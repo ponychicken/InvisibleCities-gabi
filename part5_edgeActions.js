@@ -57,13 +57,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindElementAction(compId, symbolName, "${_wegzumhaus}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${wegzumhaus}", "click", function(sym, e) {
          sym.$("wegzumhaus").hide();
 
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_uberschwarz}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${uberschwarz}", "click", function(sym, e) {
          sym.getSymbol('sym_schwarz').play();
          sym.getSymbol('sym_vorzim').getSymbol('sym_vorhang').play();
          
@@ -72,7 +72,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_Rectangle2}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${Rectangle2}", "click", function(sym, e) {
          // insert code for mouse click here
          sym.getSymbol('sym_vorzim').play();
          sym.getSymbol('sym_ausblick').play('ausblick_zoom');
@@ -88,7 +88,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_Rectangle}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${Rectangle}", "click", function(sym, e) {
          sym.getSymbol('sym_ausblick').getSymbol('sym_sprung').play('loop_sprung');
          
          
@@ -97,7 +97,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_Rectangle3}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${Rectangle3}", "click", function(sym, e) {
          sym.getSymbol('sym_mais').play();
          
          // Hide an Element.
@@ -107,7 +107,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_striche2}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${striche2}", "click", function(sym, e) {
          sym.$("striche2").hide();
          sym.getSymbol('wegzumhaus').play();
          
@@ -115,7 +115,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_StageA}", "touchstart", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${StageA}", "touchstart", function(sym, e) {
          clearTimeout(reset);
          reset = setTimeout(function(){
          	window.location.reload();
@@ -267,7 +267,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    //Edge symbol: 'sym_blatt'
    (function(symbolName) {   
    
-      Symbol.bindElementAction(compId, symbolName, "${_ib}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${ib}", "click", function(sym, e) {
          // Hide an Element.
          sym.$("ib").hide();
          
@@ -275,7 +275,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_hb}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${hb}", "click", function(sym, e) {
          // Hide an Element.
          sym.$("hb").hide();
          
@@ -284,7 +284,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_gb}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${gb}", "click", function(sym, e) {
          // Hide an Element.
          sym.$("gb").hide();
          
@@ -293,7 +293,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_fb}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${fb}", "click", function(sym, e) {
          // Hide an Element.
          sym.$("fb").hide();
          
@@ -302,7 +302,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_eb}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${eb}", "click", function(sym, e) {
          // Hide an Element.
          sym.$("eb").hide();
          
@@ -312,7 +312,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_db}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${db}", "click", function(sym, e) {
          // Hide an Element.
          sym.$("db").hide();
          
@@ -321,7 +321,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_cb}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${cb}", "click", function(sym, e) {
          // Hide an Element.
          sym.$("cb").hide();
          
@@ -330,7 +330,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_bb}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${bb}", "click", function(sym, e) {
          // Hide an Element.
          sym.$("bb").hide();
          
@@ -339,7 +339,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_a}", "click", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${a}", "click", function(sym, e) {
          // Hide an Element.
          sym.$("a").hide();
          
@@ -507,4 +507,4 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("sym_baummenschen");
    //Edge symbol end:'sym_baummenschen'
 
-})(jQuery, AdobeEdge, "PART5");
+})(window.jQuery || AdobeEdge.$, AdobeEdge, "PART5");

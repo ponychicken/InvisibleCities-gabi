@@ -37,7 +37,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${_Stage}", "touchstart", function(sym, e) {
+      Symbol.bindElementAction(compId, symbolName, "${Stage}", "touchstart", function(sym, e) {
          clearTimeout(reset);
          reset = setTimeout(function(){
          	window.location.reload();
@@ -51,4 +51,4 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("stage");
    //Edge symbol end:'stage'
 
-})(jQuery, AdobeEdge, "PART4");
+})(window.jQuery || AdobeEdge.$, AdobeEdge, "PART4");

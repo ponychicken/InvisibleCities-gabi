@@ -1,42 +1,348 @@
 
 {
 
-	"sym_huhpickenganzani-Default Timeline_playhead_ms":"0",
-	"sym_huhpickenganzani-Default Timeline_mark_ms":"-1",
+	"expanded:images/baumkronemenschen.png":"nil",
+	"expanded:images/zimmer.png":"nil",
+	"expanded:images/k5.png":"nil",
+	"expanded:images/k7.png":"nil",
+	"expanded:images/hb.png":"nil",
 	"sym_mais-Default Timeline_playhead_ms":"0",
-	"sym_zimvor-Default Timeline_playhead_ms":"0",
-	"sym_baummenschen-Default Timeline_playhead_ms":"0",
-	"symbol_sym_baumkronen":{},
+	"expanded:images/w7.png":"nil",
 	"sym_huhpickenkopfkoroer-Default Timeline_mark_ms":"-1",
 	"CompZoomFactor":"100",
+	"expanded:images/MaisHintergrund.jpg":"nil",
 	"symbol_sym_huhpickenkopfkoroer":{
-		"element_${_huhpickenkopf}":{
+		"element_${huhpickenkopf}":{
 			"timelineColor2":"0x1aa38f",
 			"timelineColor3":"0x2a6a61",
 			"animationEnabled":"true",
 			"timelineColor":"0x00bda4"},
-		"element_${_huhpickenkorper}":{
+		"element_${huhpickenkorper}":{
 			"timelineColor2":"0x168c84",
 			"timelineColor3":"0x2a605c",
 			"animationEnabled":"false",
 			"timelineColor":"0x00a096"}},
 	"sym_huhliegen-Default Timeline_playhead_ms":"0",
-	"nextElementColorIndex":"14",
-	"pref__general__GenerateSmoothTransitions":"false",
+	"sym_maisfeld-Default Timeline_playhead_ms":"0",
+	"expanded:images/k3.png":"nil",
+	"sym_blatt-Default Timeline_playhead_ms":"0",
+	"expanded:images/cb.png":"nil",
+	"expanded:images/k1.png":"nil",
+	"symbol_sym_vorzim_1":{
+		"element_${zimpflanze2}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"timelineColor":"0x00a9fa",
+			"animationEnabled":"false",
+			"invisible":"false"},
+		"element_${sym_zimmer2}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"animationEnabled":"true",
+			"timelineColor":"0x63599f"},
+		"element_${zimpflanze4}":{
+			"timelineColor2":"0xb099ce",
+			"timelineColor3":"0x70657c",
+			"animationEnabled":"true",
+			"timelineColor":"0xceaef4"},
+		"element_${zimpflanze2Copy}":{
+			"timelineColor2":"0xd35d6e",
+			"animationEnabled":"false",
+			"timelineColor3":"0x7e4b52",
+			"timelineColor":"0xfb657a"},
+		"element_${sym_vorhang}":{
+			"timelineColor2":"0x107faa",
+			"timelineColor3":"0x295a6d",
+			"animationEnabled":"true",
+			"timelineColor":"0x008dc8"}},
+	"expanded:images/maisaugendrei.png":"nil",
+	"expanded:images/bb.png":"nil",
+	"expanded:images/zimpflanze2.png":"nil",
+	"sym_zim-Default Timeline_playhead_ms":"0",
+	"pref__general__AutoKeyframePropertiesArmed":"false",
+	"expanded:images/striche2.jpg":"nil",
+	"sym_auge-Default Timeline_playhead_ms":"0",
+	"expanded:images/sprungbrucke.png":"nil",
+	"usedBOM":"false",
+	"expanded:images/zimpflanze4.png":"nil",
+	"expanded:images/MaisMenschenAugen3.png":"nil",
+	"symbol_wegzumhaus":{
+		"element_${haushinterswCopy}":{
+			"timelineColor2":"0x5a558a",
+			"animationEnabled":"false",
+			"timelineColor3":"0x4a485e",
+			"timelineColor":"0x63599f"},
+		"element_${haushinterswCopy2}":{
+			"timelineColor2":"0xb099ce",
+			"animationEnabled":"false",
+			"timelineColor3":"0x70657c",
+			"timelineColor":"0xceaef4"},
+		"element_${haushinterswrgb}":{
+			"timelineColor2":"0x107faa",
+			"timelineColor3":"0x295a6d",
+			"animationEnabled":"true",
+			"timelineColor":"0x008dc8"},
+		"element_${haushintersw}":{
+			"timelineColor2":"0x1aa38f",
+			"timelineColor3":"0x2a6a61",
+			"timelineColor":"0x00bda4",
+			"animationEnabled":"false",
+			"invisible":"false"},
+		"element_${waldanirgb}":{
+			"timelineColor2":"0x326a96",
+			"timelineColor3":"0x385063",
+			"timelineColor":"0x2f73ad",
+			"animationEnabled":"true",
+			"invisible":"true"},
+		"element_${hauswegsw}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
+			"timelineColor":"0x00a096",
+			"animationEnabled":"true",
+			"invisible":"false"},
+		"element_${waldani}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"timelineColor":"0x50bd82",
+			"timelineTreeOpened":"true",
+			"animationEnabled":"false",
+			"invisible":"true"}},
+	"expanded:images/huhpickenkopf.png":"nil",
+	"sym_huhliegenkopf-Default Timeline_mark_ms":"-1",
+	"expanded:images/WasserVordergrund%20Kopie.png":"nil",
+	"expanded:images/gseitlich3.png":"nil",
+	"sym_schwarz-Default Timeline_playhead_ms":"0",
+	"expanded:images/MaisBewegungAusMenschen.png":"nil",
+	"expanded:images/haushinterfarbegrossNeurWegFarben.png":"nil",
+	"wegzumhaus-Default Timeline_playhead_ms":"0",
+	"symbol_sym_huhliegenkopf":{
+		"element_${huhliegenkopf2}":{
+			"timelineColor2":"0x1095d2",
+			"invisible":"false",
+			"timelineColor":"0x00a9fa",
+			"animationEnabled":"true",
+			"timelineColor3":"0x29647e"}},
+	"expanded:images/Ausblick0107ohnebaumwasser%20Kopie.png":"nil",
+	"expanded:images/bauhand.png":"nil",
+	"sym_auge-Default Timeline_mark_ms":"-1",
+	"expanded:images/maismenschen.png":"nil",
+	"symbol_sym_huhflugelganzani":{
+		"element_${huhflugelganzani}":{
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
+			"animationEnabled":"true",
+			"timelineColor":"0xfb657a"}},
+	"sym_huhliegenkopf-Default Timeline_playhead_ms":"0",
+	"expanded:images/huhpickenganzani.png":"nil",
+	"pixelsPerMs":"0.44540501698097",
+	"expanded:images/w2.png":"nil",
+	"expanded:images/baumHalbesGAugenKopie.png":"nil",
+	"expanded:images/a.png":"nil",
+	"expanded:images/haushintersw.jpg":"nil",
+	"symbol_sym_vorhang":{
+		"element_${vorhangani}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"animationEnabled":"true",
+			"timelineColor":"0x00a9fa"},
+		"hGuides":"",
+		"vGuides":"20px"},
+	"sym_mais-Default Timeline_mark_ms":"-1",
+	"expanded:images/wasserstruktur%20Kopie.jpg":"nil",
+	"expanded:images/icon2.png":"nil",
+	"symbol_sym_maisfeld":{
+		"element_${MaisBewegungAusblick}":{
+			"timelineColor2":"0xcbbd71",
+			"animationEnabled":"true",
+			"timelineColor3":"0x7b7652",
+			"timelineColor":"0xeedf79"},
+		"element_${MaisBewegungAusMenschen}":{
+			"timelineColor2":"0xd8b467",
+			"animationEnabled":"true",
+			"timelineColor3":"0x81714f",
+			"timelineColor":"0xffd46d"}},
+	"symbol_sym_sprung":{
+		"element_${sprungbrucke}":{
+			"timelineColor2":"0x326a96",
+			"timelineColor3":"0x385063",
+			"animationEnabled":"true",
+			"timelineColor":"0x2f73ad"}},
+	"expanded:images/w4.png":"nil",
+	"expanded:images/w5.png":"nil",
+	"sym_maisfeldhinten-Default Timeline_playhead_ms":"0",
+	"expanded:images/gb.png":"nil",
+	"sym_maisfeld-Default Timeline_mark_ms":"-1",
+	"TransitionIdCounter":"914",
+	"expanded:images/bruckesitzen.png":"nil",
+	"symbol_sym_huhpickenganzani":{
+		"element_${huhpickenganzani}":{
+			"timelineColor2":"0xcbbd71",
+			"timelineColor3":"0x7b7652",
+			"animationEnabled":"true",
+			"timelineColor":"0xeedf79"}},
+	"sym_vorhang-Default Timeline_playhead_ms":"0",
+	"expanded:images/maisaugen.png":"nil",
+	"expanded:images/hauswegsw.png":"nil",
+	"expanded:images/gruppestehend.png":"nil",
+	"symbol_sym_schwarz":{
+		"element_${schwarz}":{
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
+			"timelineColor":"0xfb657a",
+			"animationEnabled":"true",
+			"invisible":"true"}},
+	"expanded:images/baubeweg1.png":"nil",
+	"expanded:images/gseitlich1.png":"nil",
+	"sym_huhpickenganzani-Default Timeline_mark_ms":"-1",
+	"expanded:images/auge.png":"nil",
+	"expanded:images/maisaugengrau.png":"nil",
+	"expanded:images/wasserkorpertransparent1.png":"nil",
+	"sym_baummenschen-Default Timeline_playhead_ms":"0",
+	"symbol_sym_baumkronen":{},
+	"expanded:images/w3.png":"nil",
+	"expanded:images/GesichterWasser%20Kopie.png":"nil",
+	"expanded:images/MaisHintergrFarben.png":"nil",
+	"expanded:images/baubeweg2.png":"nil",
+	"expanded:images/pflanze7.png":"nil",
+	"expanded:images/icon.png":"nil",
+	"expanded:images/k4.png":"nil",
+	"expanded:images/k9.png":"nil",
+	"expanded:images/bild.png":"nil",
+	"nextElementColorIndex":"12",
+	"stage-Default Timeline_playhead_ms":"0",
+	"expanded:images/maisaugepopille.png":"nil",
+	"expanded:images/gruppegestapelt.png":"nil",
 	"symbol_sym_maisfeldhinten":{
-		"element_${_MaisBewegungAusblick}":{
+		"element_${MaisBewegungAusblick}":{
 			"timelineColor2":"0x81aa62",
 			"timelineColor3":"0x5b6c4d",
 			"animationEnabled":"true",
 			"timelineColor":"0x91c767"},
-		"element_${_MaisBewegungAusMenschen}":{
+		"element_${MaisBewegungAusMenschen}":{
 			"timelineColor2":"0x4fa275",
 			"timelineColor3":"0x456a55",
 			"animationEnabled":"true",
 			"timelineColor":"0x50bd82"}},
-	"HTMLFileName":"part5.html",
-	"sym_blatt-Default Timeline_playhead_ms":"0",
+	"expanded:images/augenaufschlagauge.png":"nil",
+	"expanded:images/pregrau.png":"nil",
+	"expanded:images/endeStriche2.jpg":"nil",
+	"expanded:images/g6.png":"nil",
 	"sym_sprung-Default Timeline_playhead_ms":"0",
+	"expanded:images/MaisHintergrund2.jpg":"nil",
+	"sym_vorzim_1-Default Timeline_playhead_ms":"0",
+	"symbol_sym_mais":{
+		"element_${MaisMenschenAugen2}":{
+			"timelineColor2":"0x5a558a",
+			"invisible":"false",
+			"timelineColor":"0x63599f",
+			"animationEnabled":"false",
+			"timelineColor3":"0x4a485e"},
+		"element_${maisaugepopille8}":{
+			"timelineColor2":"0xb099ce",
+			"timelineColor3":"0x70657c",
+			"animationEnabled":"true",
+			"timelineColor":"0xceaef4"},
+		"element_${maisaugen}":{
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
+			"animationEnabled":"false",
+			"timelineColor":"0xfb657a"},
+		"element_${MiasMenschen}":{
+			"timelineColor2":"0x326a96",
+			"invisible":"false",
+			"timelineColor":"0x2f73ad",
+			"animationEnabled":"false",
+			"timelineColor3":"0x385063"},
+		"element_${MaisMenschenAugen3}":{
+			"timelineColor2":"0xb099ce",
+			"invisible":"false",
+			"timelineColor":"0xceaef4",
+			"animationEnabled":"false",
+			"timelineColor3":"0x70657c"},
+		"element_${maisaugepopille2}":{
+			"timelineColor2":"0x4fa275",
+			"invisible":"false",
+			"timelineColor":"0x50bd82",
+			"animationEnabled":"true",
+			"timelineColor3":"0x456a55"},
+		"element_${maisaugendrei}":{
+			"timelineColor2":"0xd8b467",
+			"timelineColor3":"0x81714f",
+			"animationEnabled":"false",
+			"timelineColor":"0xffd46d"},
+		"element_${MaisMenschenAugen1}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"animationEnabled":"false",
+			"timelineColor":"0x00a9fa"},
+		"element_${maisaugen2}":{
+			"timelineColor2":"0xba5b89",
+			"timelineColor3":"0x734a5f",
+			"animationEnabled":"false",
+			"timelineColor":"0xdb619d"},
+		"element_${MaisHinten2}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
+			"invisible":"false",
+			"timelineColor":"0x00a096"},
+		"element_${maisaugepopille}":{
+			"timelineColor2":"0x81aa62",
+			"invisible":"false",
+			"timelineColor":"0x91c767",
+			"animationEnabled":"true",
+			"timelineColor3":"0x5b6c4d"},
+		"element_${maisaugepopille4}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
+			"animationEnabled":"true",
+			"timelineColor":"0x00a096"},
+		"element_${MaisHintergrund2}":{
+			"timelineColor2":"0x107faa",
+			"timelineColor3":"0x295a6d",
+			"animationEnabled":"false",
+			"timelineColor":"0x008dc8"},
+		"element_${maisaugepopille3}":{
+			"timelineColor2":"0x1aa38f",
+			"timelineColor3":"0x2a6a61",
+			"animationEnabled":"true",
+			"timelineColor":"0x00bda4"},
+		"element_${maisaugepopille6}":{
+			"timelineColor2":"0x107faa",
+			"timelineColor3":"0x295a6d",
+			"timelineColor":"0x008dc8",
+			"animationEnabled":"true",
+			"invisible":"false"},
+		"element_${maismenschen}":{
+			"timelineColor2":"0x1095d2",
+			"invisible":"false",
+			"timelineColor":"0x00a9fa",
+			"animationEnabled":"true",
+			"timelineColor3":"0x29647e"},
+		"element_${maisaugepopille5}":{
+			"timelineColor2":"0x326a96",
+			"timelineColor3":"0x385063",
+			"timelineColor":"0x2f73ad",
+			"animationEnabled":"true",
+			"invisible":"false"},
+		"element_${maisaugepopille7}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"animationEnabled":"true",
+			"timelineColor":"0x63599f"},
+		"element_${maisaugengrau}":{
+			"timelineColor2":"0xcbbd71",
+			"invisible":"false",
+			"timelineColor":"0xeedf79",
+			"animationEnabled":"true",
+			"timelineColor3":"0x7b7652"},
+		"element_${MaisHintergrFarben}":{
+			"timelineColor2":"0xcbbd71",
+			"timelineColor3":"0x7b7652",
+			"timelineColor":"0xeedf79",
+			"animationEnabled":"false",
+			"invisible":"false"}},
+	"expanded:images/aussicht.png":"nil",
+	"sym_huhflugelganzani-Default Timeline_mark_ms":"-1",
 	"ModelData":"{\
 \"stage\": {\
    \"timelines\": {\
@@ -167,860 +473,673 @@
 \
    }}\
 }",
-	"sym_vorzim_1-Default Timeline_playhead_ms":"0",
-	"symbol_sym_mais":{
-		"element_${_MaisMenschenAugen1}":{
-			"timelineColor2":"0x1095d2",
-			"timelineColor3":"0x29647e",
-			"animationEnabled":"false",
-			"timelineColor":"0x00a9fa"},
-		"element_${_maisaugepopille7}":{
-			"timelineColor2":"0x5a558a",
-			"timelineColor3":"0x4a485e",
-			"animationEnabled":"true",
-			"timelineColor":"0x63599f"},
-		"element_${_maisaugepopille8}":{
-			"timelineColor2":"0xb099ce",
-			"timelineColor3":"0x70657c",
-			"animationEnabled":"true",
-			"timelineColor":"0xceaef4"},
-		"element_${_MaisMenschenAugen3}":{
-			"timelineColor2":"0xb099ce",
-			"invisible":"false",
-			"timelineColor":"0xceaef4",
-			"animationEnabled":"false",
-			"timelineColor3":"0x70657c"},
-		"element_${_MaisMenschenAugen2}":{
-			"timelineColor2":"0x5a558a",
-			"invisible":"false",
-			"timelineColor":"0x63599f",
-			"animationEnabled":"false",
-			"timelineColor3":"0x4a485e"},
-		"element_${_maisaugepopille2}":{
-			"timelineColor2":"0x4fa275",
-			"invisible":"false",
-			"timelineColor":"0x50bd82",
-			"animationEnabled":"true",
-			"timelineColor3":"0x456a55"},
-		"element_${_MaisHinten2}":{
-			"timelineColor2":"0x168c84",
-			"timelineColor3":"0x2a605c",
-			"invisible":"false",
-			"timelineColor":"0x00a096"},
-		"element_${_maisaugen2}":{
-			"timelineColor2":"0xba5b89",
-			"timelineColor3":"0x734a5f",
-			"animationEnabled":"false",
-			"timelineColor":"0xdb619d"},
-		"element_${_maisaugen}":{
-			"timelineColor2":"0xd35d6e",
-			"timelineColor3":"0x7e4b52",
-			"animationEnabled":"false",
-			"timelineColor":"0xfb657a"},
-		"element_${_MiasMenschen}":{
-			"timelineColor2":"0x326a96",
-			"invisible":"false",
-			"timelineColor":"0x2f73ad",
-			"animationEnabled":"false",
-			"timelineColor3":"0x385063"},
-		"element_${_maisaugepopille4}":{
-			"timelineColor2":"0x168c84",
-			"timelineColor3":"0x2a605c",
-			"animationEnabled":"true",
-			"timelineColor":"0x00a096"},
-		"element_${_maisaugendrei}":{
-			"timelineColor2":"0xd8b467",
-			"timelineColor3":"0x81714f",
-			"animationEnabled":"false",
-			"timelineColor":"0xffd46d"},
-		"element_${_maismenschen}":{
-			"timelineColor2":"0x1095d2",
-			"invisible":"false",
-			"timelineColor":"0x00a9fa",
-			"animationEnabled":"true",
-			"timelineColor3":"0x29647e"},
-		"element_${_maisaugepopille6}":{
-			"timelineColor2":"0x107faa",
-			"timelineColor3":"0x295a6d",
-			"timelineColor":"0x008dc8",
-			"animationEnabled":"true",
-			"invisible":"false"},
-		"element_${_MaisHintergrFarben}":{
-			"timelineColor2":"0xcbbd71",
-			"timelineColor3":"0x7b7652",
-			"timelineColor":"0xeedf79",
-			"animationEnabled":"false",
-			"invisible":"false"},
-		"element_${_maisaugepopille3}":{
-			"timelineColor2":"0x1aa38f",
-			"timelineColor3":"0x2a6a61",
-			"animationEnabled":"true",
-			"timelineColor":"0x00bda4"},
-		"element_${_maisaugepopille5}":{
-			"timelineColor2":"0x326a96",
-			"timelineColor3":"0x385063",
-			"timelineColor":"0x2f73ad",
-			"animationEnabled":"true",
-			"invisible":"false"},
-		"element_${_MaisHintergrund2}":{
-			"timelineColor2":"0x107faa",
-			"timelineColor3":"0x295a6d",
-			"animationEnabled":"false",
-			"timelineColor":"0x008dc8"},
-		"element_${_maisaugengrau}":{
-			"timelineColor2":"0xcbbd71",
-			"invisible":"false",
-			"timelineColor":"0xeedf79",
-			"animationEnabled":"true",
-			"timelineColor3":"0x7b7652"},
-		"element_${_maisaugepopille}":{
-			"timelineColor2":"0x81aa62",
-			"invisible":"false",
-			"timelineColor":"0x91c767",
-			"animationEnabled":"true",
-			"timelineColor3":"0x5b6c4d"}},
-	"sym_huhflugelganzani-Default Timeline_mark_ms":"-1",
-	"symbol_sym_baummenschen":{
-		"element_${_baumkronemenschen}":{
-			"timelineColor2":"0x107faa",
-			"timelineColor3":"0x295a6d",
-			"animationEnabled":"true",
-			"timelineColor":"0x008dc8"}},
-	"sym_zim-Default Timeline_playhead_ms":"0",
-	"pref__general__AutoKeyframePropertiesArmed":"false",
+	"expanded:images/aussichthintersw.jpg":"nil",
+	"expanded:images/sitzenwasser.png":"nil",
+	"expanded:images/maismenschen2.png":"nil",
+	"expanded:images/preschwarz.png":"nil",
+	"expanded:images/massemenschen.png":"nil",
+	"HTMLFileName":"part5.html",
+	"expanded:images/Ausblickvornebuschkal.png":"nil",
+	"expanded:images/menschenbaum.png":"nil",
 	"sym_huhflugelganzani-Default Timeline_playhead_ms":"0",
+	"expanded:images/menschenuberal.png":"nil",
+	"expanded:images/MaisHinten.png":"nil",
 	"symbol_sym_vorzim":{
-		"element_${_sym_vorhang}":{
+		"element_${sym_zimmer2}":{
 			"timelineColor2":"0x107faa",
 			"timelineColor3":"0x295a6d",
-			"timelineColor":"0x008dc8",
 			"animationEnabled":"true",
-			"invisible":"false"},
-		"element_${_zimpflanze2}":{
+			"timelineColor":"0x008dc8"},
+		"element_${zimpflanze2}":{
 			"timelineColor2":"0x326a96",
 			"timelineColor3":"0x385063",
 			"animationEnabled":"true",
 			"timelineColor":"0x2f73ad"},
-		"element_${_sym_zimmer2}":{
+		"element_${sym_vorhang}":{
 			"timelineColor2":"0x107faa",
 			"timelineColor3":"0x295a6d",
+			"timelineColor":"0x008dc8",
 			"animationEnabled":"true",
-			"timelineColor":"0x008dc8"}},
-	"sym_auge-Default Timeline_playhead_ms":"0",
-	"usedBOM":"false",
-	"symbol_wegzumhaus":{
-		"element_${_haushinterswCopy2}":{
-			"timelineColor2":"0xb099ce",
+			"invisible":"false"}},
+	"expanded:images/MaisBewegungAusblick.png":"nil",
+	"expanded:images/pflanze5.png":"nil",
+	"expanded:images/lachen.png":"nil",
+	"expanded:images/testanfang.jpg":"nil",
+	"expanded:images/g5.png":"nil",
+	"expanded:images/baumHalbesGAugen%20Kopie.png":"nil",
+	"expanded:images/maisaugen2.png":"nil",
+	"expanded:images/wassergesichterverlauf.png":"nil",
+	"expanded:images/pregrun.png":"nil",
+	"expanded:images/strich1.jpg":"nil",
+	"expanded:images/augenaufschlagauge%20Kopie.png":"nil",
+	"expanded:images/wald.png":"nil",
+	"pref__general__AutoKeyframeProperties":"false",
+	"expanded:images/ausblickwasserfrei.png":"nil",
+	"expanded:images/k6.png":"nil",
+	"expanded:images/horizontmenschenpunkte.png":"nil",
+	"expanded:images/zimpflanze3.png":"nil",
+	"expanded:images/huhflugelganzani.png":"nil",
+	"expanded:images/eb.png":"nil",
+	"expanded:images/w6.png":"nil",
+	"expanded:images/gseitlich2.png":"nil",
+	"expanded:images/ib.png":"nil",
+	"expanded:images/MaisMenschenAugen2.png":"nil",
+	"expanded:images/aussichthintersw.png":"nil",
+	"expanded:images/WaserHintergrundKopie.jpg":"nil",
+	"sym_huhpickenganzani-Default Timeline_playhead_ms":"0",
+	"symbol_sym_blatt":{
+		"element_${augenaufschlagauge}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
 			"animationEnabled":"false",
-			"timelineColor3":"0x70657c",
-			"timelineColor":"0xceaef4"},
-		"element_${_haushinterswCopy}":{
-			"timelineColor2":"0x5a558a",
-			"animationEnabled":"false",
-			"timelineColor3":"0x4a485e",
-			"timelineColor":"0x63599f"},
-		"element_${_haushinterswrgb}":{
-			"timelineColor2":"0x107faa",
-			"timelineColor3":"0x295a6d",
+			"timelineColor":"0x00a096"},
+		"element_${eb}":{
+			"timelineColor2":"0xcbbd71",
+			"timelineColor3":"0x7b7652",
+			"timelineColor":"0xeedf79",
 			"animationEnabled":"true",
-			"timelineColor":"0x008dc8"},
-		"element_${_waldani}":{
-			"timelineColor2":"0x4fa275",
-			"timelineColor3":"0x456a55",
-			"timelineColor":"0x50bd82",
-			"timelineTreeOpened":"true",
-			"animationEnabled":"false",
 			"invisible":"true"},
-		"element_${_waldanirgb}":{
-			"timelineColor2":"0x326a96",
-			"timelineColor3":"0x385063",
-			"timelineColor":"0x2f73ad",
+		"element_${bb}":{
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
+			"timelineColor":"0xfb657a",
 			"animationEnabled":"true",
 			"invisible":"true"},
-		"element_${_haushintersw}":{
-			"timelineColor2":"0x1aa38f",
-			"timelineColor3":"0x2a6a61",
-			"timelineColor":"0x00bda4",
-			"animationEnabled":"false",
-			"invisible":"false"},
-		"element_${_hauswegsw}":{
+		"element_${db}":{
+			"timelineColor2":"0xd8b467",
+			"timelineColor3":"0x81714f",
+			"timelineColor":"0xffd46d",
+			"animationEnabled":"true",
+			"invisible":"true"},
+		"element_${ib}":{
 			"timelineColor2":"0x168c84",
 			"timelineColor3":"0x2a605c",
 			"timelineColor":"0x00a096",
 			"animationEnabled":"true",
-			"invisible":"false"}},
-	"pref__general__AutoKeyframeProperties":"false",
-	"sym_huhliegenkopf-Default Timeline_mark_ms":"-1",
-	"sym_vorhang-Default Timeline_mark_ms":"-1",
-	"sym_schwarz-Default Timeline_playhead_ms":"0",
-	"pref__general__FilterNonAnimatedElements":"false",
-	"symbol_sym_huhliegenkopf":{
-		"element_${_huhliegenkopf2}":{
-			"timelineColor2":"0x1095d2",
-			"invisible":"false",
-			"timelineColor":"0x00a9fa",
+			"invisible":"true"},
+		"element_${hb}":{
+			"timelineColor2":"0x1aa38f",
+			"timelineColor3":"0x2a6a61",
+			"timelineColor":"0x00bda4",
 			"animationEnabled":"true",
-			"timelineColor3":"0x29647e"}},
-	"sym_auge-Default Timeline_mark_ms":"-1",
-	"sym_huhpickenkopfkoroer-Default Timeline_playhead_ms":"0",
-	"symbol_sym_huhflugelganzani":{
-		"element_${_huhflugelganzani}":{
-			"timelineColor2":"0xd35d6e",
-			"timelineColor3":"0x7e4b52",
+			"invisible":"true"},
+		"element_${cb}":{
+			"timelineColor2":"0xba5b89",
+			"timelineColor3":"0x734a5f",
+			"timelineColor":"0xdb619d",
 			"animationEnabled":"true",
-			"timelineColor":"0xfb657a"}},
-	"sym_huhliegenkopf-Default Timeline_playhead_ms":"0",
-	"sym_ausblick-Default Timeline_playhead_ms":"0",
-	"pixelsPerMs":"0.44540501698097",
-	"stage-Default Timeline_mark_ms":"-1",
-	"symbol_sym_zim":{
-		"element_${_sym_zimmer}":{
-			"timelineColor2":"0xd8b467",
-			"timelineColor3":"0x81714f",
-			"animationEnabled":"true",
-			"timelineColor":"0xffd46d"}},
-	"symbol_sym_ausblick":{
-		"element_${_ausblickwasserfrei}":{
-			"timelineColor2":"0x107faa",
-			"timelineColor3":"0x295a6d",
-			"animationEnabled":"true",
-			"timelineColor":"0x008dc8"},
-		"element_${_sym_huhpickenganzani}":{
+			"invisible":"true"},
+		"element_${fb}":{
 			"timelineColor2":"0x81aa62",
 			"timelineColor3":"0x5b6c4d",
 			"timelineColor":"0x91c767",
 			"animationEnabled":"true",
-			"usingMotionPaths":"true"},
-		"element_${_Ausblick0107ohnebaumwasser_KopieCopy2}":{
+			"invisible":"true"},
+		"element_${sym_auge}":{
+			"timelineColor2":"0x1aa38f",
+			"timelineColor3":"0x2a6a61",
+			"animationEnabled":"true",
+			"timelineColor":"0x00bda4"},
+		"element_${gb}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"timelineColor":"0x50bd82",
+			"animationEnabled":"true",
+			"invisible":"true"},
+		"element_${a}":{
 			"timelineColor2":"0xb099ce",
 			"timelineColor3":"0x70657c",
-			"timelineColor":"0xceaef4"},
-		"element_${_huhpickenkopf}":{
-			"timelineColor2":"0x107faa",
-			"timelineColor3":"0x295a6d",
-			"animationEnabled":"false",
-			"timelineColor":"0x008dc8"},
-		"element_${_huhflugelganzani}":{
+			"timelineColor":"0xceaef4",
+			"animationEnabled":"true",
+			"invisible":"true"}},
+	"sym_huhpickenkopfkoroer-Default Timeline_playhead_ms":"0",
+	"expanded:images/fb.png":"nil",
+	"sym_vorhang-Default Timeline_mark_ms":"-1",
+	"sym_zimvor-Default Timeline_playhead_ms":"0",
+	"sym_ausblick-Default Timeline_playhead_ms":"0",
+	"sym_ausblick_1-Default Timeline_playhead_ms":"0",
+	"expanded:images/pngblau.png":"nil",
+	"expanded:images/db.png":"nil",
+	"stage-Default Timeline_mark_ms":"-1",
+	"symbol_sym_zim":{
+		"element_${sym_zimmer}":{
 			"timelineColor2":"0xd8b467",
 			"timelineColor3":"0x81714f",
+			"animationEnabled":"true",
+			"timelineColor":"0xffd46d"}},
+	"expanded:images/w1.png":"nil",
+	"expanded:images/g2.png":"nil",
+	"expanded:images/g3.png":"nil",
+	"pref__general__GenerateSmoothTransitions":"false",
+	"symbol_sym_ausblick":{
+		"element_${aussichtvorsw}":{
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
 			"animationEnabled":"false",
-			"timelineColor":"0xffd46d"},
-		"element_${_huhpickenkorper2}":{
+			"timelineColor":"0xfb657a"},
+		"element_${sym_huhpickenkopfkoroer}":{
+			"timelineColor2":"0x326a96",
+			"timelineColor3":"0x385063",
+			"timelineColor":"0x2f73ad",
+			"animationEnabled":"true",
+			"usingMotionPaths":"true"},
+		"element_${huhpickenkorper2}":{
 			"timelineColor2":"0x5a558a",
 			"timelineColor3":"0x4a485e",
 			"timelineColor":"0x63599f",
 			"animationEnabled":"true",
 			"usingMotionPaths":"true"},
-		"element_${_MaisBewegungAusblick}":{
+		"element_${Ausblick0107ohnebaumwasser_KopieCopy}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"timelineColor":"0x63599f"},
+		"element_${sym_huhliegenkopf}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"animationEnabled":"true",
+			"timelineColor":"0x63599f"},
+		"element_${huhpickenkorper}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"animationEnabled":"false",
+			"timelineColor":"0x00a9fa"},
+		"element_${MaisBewegungAusblick}":{
 			"timelineColor2":"0xd35d6e",
 			"timelineColor3":"0x7e4b52",
 			"animationEnabled":"false",
 			"timelineColor":"0xfb657a"},
 		"vGuides":"1308px",
-		"element_${_aussichtvorsw2}":{
-			"timelineColor2":"0xcbbd71",
-			"timelineColor3":"0x7b7652",
-			"animationEnabled":"true",
-			"timelineColor":"0xeedf79"},
-		"element_${_Ausblick0107ohnebaumwasser_Kopie}":{
-			"timelineColor2":"0x1095d2",
-			"timelineColor3":"0x29647e",
-			"animationEnabled":"false",
-			"timelineColor":"0x00a9fa"},
-		"element_${_aussichtvorsw}":{
-			"timelineColor2":"0xd35d6e",
-			"timelineColor3":"0x7e4b52",
-			"animationEnabled":"false",
-			"timelineColor":"0xfb657a"},
-		"element_${_wasserstruktur_Kopie}":{
-			"timelineColor2":"0xd35d6e",
-			"timelineColor3":"0x7e4b52",
-			"animationEnabled":"true",
-			"timelineColor":"0xfb657a"},
-		"element_${_huhpickenganzani}":{
-			"timelineColor2":"0x4fa275",
-			"timelineColor3":"0x456a55",
-			"animationEnabled":"false",
-			"timelineColor":"0x50bd82"},
-		"element_${_huhpickenkorper}":{
-			"timelineColor2":"0x1095d2",
-			"timelineColor3":"0x29647e",
-			"animationEnabled":"false",
-			"timelineColor":"0x00a9fa"},
-		"element_${_huhliegenkopf2}":{
+		"element_${huhliegenkopf2}":{
 			"timelineColor2":"0xb099ce",
 			"timelineColor3":"0x70657c",
 			"animationEnabled":"false",
 			"timelineColor":"0xceaef4"},
-		"element_${_sym_huhflugelganzani}":{
-			"timelineColor2":"0xba5b89",
-			"timelineColor3":"0x734a5f",
-			"animationEnabled":"false",
-			"timelineColor":"0xdb619d"},
-		"element_${_sym_huhpickenkopfkoroer}":{
-			"timelineColor2":"0x326a96",
-			"timelineColor3":"0x385063",
-			"timelineColor":"0x2f73ad",
+		"element_${sym_huhpickenganzani}":{
+			"timelineColor2":"0x81aa62",
+			"timelineColor3":"0x5b6c4d",
+			"timelineColor":"0x91c767",
 			"animationEnabled":"true",
 			"usingMotionPaths":"true"},
-		"element_${_MaisBewegungAusMenschen}":{
-			"timelineColor2":"0xba5b89",
-			"timelineColor3":"0x734a5f",
-			"animationEnabled":"false",
-			"timelineColor":"0xdb619d"},
-		"element_${_sym_huhliegenkopf}":{
-			"timelineColor2":"0x5a558a",
-			"timelineColor3":"0x4a485e",
-			"animationEnabled":"true",
-			"timelineColor":"0x63599f"},
-		"element_${_huhliegenkorper2}":{
+		"element_${huhliegenkorper2}":{
 			"timelineColor2":"0x107faa",
 			"timelineColor3":"0x295a6d",
 			"invisible":"false",
 			"timelineColor":"0x008dc8"},
-		"element_${_aussichthintersw}":{
+		"element_${ausblickwasserfrei}":{
+			"timelineColor2":"0x107faa",
+			"timelineColor3":"0x295a6d",
+			"animationEnabled":"true",
+			"timelineColor":"0x008dc8"},
+		"element_${Ausblick0107ohnebaumwasser_Kopie}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"animationEnabled":"false",
+			"timelineColor":"0x00a9fa"},
+		"element_${wasserstruktur_Kopie}":{
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
+			"animationEnabled":"true",
+			"timelineColor":"0xfb657a"},
+		"element_${sym_huhflugelganzani}":{
 			"timelineColor2":"0xba5b89",
 			"timelineColor3":"0x734a5f",
 			"animationEnabled":"false",
 			"timelineColor":"0xdb619d"},
-		"hGuides":"1342px",
-		"element_${_Ausblick0107ohnebaumwasser_KopieCopy}":{
-			"timelineColor2":"0x5a558a",
-			"timelineColor3":"0x4a485e",
-			"timelineColor":"0x63599f"},
-		"element_${_aussichthintersw2}":{
+		"element_${aussichtvorsw2}":{
+			"timelineColor2":"0xcbbd71",
+			"timelineColor3":"0x7b7652",
+			"animationEnabled":"true",
+			"timelineColor":"0xeedf79"},
+		"element_${MaisBewegungAusMenschen}":{
+			"timelineColor2":"0xba5b89",
+			"timelineColor3":"0x734a5f",
+			"animationEnabled":"false",
+			"timelineColor":"0xdb619d"},
+		"element_${aussichthintersw}":{
+			"timelineColor2":"0xba5b89",
+			"timelineColor3":"0x734a5f",
+			"animationEnabled":"false",
+			"timelineColor":"0xdb619d"},
+		"element_${aussichthintersw2}":{
 			"timelineColor2":"0xd8b467",
 			"timelineColor3":"0x81714f",
 			"animationEnabled":"false",
-			"timelineColor":"0xffd46d"}},
-	"symbol_sym_vorhang":{
-		"element_${_vorhangani}":{
-			"timelineColor2":"0x1095d2",
-			"timelineColor3":"0x29647e",
-			"animationEnabled":"true",
-			"timelineColor":"0x00a9fa"},
-		"hGuides":"",
-		"vGuides":"20px"},
-	"sym_mais-Default Timeline_mark_ms":"-1",
-	"symbol_sym_vorzim_1":{
-		"element_${_sym_zimmer2}":{
-			"timelineColor2":"0x5a558a",
-			"timelineColor3":"0x4a485e",
-			"animationEnabled":"true",
-			"timelineColor":"0x63599f"},
-		"element_${_zimpflanze2Copy}":{
-			"timelineColor2":"0xd35d6e",
+			"timelineColor":"0xffd46d"},
+		"element_${huhpickenkopf}":{
+			"timelineColor2":"0x107faa",
+			"timelineColor3":"0x295a6d",
 			"animationEnabled":"false",
-			"timelineColor3":"0x7e4b52",
-			"timelineColor":"0xfb657a"},
-		"element_${_zimpflanze4}":{
+			"timelineColor":"0x008dc8"},
+		"element_${Ausblick0107ohnebaumwasser_KopieCopy2}":{
 			"timelineColor2":"0xb099ce",
 			"timelineColor3":"0x70657c",
-			"animationEnabled":"true",
 			"timelineColor":"0xceaef4"},
-		"element_${_zimpflanze2}":{
-			"timelineColor2":"0x1095d2",
-			"timelineColor3":"0x29647e",
-			"timelineColor":"0x00a9fa",
+		"hGuides":"1342px",
+		"element_${huhflugelganzani}":{
+			"timelineColor2":"0xd8b467",
+			"timelineColor3":"0x81714f",
 			"animationEnabled":"false",
-			"invisible":"false"},
-		"element_${_sym_vorhang}":{
+			"timelineColor":"0xffd46d"},
+		"element_${huhpickenganzani}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"animationEnabled":"false",
+			"timelineColor":"0x50bd82"}},
+	"expanded:images/huhliegenkorper.png":"nil",
+	"expanded:images/wasser_fluss.svg":"nil",
+	"expanded:images/g1.png":"nil",
+	"expanded:images/MiasMenschen.png":"nil",
+	"expanded:images/k2.png":"nil",
+	"expanded:images/baumHalbesGohneAugen%20Kopie.png":"nil",
+	"expanded:images/endeStriche.jpg":"nil",
+	"expanded:images/g4.png":"nil",
+	"viewStartY":"0",
+	"symbol_sym_baummenschen":{
+		"element_${baumkronemenschen}":{
 			"timelineColor2":"0x107faa",
 			"timelineColor3":"0x295a6d",
 			"animationEnabled":"true",
 			"timelineColor":"0x008dc8"}},
-	"symbol_sym_maisfeld":{
-		"element_${_MaisBewegungAusblick}":{
-			"timelineColor2":"0xcbbd71",
-			"animationEnabled":"true",
-			"timelineColor3":"0x7b7652",
-			"timelineColor":"0xeedf79"},
-		"element_${_MaisBewegungAusMenschen}":{
-			"timelineColor2":"0xd8b467",
-			"animationEnabled":"true",
-			"timelineColor3":"0x81714f",
-			"timelineColor":"0xffd46d"}},
-	"symbol_sym_sprung":{
-		"element_${_sprungbrucke}":{
-			"timelineColor2":"0x326a96",
-			"timelineColor3":"0x385063",
-			"animationEnabled":"true",
-			"timelineColor":"0x2f73ad"}},
-	"sym_maisfeld-Default Timeline_playhead_ms":"0",
-	"sym_maisfeldhinten-Default Timeline_playhead_ms":"0",
-	"sym_ausblick-Default Timeline_mark_ms":"-1",
-	"symbol_sym_auge":{
-		"element_${_augenaufschlagauge}":{
+	"expanded:images/haushinterswrgb.jpg":"nil",
+	"StageZoomFactor":"10",
+	"expanded:images/mauerbusch.png":"nil",
+	"expanded:images/baumHalbesGohneAugenKopie.png":"nil",
+	"symbol_sym_zimvor":{},
+	"expanded:images/MaisMenschenAugen1.png":"nil",
+	"symbol_sym_huhliegen":{
+		"element_${huhliegenkopf}":{
 			"timelineColor2":"0x4fa275",
 			"timelineColor3":"0x456a55",
-			"animationEnabled":"true",
-			"timelineColor":"0x50bd82"}},
-	"symbol_sym_zimvor":{},
-	"sym_ausblick_1-Default Timeline_playhead_ms":"0",
-	"symbol_sym_huhliegen":{
-		"element_${_huhliegenkorper}":{
+			"timelineColor":"0x50bd82"},
+		"element_${huhliegenkorper}":{
 			"timelineColor2":"0x81aa62",
 			"timelineColor3":"0x5b6c4d",
-			"timelineColor":"0x91c767"},
-		"element_${_huhliegenkopf}":{
-			"timelineColor2":"0x4fa275",
-			"timelineColor3":"0x456a55",
-			"timelineColor":"0x50bd82"}},
-	"StageZoomFactor":"10",
-	"sym_maisfeld-Default Timeline_mark_ms":"-1",
-	"TransitionIdCounter":"914",
+			"timelineColor":"0x91c767"}},
+	"expanded:images/zimpflanze1.png":"nil",
+	"expanded:images/aussichtvorsw.png":"nil",
+	"expanded:images/huhpickenkorper.png":"nil",
+	"expanded:images/vorhangani.png":"nil",
 	"symbol_sym_zimmer":{
-		"element_${_zimmer}":{
+		"element_${zimmer}":{
 			"timelineColor2":"0x326a96",
 			"timelineColor3":"0x385063",
 			"invisible":"false",
 			"timelineColor":"0x2f73ad"}},
-	"sym_vorzim-Default Timeline_playhead_ms":"0",
-	"sym_vorhang-Default Timeline_playhead_ms":"0",
-	"viewStartY":"0",
+	"expanded:images/huhliegenkopf.png":"nil",
+	"expanded:images/k8.png":"nil",
 	"symbol_sym_ausblick_1":{
-		"element_${_ausblickwasserfrei}":{
-			"timelineColor2":"0x1aa38f",
-			"timelineColor3":"0x2a6a61",
-			"animationEnabled":"true",
-			"timelineColor":"0x00bda4"},
-		"element_${_sym_huhpickenganzani}":{
+		"element_${Ausblickvornebuschkal2}":{
 			"timelineColor2":"0xd8b467",
 			"timelineColor3":"0x81714f",
 			"animationEnabled":"true",
 			"timelineColor":"0xffd46d"},
-		"element_${_sym_maisfeldhinten}":{
-			"timelineColor2":"0x1aa38f",
-			"timelineColor3":"0x2a6a61",
-			"animationEnabled":"true",
-			"timelineColor":"0x00bda4"},
-		"element_${_huhpickenkorper2}":{
-			"timelineColor2":"0xba5b89",
-			"timelineColor3":"0x734a5f",
-			"animationEnabled":"true",
-			"timelineColor":"0xdb619d"},
-		"element_${_MaisBewegungAusblick}":{
+		"element_${MaisBewegungAusblick}":{
 			"timelineColor2":"0x326a96",
 			"timelineColor3":"0x385063",
 			"animationEnabled":"false",
 			"timelineColor":"0x2f73ad"},
-		"element_${_aussichtvorsw2}":{
-			"timelineColor2":"0x4fa275",
-			"timelineColor3":"0x456a55",
+		"element_${huhliegenkorper2}":{
+			"timelineColor2":"0x81aa62",
+			"timelineColor3":"0x5b6c4d",
+			"timelineColor":"0x91c767"},
+		"element_${MaisBewegungAusMenschen}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
+			"animationEnabled":"false",
+			"timelineColor":"0x00a096"},
+		"element_${sym_huhpickenkopfkoroer}":{
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
 			"animationEnabled":"true",
-			"timelineColor":"0x50bd82"},
-		"element_${_Ausblickvornebuschkal2}":{
+			"timelineColor":"0xfb657a"},
+		"element_${Ausblickvornebuschkal}":{
+			"timelineColor2":"0xba5b89",
+			"timelineColor3":"0x734a5f",
+			"animationEnabled":"false",
+			"timelineColor":"0xdb619d"},
+		"element_${sym_baumkronen}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"animationEnabled":"true",
+			"timelineColor":"0x63599f"},
+		"element_${huhpickenkorper2}":{
+			"timelineColor2":"0xba5b89",
+			"timelineColor3":"0x734a5f",
+			"animationEnabled":"true",
+			"timelineColor":"0xdb619d"},
+		"element_${sym_huhpickenganzani}":{
 			"timelineColor2":"0xd8b467",
 			"timelineColor3":"0x81714f",
 			"animationEnabled":"true",
 			"timelineColor":"0xffd46d"},
-		"element_${_wasserstruktur_KopieCopy}":{
-			"timelineColor2":"0x168c84",
-			"timelineColor3":"0x2a605c",
-			"animationEnabled":"true",
-			"timelineColor":"0x00a096"},
-		"element_${_sym_baummenschen}":{
-			"timelineColor2":"0xd35d6e",
-			"timelineColor3":"0x7e4b52",
-			"animationEnabled":"true",
-			"timelineColor":"0xfb657a"},
-		"element_${_sym_baumgesicht}":{
-			"timelineColor2":"0x5a558a",
-			"timelineColor3":"0x4a485e",
-			"animationEnabled":"true",
-			"timelineColor":"0x63599f"},
-		"element_${_baumkronemenschen}":{
-			"timelineColor2":"0xba5b89",
-			"timelineColor3":"0x734a5f",
-			"animationEnabled":"false",
-			"timelineColor":"0xdb619d"},
-		"element_${_sym_huhliegenkopf}":{
+		"element_${sym_huhliegenkopf}":{
 			"timelineColor2":"0xcbbd71",
 			"timelineColor3":"0x7b7652",
 			"animationEnabled":"true",
 			"timelineColor":"0xeedf79"},
-		"element_${_sym_sprung}":{
-			"timelineColor2":"0x107faa",
-			"timelineColor3":"0x295a6d",
+		"element_${bruckesitzen}":{
+			"timelineColor2":"0xcbbd71",
 			"animationEnabled":"true",
-			"timelineColor":"0x008dc8"},
-		"element_${_MaisBewegungAusMenschen}":{
+			"timelineColor3":"0x7b7652",
+			"timelineColor":"0xeedf79"},
+		"element_${sym_maisfeldhinten}":{
+			"timelineColor2":"0x1aa38f",
+			"timelineColor3":"0x2a6a61",
+			"animationEnabled":"true",
+			"timelineColor":"0x00bda4"},
+		"element_${wasserstruktur_KopieCopy}":{
 			"timelineColor2":"0x168c84",
 			"timelineColor3":"0x2a605c",
-			"animationEnabled":"false",
+			"animationEnabled":"true",
 			"timelineColor":"0x00a096"},
-		"element_${_sym_blattbaum}":{
+		"element_${aussichtvorsw2}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"animationEnabled":"true",
+			"timelineColor":"0x50bd82"},
+		"element_${sym_blattbaum}":{
 			"timelineColor2":"0xb099ce",
 			"timelineColor3":"0x70657c",
 			"animationEnabled":"true",
 			"timelineColor":"0xceaef4"},
-		"element_${_Ausblickvornebuschkal}":{
-			"timelineColor2":"0xba5b89",
-			"timelineColor3":"0x734a5f",
-			"animationEnabled":"false",
-			"timelineColor":"0xdb619d"},
-		"element_${_sym_huhpickenkopfkoroer}":{
-			"timelineColor2":"0xd35d6e",
-			"timelineColor3":"0x7e4b52",
+		"element_${ausblickwasserfrei}":{
+			"timelineColor2":"0x1aa38f",
+			"timelineColor3":"0x2a6a61",
 			"animationEnabled":"true",
-			"timelineColor":"0xfb657a"},
-		"element_${_huhliegenkorper2}":{
-			"timelineColor2":"0x81aa62",
-			"timelineColor3":"0x5b6c4d",
-			"timelineColor":"0x91c767"},
-		"element_${_sym_baumkronen}":{
+			"timelineColor":"0x00bda4"},
+		"element_${sym_baumgesicht}":{
 			"timelineColor2":"0x5a558a",
 			"timelineColor3":"0x4a485e",
 			"animationEnabled":"true",
 			"timelineColor":"0x63599f"},
-		"element_${_bruckesitzen}":{
-			"timelineColor2":"0xcbbd71",
+		"element_${sym_sprung}":{
+			"timelineColor2":"0x107faa",
+			"timelineColor3":"0x295a6d",
 			"animationEnabled":"true",
-			"timelineColor3":"0x7b7652",
-			"timelineColor":"0xeedf79"}},
-	"symbol_stage":{
-		"dummyStageParentHeight":"1536px",
-		"element_${_sym_ausblick}":{
-			"timelineColor2":"0xd8b467",
-			"timelineColor3":"0x81714f",
-			"timelineColor":"0xffd46d",
-			"timelineTreeOpened":"true",
+			"timelineColor":"0x008dc8"},
+		"element_${baumkronemenschen}":{
+			"timelineColor2":"0xba5b89",
+			"timelineColor3":"0x734a5f",
 			"animationEnabled":"false",
-			"invisible":"false"},
-		"element_${_sym_maisfeld}":{
+			"timelineColor":"0xdb619d"},
+		"element_${sym_baummenschen}":{
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
+			"animationEnabled":"true",
+			"timelineColor":"0xfb657a"}},
+	"expanded:images/baugesicht.png":"nil",
+	"pref__general__FilterNonAnimatedElements":"false",
+	"symbol_sym_auge":{
+		"element_${augenaufschlagauge}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"animationEnabled":"true",
+			"timelineColor":"0x50bd82"}},
+	"sym_ausblick-Default Timeline_mark_ms":"-1",
+	"sym_vorzim-Default Timeline_playhead_ms":"0",
+	"symbol_stage":{
+		"element_${zimmer}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"animationEnabled":"false",
+			"timelineColor":"0x63599f"},
+		"dummyStageParentHeight":"1536px",
+		"element_${ib}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"animationEnabled":"false",
+			"timelineColor":"0x00a9fa"},
+		"element_${hauswegsw}":{
 			"timelineColor2":"0x81aa62",
 			"timelineColor3":"0x5b6c4d",
-			"timelineColor":"0x91c767",
 			"animationEnabled":"false",
-			"invisible":"false"},
-		"element_${_uberschwarz}":{
+			"timelineColor":"0x91c767"},
+		"element_${eb}":{
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
+			"animationEnabled":"false",
+			"timelineColor":"0xfb657a"},
+		"element_${ubervorhangani}":{
+			"timelineColor2":"0xb099ce",
+			"invisible":"false",
+			"timelineColor":"0xceaef4",
+			"animationEnabled":"false",
+			"timelineColor3":"0x70657c"},
+		"element_${Rectangle2}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"invisible":"true",
+			"timelineColor":"0x00a9fa"},
+		"element_${waldani}":{
+			"timelineColor2":"0xcbbd71",
+			"timelineColor3":"0x7b7652",
+			"animationEnabled":"false",
+			"timelineColor":"0xeedf79"},
+		"element_${sym_zimmer2}":{
+			"timelineColor2":"0xba5b89",
+			"timelineColor3":"0x734a5f",
+			"animationEnabled":"false",
+			"timelineColor":"0xdb619d"},
+		"element_${uberschwarz}":{
 			"timelineColor2":"0x107faa",
 			"invisible":"true",
 			"timelineColor":"0x008dc8",
 			"timelineTreeOpened":"false",
 			"animationEnabled":"false",
 			"timelineColor3":"0x295a6d"},
-		"element_${_hauswegsw}":{
-			"timelineColor2":"0x81aa62",
-			"timelineColor3":"0x5b6c4d",
-			"animationEnabled":"false",
-			"timelineColor":"0x91c767"},
-		"element_${_sym_vorzim}":{
-			"timelineColor2":"0xb099ce",
-			"timelineColor3":"0x70657c",
-			"timelineColor":"0xceaef4",
-			"timelineTreeOpened":"false",
-			"animationEnabled":"false",
-			"invisible":"true"},
-		"element_${_db}":{
-			"timelineColor2":"0xba5b89",
-			"timelineColor3":"0x734a5f",
-			"animationEnabled":"false",
-			"timelineColor":"0xdb619d"},
-		"element_${_wegzumhaus}":{
-			"timelineColor2":"0xd8b467",
-			"timelineColor3":"0x81714f",
-			"timelineColor":"0xffd46d",
-			"animationEnabled":"false",
-			"invisible":"true"},
-		"element_${_Rectangle3}":{
-			"timelineColor2":"0x1095d2",
-			"timelineColor3":"0x29647e",
-			"timelineColor":"0x00a9fa"},
-		"element_${_huhliegenkorper}":{
-			"timelineColor2":"0x326a96",
-			"timelineColor3":"0x385063",
-			"animationEnabled":"false",
-			"timelineColor":"0x2f73ad"},
-		"element_${_Rectangle2}":{
-			"timelineColor2":"0x1095d2",
-			"timelineColor3":"0x29647e",
-			"invisible":"true",
-			"timelineColor":"0x00a9fa"},
-		"element_${_aussichtvorsw}":{
-			"timelineColor2":"0xcbbd71",
-			"timelineColor3":"0x7b7652",
-			"animationEnabled":"false",
-			"timelineColor":"0xeedf79"},
-		"element_${_huhliegenkopf}":{
+		"element_${huhliegenkopf}":{
 			"timelineColor2":"0x168c84",
 			"timelineColor3":"0x2a605c",
 			"animationEnabled":"false",
 			"timelineColor":"0x00a096"},
-		"element_${_vorhangani}":{
-			"timelineColor2":"0x5a558a",
-			"timelineColor3":"0x4a485e",
-			"animationEnabled":"false",
-			"timelineColor":"0x63599f"},
-		"element_${_hb}":{
-			"timelineColor2":"0x107faa",
-			"timelineColor3":"0x295a6d",
-			"animationEnabled":"false",
-			"timelineColor":"0x008dc8"},
-		"element_${_MaisBewegungAusMenschen}":{
-			"timelineColor2":"0x4fa275",
-			"timelineColor3":"0x456a55",
-			"animationEnabled":"false",
-			"timelineColor":"0x50bd82"},
-		"element_${_sym_blatt}":{
-			"timelineColor2":"0x326a96",
-			"timelineColor3":"0x385063",
-			"animationEnabled":"false",
-			"timelineColor":"0x2f73ad"},
-		"element_${_sym_zimvor}":{
-			"timelineColor2":"0x4fa275",
-			"timelineColor3":"0x456a55",
-			"timelineColor":"0x50bd82",
-			"animationEnabled":"true",
-			"invisible":"false"},
-		"element_${_wald}":{
-			"timelineColor2":"0x81aa62",
-			"invisible":"true",
-			"timelineColor":"0x91c767",
-			"timelineTreeOpened":"false",
-			"animationEnabled":"false",
-			"timelineColor3":"0x5b6c4d"},
-		"element_${_schwarz}":{
-			"timelineColor2":"0x168c84",
-			"timelineColor3":"0x2a605c",
-			"animationEnabled":"false",
-			"timelineColor":"0x00a096"},
-		"element_${_sym_zimmer2}":{
-			"timelineColor2":"0xba5b89",
-			"timelineColor3":"0x734a5f",
-			"animationEnabled":"false",
-			"timelineColor":"0xdb619d"},
-		"dummyStageParentWidth":"2048px",
-		"element_${_MaisHintergrFarben}":{
-			"timelineColor2":"0x4fa275",
-			"timelineColor3":"0x456a55",
-			"animationEnabled":"false",
-			"timelineColor":"0x50bd82"},
-		"element_${_a}":{
+		"element_${aussichthintersw}":{
 			"timelineColor2":"0x81aa62",
 			"timelineColor3":"0x5b6c4d",
 			"animationEnabled":"false",
 			"timelineColor":"0x91c767"},
-		"element_${_waldani}":{
-			"timelineColor2":"0xcbbd71",
-			"timelineColor3":"0x7b7652",
-			"animationEnabled":"false",
-			"timelineColor":"0xeedf79"},
-		"element_${_MaisHintergrund2}":{
-			"timelineColor2":"0xd8b467",
-			"invisible":"true",
-			"timelineColor":"0xffd46d",
-			"animationEnabled":"false",
-			"timelineColor3":"0x81714f"},
-		"element_${_striche2}":{
-			"timelineColor2":"0xd8b467",
-			"timelineColor3":"0x81714f",
-			"timelineColor":"0xffd46d"},
-		"element_${_sym_mais}":{
+		"element_${sym_maisfeld}":{
 			"timelineColor2":"0x81aa62",
 			"timelineColor3":"0x5b6c4d",
 			"timelineColor":"0x91c767",
-			"timelineTreeOpened":"true",
-			"animationEnabled":"true",
-			"invisible":"true"},
-		"element_${_MaisHinten}":{
-			"timelineColor2":"0x1aa38f",
-			"timelineColor3":"0x2a6a61",
-			"animationEnabled":"false",
-			"timelineColor":"0x00bda4"},
-		"element_${_Rectangle}":{
-			"timelineColor2":"0x168c84",
-			"timelineColor3":"0x2a605c",
-			"timelineColor":"0x00a096",
 			"animationEnabled":"false",
 			"invisible":"false"},
-		"element_${_zimmer}":{
-			"timelineColor2":"0x5a558a",
-			"timelineColor3":"0x4a485e",
-			"animationEnabled":"false",
-			"timelineColor":"0x63599f"},
-		"element_${_eb}":{
-			"timelineColor2":"0xd35d6e",
-			"timelineColor3":"0x7e4b52",
-			"animationEnabled":"false",
-			"timelineColor":"0xfb657a"},
-		"element_${_sym_vorhang}":{
-			"timelineColor2":"0xd35d6e",
-			"timelineColor3":"0x7e4b52",
-			"animationEnabled":"false",
-			"timelineColor":"0xfb657a"},
-		"element_${_bb}":{
-			"timelineColor2":"0xcbbd71",
-			"timelineColor3":"0x7b7652",
-			"animationEnabled":"false",
-			"timelineColor":"0xeedf79"},
-		"element_${_StageA}":{
+		"defaultStageParentHeight":"1536px",
+		"element_${StageA}":{
 			"timelineColor2":"0x326a96",
 			"timelineColor3":"0x385063",
 			"timelineColor":"0x2f73ad",
 			"timelineTreeOpened":"true",
 			"invisible":"false"},
-		"defaultStageParentHeight":"1536px",
-		"element_${_sym_zim}":{
-			"timelineColor2":"0x5a558a",
-			"timelineColor3":"0x4a485e",
-			"animationEnabled":"true",
-			"timelineColor":"0x63599f"},
-		"element_${_haushintersw}":{
-			"timelineColor2":"0x4fa275",
-			"timelineColor3":"0x456a55",
-			"animationEnabled":"false",
-			"timelineColor":"0x50bd82"},
-		"element_${_MaisHintergrund}":{
-			"timelineColor2":"0xba5b89",
+		"element_${MaisHintergrund2}":{
+			"timelineColor2":"0xd8b467",
 			"invisible":"true",
-			"timelineColor":"0xdb619d",
+			"timelineColor":"0xffd46d",
 			"animationEnabled":"false",
-			"timelineColor3":"0x734a5f"},
-		"element_${_uberwaldani}":{
-			"timelineColor2":"0xba5b89",
-			"invisible":"true",
-			"timelineColor":"0xdb619d",
-			"animationEnabled":"false",
-			"timelineColor3":"0x734a5f"},
-		"element_${_sym_zim2}":{
+			"timelineColor3":"0x81714f"},
+		"element_${Rectangle}":{
 			"timelineColor2":"0x168c84",
 			"timelineColor3":"0x2a605c",
-			"animationEnabled":"true",
-			"timelineColor":"0x00a096"},
-		"element_${_ib}":{
-			"timelineColor2":"0x1095d2",
-			"timelineColor3":"0x29647e",
+			"timelineColor":"0x00a096",
 			"animationEnabled":"false",
-			"timelineColor":"0x00a9fa"},
-		"defaultStageParentWidth":"2048px",
-		"element_${_fb}":{
-			"timelineColor2":"0xb099ce",
-			"timelineColor3":"0x70657c",
+			"invisible":"false"},
+		"element_${wegzumhaus}":{
+			"timelineColor2":"0xd8b467",
+			"timelineColor3":"0x81714f",
+			"timelineColor":"0xffd46d",
 			"animationEnabled":"false",
-			"timelineColor":"0xceaef4"},
-		"element_${_gb}":{
+			"invisible":"true"},
+		"element_${sym_ausblick}":{
+			"timelineColor2":"0xd8b467",
+			"timelineColor3":"0x81714f",
+			"timelineColor":"0xffd46d",
+			"timelineTreeOpened":"true",
+			"animationEnabled":"false",
+			"invisible":"false"},
+		"element_${sym_schwarz}":{
+			"timelineColor2":"0x1aa38f",
+			"timelineColor3":"0x2a6a61",
+			"timelineColor":"0x00bda4",
+			"timelineTreeOpened":"false",
+			"animationEnabled":"false",
+			"invisible":"true"},
+		"element_${sym_zim}":{
 			"timelineColor2":"0x5a558a",
 			"timelineColor3":"0x4a485e",
-			"animationEnabled":"false",
+			"animationEnabled":"true",
 			"timelineColor":"0x63599f"},
-		"element_${_ubervorhangani}":{
+		"dummyStageParentWidth":"2048px",
+		"element_${sym_zimvor}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"timelineColor":"0x50bd82",
+			"animationEnabled":"true",
+			"invisible":"false"},
+		"element_${sym_vorzim}":{
 			"timelineColor2":"0xb099ce",
-			"invisible":"false",
+			"timelineColor3":"0x70657c",
 			"timelineColor":"0xceaef4",
+			"timelineTreeOpened":"false",
 			"animationEnabled":"false",
-			"timelineColor3":"0x70657c"},
-		"element_${_sym_huhliegen}":{
+			"invisible":"true"},
+		"element_${sym_blatt}":{
+			"timelineColor2":"0x326a96",
+			"timelineColor3":"0x385063",
+			"animationEnabled":"false",
+			"timelineColor":"0x2f73ad"},
+		"element_${aussichtvorsw}":{
+			"timelineColor2":"0xcbbd71",
+			"timelineColor3":"0x7b7652",
+			"animationEnabled":"false",
+			"timelineColor":"0xeedf79"},
+		"element_${sym_huhliegen}":{
 			"timelineColor2":"0x1aa38f",
 			"timelineColor3":"0x2a6a61",
 			"timelineColor":"0x00bda4",
 			"locked":"false",
 			"animationEnabled":"false",
 			"invisible":"false"},
-		"element_${_MaisBewegungAusblick}":{
+		"element_${hb}":{
+			"timelineColor2":"0x107faa",
+			"timelineColor3":"0x295a6d",
+			"animationEnabled":"false",
+			"timelineColor":"0x008dc8"},
+		"element_${vorhangani}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"animationEnabled":"false",
+			"timelineColor":"0x63599f"},
+		"element_${MaisBewegungAusblick}":{
 			"timelineColor2":"0x1aa38f",
 			"timelineColor3":"0x2a6a61",
 			"animationEnabled":"false",
 			"timelineColor":"0x00bda4"},
-		"element_${_aussichthintersw}":{
+		"element_${MaisHinten}":{
+			"timelineColor2":"0x1aa38f",
+			"timelineColor3":"0x2a6a61",
+			"animationEnabled":"false",
+			"timelineColor":"0x00bda4"},
+		"element_${fb}":{
+			"timelineColor2":"0xb099ce",
+			"timelineColor3":"0x70657c",
+			"animationEnabled":"false",
+			"timelineColor":"0xceaef4"},
+		"element_${striche2}":{
+			"timelineColor2":"0xd8b467",
+			"timelineColor3":"0x81714f",
+			"timelineColor":"0xffd46d"},
+		"element_${huhliegenkorper}":{
+			"timelineColor2":"0x326a96",
+			"timelineColor3":"0x385063",
+			"animationEnabled":"false",
+			"timelineColor":"0x2f73ad"},
+		"element_${gb}":{
+			"timelineColor2":"0x5a558a",
+			"timelineColor3":"0x4a485e",
+			"animationEnabled":"false",
+			"timelineColor":"0x63599f"},
+		"element_${a}":{
 			"timelineColor2":"0x81aa62",
 			"timelineColor3":"0x5b6c4d",
 			"animationEnabled":"false",
 			"timelineColor":"0x91c767"},
-		"element_${_sym_schwarz}":{
-			"timelineColor2":"0x1aa38f",
-			"timelineColor3":"0x2a6a61",
-			"timelineColor":"0x00bda4",
+		"element_${Rectangle3}":{
+			"timelineColor2":"0x1095d2",
+			"timelineColor3":"0x29647e",
+			"timelineColor":"0x00a9fa"},
+		"element_${sym_zim2}":{
+			"timelineColor2":"0x168c84",
+			"timelineColor3":"0x2a605c",
+			"animationEnabled":"true",
+			"timelineColor":"0x00a096"},
+		"element_${db}":{
+			"timelineColor2":"0xba5b89",
+			"timelineColor3":"0x734a5f",
+			"animationEnabled":"false",
+			"timelineColor":"0xdb619d"},
+		"element_${bb}":{
+			"timelineColor2":"0xcbbd71",
+			"timelineColor3":"0x7b7652",
+			"animationEnabled":"false",
+			"timelineColor":"0xeedf79"},
+		"element_${MaisBewegungAusMenschen}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"animationEnabled":"false",
+			"timelineColor":"0x50bd82"},
+		"element_${sym_mais}":{
+			"timelineColor2":"0x81aa62",
+			"timelineColor3":"0x5b6c4d",
+			"timelineColor":"0x91c767",
+			"timelineTreeOpened":"true",
+			"animationEnabled":"true",
+			"invisible":"true"},
+		"element_${MaisHintergrund}":{
+			"timelineColor2":"0xba5b89",
+			"invisible":"true",
+			"timelineColor":"0xdb619d",
+			"animationEnabled":"false",
+			"timelineColor3":"0x734a5f"},
+		"element_${sym_vorhang}":{
+			"timelineColor2":"0xd35d6e",
+			"timelineColor3":"0x7e4b52",
+			"animationEnabled":"false",
+			"timelineColor":"0xfb657a"},
+		"element_${wald}":{
+			"timelineColor2":"0x81aa62",
+			"invisible":"true",
+			"timelineColor":"0x91c767",
 			"timelineTreeOpened":"false",
 			"animationEnabled":"false",
-			"invisible":"true"},
-		"element_${_Stage}":{
+			"timelineColor3":"0x5b6c4d"},
+		"element_${cb}":{
+			"timelineColor2":"0xd8b467",
+			"timelineColor3":"0x81714f",
+			"animationEnabled":"false",
+			"timelineColor":"0xffd46d"},
+		"element_${haushintersw}":{
+			"timelineColor2":"0x4fa275",
+			"timelineColor3":"0x456a55",
+			"animationEnabled":"false",
+			"timelineColor":"0x50bd82"},
+		"element_${Stage}":{
 			"timelineColor2":"0xcbbd71",
 			"timelineColor3":"0x7b7652",
 			"invisible":"false",
 			"timelineColor":"0xeedf79"},
-		"element_${_cb}":{
-			"timelineColor2":"0xd8b467",
-			"timelineColor3":"0x81714f",
-			"animationEnabled":"false",
-			"timelineColor":"0xffd46d"}},
-	"symbol_sym_blatt":{
-		"element_${_a}":{
-			"timelineColor2":"0xb099ce",
-			"timelineColor3":"0x70657c",
-			"timelineColor":"0xceaef4",
-			"animationEnabled":"true",
-			"invisible":"true"},
-		"element_${_cb}":{
+		"defaultStageParentWidth":"2048px",
+		"element_${uberwaldani}":{
 			"timelineColor2":"0xba5b89",
-			"timelineColor3":"0x734a5f",
+			"invisible":"true",
 			"timelineColor":"0xdb619d",
-			"animationEnabled":"true",
-			"invisible":"true"},
-		"element_${_sym_auge}":{
-			"timelineColor2":"0x1aa38f",
-			"timelineColor3":"0x2a6a61",
-			"animationEnabled":"true",
-			"timelineColor":"0x00bda4"},
-		"element_${_gb}":{
+			"animationEnabled":"false",
+			"timelineColor3":"0x734a5f"},
+		"element_${MaisHintergrFarben}":{
 			"timelineColor2":"0x4fa275",
 			"timelineColor3":"0x456a55",
-			"timelineColor":"0x50bd82",
-			"animationEnabled":"true",
-			"invisible":"true"},
-		"element_${_eb}":{
-			"timelineColor2":"0xcbbd71",
-			"timelineColor3":"0x7b7652",
-			"timelineColor":"0xeedf79",
-			"animationEnabled":"true",
-			"invisible":"true"},
-		"element_${_hb}":{
-			"timelineColor2":"0x1aa38f",
-			"timelineColor3":"0x2a6a61",
-			"timelineColor":"0x00bda4",
-			"animationEnabled":"true",
-			"invisible":"true"},
-		"element_${_db}":{
-			"timelineColor2":"0xd8b467",
-			"timelineColor3":"0x81714f",
-			"timelineColor":"0xffd46d",
-			"animationEnabled":"true",
-			"invisible":"true"},
-		"element_${_augenaufschlagauge}":{
+			"animationEnabled":"false",
+			"timelineColor":"0x50bd82"},
+		"element_${schwarz}":{
 			"timelineColor2":"0x168c84",
 			"timelineColor3":"0x2a605c",
 			"animationEnabled":"false",
-			"timelineColor":"0x00a096"},
-		"element_${_bb}":{
-			"timelineColor2":"0xd35d6e",
-			"timelineColor3":"0x7e4b52",
-			"timelineColor":"0xfb657a",
-			"animationEnabled":"true",
-			"invisible":"true"},
-		"element_${_fb}":{
-			"timelineColor2":"0x81aa62",
-			"timelineColor3":"0x5b6c4d",
-			"timelineColor":"0x91c767",
-			"animationEnabled":"true",
-			"invisible":"true"},
-		"element_${_ib}":{
-			"timelineColor2":"0x168c84",
-			"timelineColor3":"0x2a605c",
-			"timelineColor":"0x00a096",
-			"animationEnabled":"true",
-			"invisible":"true"}},
-	"stage-Default Timeline_playhead_ms":"0",
-	"symbol_sym_schwarz":{
-		"element_${_schwarz}":{
-			"timelineColor2":"0xd35d6e",
-			"timelineColor3":"0x7e4b52",
-			"timelineColor":"0xfb657a",
-			"animationEnabled":"true",
-			"invisible":"true"}},
-	"wegzumhaus-Default Timeline_playhead_ms":"0",
-	"symbol_sym_huhpickenganzani":{
-		"element_${_huhpickenganzani}":{
-			"timelineColor2":"0xcbbd71",
-			"timelineColor3":"0x7b7652",
-			"animationEnabled":"true",
-			"timelineColor":"0xeedf79"}}}
+			"timelineColor":"0x00a096"}}}

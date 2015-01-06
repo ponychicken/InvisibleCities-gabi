@@ -1,1282 +1,3629 @@
-/**
- * Adobe Edge: symbol definitions
- */
-(function($, Edge, compId){
-//images folder
-var im='images/';
+/*jslint */
+/*global AdobeEdge: false, window: false, document: false, console:false, alert: false */
+(function (compId) {
 
-var fonts = {};
-var opts = {};
-var resources = [
-];
-var symbols = {
-"stage": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-            {
-                id: 'sym_blatt',
-                type: 'rect',
-                rect: ['1', '1','auto','auto','auto', 'auto']
-            }],
-            symbolInstances: [
-            {
-                id: 'sym_blatt',
-                symbolName: 'sym_blatt',
-                autoPlay: {
+    "use strict";
+    var im='images/',
+        aud='media/',
+        vid='media/',
+        js='js/',
+        fonts = {
+        },
+        opts = {
+            'gAudioPreloadPreference': 'auto',
+            'gVideoPreloadPreference': 'auto'
+        },
+        resources = [
+        ],
+        scripts = [
+            js+"jquery-2.0.3.min.js"
+        ],
+        symbols = {
+            "stage": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'sym_blatt',
+                            symbolName: 'sym_blatt',
+                            type: 'rect',
+                            rect: ['1', '1', '2048', '1536', 'auto', 'auto']
+                        }
+                    ],
+                    style: {
+                        '${StageB}': {
+                            isStage: true,
+                            rect: ['0', '0', '0', '0', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,1.00)"]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: false,
+                    data: [
+                        [
+                            "eid661",
+                            "background-color",
+                            0,
+                            0,
+                            "linear",
+                            "${StageB}",
+                            'rgba(0,0,0,1.00)',
+                            'rgba(0,0,0,1.00)'
+                        ]
+                    ]
+                }
+            },
+            "sym_vorhang": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'vorhangani',
+                            type: 'image',
+                            rect: [0, 0, '5112px', '538px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/vorhangani.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 850, 538]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 2500,
+                    autoPlay: false,
+                    data: [
+                        [
+                            "eid58",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${vorhangani}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid60",
+                            "left",
+                            500,
+                            0,
+                            "linear",
+                            "${vorhangani}",
+                            '0px',
+                            '-871px'
+                        ],
+                        [
+                            "eid61",
+                            "left",
+                            1000,
+                            0,
+                            "linear",
+                            "${vorhangani}",
+                            '-872px',
+                            '-1750px'
+                        ],
+                        [
+                            "eid62",
+                            "left",
+                            1500,
+                            0,
+                            "linear",
+                            "${vorhangani}",
+                            '-1751px',
+                            '-2610px'
+                        ],
+                        [
+                            "eid63",
+                            "left",
+                            2000,
+                            0,
+                            "linear",
+                            "${vorhangani}",
+                            '-2610px',
+                            '-3462px'
+                        ],
+                        [
+                            "eid64",
+                            "left",
+                            2500,
+                            0,
+                            "linear",
+                            "${vorhangani}",
+                            '-3464px',
+                            '-4313px'
+                        ]
+                    ]
+                }
+            },
+            "wegzumhaus": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['-580', '-403', '3414px', '2369px', 'auto', 'auto'],
+                            id: 'haushinterswrgb',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/haushinterswrgb.jpg', '0px', '0px']
+                        },
+                        {
+                            rect: [142, 216, '1737px', '916px', 'auto', 'auto'],
+                            id: 'hauswegsw',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/hauswegsw.png', '0px', '0px']
+                        },
+                        {
+                            id: 'waldanirgb',
+                            type: 'image',
+                            rect: [25, '9', '8192px', '1536px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/waldanirgb.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 8217, 1564]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 3000,
+                    autoPlay: false,
+                    data: [
+                        [
+                            "eid97",
+                            "scaleY",
+                            0,
+                            3000,
+                            "linear",
+                            "${haushinterswrgb}",
+                            '0.66',
+                            '1'
+                        ],
+                        [
+                            "eid75",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${waldanirgb}",
+                            '25px',
+                            '25px'
+                        ],
+                        [
+                            "eid76",
+                            "left",
+                            500,
+                            0,
+                            "linear",
+                            "${waldanirgb}",
+                            '25px',
+                            '-2023px'
+                        ],
+                        [
+                            "eid77",
+                            "left",
+                            1000,
+                            0,
+                            "linear",
+                            "${waldanirgb}",
+                            '-2023px',
+                            '-4071px'
+                        ],
+                        [
+                            "eid78",
+                            "left",
+                            1500,
+                            0,
+                            "linear",
+                            "${waldanirgb}",
+                            '-4071px',
+                            '-6119px'
+                        ],
+                        [
+                            "eid79",
+                            "left",
+                            2000,
+                            0,
+                            "linear",
+                            "${waldanirgb}",
+                            '-6119px',
+                            '-8167px'
+                        ],
+                        [
+                            "eid49",
+                            "scaleX",
+                            0,
+                            3000,
+                            "linear",
+                            "${hauswegsw}",
+                            '0.66',
+                            '1'
+                        ],
+                        [
+                            "eid128",
+                            "top",
+                            0,
+                            3000,
+                            "linear",
+                            "${hauswegsw}",
+                            '216px',
+                            '158px'
+                        ],
+                        [
+                            "eid129",
+                            "left",
+                            0,
+                            3000,
+                            "linear",
+                            "${hauswegsw}",
+                            '142px',
+                            '91px'
+                        ],
+                        [
+                            "eid96",
+                            "scaleX",
+                            0,
+                            3000,
+                            "linear",
+                            "${haushinterswrgb}",
+                            '0.66',
+                            '1'
+                        ],
+                        [
+                            "eid50",
+                            "scaleY",
+                            0,
+                            3000,
+                            "linear",
+                            "${hauswegsw}",
+                            '0.66',
+                            '1'
+                        ]
+                    ]
+                }
+            },
+            "sym_schwarz": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '2048px', '1536px', 'auto', 'auto'],
+                            opacity: '0.850000',
+                            id: 'schwarz',
+                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
+                            type: 'rect',
+                            fill: ['rgba(0,0,0,1)']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 2000,
+                    autoPlay: false,
+                    data: [
+                        [
+                            "eid70",
+                            "opacity",
+                            0,
+                            2000,
+                            "linear",
+                            "${schwarz}",
+                            '0.850000',
+                            '0'
+                        ]
+                    ]
+                }
+            },
+            "sym_ausblick": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [133, -94, '2048px', '1536px', 'auto', 'auto'],
+                            id: 'aussichthintersw2',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/aussichthintersw.jpg', '0px', '0px']
+                        },
+                        {
+                            rect: [133, -94, '2048px', '1536px', 'auto', 'auto'],
+                            id: 'aussichtvorsw2',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/aussichtvorsw.png', '0px', '0px']
+                        },
+                        {
+                            id: 'huhliegenkorper2',
+                            type: 'image',
+                            rect: [1116, 1198, '140px', '122px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
+                        },
+                        {
+                            rect: [1146, 1214, 50, 68, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'sym_huhliegenkopf',
+                            symbolName: 'sym_huhliegenkopf',
+                            type: 'rect'
+                        },
+                        {
+                            rect: ['1465px', '1242px', 170, 155, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'sym_huhpickenganzani',
+                            symbolName: 'sym_huhpickenganzani',
+                            type: 'rect'
+                        },
+                        {
+                            rect: ['1278px', '1291px', '163px', '146px', 'auto', 'auto'],
+                            id: 'huhpickenkorper2',
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/huhpickenkorper.png', '0px', '0px']
+                        },
+                        {
+                            rect: ['1278px', '1291px', 65, 146, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'sym_huhpickenkopfkoroer',
+                            symbolName: 'sym_huhpickenkopfkoroer',
+                            type: 'rect',
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 15162,
+                    autoPlay: false,
+                    labels: {
+                        "huhsontherun": 3069
+                    },
+                    data: [
+                        [
+                            "eid375",
+                            "rotateZ",
+                            5250,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid376",
+                            "rotateZ",
+                            5500,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid378",
+                            "rotateZ",
+                            5750,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '-8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid380",
+                            "rotateZ",
+                            6000,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid382",
+                            "rotateZ",
+                            6250,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid387",
+                            "rotateZ",
+                            10500,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid388",
+                            "rotateZ",
+                            10750,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid389",
+                            "rotateZ",
+                            11000,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid390",
+                            "rotateZ",
+                            11250,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid391",
+                            "rotateZ",
+                            11500,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid259",
+                            "scaleX",
+                            0,
+                            3000,
+                            "linear",
+                            "${aussichtvorsw2}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid371",
+                            "location",
+                            5250,
+                            1000,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            [[1359.5, 1364, 0, 0, 0, 0,0],[1344.43, 1370.42, -26.36, -18.81, -23.2, -16.55,18.22],[1318.34, 1370.17, -16.72, 1.61, -23.12, 2.22,45.12],[1307.5, 1366.14, 0, 0, 0, 0,56.93]]
+                        ],
+                        [
+                            "eid400",
+                            "location",
+                            10500,
+                            1000,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            [[1307.5, 1366.14, 0, 0, 0, 0,0],[1318.34, 1370.17, 23.12, -2.22, 16.72, -1.61,11.81],[1344.43, 1370.42, 23.2, 16.55, 26.36, 18.81,38.7],[1359.5, 1364, 0, 0, 0, 0,56.93]]
+                        ],
+                        [
+                            "eid374",
+                            "rotateZ",
+                            5250,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid377",
+                            "rotateZ",
+                            5500,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '-8deg'
+                        ],
+                        [
+                            "eid379",
+                            "rotateZ",
+                            5750,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '-8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid381",
+                            "rotateZ",
+                            6000,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid383",
+                            "rotateZ",
+                            6250,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid393",
+                            "rotateZ",
+                            10500,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid394",
+                            "rotateZ",
+                            10750,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '-8deg'
+                        ],
+                        [
+                            "eid395",
+                            "rotateZ",
+                            11000,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '-8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid396",
+                            "rotateZ",
+                            11250,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid397",
+                            "rotateZ",
+                            11500,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid370",
+                            "location",
+                            5250,
+                            250,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1310.5, 1364, 0, 0, 0, 0,0],[1299.5, 1364, 0, 0, -20.19, -2.76,11.04]]
+                        ],
+                        [
+                            "eid384",
+                            "location",
+                            5500,
+                            750,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1299.5, 1364, -5.53, -0.76, 0, 0,0],[1291.41, 1360.26, -9.59, 0.4, -4.94, 0.2,8.95],[1282.45, 1368.31, -36.7, -20.67, -8.45, -4.76,21.41],[1258.5, 1366.14, 0, 0, 0, 0,46.11]]
+                        ],
+                        [
+                            "eid405",
+                            "location",
+                            9500,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1356.51, 1366, 0, 0, 0, 0,0],[1356.51, 1366, 0, 0, 0, 0,0]]
+                        ],
+                        [
+                            "eid398",
+                            "location",
+                            10500,
+                            750,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1352.91, 1367.26, 0, 0, 0, 0,0],[1376.86, 1369.43, 8.45, 4.76, 36.7, 20.67,24.7],[1385.82, 1361.38, 4.94, -0.2, 9.59, -0.4,37.16],[1393.91, 1365.12, 0, 0, 5.53, 0.76,46.11]]
+                        ],
+                        [
+                            "eid399",
+                            "location",
+                            11250,
+                            250,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1393.91, 1365.12, 20.19, 2.76, 0, 0,0],[1404.91, 1365.12, 0, 0, 0, 0,11.04]]
+                        ],
+                        [
+                            "eid261",
+                            "scaleX",
+                            0,
+                            3000,
+                            "linear",
+                            "${aussichthintersw2}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid273",
+                            "left",
+                            0,
+                            3000,
+                            "linear",
+                            "${aussichthintersw2}",
+                            '133px',
+                            '0px'
+                        ],
+                        [
+                            "eid271",
+                            "left",
+                            0,
+                            3000,
+                            "linear",
+                            "${aussichtvorsw2}",
+                            '133px',
+                            '0px'
+                        ],
+                        [
+                            "eid260",
+                            "scaleY",
+                            0,
+                            3000,
+                            "linear",
+                            "${aussichtvorsw2}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid404",
+                            "scaleX",
+                            3184,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid402",
+                            "scaleX",
+                            9500,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '1',
+                            '-1'
+                        ],
+                        [
+                            "eid272",
+                            "top",
+                            0,
+                            3000,
+                            "linear",
+                            "${aussichtvorsw2}",
+                            '-94px',
+                            '0px'
+                        ],
+                        [
+                            "eid403",
+                            "scaleX",
+                            3184,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid401",
+                            "scaleX",
+                            9500,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '1',
+                            '-1'
+                        ],
+                        [
+                            "eid262",
+                            "scaleY",
+                            0,
+                            3000,
+                            "linear",
+                            "${aussichthintersw2}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid274",
+                            "top",
+                            0,
+                            3000,
+                            "linear",
+                            "${aussichthintersw2}",
+                            '-94px',
+                            '0px'
+                        ]
+                    ]
+                }
+            },
+            "sym_zimmer": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'zimmer',
+                            type: 'image',
+                            rect: [0, 0, '2048px', '1536px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/zimmer.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: false,
+                    data: [
 
+                    ]
+                }
+            },
+            "sym_vorzim": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'sym_zimmer2',
+                            type: 'rect',
+                            symbolName: 'sym_zimmer',
+                            rect: [0, 0, 2048, 1536, 'auto', 'auto']
+                        },
+                        {
+                            rect: [767, 263, 850, 538, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'sym_vorhang',
+                            symbolName: 'sym_vorhang',
+                            type: 'rect'
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 4000,
+                    autoPlay: false,
+                    data: [
+                        [
+                            "eid162",
+                            "scaleY",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_zimmer2}",
+                            '1',
+                            '3.76926'
+                        ],
+                        [
+                            "eid188",
+                            "top",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_zimmer2}",
+                            '0px',
+                            '791px'
+                        ],
+                        [
+                            "eid166",
+                            "scaleY",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_vorhang}",
+                            '1',
+                            '3.76926'
+                        ],
+                        [
+                            "eid161",
+                            "scaleX",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_zimmer2}",
+                            '1',
+                            '3.76926'
+                        ],
+                        [
+                            "eid190",
+                            "top",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_vorhang}",
+                            '263px',
+                            '404px'
+                        ],
+                        [
+                            "eid187",
+                            "left",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_zimmer2}",
+                            '0px',
+                            '-851px'
+                        ],
+                        [
+                            "eid165",
+                            "scaleX",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_vorhang}",
+                            '1',
+                            '3.76926'
+                        ],
+                        [
+                            "eid189",
+                            "left",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_vorhang}",
+                            '767px',
+                            '289px'
+                        ]
+                    ]
+                }
+            },
+            "sym_huhliegen": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'huhliegenkorper',
+                            type: 'image',
+                            rect: [0, 0, '140px', '122px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
+                        },
+                        {
+                            id: 'huhliegenkopf',
+                            type: 'image',
+                            rect: [0, 0, '242px', '68px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/huhliegenkopf.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 242, 122]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: false,
+                    data: [
+
+                    ]
+                }
+            },
+            "sym_huhliegenkopf": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'huhliegenkopf2',
+                            type: 'image',
+                            rect: [-5, 0, '242px', '68px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/huhliegenkopf.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 50, 68]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: false,
+                    labels: {
+                        "loophuhn1": 0
+                    },
+                    data: [
+                        [
+                            "eid285",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${huhliegenkopf2}",
+                            '-5px',
+                            '-5px'
+                        ],
+                        [
+                            "eid286",
+                            "left",
+                            649,
+                            0,
+                            "linear",
+                            "${huhliegenkopf2}",
+                            '-5px',
+                            '-60px'
+                        ],
+                        [
+                            "eid287",
+                            "left",
+                            1182,
+                            0,
+                            "linear",
+                            "${huhliegenkopf2}",
+                            '-60px',
+                            '-121px'
+                        ],
+                        [
+                            "eid288",
+                            "left",
+                            1750,
+                            0,
+                            "linear",
+                            "${huhliegenkopf2}",
+                            '-121px',
+                            '-185px'
+                        ],
+                        [
+                            "eid289",
+                            "left",
+                            2750,
+                            0,
+                            "linear",
+                            "${huhliegenkopf2}",
+                            '-185px',
+                            '-121px'
+                        ],
+                        [
+                            "eid290",
+                            "left",
+                            4399,
+                            0,
+                            "linear",
+                            "${huhliegenkopf2}",
+                            '-121px',
+                            '-61px'
+                        ]
+                    ]
+                }
+            },
+            "sym_huhflugelganzani": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'huhflugelganzani',
+                            type: 'image',
+                            rect: [-21, -5, '1109px', '259px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/huhflugelganzani.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 180, 259]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 3116,
+                    autoPlay: false,
+                    labels: {
+                        "loophuhflugelganzani2": 0,
+                        "labelhuhflugelganzani": 1095
+                    },
+                    data: [
+                        [
+                            "eid304",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-21px',
+                            '-21px'
+                        ],
+                        [
+                            "eid306",
+                            "left",
+                            392,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-21px',
+                            '-197px'
+                        ],
+                        [
+                            "eid308",
+                            "left",
+                            750,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-197px',
+                            '-374px'
+                        ],
+                        [
+                            "eid310",
+                            "left",
+                            1095,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-374px',
+                            '-548px'
+                        ],
+                        [
+                            "eid312",
+                            "left",
+                            1386,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-548px',
+                            '-739px'
+                        ],
+                        [
+                            "eid314",
+                            "left",
+                            1750,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-739px',
+                            '-918px'
+                        ],
+                        [
+                            "eid316",
+                            "left",
+                            2000,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-918px',
+                            '-734px'
+                        ],
+                        [
+                            "eid318",
+                            "left",
+                            2305,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-734px',
+                            '-543px'
+                        ],
+                        [
+                            "eid320",
+                            "left",
+                            2643,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-543px',
+                            '-385px'
+                        ],
+                        [
+                            "eid322",
+                            "left",
+                            2839,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-385px',
+                            '-205px'
+                        ],
+                        [
+                            "eid305",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-5px',
+                            '-5px'
+                        ],
+                        [
+                            "eid307",
+                            "top",
+                            392,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-5px',
+                            '-6px'
+                        ],
+                        [
+                            "eid309",
+                            "top",
+                            750,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-6px',
+                            '-4px'
+                        ],
+                        [
+                            "eid311",
+                            "top",
+                            1095,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-4px',
+                            '-2px'
+                        ],
+                        [
+                            "eid313",
+                            "top",
+                            1386,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-2px',
+                            '2px'
+                        ],
+                        [
+                            "eid315",
+                            "top",
+                            1750,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '2px',
+                            '-3px'
+                        ],
+                        [
+                            "eid317",
+                            "top",
+                            2000,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-3px',
+                            '2px'
+                        ],
+                        [
+                            "eid319",
+                            "top",
+                            2305,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '2px',
+                            '-3px'
+                        ],
+                        [
+                            "eid321",
+                            "top",
+                            2643,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-3px',
+                            '2px'
+                        ],
+                        [
+                            "eid323",
+                            "top",
+                            2839,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '2px',
+                            '3px'
+                        ]
+                    ]
+                }
+            },
+            "sym_huhpickenganzani": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'huhpickenganzani',
+                            type: 'image',
+                            rect: [-7, 0, '550px', '147px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/huhpickenganzani.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 170, 155]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 3717,
+                    autoPlay: false,
+                    labels: {
+                        "loophuhpickenganzani3": 0
+                    },
+                    data: [
+                        [
+                            "eid329",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid331",
+                            "top",
+                            2250,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '0px',
+                            '2px'
+                        ],
+                        [
+                            "eid333",
+                            "top",
+                            2635,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '2px',
+                            '5px'
+                        ],
+                        [
+                            "eid335",
+                            "top",
+                            3467,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '5px',
+                            '0px'
+                        ],
+                        [
+                            "eid328",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '-7px',
+                            '-7px'
+                        ],
+                        [
+                            "eid330",
+                            "left",
+                            2250,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '-7px',
+                            '-190px'
+                        ],
+                        [
+                            "eid332",
+                            "left",
+                            2635,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '-190px',
+                            '-367px'
+                        ],
+                        [
+                            "eid334",
+                            "left",
+                            3467,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '-367px',
+                            '-190px'
+                        ]
+                    ]
+                }
+            },
+            "sym_huhpickenkopfkoroer": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'huhpickenkopf',
+                            type: 'image',
+                            rect: [-87, 0, '163px', '146px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/huhpickenkopf.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 65, 146]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 1500,
+                    autoPlay: false,
+                    labels: {
+                        "loophuhn4": 0
+                    },
+                    data: [
+                        [
+                            "eid339",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${huhpickenkopf}",
+                            '-87px',
+                            '-87px'
+                        ],
+                        [
+                            "eid341",
+                            "left",
+                            500,
+                            0,
+                            "linear",
+                            "${huhpickenkopf}",
+                            '-87px',
+                            '-4px'
+                        ],
+                        [
+                            "eid340",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${huhpickenkopf}",
+                            '0px',
+                            '0px'
+                        ]
+                    ]
+                }
+            },
+            "sym_blatt": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['0', '0', 2048, 1536, 'auto', 'auto'],
+                            id: 'sym_gesicht',
+                            symbolName: 'sym_gesicht',
+                            type: 'rect'
+                        },
+                        {
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            id: 'ib',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ib.png', '0px', '0px']
+                        },
+                        {
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            id: 'hb',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/hb.png', '0px', '0px']
+                        },
+                        {
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            id: 'gb',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/gb.png', '0px', '0px']
+                        },
+                        {
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            id: 'fb',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/fb.png', '0px', '0px']
+                        },
+                        {
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            id: 'eb',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/eb.png', '0px', '0px']
+                        },
+                        {
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            id: 'db',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/db.png', '0px', '0px']
+                        },
+                        {
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            id: 'cb',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/cb.png', '0px', '0px']
+                        },
+                        {
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            id: 'bb',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/bb.png', '0px', '0px']
+                        },
+                        {
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            id: 'a',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/a.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: true,
+                    labels: {
+                        "loop_blatt": 0
+                    },
+                    data: [
+                        [
+                            "eid448",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-50px',
+                            '-30px'
+                        ],
+                        [
+                            "eid493",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-30px',
+                            '-50px'
+                        ],
+                        [
+                            "eid528",
+                            "left",
+                            1000,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-50px',
+                            '-30px'
+                        ],
+                        [
+                            "eid529",
+                            "left",
+                            1500,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-30px',
+                            '-50px'
+                        ],
+                        [
+                            "eid564",
+                            "left",
+                            2000,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-50px',
+                            '-30px'
+                        ],
+                        [
+                            "eid565",
+                            "left",
+                            2500,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-30px',
+                            '-50px'
+                        ],
+                        [
+                            "eid600",
+                            "left",
+                            3000,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-50px',
+                            '-30px'
+                        ],
+                        [
+                            "eid601",
+                            "left",
+                            3500,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-30px',
+                            '-50px'
+                        ],
+                        [
+                            "eid636",
+                            "left",
+                            4000,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-50px',
+                            '-30px'
+                        ],
+                        [
+                            "eid637",
+                            "left",
+                            4500,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-30px',
+                            '-50px'
+                        ],
+                        [
+                            "eid446",
+                            "top",
+                            0,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-37px',
+                            '-57px'
+                        ],
+                        [
+                            "eid490",
+                            "top",
+                            500,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-57px',
+                            '-37px'
+                        ],
+                        [
+                            "eid526",
+                            "top",
+                            1000,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-37px',
+                            '-57px'
+                        ],
+                        [
+                            "eid527",
+                            "top",
+                            1500,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-57px',
+                            '-37px'
+                        ],
+                        [
+                            "eid562",
+                            "top",
+                            2000,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-37px',
+                            '-57px'
+                        ],
+                        [
+                            "eid563",
+                            "top",
+                            2500,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-57px',
+                            '-37px'
+                        ],
+                        [
+                            "eid598",
+                            "top",
+                            3000,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-37px',
+                            '-57px'
+                        ],
+                        [
+                            "eid599",
+                            "top",
+                            3500,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-57px',
+                            '-37px'
+                        ],
+                        [
+                            "eid634",
+                            "top",
+                            4000,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-37px',
+                            '-57px'
+                        ],
+                        [
+                            "eid635",
+                            "top",
+                            4500,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-57px',
+                            '-37px'
+                        ],
+                        [
+                            "eid443",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-50px',
+                            '-24px'
+                        ],
+                        [
+                            "eid486",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-24px',
+                            '-50px'
+                        ],
+                        [
+                            "eid516",
+                            "left",
+                            1000,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-50px',
+                            '-24px'
+                        ],
+                        [
+                            "eid517",
+                            "left",
+                            1500,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-24px',
+                            '-50px'
+                        ],
+                        [
+                            "eid552",
+                            "left",
+                            2000,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-50px',
+                            '-24px'
+                        ],
+                        [
+                            "eid553",
+                            "left",
+                            2500,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-24px',
+                            '-50px'
+                        ],
+                        [
+                            "eid588",
+                            "left",
+                            3000,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-50px',
+                            '-24px'
+                        ],
+                        [
+                            "eid589",
+                            "left",
+                            3500,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-24px',
+                            '-50px'
+                        ],
+                        [
+                            "eid624",
+                            "left",
+                            4000,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-50px',
+                            '-24px'
+                        ],
+                        [
+                            "eid625",
+                            "left",
+                            4500,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-24px',
+                            '-50px'
+                        ],
+                        [
+                            "eid455",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${hb}",
+                            '-50px',
+                            '-70px'
+                        ],
+                        [
+                            "eid499",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${hb}",
+                            '-70px',
+                            '-50px'
+                        ],
+                        [
+                            "eid544",
+                            "left",
+                            1000,
+                            500,
+                            "linear",
+                            "${hb}",
+                            '-50px',
+                            '-70px'
+                        ],
+                        [
+                            "eid545",
+                            "left",
+                            1500,
+                            500,
+                            "linear",
+                            "${hb}",
+                            '-70px',
+                            '-50px'
+                        ],
+                        [
+                            "eid580",
+                            "left",
+                            2000,
+                            500,
+                            "linear",
+                            "${hb}",
+                            '-50px',
+                            '-70px'
+                        ],
+                        [
+                            "eid581",
+                            "left",
+                            2500,
+                            500,
+                            "linear",
+                            "${hb}",
+                            '-70px',
+                            '-50px'
+                        ],
+                        [
+                            "eid616",
+                            "left",
+                            3000,
+                            500,
+                            "linear",
+                            "${hb}",
+                            '-50px',
+                            '-70px'
+                        ],
+                        [
+                            "eid617",
+                            "left",
+                            3500,
+                            500,
+                            "linear",
+                            "${hb}",
+                            '-70px',
+                            '-50px'
+                        ],
+                        [
+                            "eid652",
+                            "left",
+                            4000,
+                            500,
+                            "linear",
+                            "${hb}",
+                            '-50px',
+                            '-70px'
+                        ],
+                        [
+                            "eid653",
+                            "left",
+                            4500,
+                            500,
+                            "linear",
+                            "${hb}",
+                            '-70px',
+                            '-50px'
+                        ],
+                        [
+                            "eid445",
+                            "top",
+                            0,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-37px',
+                            '-57px'
+                        ],
+                        [
+                            "eid488",
+                            "top",
+                            500,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-57px',
+                            '-37px'
+                        ],
+                        [
+                            "eid522",
+                            "top",
+                            1000,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-37px',
+                            '-57px'
+                        ],
+                        [
+                            "eid523",
+                            "top",
+                            1500,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-57px',
+                            '-37px'
+                        ],
+                        [
+                            "eid558",
+                            "top",
+                            2000,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-37px',
+                            '-57px'
+                        ],
+                        [
+                            "eid559",
+                            "top",
+                            2500,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-57px',
+                            '-37px'
+                        ],
+                        [
+                            "eid594",
+                            "top",
+                            3000,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-37px',
+                            '-57px'
+                        ],
+                        [
+                            "eid595",
+                            "top",
+                            3500,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-57px',
+                            '-37px'
+                        ],
+                        [
+                            "eid630",
+                            "top",
+                            4000,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-37px',
+                            '-57px'
+                        ],
+                        [
+                            "eid631",
+                            "top",
+                            4500,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-57px',
+                            '-37px'
+                        ],
+                        [
+                            "eid453",
+                            "top",
+                            0,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-37px',
+                            '-17px'
+                        ],
+                        [
+                            "eid496",
+                            "top",
+                            500,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-17px',
+                            '-37px'
+                        ],
+                        [
+                            "eid538",
+                            "top",
+                            1000,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-37px',
+                            '-17px'
+                        ],
+                        [
+                            "eid539",
+                            "top",
+                            1500,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-17px',
+                            '-37px'
+                        ],
+                        [
+                            "eid574",
+                            "top",
+                            2000,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-37px',
+                            '-17px'
+                        ],
+                        [
+                            "eid575",
+                            "top",
+                            2500,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-17px',
+                            '-37px'
+                        ],
+                        [
+                            "eid610",
+                            "top",
+                            3000,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-37px',
+                            '-17px'
+                        ],
+                        [
+                            "eid611",
+                            "top",
+                            3500,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-17px',
+                            '-37px'
+                        ],
+                        [
+                            "eid646",
+                            "top",
+                            4000,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-37px',
+                            '-17px'
+                        ],
+                        [
+                            "eid647",
+                            "top",
+                            4500,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-17px',
+                            '-37px'
+                        ],
+                        [
+                            "eid454",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${gb}",
+                            '-50px',
+                            '-30px'
+                        ],
+                        [
+                            "eid498",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${gb}",
+                            '-30px',
+                            '-50px'
+                        ],
+                        [
+                            "eid540",
+                            "left",
+                            1000,
+                            500,
+                            "linear",
+                            "${gb}",
+                            '-50px',
+                            '-30px'
+                        ],
+                        [
+                            "eid541",
+                            "left",
+                            1500,
+                            500,
+                            "linear",
+                            "${gb}",
+                            '-30px',
+                            '-50px'
+                        ],
+                        [
+                            "eid576",
+                            "left",
+                            2000,
+                            500,
+                            "linear",
+                            "${gb}",
+                            '-50px',
+                            '-30px'
+                        ],
+                        [
+                            "eid577",
+                            "left",
+                            2500,
+                            500,
+                            "linear",
+                            "${gb}",
+                            '-30px',
+                            '-50px'
+                        ],
+                        [
+                            "eid612",
+                            "left",
+                            3000,
+                            500,
+                            "linear",
+                            "${gb}",
+                            '-50px',
+                            '-30px'
+                        ],
+                        [
+                            "eid613",
+                            "left",
+                            3500,
+                            500,
+                            "linear",
+                            "${gb}",
+                            '-30px',
+                            '-50px'
+                        ],
+                        [
+                            "eid648",
+                            "left",
+                            4000,
+                            500,
+                            "linear",
+                            "${gb}",
+                            '-50px',
+                            '-30px'
+                        ],
+                        [
+                            "eid649",
+                            "left",
+                            4500,
+                            500,
+                            "linear",
+                            "${gb}",
+                            '-30px',
+                            '-50px'
+                        ],
+                        [
+                            "eid444",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-50px',
+                            '0px'
+                        ],
+                        [
+                            "eid489",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '0px',
+                            '-50px'
+                        ],
+                        [
+                            "eid520",
+                            "left",
+                            1000,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-50px',
+                            '0px'
+                        ],
+                        [
+                            "eid521",
+                            "left",
+                            1500,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '0px',
+                            '-50px'
+                        ],
+                        [
+                            "eid556",
+                            "left",
+                            2000,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-50px',
+                            '0px'
+                        ],
+                        [
+                            "eid557",
+                            "left",
+                            2500,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '0px',
+                            '-50px'
+                        ],
+                        [
+                            "eid592",
+                            "left",
+                            3000,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-50px',
+                            '0px'
+                        ],
+                        [
+                            "eid593",
+                            "left",
+                            3500,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '0px',
+                            '-50px'
+                        ],
+                        [
+                            "eid628",
+                            "left",
+                            4000,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-50px',
+                            '0px'
+                        ],
+                        [
+                            "eid629",
+                            "left",
+                            4500,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '0px',
+                            '-50px'
+                        ],
+                        [
+                            "eid450",
+                            "top",
+                            0,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-37px',
+                            '-17px'
+                        ],
+                        [
+                            "eid494",
+                            "top",
+                            500,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-17px',
+                            '-37px'
+                        ],
+                        [
+                            "eid534",
+                            "top",
+                            1000,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-37px',
+                            '-17px'
+                        ],
+                        [
+                            "eid535",
+                            "top",
+                            1500,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-17px',
+                            '-37px'
+                        ],
+                        [
+                            "eid570",
+                            "top",
+                            2000,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-37px',
+                            '-17px'
+                        ],
+                        [
+                            "eid571",
+                            "top",
+                            2500,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-17px',
+                            '-37px'
+                        ],
+                        [
+                            "eid606",
+                            "top",
+                            3000,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-37px',
+                            '-17px'
+                        ],
+                        [
+                            "eid607",
+                            "top",
+                            3500,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-17px',
+                            '-37px'
+                        ],
+                        [
+                            "eid642",
+                            "top",
+                            4000,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-37px',
+                            '-17px'
+                        ],
+                        [
+                            "eid643",
+                            "top",
+                            4500,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-17px',
+                            '-37px'
+                        ],
+                        [
+                            "eid452",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-50px',
+                            '-20px'
+                        ],
+                        [
+                            "eid497",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-20px',
+                            '-50px'
+                        ],
+                        [
+                            "eid536",
+                            "left",
+                            1000,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-50px',
+                            '-20px'
+                        ],
+                        [
+                            "eid537",
+                            "left",
+                            1500,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-20px',
+                            '-50px'
+                        ],
+                        [
+                            "eid572",
+                            "left",
+                            2000,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-50px',
+                            '-20px'
+                        ],
+                        [
+                            "eid573",
+                            "left",
+                            2500,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-20px',
+                            '-50px'
+                        ],
+                        [
+                            "eid608",
+                            "left",
+                            3000,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-50px',
+                            '-20px'
+                        ],
+                        [
+                            "eid609",
+                            "left",
+                            3500,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-20px',
+                            '-50px'
+                        ],
+                        [
+                            "eid644",
+                            "left",
+                            4000,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-50px',
+                            '-20px'
+                        ],
+                        [
+                            "eid645",
+                            "left",
+                            4500,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-20px',
+                            '-50px'
+                        ],
+                        [
+                            "eid442",
+                            "top",
+                            0,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-37px',
+                            '-23px'
+                        ],
+                        [
+                            "eid487",
+                            "top",
+                            500,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-23px',
+                            '-37px'
+                        ],
+                        [
+                            "eid518",
+                            "top",
+                            1000,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-37px',
+                            '-23px'
+                        ],
+                        [
+                            "eid519",
+                            "top",
+                            1500,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-23px',
+                            '-37px'
+                        ],
+                        [
+                            "eid554",
+                            "top",
+                            2000,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-37px',
+                            '-23px'
+                        ],
+                        [
+                            "eid555",
+                            "top",
+                            2500,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-23px',
+                            '-37px'
+                        ],
+                        [
+                            "eid590",
+                            "top",
+                            3000,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-37px',
+                            '-23px'
+                        ],
+                        [
+                            "eid591",
+                            "top",
+                            3500,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-23px',
+                            '-37px'
+                        ],
+                        [
+                            "eid626",
+                            "top",
+                            4000,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-37px',
+                            '-23px'
+                        ],
+                        [
+                            "eid627",
+                            "top",
+                            4500,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-23px',
+                            '-37px'
+                        ],
+                        [
+                            "eid456",
+                            "top",
+                            0,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-37px',
+                            '-67px'
+                        ],
+                        [
+                            "eid501",
+                            "top",
+                            500,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-67px',
+                            '-37px'
+                        ],
+                        [
+                            "eid550",
+                            "top",
+                            1000,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-37px',
+                            '-67px'
+                        ],
+                        [
+                            "eid551",
+                            "top",
+                            1500,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-67px',
+                            '-37px'
+                        ],
+                        [
+                            "eid586",
+                            "top",
+                            2000,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-37px',
+                            '-67px'
+                        ],
+                        [
+                            "eid587",
+                            "top",
+                            2500,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-67px',
+                            '-37px'
+                        ],
+                        [
+                            "eid622",
+                            "top",
+                            3000,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-37px',
+                            '-67px'
+                        ],
+                        [
+                            "eid623",
+                            "top",
+                            3500,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-67px',
+                            '-37px'
+                        ],
+                        [
+                            "eid658",
+                            "top",
+                            4000,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-37px',
+                            '-67px'
+                        ],
+                        [
+                            "eid659",
+                            "top",
+                            4500,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-67px',
+                            '-37px'
+                        ],
+                        [
+                            "eid449",
+                            "top",
+                            0,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-37px',
+                            '-47px'
+                        ],
+                        [
+                            "eid492",
+                            "top",
+                            500,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-47px',
+                            '-37px'
+                        ],
+                        [
+                            "eid530",
+                            "top",
+                            1000,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-37px',
+                            '-47px'
+                        ],
+                        [
+                            "eid531",
+                            "top",
+                            1500,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-47px',
+                            '-37px'
+                        ],
+                        [
+                            "eid566",
+                            "top",
+                            2000,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-37px',
+                            '-47px'
+                        ],
+                        [
+                            "eid567",
+                            "top",
+                            2500,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-47px',
+                            '-37px'
+                        ],
+                        [
+                            "eid602",
+                            "top",
+                            3000,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-37px',
+                            '-47px'
+                        ],
+                        [
+                            "eid603",
+                            "top",
+                            3500,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-47px',
+                            '-37px'
+                        ],
+                        [
+                            "eid638",
+                            "top",
+                            4000,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-37px',
+                            '-47px'
+                        ],
+                        [
+                            "eid639",
+                            "top",
+                            4500,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-47px',
+                            '-37px'
+                        ],
+                        [
+                            "eid421",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${hb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid481",
+                            "top",
+                            500,
+                            0,
+                            "linear",
+                            "${hb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid482",
+                            "top",
+                            1000,
+                            0,
+                            "linear",
+                            "${hb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid546",
+                            "top",
+                            1500,
+                            0,
+                            "linear",
+                            "${hb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid547",
+                            "top",
+                            2000,
+                            0,
+                            "linear",
+                            "${hb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid582",
+                            "top",
+                            2500,
+                            0,
+                            "linear",
+                            "${hb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid583",
+                            "top",
+                            3000,
+                            0,
+                            "linear",
+                            "${hb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid618",
+                            "top",
+                            3500,
+                            0,
+                            "linear",
+                            "${hb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid619",
+                            "top",
+                            4000,
+                            0,
+                            "linear",
+                            "${hb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid654",
+                            "top",
+                            4500,
+                            0,
+                            "linear",
+                            "${hb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid655",
+                            "top",
+                            5000,
+                            0,
+                            "linear",
+                            "${hb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid457",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-50px',
+                            '-19px'
+                        ],
+                        [
+                            "eid500",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-19px',
+                            '-50px'
+                        ],
+                        [
+                            "eid548",
+                            "left",
+                            1000,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-50px',
+                            '-19px'
+                        ],
+                        [
+                            "eid549",
+                            "left",
+                            1500,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-19px',
+                            '-50px'
+                        ],
+                        [
+                            "eid584",
+                            "left",
+                            2000,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-50px',
+                            '-19px'
+                        ],
+                        [
+                            "eid585",
+                            "left",
+                            2500,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-19px',
+                            '-50px'
+                        ],
+                        [
+                            "eid620",
+                            "left",
+                            3000,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-50px',
+                            '-19px'
+                        ],
+                        [
+                            "eid621",
+                            "left",
+                            3500,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-19px',
+                            '-50px'
+                        ],
+                        [
+                            "eid656",
+                            "left",
+                            4000,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-50px',
+                            '-19px'
+                        ],
+                        [
+                            "eid657",
+                            "left",
+                            4500,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-19px',
+                            '-50px'
+                        ],
+                        [
+                            "eid451",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-50px',
+                            '-70px'
+                        ],
+                        [
+                            "eid495",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-70px',
+                            '-50px'
+                        ],
+                        [
+                            "eid532",
+                            "left",
+                            1000,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-50px',
+                            '-70px'
+                        ],
+                        [
+                            "eid533",
+                            "left",
+                            1500,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-70px',
+                            '-50px'
+                        ],
+                        [
+                            "eid568",
+                            "left",
+                            2000,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-50px',
+                            '-70px'
+                        ],
+                        [
+                            "eid569",
+                            "left",
+                            2500,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-70px',
+                            '-50px'
+                        ],
+                        [
+                            "eid604",
+                            "left",
+                            3000,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-50px',
+                            '-70px'
+                        ],
+                        [
+                            "eid605",
+                            "left",
+                            3500,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-70px',
+                            '-50px'
+                        ],
+                        [
+                            "eid640",
+                            "left",
+                            4000,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-50px',
+                            '-70px'
+                        ],
+                        [
+                            "eid641",
+                            "left",
+                            4500,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-70px',
+                            '-50px'
+                        ],
+                        [
+                            "eid447",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-50px',
+                            '-80px'
+                        ],
+                        [
+                            "eid491",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-80px',
+                            '-50px'
+                        ],
+                        [
+                            "eid524",
+                            "left",
+                            1000,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-50px',
+                            '-80px'
+                        ],
+                        [
+                            "eid525",
+                            "left",
+                            1500,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-80px',
+                            '-50px'
+                        ],
+                        [
+                            "eid560",
+                            "left",
+                            2000,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-50px',
+                            '-80px'
+                        ],
+                        [
+                            "eid561",
+                            "left",
+                            2500,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-80px',
+                            '-50px'
+                        ],
+                        [
+                            "eid596",
+                            "left",
+                            3000,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-50px',
+                            '-80px'
+                        ],
+                        [
+                            "eid597",
+                            "left",
+                            3500,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-80px',
+                            '-50px'
+                        ],
+                        [
+                            "eid632",
+                            "left",
+                            4000,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-50px',
+                            '-80px'
+                        ],
+                        [
+                            "eid633",
+                            "left",
+                            4500,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-80px',
+                            '-50px'
+                        ],
+                        [
+                            "eid419",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${gb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid478",
+                            "top",
+                            500,
+                            0,
+                            "linear",
+                            "${gb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid479",
+                            "top",
+                            1000,
+                            0,
+                            "linear",
+                            "${gb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid542",
+                            "top",
+                            1500,
+                            0,
+                            "linear",
+                            "${gb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid543",
+                            "top",
+                            2000,
+                            0,
+                            "linear",
+                            "${gb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid578",
+                            "top",
+                            2500,
+                            0,
+                            "linear",
+                            "${gb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid579",
+                            "top",
+                            3000,
+                            0,
+                            "linear",
+                            "${gb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid614",
+                            "top",
+                            3500,
+                            0,
+                            "linear",
+                            "${gb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid615",
+                            "top",
+                            4000,
+                            0,
+                            "linear",
+                            "${gb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid650",
+                            "top",
+                            4500,
+                            0,
+                            "linear",
+                            "${gb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid651",
+                            "top",
+                            5000,
+                            0,
+                            "linear",
+                            "${gb}",
+                            '-37px',
+                            '-37px'
+                        ]
+                    ]
+                }
+            },
+            "sym_auge": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'augenaufschlagauge',
+                            type: 'image',
+                            rect: [0, 0, '14336px', '1536px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/augenaufschlagauge.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 2250,
+                    autoPlay: false,
+                    data: [
+                        [
+                            "eid459",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid458",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid460",
+                            "left",
+                            311,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '0px',
+                            '-2048px'
+                        ],
+                        [
+                            "eid461",
+                            "left",
+                            642,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '-2048px',
+                            '-4096px'
+                        ],
+                        [
+                            "eid462",
+                            "left",
+                            1000,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '-4096px',
+                            '-6144px'
+                        ],
+                        [
+                            "eid463",
+                            "left",
+                            1338,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '-6144px',
+                            '-8192px'
+                        ],
+                        [
+                            "eid464",
+                            "left",
+                            1839,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '-8192px',
+                            '-10310px'
+                        ],
+                        [
+                            "eid465",
+                            "left",
+                            2250,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '-10000px',
+                            '-12367px'
+                        ]
+                    ]
+                }
+            },
+            "sym_gesicht": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [620, 220, '932px', '404px', 'auto', 'auto'],
+                            id: 'baumHalbesGAugenKopie',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/baumHalbesGAugenKopie.png', '0px', '0px']
+                        },
+                        {
+                            rect: [0, 0, '2048px', '1536px', 'auto', 'auto'],
+                            id: 'baumHalbesGohneAugenKopie',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/baumHalbesGohneAugenKopie.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 4940,
+                    autoPlay: true,
+                    labels: {
+                        "loop_gesicht": 0
+                    },
+                    data: [
+                        [
+                            "eid506",
+                            "top",
+                            0,
+                            1659,
+                            "linear",
+                            "${baumHalbesGAugenKopie}",
+                            '220px',
+                            '250px'
+                        ],
+                        [
+                            "eid508",
+                            "top",
+                            1659,
+                            1456,
+                            "linear",
+                            "${baumHalbesGAugenKopie}",
+                            '250px',
+                            '270px'
+                        ],
+                        [
+                            "eid510",
+                            "top",
+                            3115,
+                            737,
+                            "linear",
+                            "${baumHalbesGAugenKopie}",
+                            '270px',
+                            '220px'
+                        ],
+                        [
+                            "eid513",
+                            "top",
+                            4940,
+                            0,
+                            "linear",
+                            "${baumHalbesGAugenKopie}",
+                            '220px',
+                            '220px'
+                        ],
+                        [
+                            "eid504",
+                            "left",
+                            0,
+                            1250,
+                            "linear",
+                            "${baumHalbesGAugenKopie}",
+                            '620px',
+                            '650px'
+                        ],
+                        [
+                            "eid505",
+                            "left",
+                            1250,
+                            635,
+                            "linear",
+                            "${baumHalbesGAugenKopie}",
+                            '650px',
+                            '560px'
+                        ],
+                        [
+                            "eid507",
+                            "left",
+                            2189,
+                            926,
+                            "linear",
+                            "${baumHalbesGAugenKopie}",
+                            '560px',
+                            '620px'
+                        ],
+                        [
+                            "eid511",
+                            "left",
+                            3852,
+                            0,
+                            "linear",
+                            "${baumHalbesGAugenKopie}",
+                            '620px',
+                            '620px'
+                        ]
+                    ]
                 }
             }
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_Stage}": [
-                ["color", "background-color", 'rgba(199,138,138,1.00)'],
-                ["style", "overflow", 'hidden'],
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ],
-            "${_StageB}": [
-                ["color", "background-color", 'rgba(0,0,0,1.00)']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: false,
-            timeline: [
-                { id: "eid661", tween: [ "color", "${_StageB}", "background-color", 'rgba(0,0,0,1.00)', { animationColorSpace: 'RGB', valueTemplate: undefined, fromValue: 'rgba(0,0,0,1.00)'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"sym_vorhang": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'vorhangani',
-                    type: 'image',
-                    rect: ['0px', '0px', '5112px', '538px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/vorhangani.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '538px'],
-                ["style", "width", '850px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_vorhangani}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 2500,
-            autoPlay: false,
-            timeline: [
-                { id: "eid58", tween: [ "style", "${_vorhangani}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid60", tween: [ "style", "${_vorhangani}", "left", '-871px', { fromValue: '0px'}], position: 500, duration: 0 },
-                { id: "eid61", tween: [ "style", "${_vorhangani}", "left", '-1750px', { fromValue: '-872px'}], position: 1000, duration: 0 },
-                { id: "eid62", tween: [ "style", "${_vorhangani}", "left", '-2610px', { fromValue: '-1751px'}], position: 1500, duration: 0 },
-                { id: "eid63", tween: [ "style", "${_vorhangani}", "left", '-3462px', { fromValue: '-2610px'}], position: 2000, duration: 0 },
-                { id: "eid64", tween: [ "style", "${_vorhangani}", "left", '-4313px', { fromValue: '-3464px'}], position: 2500, duration: 0 }            ]
-        }
-    }
-},
-"wegzumhaus": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'haushinterswrgb',
-                    type: 'image',
-                    rect: ['-580', '-403', '3414px', '2369px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/haushinterswrgb.jpg', '0px', '0px']
-                },
-                {
-                    id: 'hauswegsw',
-                    type: 'image',
-                    rect: ['140px', '132px', '1737px', '916px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/hauswegsw.png', '0px', '0px']
-                },
-                {
-                    id: 'waldanirgb',
-                    type: 'image',
-                    rect: ['25', '9', '8192px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/waldanirgb.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_hauswegsw}": [
-                ["transform", "scaleX", '0.66'],
-                ["style", "top", '216px'],
-                ["transform", "scaleY", '0.66'],
-                ["style", "left", '142px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1564px'],
-                ["style", "width", '8217px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_waldanirgb}": [
-                ["style", "left", '25px']
-            ],
-            "${_haushinterswrgb}": [
-                ["transform", "scaleX", '0.66'],
-                ["transform", "scaleY", '0.66']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 3000,
-            autoPlay: false,
-            timeline: [
-                { id: "eid50", tween: [ "transform", "${_hauswegsw}", "scaleY", '1', { fromValue: '0.66'}], position: 0, duration: 3000 },
-                { id: "eid129", tween: [ "style", "${_hauswegsw}", "left", '91px', { fromValue: '142px'}], position: 0, duration: 3000 },
-                { id: "eid96", tween: [ "transform", "${_haushinterswrgb}", "scaleX", '1', { fromValue: '0.66'}], position: 0, duration: 3000 },
-                { id: "eid128", tween: [ "style", "${_hauswegsw}", "top", '158px', { fromValue: '216px'}], position: 0, duration: 3000 },
-                { id: "eid75", tween: [ "style", "${_waldanirgb}", "left", '25px', { fromValue: '25px'}], position: 0, duration: 0 },
-                { id: "eid76", tween: [ "style", "${_waldanirgb}", "left", '-2023px', { fromValue: '25px'}], position: 500, duration: 0 },
-                { id: "eid77", tween: [ "style", "${_waldanirgb}", "left", '-4071px', { fromValue: '-2023px'}], position: 1000, duration: 0 },
-                { id: "eid78", tween: [ "style", "${_waldanirgb}", "left", '-6119px', { fromValue: '-4071px'}], position: 1500, duration: 0 },
-                { id: "eid79", tween: [ "style", "${_waldanirgb}", "left", '-8167px', { fromValue: '-6119px'}], position: 2000, duration: 0 },
-                { id: "eid97", tween: [ "transform", "${_haushinterswrgb}", "scaleY", '1', { fromValue: '0.66'}], position: 0, duration: 3000 },
-                { id: "eid49", tween: [ "transform", "${_hauswegsw}", "scaleX", '1', { fromValue: '0.66'}], position: 0, duration: 3000 }            ]
-        }
-    }
-},
-"sym_schwarz": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    type: 'rect',
-                    id: 'schwarz',
-                    stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
-                    rect: ['0px', '0px', '2048px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,1)']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_schwarz}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.850000'],
-                ["style", "left", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 2000,
-            autoPlay: false,
-            timeline: [
-                { id: "eid70", tween: [ "style", "${_schwarz}", "opacity", '0', { fromValue: '0.850000'}], position: 0, duration: 2000 }            ]
-        }
-    }
-},
-"sym_ausblick": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'aussichthintersw2',
-                    type: 'image',
-                    rect: ['0', '0', '2048px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/aussichthintersw.jpg', '0px', '0px']
-                },
-                {
-                    id: 'aussichtvorsw2',
-                    type: 'image',
-                    rect: ['0', '0', '2048px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/aussichtvorsw.png', '0px', '0px']
-                },
-                {
-                    id: 'huhliegenkorper2',
-                    type: 'image',
-                    rect: ['1116px', '1198px', '140px', '122px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
-                },
-                {
-                    id: 'sym_huhliegenkopf',
-                    type: 'rect',
-                    rect: ['1146px', '1214px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'sym_huhpickenganzani',
-                    type: 'rect',
-                    rect: ['1465px', '1242px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'huhpickenkorper2',
-                    type: 'image',
-                    rect: ['1278px', '1291px', '163px', '146px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhpickenkorper.png', '0px', '0px']
-                },
-                {
-                    id: 'sym_huhpickenkopfkoroer',
-                    type: 'rect',
-                    rect: ['1278px', '1291px', 'auto', 'auto', 'auto', 'auto']
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'sym_huhliegenkopf',
-                symbolName: 'sym_huhliegenkopf',
-                autoPlay: {
+        };
 
-               }
-            },
-            {
-                id: 'sym_huhpickenkopfkoroer',
-                symbolName: 'sym_huhpickenkopfkoroer',
-                autoPlay: {
+    AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
-               }
-            },
-            {
-                id: 'sym_huhpickenganzani',
-                symbolName: 'sym_huhpickenganzani',
-                autoPlay: {
-
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_sym_huhpickenganzani}": [
-                ["transform", "scaleX", '1'],
-                ["transform", "scaleY", '1'],
-                ["motion", "location", '1550px 1319.5px']
-            ],
-            "${_huhpickenkorper2}": [
-                ["transform", "scaleX", '1'],
-                ["motion", "location", '1359.5px 1364px'],
-                ["transform", "rotateZ", '0deg']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ],
-            "${_huhliegenkorper2}": [
-                ["style", "left", '1116px'],
-                ["style", "top", '1198px']
-            ],
-            "${_sym_huhpickenkopfkoroer}": [
-                ["transform", "scaleX", '1'],
-                ["motion", "location", '1310.5px 1364px'],
-                ["transform", "rotateZ", '0deg']
-            ],
-            "${_aussichtvorsw2}": [
-                ["style", "top", '-94px'],
-                ["transform", "scaleX", '0.53'],
-                ["style", "left", '133px'],
-                ["transform", "scaleY", '0.53']
-            ],
-            "${_aussichthintersw2}": [
-                ["style", "top", '-94px'],
-                ["transform", "scaleX", '0.53'],
-                ["style", "left", '133px'],
-                ["transform", "scaleY", '0.53']
-            ],
-            "${_sym_huhliegenkopf}": [
-                ["style", "left", '1146px'],
-                ["style", "top", '1214px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 15162,
-            autoPlay: false,
-            labels: {
-                "huhsontherun": 3069
-            },
-            timeline: [
-                { id: "eid403", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "scaleX", '1', { fromValue: '1'}], position: 3184, duration: 0 },
-                { id: "eid401", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "scaleX", '-1', { fromValue: '1'}], position: 9500, duration: 0 },
-                { id: "eid274", tween: [ "style", "${_aussichthintersw2}", "top", '0px', { fromValue: '-94px'}], position: 0, duration: 3000 },
-                { id: "eid262", tween: [ "transform", "${_aussichthintersw2}", "scaleY", '1', { fromValue: '0.53'}], position: 0, duration: 3000 },
-                { id: "eid271", tween: [ "style", "${_aussichtvorsw2}", "left", '0px', { fromValue: '133px'}], position: 0, duration: 3000 },
-                { id: "eid272", tween: [ "style", "${_aussichtvorsw2}", "top", '0px', { fromValue: '-94px'}], position: 0, duration: 3000 },
-                { id: "eid260", tween: [ "transform", "${_aussichtvorsw2}", "scaleY", '1', { fromValue: '0.53'}], position: 0, duration: 3000 },
-                { id: "eid375", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 5250, duration: 0 },
-                { id: "eid376", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 5500, duration: 0 },
-                { id: "eid378", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '-8deg'}], position: 5750, duration: 0 },
-                { id: "eid380", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 6000, duration: 0 },
-                { id: "eid382", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 6250, duration: 0 },
-                { id: "eid387", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 10500, duration: 0 },
-                { id: "eid388", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 10750, duration: 0 },
-                { id: "eid389", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 11000, duration: 0 },
-                { id: "eid390", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 11250, duration: 0 },
-                { id: "eid391", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 11500, duration: 0 },
-                { id: "eid370", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1310.5, 1364, 0, 0],[1299.5, 1364, -20.19, -2.76]]], position: 5250, duration: 250 },
-                { id: "eid384", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1299.5, 1364, -5.53, -0.76],[1291.41, 1360.26, -9.59, 0.4, -4.94, 0.2],[1282.45, 1368.31, -36.7, -20.67, -8.45, -4.76],[1258.5, 1366.14, 0, 0]]], position: 5500, duration: 750 },
-                { id: "eid405", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1356.51, 1366, 0, 0],[1356.51, 1366, 0, 0]]], position: 9500, duration: 0 },
-                { id: "eid398", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1352.91, 1367.26, 0, 0],[1376.86, 1369.43, 8.45, 4.76, 36.7, 20.67],[1385.82, 1361.38, 4.94, -0.2, 9.59, -0.4],[1393.91, 1365.12, 5.53, 0.76]]], position: 10500, duration: 750 },
-                { id: "eid399", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1393.91, 1365.12, 20.19, 2.76],[1404.91, 1365.12, 0, 0]]], position: 11250, duration: 250 },
-                { id: "eid259", tween: [ "transform", "${_aussichtvorsw2}", "scaleX", '1', { fromValue: '0.53'}], position: 0, duration: 3000 },
-                { id: "eid374", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 5250, duration: 0 },
-                { id: "eid377", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '-8deg', { fromValue: '0deg'}], position: 5500, duration: 0 },
-                { id: "eid379", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '-8deg'}], position: 5750, duration: 0 },
-                { id: "eid381", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 6000, duration: 0 },
-                { id: "eid383", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 6250, duration: 0 },
-                { id: "eid393", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 10500, duration: 0 },
-                { id: "eid394", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '-8deg', { fromValue: '0deg'}], position: 10750, duration: 0 },
-                { id: "eid395", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '-8deg'}], position: 11000, duration: 0 },
-                { id: "eid396", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 11250, duration: 0 },
-                { id: "eid397", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 11500, duration: 0 },
-                { id: "eid371", tween: [ "motion", "${_huhpickenkorper2}", [[1359.5, 1364, 0, 0],[1344.43, 1370.42, -26.36, -18.81, -23.2, -16.55],[1318.34, 1370.17, -16.72, 1.61, -23.12, 2.22],[1307.5, 1366.14, 0, 0]]], position: 5250, duration: 1000 },
-                { id: "eid400", tween: [ "motion", "${_huhpickenkorper2}", [[1307.5, 1366.14, 0, 0],[1318.34, 1370.17, 23.12, -2.22, 16.72, -1.61],[1344.43, 1370.42, 23.2, 16.55, 26.36, 18.81],[1359.5, 1364, 0, 0]]], position: 10500, duration: 1000 },
-                { id: "eid273", tween: [ "style", "${_aussichthintersw2}", "left", '0px', { fromValue: '133px'}], position: 0, duration: 3000 },
-                { id: "eid261", tween: [ "transform", "${_aussichthintersw2}", "scaleX", '1', { fromValue: '0.53'}], position: 0, duration: 3000 },
-                { id: "eid404", tween: [ "transform", "${_huhpickenkorper2}", "scaleX", '1', { fromValue: '1'}], position: 3184, duration: 0 },
-                { id: "eid402", tween: [ "transform", "${_huhpickenkorper2}", "scaleX", '-1', { fromValue: '1'}], position: 9500, duration: 0 }            ]
-        }
-    }
-},
-"sym_zimmer": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'zimmer',
-                    type: 'image',
-                    rect: ['0px', '0px', '2048px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/zimmer.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_zimmer}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 0,
-            autoPlay: false,
-            timeline: [
-            ]
-        }
-    }
-},
-"sym_vorzim": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'sym_zimmer2',
-                    type: 'rect',
-                    rect: ['0px', '0px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'sym_vorhang',
-                    type: 'rect',
-                    rect: ['773px', '274px', 'auto', 'auto', 'auto', 'auto']
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'sym_vorhang',
-                symbolName: 'sym_vorhang',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'sym_zimmer2',
-                symbolName: 'sym_zimmer',
-                autoPlay: {
-
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_sym_zimmer2}": [
-                ["transform", "scaleX", '1'],
-                ["style", "top", '0px'],
-                ["transform", "scaleY", '1'],
-                ["style", "left", '0px']
-            ],
-            "${_sym_vorhang}": [
-                ["transform", "scaleX", '1'],
-                ["style", "top", '263px'],
-                ["transform", "scaleY", '1'],
-                ["style", "left", '767px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 4000,
-            autoPlay: false,
-            timeline: [
-                { id: "eid166", tween: [ "transform", "${_sym_vorhang}", "scaleY", '3.76926', { fromValue: '1'}], position: 0, duration: 4000 },
-                { id: "eid189", tween: [ "style", "${_sym_vorhang}", "left", '289px', { fromValue: '767px'}], position: 0, duration: 4000 },
-                { id: "eid161", tween: [ "transform", "${_sym_zimmer2}", "scaleX", '3.76926', { fromValue: '1'}], position: 0, duration: 4000 },
-                { id: "eid190", tween: [ "style", "${_sym_vorhang}", "top", '404px', { fromValue: '263px'}], position: 0, duration: 4000 },
-                { id: "eid165", tween: [ "transform", "${_sym_vorhang}", "scaleX", '3.76926', { fromValue: '1'}], position: 0, duration: 4000 },
-                { id: "eid187", tween: [ "style", "${_sym_zimmer2}", "left", '-851px', { fromValue: '0px'}], position: 0, duration: 4000 },
-                { id: "eid188", tween: [ "style", "${_sym_zimmer2}", "top", '791px', { fromValue: '0px'}], position: 0, duration: 4000 },
-                { id: "eid162", tween: [ "transform", "${_sym_zimmer2}", "scaleY", '3.76926', { fromValue: '1'}], position: 0, duration: 4000 }            ]
-        }
-    }
-},
-"sym_huhliegen": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'huhliegenkorper',
-                    type: 'image',
-                    rect: ['0px', '0px', '140px', '122px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
-                },
-                {
-                    id: 'huhliegenkopf',
-                    type: 'image',
-                    rect: ['0px', '0px', '242px', '68px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhliegenkopf.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_huhliegenkopf}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_huhliegenkorper}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '122px'],
-                ["style", "width", '242px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 0,
-            autoPlay: false,
-            timeline: [
-            ]
-        }
-    }
-},
-"sym_huhliegenkopf": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'huhliegenkopf2',
-                    type: 'image',
-                    rect: ['-6px', '0px', '242px', '68px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhliegenkopf.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_huhliegenkopf2}": [
-                ["style", "left", '-5px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '68px'],
-                ["style", "width", '50px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: false,
-            labels: {
-                "loophuhn1": 0
-            },
-            timeline: [
-                { id: "eid285", tween: [ "style", "${_huhliegenkopf2}", "left", '-5px', { fromValue: '-5px'}], position: 0, duration: 0 },
-                { id: "eid286", tween: [ "style", "${_huhliegenkopf2}", "left", '-60px', { fromValue: '-5px'}], position: 649, duration: 0 },
-                { id: "eid287", tween: [ "style", "${_huhliegenkopf2}", "left", '-121px', { fromValue: '-60px'}], position: 1182, duration: 0 },
-                { id: "eid288", tween: [ "style", "${_huhliegenkopf2}", "left", '-185px', { fromValue: '-121px'}], position: 1750, duration: 0 },
-                { id: "eid289", tween: [ "style", "${_huhliegenkopf2}", "left", '-121px', { fromValue: '-185px'}], position: 2750, duration: 0 },
-                { id: "eid290", tween: [ "style", "${_huhliegenkopf2}", "left", '-61px', { fromValue: '-121px'}], position: 4399, duration: 0 }            ]
-        }
-    }
-},
-"sym_huhflugelganzani": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'huhflugelganzani',
-                    type: 'image',
-                    rect: ['-21px', '-5px', '1109px', '259px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhflugelganzani.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_huhflugelganzani}": [
-                ["style", "left", '-21px'],
-                ["style", "top", '-5px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '259px'],
-                ["style", "width", '180px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 3116,
-            autoPlay: false,
-            labels: {
-                "loophuhflugelganzani2": 0,
-                "labelhuhflugelganzani": 1095
-            },
-            timeline: [
-                { id: "eid305", tween: [ "style", "${_huhflugelganzani}", "top", '-5px', { fromValue: '-5px'}], position: 0, duration: 0 },
-                { id: "eid307", tween: [ "style", "${_huhflugelganzani}", "top", '-6px', { fromValue: '-5px'}], position: 392, duration: 0 },
-                { id: "eid309", tween: [ "style", "${_huhflugelganzani}", "top", '-4px', { fromValue: '-6px'}], position: 750, duration: 0 },
-                { id: "eid311", tween: [ "style", "${_huhflugelganzani}", "top", '-2px', { fromValue: '-4px'}], position: 1095, duration: 0 },
-                { id: "eid313", tween: [ "style", "${_huhflugelganzani}", "top", '2px', { fromValue: '-2px'}], position: 1386, duration: 0 },
-                { id: "eid315", tween: [ "style", "${_huhflugelganzani}", "top", '-3px', { fromValue: '2px'}], position: 1750, duration: 0 },
-                { id: "eid317", tween: [ "style", "${_huhflugelganzani}", "top", '2px', { fromValue: '-3px'}], position: 2000, duration: 0 },
-                { id: "eid319", tween: [ "style", "${_huhflugelganzani}", "top", '-3px', { fromValue: '2px'}], position: 2305, duration: 0 },
-                { id: "eid321", tween: [ "style", "${_huhflugelganzani}", "top", '2px', { fromValue: '-3px'}], position: 2643, duration: 0 },
-                { id: "eid323", tween: [ "style", "${_huhflugelganzani}", "top", '3px', { fromValue: '2px'}], position: 2839, duration: 0 },
-                { id: "eid304", tween: [ "style", "${_huhflugelganzani}", "left", '-21px', { fromValue: '-21px'}], position: 0, duration: 0 },
-                { id: "eid306", tween: [ "style", "${_huhflugelganzani}", "left", '-197px', { fromValue: '-21px'}], position: 392, duration: 0 },
-                { id: "eid308", tween: [ "style", "${_huhflugelganzani}", "left", '-374px', { fromValue: '-197px'}], position: 750, duration: 0 },
-                { id: "eid310", tween: [ "style", "${_huhflugelganzani}", "left", '-548px', { fromValue: '-374px'}], position: 1095, duration: 0 },
-                { id: "eid312", tween: [ "style", "${_huhflugelganzani}", "left", '-739px', { fromValue: '-548px'}], position: 1386, duration: 0 },
-                { id: "eid314", tween: [ "style", "${_huhflugelganzani}", "left", '-918px', { fromValue: '-739px'}], position: 1750, duration: 0 },
-                { id: "eid316", tween: [ "style", "${_huhflugelganzani}", "left", '-734px', { fromValue: '-918px'}], position: 2000, duration: 0 },
-                { id: "eid318", tween: [ "style", "${_huhflugelganzani}", "left", '-543px', { fromValue: '-734px'}], position: 2305, duration: 0 },
-                { id: "eid320", tween: [ "style", "${_huhflugelganzani}", "left", '-385px', { fromValue: '-543px'}], position: 2643, duration: 0 },
-                { id: "eid322", tween: [ "style", "${_huhflugelganzani}", "left", '-205px', { fromValue: '-385px'}], position: 2839, duration: 0 }            ]
-        }
-    }
-},
-"sym_huhpickenganzani": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'huhpickenganzani',
-                    type: 'image',
-                    rect: ['-7px', '0px', '550px', '147px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhpickenganzani.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_huhpickenganzani}": [
-                ["style", "left", '-7px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '155px'],
-                ["style", "width", '170px'],
-                ["style", "overflow", 'hidden']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 3717,
-            autoPlay: false,
-            labels: {
-                "loophuhpickenganzani3": 0
-            },
-            timeline: [
-                { id: "eid328", tween: [ "style", "${_huhpickenganzani}", "left", '-7px', { fromValue: '-7px'}], position: 0, duration: 0 },
-                { id: "eid330", tween: [ "style", "${_huhpickenganzani}", "left", '-190px', { fromValue: '-7px'}], position: 2250, duration: 0 },
-                { id: "eid332", tween: [ "style", "${_huhpickenganzani}", "left", '-367px', { fromValue: '-190px'}], position: 2635, duration: 0 },
-                { id: "eid334", tween: [ "style", "${_huhpickenganzani}", "left", '-190px', { fromValue: '-367px'}], position: 3467, duration: 0 },
-                { id: "eid329", tween: [ "style", "${_huhpickenganzani}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid331", tween: [ "style", "${_huhpickenganzani}", "top", '2px', { fromValue: '0px'}], position: 2250, duration: 0 },
-                { id: "eid333", tween: [ "style", "${_huhpickenganzani}", "top", '5px', { fromValue: '2px'}], position: 2635, duration: 0 },
-                { id: "eid335", tween: [ "style", "${_huhpickenganzani}", "top", '0px', { fromValue: '5px'}], position: 3467, duration: 0 }            ]
-        }
-    }
-},
-"sym_huhpickenkopfkoroer": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'huhpickenkopf',
-                    type: 'image',
-                    rect: ['-11px', '0px', '163px', '146px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhpickenkopf.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '146px'],
-                ["style", "width", '65px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_huhpickenkopf}": [
-                ["style", "left", '-87px'],
-                ["style", "top", '0px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 1500,
-            autoPlay: false,
-            labels: {
-                "loophuhn4": 0
-            },
-            timeline: [
-                { id: "eid340", tween: [ "style", "${_huhpickenkopf}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid339", tween: [ "style", "${_huhpickenkopf}", "left", '-87px', { fromValue: '-87px'}], position: 0, duration: 0 },
-                { id: "eid341", tween: [ "style", "${_huhpickenkopf}", "left", '-4px', { fromValue: '-87px'}], position: 500, duration: 0 }            ]
-        }
-    }
-},
-"sym_blatt": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'sym_gesicht',
-                    type: 'rect',
-                    rect: ['0', '0', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'ib',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ib.png', '0px', '0px']
-                },
-                {
-                    id: 'hb',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/hb.png', '0px', '0px']
-                },
-                {
-                    id: 'gb',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/gb.png', '0px', '0px']
-                },
-                {
-                    id: 'fb',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/fb.png', '0px', '0px']
-                },
-                {
-                    id: 'eb',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/eb.png', '0px', '0px']
-                },
-                {
-                    id: 'db',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/db.png', '0px', '0px']
-                },
-                {
-                    id: 'cb',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/cb.png', '0px', '0px']
-                },
-                {
-                    id: 'bb',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/bb.png', '0px', '0px']
-                },
-                {
-                    id: 'a',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/a.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'sym_gesicht',
-                symbolName: 'sym_gesicht',
-                autoPlay: {
-
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_hb}": [
-                ["style", "top", '-37px'],
-                ["style", "height", '1613px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${_a}": [
-                ["style", "top", '-37px'],
-                ["style", "height", '1613px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${_db}": [
-                ["style", "top", '-37px'],
-                ["style", "height", '1613px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${_gb}": [
-                ["style", "top", '-37px'],
-                ["style", "height", '1613px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${_ib}": [
-                ["style", "top", '-37px'],
-                ["style", "height", '1613px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ],
-            "${_fb}": [
-                ["style", "top", '-37px'],
-                ["style", "height", '1613px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${_eb}": [
-                ["style", "top", '-37px'],
-                ["style", "height", '1613px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${_bb}": [
-                ["style", "top", '-37px'],
-                ["style", "height", '1613px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${_cb}": [
-                ["style", "top", '-37px'],
-                ["style", "height", '1613px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: true,
-            labels: {
-                "loop_blatt": 0
-            },
-            timeline: [
-                { id: "eid421", tween: [ "style", "${_hb}", "top", '-37px', { fromValue: '-37px'}], position: 0, duration: 0 },
-                { id: "eid481", tween: [ "style", "${_hb}", "top", '-37px', { fromValue: '-37px'}], position: 500, duration: 0 },
-                { id: "eid482", tween: [ "style", "${_hb}", "top", '-37px', { fromValue: '-37px'}], position: 1000, duration: 0 },
-                { id: "eid546", tween: [ "style", "${_hb}", "top", '-37px', { fromValue: '-37px'}], position: 1500, duration: 0 },
-                { id: "eid547", tween: [ "style", "${_hb}", "top", '-37px', { fromValue: '-37px'}], position: 2000, duration: 0 },
-                { id: "eid582", tween: [ "style", "${_hb}", "top", '-37px', { fromValue: '-37px'}], position: 2500, duration: 0 },
-                { id: "eid583", tween: [ "style", "${_hb}", "top", '-37px', { fromValue: '-37px'}], position: 3000, duration: 0 },
-                { id: "eid618", tween: [ "style", "${_hb}", "top", '-37px', { fromValue: '-37px'}], position: 3500, duration: 0 },
-                { id: "eid619", tween: [ "style", "${_hb}", "top", '-37px', { fromValue: '-37px'}], position: 4000, duration: 0 },
-                { id: "eid654", tween: [ "style", "${_hb}", "top", '-37px', { fromValue: '-37px'}], position: 4500, duration: 0 },
-                { id: "eid655", tween: [ "style", "${_hb}", "top", '-37px', { fromValue: '-37px'}], position: 5000, duration: 0 },
-                { id: "eid453", tween: [ "style", "${_fb}", "top", '-17px', { fromValue: '-37px'}], position: 0, duration: 500 },
-                { id: "eid496", tween: [ "style", "${_fb}", "top", '-37px', { fromValue: '-17px'}], position: 500, duration: 500 },
-                { id: "eid538", tween: [ "style", "${_fb}", "top", '-17px', { fromValue: '-37px'}], position: 1000, duration: 500 },
-                { id: "eid539", tween: [ "style", "${_fb}", "top", '-37px', { fromValue: '-17px'}], position: 1500, duration: 500 },
-                { id: "eid574", tween: [ "style", "${_fb}", "top", '-17px', { fromValue: '-37px'}], position: 2000, duration: 500 },
-                { id: "eid575", tween: [ "style", "${_fb}", "top", '-37px', { fromValue: '-17px'}], position: 2500, duration: 500 },
-                { id: "eid610", tween: [ "style", "${_fb}", "top", '-17px', { fromValue: '-37px'}], position: 3000, duration: 500 },
-                { id: "eid611", tween: [ "style", "${_fb}", "top", '-37px', { fromValue: '-17px'}], position: 3500, duration: 500 },
-                { id: "eid646", tween: [ "style", "${_fb}", "top", '-17px', { fromValue: '-37px'}], position: 4000, duration: 500 },
-                { id: "eid647", tween: [ "style", "${_fb}", "top", '-37px', { fromValue: '-17px'}], position: 4500, duration: 500 },
-                { id: "eid456", tween: [ "style", "${_ib}", "top", '-67px', { fromValue: '-37px'}], position: 0, duration: 500 },
-                { id: "eid501", tween: [ "style", "${_ib}", "top", '-37px', { fromValue: '-67px'}], position: 500, duration: 500 },
-                { id: "eid550", tween: [ "style", "${_ib}", "top", '-67px', { fromValue: '-37px'}], position: 1000, duration: 500 },
-                { id: "eid551", tween: [ "style", "${_ib}", "top", '-37px', { fromValue: '-67px'}], position: 1500, duration: 500 },
-                { id: "eid586", tween: [ "style", "${_ib}", "top", '-67px', { fromValue: '-37px'}], position: 2000, duration: 500 },
-                { id: "eid587", tween: [ "style", "${_ib}", "top", '-37px', { fromValue: '-67px'}], position: 2500, duration: 500 },
-                { id: "eid622", tween: [ "style", "${_ib}", "top", '-67px', { fromValue: '-37px'}], position: 3000, duration: 500 },
-                { id: "eid623", tween: [ "style", "${_ib}", "top", '-37px', { fromValue: '-67px'}], position: 3500, duration: 500 },
-                { id: "eid658", tween: [ "style", "${_ib}", "top", '-67px', { fromValue: '-37px'}], position: 4000, duration: 500 },
-                { id: "eid659", tween: [ "style", "${_ib}", "top", '-37px', { fromValue: '-67px'}], position: 4500, duration: 500 },
-                { id: "eid445", tween: [ "style", "${_bb}", "top", '-57px', { fromValue: '-37px'}], position: 0, duration: 500 },
-                { id: "eid488", tween: [ "style", "${_bb}", "top", '-37px', { fromValue: '-57px'}], position: 500, duration: 500 },
-                { id: "eid522", tween: [ "style", "${_bb}", "top", '-57px', { fromValue: '-37px'}], position: 1000, duration: 500 },
-                { id: "eid523", tween: [ "style", "${_bb}", "top", '-37px', { fromValue: '-57px'}], position: 1500, duration: 500 },
-                { id: "eid558", tween: [ "style", "${_bb}", "top", '-57px', { fromValue: '-37px'}], position: 2000, duration: 500 },
-                { id: "eid559", tween: [ "style", "${_bb}", "top", '-37px', { fromValue: '-57px'}], position: 2500, duration: 500 },
-                { id: "eid594", tween: [ "style", "${_bb}", "top", '-57px', { fromValue: '-37px'}], position: 3000, duration: 500 },
-                { id: "eid595", tween: [ "style", "${_bb}", "top", '-37px', { fromValue: '-57px'}], position: 3500, duration: 500 },
-                { id: "eid630", tween: [ "style", "${_bb}", "top", '-57px', { fromValue: '-37px'}], position: 4000, duration: 500 },
-                { id: "eid631", tween: [ "style", "${_bb}", "top", '-37px', { fromValue: '-57px'}], position: 4500, duration: 500 },
-                { id: "eid419", tween: [ "style", "${_gb}", "top", '-37px', { fromValue: '-37px'}], position: 0, duration: 0 },
-                { id: "eid478", tween: [ "style", "${_gb}", "top", '-37px', { fromValue: '-37px'}], position: 500, duration: 0 },
-                { id: "eid479", tween: [ "style", "${_gb}", "top", '-37px', { fromValue: '-37px'}], position: 1000, duration: 0 },
-                { id: "eid542", tween: [ "style", "${_gb}", "top", '-37px', { fromValue: '-37px'}], position: 1500, duration: 0 },
-                { id: "eid543", tween: [ "style", "${_gb}", "top", '-37px', { fromValue: '-37px'}], position: 2000, duration: 0 },
-                { id: "eid578", tween: [ "style", "${_gb}", "top", '-37px', { fromValue: '-37px'}], position: 2500, duration: 0 },
-                { id: "eid579", tween: [ "style", "${_gb}", "top", '-37px', { fromValue: '-37px'}], position: 3000, duration: 0 },
-                { id: "eid614", tween: [ "style", "${_gb}", "top", '-37px', { fromValue: '-37px'}], position: 3500, duration: 0 },
-                { id: "eid615", tween: [ "style", "${_gb}", "top", '-37px', { fromValue: '-37px'}], position: 4000, duration: 0 },
-                { id: "eid650", tween: [ "style", "${_gb}", "top", '-37px', { fromValue: '-37px'}], position: 4500, duration: 0 },
-                { id: "eid651", tween: [ "style", "${_gb}", "top", '-37px', { fromValue: '-37px'}], position: 5000, duration: 0 },
-                { id: "eid454", tween: [ "style", "${_gb}", "left", '-30px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid498", tween: [ "style", "${_gb}", "left", '-50px', { fromValue: '-30px'}], position: 500, duration: 500 },
-                { id: "eid540", tween: [ "style", "${_gb}", "left", '-30px', { fromValue: '-50px'}], position: 1000, duration: 500 },
-                { id: "eid541", tween: [ "style", "${_gb}", "left", '-50px', { fromValue: '-30px'}], position: 1500, duration: 500 },
-                { id: "eid576", tween: [ "style", "${_gb}", "left", '-30px', { fromValue: '-50px'}], position: 2000, duration: 500 },
-                { id: "eid577", tween: [ "style", "${_gb}", "left", '-50px', { fromValue: '-30px'}], position: 2500, duration: 500 },
-                { id: "eid612", tween: [ "style", "${_gb}", "left", '-30px', { fromValue: '-50px'}], position: 3000, duration: 500 },
-                { id: "eid613", tween: [ "style", "${_gb}", "left", '-50px', { fromValue: '-30px'}], position: 3500, duration: 500 },
-                { id: "eid648", tween: [ "style", "${_gb}", "left", '-30px', { fromValue: '-50px'}], position: 4000, duration: 500 },
-                { id: "eid649", tween: [ "style", "${_gb}", "left", '-50px', { fromValue: '-30px'}], position: 4500, duration: 500 },
-                { id: "eid451", tween: [ "style", "${_eb}", "left", '-70px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid495", tween: [ "style", "${_eb}", "left", '-50px', { fromValue: '-70px'}], position: 500, duration: 500 },
-                { id: "eid532", tween: [ "style", "${_eb}", "left", '-70px', { fromValue: '-50px'}], position: 1000, duration: 500 },
-                { id: "eid533", tween: [ "style", "${_eb}", "left", '-50px', { fromValue: '-70px'}], position: 1500, duration: 500 },
-                { id: "eid568", tween: [ "style", "${_eb}", "left", '-70px', { fromValue: '-50px'}], position: 2000, duration: 500 },
-                { id: "eid569", tween: [ "style", "${_eb}", "left", '-50px', { fromValue: '-70px'}], position: 2500, duration: 500 },
-                { id: "eid604", tween: [ "style", "${_eb}", "left", '-70px', { fromValue: '-50px'}], position: 3000, duration: 500 },
-                { id: "eid605", tween: [ "style", "${_eb}", "left", '-50px', { fromValue: '-70px'}], position: 3500, duration: 500 },
-                { id: "eid640", tween: [ "style", "${_eb}", "left", '-70px', { fromValue: '-50px'}], position: 4000, duration: 500 },
-                { id: "eid641", tween: [ "style", "${_eb}", "left", '-50px', { fromValue: '-70px'}], position: 4500, duration: 500 },
-                { id: "eid447", tween: [ "style", "${_cb}", "left", '-80px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid491", tween: [ "style", "${_cb}", "left", '-50px', { fromValue: '-80px'}], position: 500, duration: 500 },
-                { id: "eid524", tween: [ "style", "${_cb}", "left", '-80px', { fromValue: '-50px'}], position: 1000, duration: 500 },
-                { id: "eid525", tween: [ "style", "${_cb}", "left", '-50px', { fromValue: '-80px'}], position: 1500, duration: 500 },
-                { id: "eid560", tween: [ "style", "${_cb}", "left", '-80px', { fromValue: '-50px'}], position: 2000, duration: 500 },
-                { id: "eid561", tween: [ "style", "${_cb}", "left", '-50px', { fromValue: '-80px'}], position: 2500, duration: 500 },
-                { id: "eid596", tween: [ "style", "${_cb}", "left", '-80px', { fromValue: '-50px'}], position: 3000, duration: 500 },
-                { id: "eid597", tween: [ "style", "${_cb}", "left", '-50px', { fromValue: '-80px'}], position: 3500, duration: 500 },
-                { id: "eid632", tween: [ "style", "${_cb}", "left", '-80px', { fromValue: '-50px'}], position: 4000, duration: 500 },
-                { id: "eid633", tween: [ "style", "${_cb}", "left", '-50px', { fromValue: '-80px'}], position: 4500, duration: 500 },
-                { id: "eid450", tween: [ "style", "${_eb}", "top", '-17px', { fromValue: '-37px'}], position: 0, duration: 500 },
-                { id: "eid494", tween: [ "style", "${_eb}", "top", '-37px', { fromValue: '-17px'}], position: 500, duration: 500 },
-                { id: "eid534", tween: [ "style", "${_eb}", "top", '-17px', { fromValue: '-37px'}], position: 1000, duration: 500 },
-                { id: "eid535", tween: [ "style", "${_eb}", "top", '-37px', { fromValue: '-17px'}], position: 1500, duration: 500 },
-                { id: "eid570", tween: [ "style", "${_eb}", "top", '-17px', { fromValue: '-37px'}], position: 2000, duration: 500 },
-                { id: "eid571", tween: [ "style", "${_eb}", "top", '-37px', { fromValue: '-17px'}], position: 2500, duration: 500 },
-                { id: "eid606", tween: [ "style", "${_eb}", "top", '-17px', { fromValue: '-37px'}], position: 3000, duration: 500 },
-                { id: "eid607", tween: [ "style", "${_eb}", "top", '-37px', { fromValue: '-17px'}], position: 3500, duration: 500 },
-                { id: "eid642", tween: [ "style", "${_eb}", "top", '-17px', { fromValue: '-37px'}], position: 4000, duration: 500 },
-                { id: "eid643", tween: [ "style", "${_eb}", "top", '-37px', { fromValue: '-17px'}], position: 4500, duration: 500 },
-                { id: "eid457", tween: [ "style", "${_ib}", "left", '-19px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid500", tween: [ "style", "${_ib}", "left", '-50px', { fromValue: '-19px'}], position: 500, duration: 500 },
-                { id: "eid548", tween: [ "style", "${_ib}", "left", '-19px', { fromValue: '-50px'}], position: 1000, duration: 500 },
-                { id: "eid549", tween: [ "style", "${_ib}", "left", '-50px', { fromValue: '-19px'}], position: 1500, duration: 500 },
-                { id: "eid584", tween: [ "style", "${_ib}", "left", '-19px', { fromValue: '-50px'}], position: 2000, duration: 500 },
-                { id: "eid585", tween: [ "style", "${_ib}", "left", '-50px', { fromValue: '-19px'}], position: 2500, duration: 500 },
-                { id: "eid620", tween: [ "style", "${_ib}", "left", '-19px', { fromValue: '-50px'}], position: 3000, duration: 500 },
-                { id: "eid621", tween: [ "style", "${_ib}", "left", '-50px', { fromValue: '-19px'}], position: 3500, duration: 500 },
-                { id: "eid656", tween: [ "style", "${_ib}", "left", '-19px', { fromValue: '-50px'}], position: 4000, duration: 500 },
-                { id: "eid657", tween: [ "style", "${_ib}", "left", '-50px', { fromValue: '-19px'}], position: 4500, duration: 500 },
-                { id: "eid446", tween: [ "style", "${_cb}", "top", '-57px', { fromValue: '-37px'}], position: 0, duration: 500 },
-                { id: "eid490", tween: [ "style", "${_cb}", "top", '-37px', { fromValue: '-57px'}], position: 500, duration: 500 },
-                { id: "eid526", tween: [ "style", "${_cb}", "top", '-57px', { fromValue: '-37px'}], position: 1000, duration: 500 },
-                { id: "eid527", tween: [ "style", "${_cb}", "top", '-37px', { fromValue: '-57px'}], position: 1500, duration: 500 },
-                { id: "eid562", tween: [ "style", "${_cb}", "top", '-57px', { fromValue: '-37px'}], position: 2000, duration: 500 },
-                { id: "eid563", tween: [ "style", "${_cb}", "top", '-37px', { fromValue: '-57px'}], position: 2500, duration: 500 },
-                { id: "eid598", tween: [ "style", "${_cb}", "top", '-57px', { fromValue: '-37px'}], position: 3000, duration: 500 },
-                { id: "eid599", tween: [ "style", "${_cb}", "top", '-37px', { fromValue: '-57px'}], position: 3500, duration: 500 },
-                { id: "eid634", tween: [ "style", "${_cb}", "top", '-57px', { fromValue: '-37px'}], position: 4000, duration: 500 },
-                { id: "eid635", tween: [ "style", "${_cb}", "top", '-37px', { fromValue: '-57px'}], position: 4500, duration: 500 },
-                { id: "eid442", tween: [ "style", "${_a}", "top", '-23px', { fromValue: '-37px'}], position: 0, duration: 500 },
-                { id: "eid487", tween: [ "style", "${_a}", "top", '-37px', { fromValue: '-23px'}], position: 500, duration: 500 },
-                { id: "eid518", tween: [ "style", "${_a}", "top", '-23px', { fromValue: '-37px'}], position: 1000, duration: 500 },
-                { id: "eid519", tween: [ "style", "${_a}", "top", '-37px', { fromValue: '-23px'}], position: 1500, duration: 500 },
-                { id: "eid554", tween: [ "style", "${_a}", "top", '-23px', { fromValue: '-37px'}], position: 2000, duration: 500 },
-                { id: "eid555", tween: [ "style", "${_a}", "top", '-37px', { fromValue: '-23px'}], position: 2500, duration: 500 },
-                { id: "eid590", tween: [ "style", "${_a}", "top", '-23px', { fromValue: '-37px'}], position: 3000, duration: 500 },
-                { id: "eid591", tween: [ "style", "${_a}", "top", '-37px', { fromValue: '-23px'}], position: 3500, duration: 500 },
-                { id: "eid626", tween: [ "style", "${_a}", "top", '-23px', { fromValue: '-37px'}], position: 4000, duration: 500 },
-                { id: "eid627", tween: [ "style", "${_a}", "top", '-37px', { fromValue: '-23px'}], position: 4500, duration: 500 },
-                { id: "eid443", tween: [ "style", "${_a}", "left", '-24px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid486", tween: [ "style", "${_a}", "left", '-50px', { fromValue: '-24px'}], position: 500, duration: 500 },
-                { id: "eid516", tween: [ "style", "${_a}", "left", '-24px', { fromValue: '-50px'}], position: 1000, duration: 500 },
-                { id: "eid517", tween: [ "style", "${_a}", "left", '-50px', { fromValue: '-24px'}], position: 1500, duration: 500 },
-                { id: "eid552", tween: [ "style", "${_a}", "left", '-24px', { fromValue: '-50px'}], position: 2000, duration: 500 },
-                { id: "eid553", tween: [ "style", "${_a}", "left", '-50px', { fromValue: '-24px'}], position: 2500, duration: 500 },
-                { id: "eid588", tween: [ "style", "${_a}", "left", '-24px', { fromValue: '-50px'}], position: 3000, duration: 500 },
-                { id: "eid589", tween: [ "style", "${_a}", "left", '-50px', { fromValue: '-24px'}], position: 3500, duration: 500 },
-                { id: "eid624", tween: [ "style", "${_a}", "left", '-24px', { fromValue: '-50px'}], position: 4000, duration: 500 },
-                { id: "eid625", tween: [ "style", "${_a}", "left", '-50px', { fromValue: '-24px'}], position: 4500, duration: 500 },
-                { id: "eid449", tween: [ "style", "${_db}", "top", '-47px', { fromValue: '-37px'}], position: 0, duration: 500 },
-                { id: "eid492", tween: [ "style", "${_db}", "top", '-37px', { fromValue: '-47px'}], position: 500, duration: 500 },
-                { id: "eid530", tween: [ "style", "${_db}", "top", '-47px', { fromValue: '-37px'}], position: 1000, duration: 500 },
-                { id: "eid531", tween: [ "style", "${_db}", "top", '-37px', { fromValue: '-47px'}], position: 1500, duration: 500 },
-                { id: "eid566", tween: [ "style", "${_db}", "top", '-47px', { fromValue: '-37px'}], position: 2000, duration: 500 },
-                { id: "eid567", tween: [ "style", "${_db}", "top", '-37px', { fromValue: '-47px'}], position: 2500, duration: 500 },
-                { id: "eid602", tween: [ "style", "${_db}", "top", '-47px', { fromValue: '-37px'}], position: 3000, duration: 500 },
-                { id: "eid603", tween: [ "style", "${_db}", "top", '-37px', { fromValue: '-47px'}], position: 3500, duration: 500 },
-                { id: "eid638", tween: [ "style", "${_db}", "top", '-47px', { fromValue: '-37px'}], position: 4000, duration: 500 },
-                { id: "eid639", tween: [ "style", "${_db}", "top", '-37px', { fromValue: '-47px'}], position: 4500, duration: 500 },
-                { id: "eid455", tween: [ "style", "${_hb}", "left", '-70px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid499", tween: [ "style", "${_hb}", "left", '-50px', { fromValue: '-70px'}], position: 500, duration: 500 },
-                { id: "eid544", tween: [ "style", "${_hb}", "left", '-70px', { fromValue: '-50px'}], position: 1000, duration: 500 },
-                { id: "eid545", tween: [ "style", "${_hb}", "left", '-50px', { fromValue: '-70px'}], position: 1500, duration: 500 },
-                { id: "eid580", tween: [ "style", "${_hb}", "left", '-70px', { fromValue: '-50px'}], position: 2000, duration: 500 },
-                { id: "eid581", tween: [ "style", "${_hb}", "left", '-50px', { fromValue: '-70px'}], position: 2500, duration: 500 },
-                { id: "eid616", tween: [ "style", "${_hb}", "left", '-70px', { fromValue: '-50px'}], position: 3000, duration: 500 },
-                { id: "eid617", tween: [ "style", "${_hb}", "left", '-50px', { fromValue: '-70px'}], position: 3500, duration: 500 },
-                { id: "eid652", tween: [ "style", "${_hb}", "left", '-70px', { fromValue: '-50px'}], position: 4000, duration: 500 },
-                { id: "eid653", tween: [ "style", "${_hb}", "left", '-50px', { fromValue: '-70px'}], position: 4500, duration: 500 },
-                { id: "eid452", tween: [ "style", "${_fb}", "left", '-20px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid497", tween: [ "style", "${_fb}", "left", '-50px', { fromValue: '-20px'}], position: 500, duration: 500 },
-                { id: "eid536", tween: [ "style", "${_fb}", "left", '-20px', { fromValue: '-50px'}], position: 1000, duration: 500 },
-                { id: "eid537", tween: [ "style", "${_fb}", "left", '-50px', { fromValue: '-20px'}], position: 1500, duration: 500 },
-                { id: "eid572", tween: [ "style", "${_fb}", "left", '-20px', { fromValue: '-50px'}], position: 2000, duration: 500 },
-                { id: "eid573", tween: [ "style", "${_fb}", "left", '-50px', { fromValue: '-20px'}], position: 2500, duration: 500 },
-                { id: "eid608", tween: [ "style", "${_fb}", "left", '-20px', { fromValue: '-50px'}], position: 3000, duration: 500 },
-                { id: "eid609", tween: [ "style", "${_fb}", "left", '-50px', { fromValue: '-20px'}], position: 3500, duration: 500 },
-                { id: "eid644", tween: [ "style", "${_fb}", "left", '-20px', { fromValue: '-50px'}], position: 4000, duration: 500 },
-                { id: "eid645", tween: [ "style", "${_fb}", "left", '-50px', { fromValue: '-20px'}], position: 4500, duration: 500 },
-                { id: "eid448", tween: [ "style", "${_db}", "left", '-30px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid493", tween: [ "style", "${_db}", "left", '-50px', { fromValue: '-30px'}], position: 500, duration: 500 },
-                { id: "eid528", tween: [ "style", "${_db}", "left", '-30px', { fromValue: '-50px'}], position: 1000, duration: 500 },
-                { id: "eid529", tween: [ "style", "${_db}", "left", '-50px', { fromValue: '-30px'}], position: 1500, duration: 500 },
-                { id: "eid564", tween: [ "style", "${_db}", "left", '-30px', { fromValue: '-50px'}], position: 2000, duration: 500 },
-                { id: "eid565", tween: [ "style", "${_db}", "left", '-50px', { fromValue: '-30px'}], position: 2500, duration: 500 },
-                { id: "eid600", tween: [ "style", "${_db}", "left", '-30px', { fromValue: '-50px'}], position: 3000, duration: 500 },
-                { id: "eid601", tween: [ "style", "${_db}", "left", '-50px', { fromValue: '-30px'}], position: 3500, duration: 500 },
-                { id: "eid636", tween: [ "style", "${_db}", "left", '-30px', { fromValue: '-50px'}], position: 4000, duration: 500 },
-                { id: "eid637", tween: [ "style", "${_db}", "left", '-50px', { fromValue: '-30px'}], position: 4500, duration: 500 },
-                { id: "eid444", tween: [ "style", "${_bb}", "left", '0px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid489", tween: [ "style", "${_bb}", "left", '-50px', { fromValue: '0px'}], position: 500, duration: 500 },
-                { id: "eid520", tween: [ "style", "${_bb}", "left", '0px', { fromValue: '-50px'}], position: 1000, duration: 500 },
-                { id: "eid521", tween: [ "style", "${_bb}", "left", '-50px', { fromValue: '0px'}], position: 1500, duration: 500 },
-                { id: "eid556", tween: [ "style", "${_bb}", "left", '0px', { fromValue: '-50px'}], position: 2000, duration: 500 },
-                { id: "eid557", tween: [ "style", "${_bb}", "left", '-50px', { fromValue: '0px'}], position: 2500, duration: 500 },
-                { id: "eid592", tween: [ "style", "${_bb}", "left", '0px', { fromValue: '-50px'}], position: 3000, duration: 500 },
-                { id: "eid593", tween: [ "style", "${_bb}", "left", '-50px', { fromValue: '0px'}], position: 3500, duration: 500 },
-                { id: "eid628", tween: [ "style", "${_bb}", "left", '0px', { fromValue: '-50px'}], position: 4000, duration: 500 },
-                { id: "eid629", tween: [ "style", "${_bb}", "left", '-50px', { fromValue: '0px'}], position: 4500, duration: 500 }            ]
-        }
-    }
-},
-"sym_auge": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'augenaufschlagauge',
-                    type: 'image',
-                    rect: ['0px', '0px', '14336px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/augenaufschlagauge.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_augenaufschlagauge}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 2250,
-            autoPlay: false,
-            timeline: [
-                { id: "eid458", tween: [ "style", "${_augenaufschlagauge}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid460", tween: [ "style", "${_augenaufschlagauge}", "left", '-2048px', { fromValue: '0px'}], position: 311, duration: 0 },
-                { id: "eid461", tween: [ "style", "${_augenaufschlagauge}", "left", '-4096px', { fromValue: '-2048px'}], position: 642, duration: 0 },
-                { id: "eid462", tween: [ "style", "${_augenaufschlagauge}", "left", '-6144px', { fromValue: '-4096px'}], position: 1000, duration: 0 },
-                { id: "eid463", tween: [ "style", "${_augenaufschlagauge}", "left", '-8192px', { fromValue: '-6144px'}], position: 1338, duration: 0 },
-                { id: "eid464", tween: [ "style", "${_augenaufschlagauge}", "left", '-10310px', { fromValue: '-8192px'}], position: 1839, duration: 0 },
-                { id: "eid465", tween: [ "style", "${_augenaufschlagauge}", "left", '-12367px', { fromValue: '-10000px'}], position: 2250, duration: 0 },
-                { id: "eid459", tween: [ "style", "${_augenaufschlagauge}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"sym_gesicht": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'baumHalbesGAugenKopie',
-                    type: 'image',
-                    rect: ['620px', '220px', '932px', '404px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/baumHalbesGAugenKopie.png', '0px', '0px']
-                },
-                {
-                    id: 'baumHalbesGohneAugenKopie',
-                    type: 'image',
-                    rect: ['0px', '0px', '2048px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/baumHalbesGohneAugenKopie.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_baumHalbesGAugenKopie}": [
-                ["style", "top", '220px'],
-                ["style", "left", '620px']
-            ],
-            "${_baumHalbesGohneAugenKopie}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 4940,
-            autoPlay: true,
-            labels: {
-                "loop_gesicht": 0
-            },
-            timeline: [
-                { id: "eid504", tween: [ "style", "${_baumHalbesGAugenKopie}", "left", '650px', { fromValue: '620px'}], position: 0, duration: 1250 },
-                { id: "eid505", tween: [ "style", "${_baumHalbesGAugenKopie}", "left", '560px', { fromValue: '650px'}], position: 1250, duration: 635 },
-                { id: "eid507", tween: [ "style", "${_baumHalbesGAugenKopie}", "left", '620px', { fromValue: '560px'}], position: 2189, duration: 926 },
-                { id: "eid511", tween: [ "style", "${_baumHalbesGAugenKopie}", "left", '620px', { fromValue: '620px'}], position: 3852, duration: 0 },
-                { id: "eid506", tween: [ "style", "${_baumHalbesGAugenKopie}", "top", '250px', { fromValue: '220px'}], position: 0, duration: 1659 },
-                { id: "eid508", tween: [ "style", "${_baumHalbesGAugenKopie}", "top", '270px', { fromValue: '250px'}], position: 1659, duration: 1456 },
-                { id: "eid510", tween: [ "style", "${_baumHalbesGAugenKopie}", "top", '220px', { fromValue: '270px'}], position: 3115, duration: 737 },
-                { id: "eid513", tween: [ "style", "${_baumHalbesGAugenKopie}", "top", '220px', { fromValue: '220px'}], position: 4940, duration: 0 }            ]
-        }
-    }
-}
-};
-
-
-Edge.registerCompositionDefn(compId, symbols, fonts, resources, opts);
-
-/**
- * Adobe Edge DOM Ready Event Handler
- */
-$(window).ready(function() {
-     Edge.launchComposition(compId);
-});
-})(jQuery, AdobeEdge, "PART2");
+    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("part2_edgeActions.js");
+})("PART2");

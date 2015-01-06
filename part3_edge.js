@@ -1,1761 +1,4164 @@
-/**
- * Adobe Edge: symbol definitions
- */
-(function($, Edge, compId){
-//images folder
-var im='images/';
+/*jslint */
+/*global AdobeEdge: false, window: false, document: false, console:false, alert: false */
+(function (compId) {
 
-var fonts = {};
-var opts = {};
-var resources = [
-];
-var symbols = {
-"stage": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-            {
-                id: 'sym_ausblick',
-                type: 'rect',
-                rect: ['0', '0','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'Rectangle',
-                type: 'rect',
-                rect: ['1311px', '548px','361px','153px','auto', 'auto'],
-                fill: ["rgba(192,192,192,0.00)"],
-                stroke: [0,"rgba(0,0,0,1)","none"]
-            },
-            {
-                id: 'sym_vorzim',
-                type: 'rect',
-                rect: ['0', '-9','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'Rectangle2',
-                type: 'rect',
-                rect: ['904px', '312px','620px','461px','auto', 'auto'],
-                fill: ["rgba(192,192,192,0)"],
-                stroke: [0,"rgb(0, 0, 0)","none"]
-            },
-            {
-                id: 'sym_schwarz',
-                type: 'rect',
-                rect: ['0', '0','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'uberschwarz',
-                type: 'rect',
-                rect: ['844px', '319px','680px','449px','auto', 'auto'],
-                fill: ["rgba(192,192,192,0)"],
-                stroke: [0,"rgba(0,0,0,0.00)","none"]
-            },
-            {
-                id: 'wegzumhaus',
-                type: 'rect',
-                rect: ['-25', '-9','auto','auto','auto', 'auto']
-            },
-            {
-                id: 'strich1',
-                type: 'image',
-                rect: ['0', '0','2048px','1536px','auto', 'auto'],
-                fill: ["rgba(0,0,0,0)",im+"strich1.jpg",'0px','0px']
-            }],
-            symbolInstances: [
-            {
-                id: 'sym_ausblick',
-                symbolName: 'sym_ausblick_1',
-                autoPlay: {
+    "use strict";
+    var im='images/',
+        aud='media/',
+        vid='media/',
+        js='js/',
+        fonts = {
+        },
+        opts = {
+            'gAudioPreloadPreference': 'auto',
+            'gVideoPreloadPreference': 'auto'
+        },
+        resources = [
+        ],
+        scripts = [
+            js+"jquery-2.0.3.min.js"
+        ],
+        symbols = {
+            "stage": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'sym_ausblick',
+                            symbolName: 'sym_ausblick_1',
+                            type: 'rect',
+                            rect: ['0', '0', '2048', '1536', 'auto', 'auto']
+                        },
+                        {
+                            id: 'Rectangle',
+                            type: 'rect',
+                            rect: ['1311', '548', '361', '153', 'auto', 'auto'],
+                            fill: ["rgba(192,192,192,0.00)"],
+                            stroke: [0,"rgba(0,0,0,1)","none"]
+                        },
+                        {
+                            id: 'sym_vorzim',
+                            symbolName: 'sym_vorzim',
+                            type: 'rect',
+                            rect: ['0', '-9', '2048', '1536', 'auto', 'auto']
+                        },
+                        {
+                            id: 'Rectangle2',
+                            type: 'rect',
+                            rect: ['904px', '312px', '620px', '461px', 'auto', 'auto'],
+                            fill: ["rgba(192,192,192,0)"],
+                            stroke: [0,"rgb(0, 0, 0)","none"]
+                        },
+                        {
+                            id: 'sym_schwarz',
+                            symbolName: 'sym_schwarz',
+                            type: 'rect',
+                            rect: ['0', '0', '2048', '1536', 'auto', 'auto']
+                        },
+                        {
+                            id: 'uberschwarz',
+                            type: 'rect',
+                            rect: ['844', '319', '680', '449', 'auto', 'auto'],
+                            fill: ["rgba(192,192,192,0)"],
+                            stroke: [0,"rgba(0,0,0,0.00)","none"]
+                        },
+                        {
+                            id: 'wegzumhaus',
+                            symbolName: 'wegzumhaus',
+                            type: 'rect',
+                            rect: ['-25', '-9', '8217', '1564', 'auto', 'auto'],
+                            overflow: 'hidden'
+                        },
+                        {
+                            id: 'strich1',
+                            type: 'image',
+                            rect: ['0', '0', '2048px', '1536px', 'auto', 'auto'],
+                            fill: ["rgba(0,0,0,0)",im+"strich1.jpg",'0px','0px']
+                        }
+                    ],
+                    style: {
+                        '${StageA}': {
+                            isStage: true,
+                            rect: ['0', '0', '0', '0', 'auto', 'auto'],
+                            fill: ["rgba(255,255,255,1.00)"]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: false,
+                    data: [
 
+                    ]
                 }
             },
-            {
-                id: 'sym_schwarz',
-                symbolName: 'sym_schwarz',
-                autoPlay: {
-
+            "sym_vorhang": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '5112px', '538px', 'auto', 'auto'],
+                            id: 'vorhangani',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/vorhangani.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 850, 538]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 2500,
+                    autoPlay: false,
+                    data: [
+                        [
+                            "eid58",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${vorhangani}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid60",
+                            "left",
+                            500,
+                            0,
+                            "linear",
+                            "${vorhangani}",
+                            '0px',
+                            '-871px'
+                        ],
+                        [
+                            "eid61",
+                            "left",
+                            1000,
+                            0,
+                            "linear",
+                            "${vorhangani}",
+                            '-872px',
+                            '-1750px'
+                        ],
+                        [
+                            "eid62",
+                            "left",
+                            1500,
+                            0,
+                            "linear",
+                            "${vorhangani}",
+                            '-1751px',
+                            '-2610px'
+                        ],
+                        [
+                            "eid63",
+                            "left",
+                            2000,
+                            0,
+                            "linear",
+                            "${vorhangani}",
+                            '-2610px',
+                            '-3462px'
+                        ],
+                        [
+                            "eid64",
+                            "left",
+                            2500,
+                            0,
+                            "linear",
+                            "${vorhangani}",
+                            '-3464px',
+                            '-4313px'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'sym_vorzim',
-                symbolName: 'sym_vorzim',
-                autoPlay: {
-
+            "wegzumhaus": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: ['-580', '-403', '3414px', '2369px', 'auto', 'auto'],
+                            id: 'haushinterswrgb',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/haushinterswrgb.jpg', '0px', '0px']
+                        },
+                        {
+                            rect: [142, 216, '1737px', '916px', 'auto', 'auto'],
+                            id: 'hauswegsw',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/hauswegsw.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 8217, 1564]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 3000,
+                    autoPlay: false,
+                    data: [
+                        [
+                            "eid97",
+                            "scaleY",
+                            0,
+                            3000,
+                            "linear",
+                            "${haushinterswrgb}",
+                            '0.66',
+                            '1'
+                        ],
+                        [
+                            "eid49",
+                            "scaleX",
+                            0,
+                            3000,
+                            "linear",
+                            "${hauswegsw}",
+                            '0.66',
+                            '1'
+                        ],
+                        [
+                            "eid128",
+                            "top",
+                            0,
+                            3000,
+                            "linear",
+                            "${hauswegsw}",
+                            '216px',
+                            '158px'
+                        ],
+                        [
+                            "eid129",
+                            "left",
+                            0,
+                            3000,
+                            "linear",
+                            "${hauswegsw}",
+                            '142px',
+                            '91px'
+                        ],
+                        [
+                            "eid96",
+                            "scaleX",
+                            0,
+                            3000,
+                            "linear",
+                            "${haushinterswrgb}",
+                            '0.66',
+                            '1'
+                        ],
+                        [
+                            "eid50",
+                            "scaleY",
+                            0,
+                            3000,
+                            "linear",
+                            "${hauswegsw}",
+                            '0.66',
+                            '1'
+                        ]
+                    ]
                 }
             },
-            {
-                id: 'wegzumhaus',
-                symbolName: 'wegzumhaus',
-                autoPlay: {
+            "sym_schwarz": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '2048px', '1536px', 'auto', 'auto'],
+                            opacity: '0.850000',
+                            id: 'schwarz',
+                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
+                            type: 'rect',
+                            fill: ['rgba(0,0,0,1)']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 2000,
+                    autoPlay: false,
+                    data: [
+                        [
+                            "eid70",
+                            "opacity",
+                            0,
+                            2000,
+                            "linear",
+                            "${schwarz}",
+                            '0.850000',
+                            '0'
+                        ]
+                    ]
+                }
+            },
+            "sym_ausblick": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [399, -74, '2048px', '1536px', 'auto', 'auto'],
+                            id: 'wasserstruktur_Kopie',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/wasserstruktur%20Kopie.jpg', '0px', '0px']
+                        },
+                        {
+                            rect: [133, -94, '2048px', '1536px', 'auto', 'auto'],
+                            id: 'ausblickwasserfrei',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ausblickwasserfrei.png', '0px', '0px']
+                        },
+                        {
+                            rect: [133, -94, '2048px', '1536px', 'auto', 'auto'],
+                            id: 'aussichtvorsw2',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/aussichtvorsw.png', '0px', '0px']
+                        },
+                        {
+                            id: 'huhliegenkorper2',
+                            type: 'image',
+                            rect: [1116, 1198, '140px', '122px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
+                        },
+                        {
+                            rect: [1146, 1214, 50, 68, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'sym_huhliegenkopf',
+                            symbolName: 'sym_huhliegenkopf',
+                            type: 'rect'
+                        },
+                        {
+                            rect: ['1465px', '1242px', 170, 155, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'sym_huhpickenganzani',
+                            symbolName: 'sym_huhpickenganzani',
+                            type: 'rect'
+                        },
+                        {
+                            rect: ['1278px', '1291px', '163px', '146px', 'auto', 'auto'],
+                            id: 'huhpickenkorper2',
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/huhpickenkorper.png', '0px', '0px']
+                        },
+                        {
+                            rect: ['1278px', '1291px', 65, 146, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'sym_huhpickenkopfkoroer',
+                            symbolName: 'sym_huhpickenkopfkoroer',
+                            type: 'rect',
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 15162,
+                    autoPlay: false,
+                    labels: {
+                        "huhsontherun": 3069
+                    },
+                    data: [
+                        [
+                            "eid513",
+                            "left",
+                            0,
+                            3000,
+                            "linear",
+                            "${ausblickwasserfrei}",
+                            '133px',
+                            '0px'
+                        ],
+                        [
+                            "eid271",
+                            "left",
+                            0,
+                            3000,
+                            "linear",
+                            "${aussichtvorsw2}",
+                            '133px',
+                            '0px'
+                        ],
+                        [
+                            "eid260",
+                            "scaleY",
+                            0,
+                            3000,
+                            "linear",
+                            "${aussichtvorsw2}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid404",
+                            "scaleX",
+                            3184,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid402",
+                            "scaleX",
+                            9500,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '1',
+                            '-1'
+                        ],
+                        [
+                            "eid511",
+                            "scaleX",
+                            0,
+                            3000,
+                            "linear",
+                            "${ausblickwasserfrei}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid515",
+                            "scaleX",
+                            0,
+                            3000,
+                            "linear",
+                            "${wasserstruktur_Kopie}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid259",
+                            "scaleX",
+                            0,
+                            3000,
+                            "linear",
+                            "${aussichtvorsw2}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid371",
+                            "location",
+                            5250,
+                            1000,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            [[1359.5, 1364, 0, 0, 0, 0,0],[1344.43, 1370.42, -26.36, -18.81, -23.2, -16.55,18.22],[1318.34, 1370.17, -16.72, 1.61, -23.12, 2.22,45.12],[1307.5, 1366.14, 0, 0, 0, 0,56.93]]
+                        ],
+                        [
+                            "eid400",
+                            "location",
+                            10500,
+                            1000,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            [[1307.5, 1366.14, 0, 0, 0, 0,0],[1318.34, 1370.17, 23.12, -2.22, 16.72, -1.61,11.81],[1344.43, 1370.42, 23.2, 16.55, 26.36, 18.81,38.7],[1359.5, 1364, 0, 0, 0, 0,56.93]]
+                        ],
+                        [
+                            "eid374",
+                            "rotateZ",
+                            5250,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid377",
+                            "rotateZ",
+                            5500,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '-8deg'
+                        ],
+                        [
+                            "eid379",
+                            "rotateZ",
+                            5750,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '-8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid381",
+                            "rotateZ",
+                            6000,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid383",
+                            "rotateZ",
+                            6250,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid393",
+                            "rotateZ",
+                            10500,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid394",
+                            "rotateZ",
+                            10750,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '-8deg'
+                        ],
+                        [
+                            "eid395",
+                            "rotateZ",
+                            11000,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '-8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid396",
+                            "rotateZ",
+                            11250,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid397",
+                            "rotateZ",
+                            11500,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid370",
+                            "location",
+                            5250,
+                            250,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1310.5, 1364, 0, 0, 0, 0,0],[1299.5, 1364, 0, 0, -20.19, -2.76,11.04]]
+                        ],
+                        [
+                            "eid384",
+                            "location",
+                            5500,
+                            750,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1299.5, 1364, -5.53, -0.76, 0, 0,0],[1291.41, 1360.26, -9.59, 0.4, -4.94, 0.2,8.95],[1282.45, 1368.31, -36.7, -20.67, -8.45, -4.76,21.41],[1258.5, 1366.14, 0, 0, 0, 0,46.11]]
+                        ],
+                        [
+                            "eid405",
+                            "location",
+                            9500,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1356.51, 1366, 0, 0, 0, 0,0],[1356.51, 1366, 0, 0, 0, 0,0]]
+                        ],
+                        [
+                            "eid398",
+                            "location",
+                            10500,
+                            750,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1352.91, 1367.26, 0, 0, 0, 0,0],[1376.86, 1369.43, 8.45, 4.76, 36.7, 20.67,24.7],[1385.82, 1361.38, 4.94, -0.2, 9.59, -0.4,37.16],[1393.91, 1365.12, 0, 0, 5.53, 0.76,46.11]]
+                        ],
+                        [
+                            "eid399",
+                            "location",
+                            11250,
+                            250,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1393.91, 1365.12, 20.19, 2.76, 0, 0,0],[1404.91, 1365.12, 0, 0, 0, 0,11.04]]
+                        ],
+                        [
+                            "eid512",
+                            "scaleY",
+                            0,
+                            3000,
+                            "linear",
+                            "${ausblickwasserfrei}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid534",
+                            "left",
+                            0,
+                            3000,
+                            "linear",
+                            "${wasserstruktur_Kopie}",
+                            '399px',
+                            '439px'
+                        ],
+                        [
+                            "eid523",
+                            "left",
+                            3069,
+                            3407,
+                            "linear",
+                            "${wasserstruktur_Kopie}",
+                            '439px',
+                            '266px'
+                        ],
+                        [
+                            "eid524",
+                            "left",
+                            6476,
+                            4655,
+                            "linear",
+                            "${wasserstruktur_Kopie}",
+                            '266px',
+                            '517px'
+                        ],
+                        [
+                            "eid525",
+                            "left",
+                            11131,
+                            4031,
+                            "linear",
+                            "${wasserstruktur_Kopie}",
+                            '517px',
+                            '439px'
+                        ],
+                        [
+                            "eid272",
+                            "top",
+                            0,
+                            3000,
+                            "linear",
+                            "${aussichtvorsw2}",
+                            '-94px',
+                            '0px'
+                        ],
+                        [
+                            "eid535",
+                            "top",
+                            0,
+                            3000,
+                            "linear",
+                            "${wasserstruktur_Kopie}",
+                            '-74px',
+                            '-94px'
+                        ],
+                        [
+                            "eid526",
+                            "top",
+                            3069,
+                            2016,
+                            "linear",
+                            "${wasserstruktur_Kopie}",
+                            '-94px',
+                            '-136px'
+                        ],
+                        [
+                            "eid527",
+                            "top",
+                            5085,
+                            3596,
+                            "linear",
+                            "${wasserstruktur_Kopie}",
+                            '-136px',
+                            '-7px'
+                        ],
+                        [
+                            "eid528",
+                            "top",
+                            8680,
+                            4769,
+                            "linear",
+                            "${wasserstruktur_Kopie}",
+                            '-7px',
+                            '-82px'
+                        ],
+                        [
+                            "eid529",
+                            "top",
+                            13449,
+                            1713,
+                            "linear",
+                            "${wasserstruktur_Kopie}",
+                            '-82px',
+                            '-94px'
+                        ],
+                        [
+                            "eid375",
+                            "rotateZ",
+                            5250,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid376",
+                            "rotateZ",
+                            5500,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid378",
+                            "rotateZ",
+                            5750,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '-8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid380",
+                            "rotateZ",
+                            6000,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid382",
+                            "rotateZ",
+                            6250,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid387",
+                            "rotateZ",
+                            10500,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid388",
+                            "rotateZ",
+                            10750,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid389",
+                            "rotateZ",
+                            11000,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid390",
+                            "rotateZ",
+                            11250,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid391",
+                            "rotateZ",
+                            11500,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid403",
+                            "scaleX",
+                            3184,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid401",
+                            "scaleX",
+                            9500,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '1',
+                            '-1'
+                        ],
+                        [
+                            "eid510",
+                            "top",
+                            0,
+                            3000,
+                            "linear",
+                            "${ausblickwasserfrei}",
+                            '-94px',
+                            '0px'
+                        ],
+                        [
+                            "eid517",
+                            "scaleY",
+                            0,
+                            3000,
+                            "linear",
+                            "${wasserstruktur_Kopie}",
+                            '0.53',
+                            '1'
+                        ]
+                    ]
+                }
+            },
+            "sym_zimmer": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, '2048px', '1536px', 'auto', 'auto'],
+                            id: 'zimmer',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/zimmer.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: false,
+                    data: [
 
+                    ]
+                }
+            },
+            "sym_vorzim": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [0, 0, 2048, 1536, 'auto', 'auto'],
+                            id: 'sym_zimmer2',
+                            symbolName: 'sym_zimmer',
+                            type: 'rect'
+                        },
+                        {
+                            rect: [767, 263, 850, 538, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'sym_vorhang',
+                            symbolName: 'sym_vorhang',
+                            type: 'rect'
+                        },
+                        {
+                            rect: [1673, 242, '336px', '393px', 'auto', 'auto'],
+                            id: 'zimpflanze2',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/zimpflanze2.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 4000,
+                    autoPlay: false,
+                    data: [
+                        [
+                            "eid162",
+                            "scaleY",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_zimmer2}",
+                            '1',
+                            '3.76926'
+                        ],
+                        [
+                            "eid166",
+                            "scaleY",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_vorhang}",
+                            '1',
+                            '3.76926'
+                        ],
+                        [
+                            "eid187",
+                            "left",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_zimmer2}",
+                            '0px',
+                            '-851px'
+                        ],
+                        [
+                            "eid190",
+                            "top",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_vorhang}",
+                            '263px',
+                            '404px'
+                        ],
+                        [
+                            "eid536",
+                            "top",
+                            0,
+                            4000,
+                            "linear",
+                            "${zimpflanze2}",
+                            '242px',
+                            '155px'
+                        ],
+                        [
+                            "eid189",
+                            "left",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_vorhang}",
+                            '767px',
+                            '289px'
+                        ],
+                        [
+                            "eid537",
+                            "scaleY",
+                            0,
+                            4000,
+                            "linear",
+                            "${zimpflanze2}",
+                            '1',
+                            '3.76926'
+                        ],
+                        [
+                            "eid538",
+                            "left",
+                            0,
+                            4000,
+                            "linear",
+                            "${zimpflanze2}",
+                            '1673px',
+                            '3080px'
+                        ],
+                        [
+                            "eid539",
+                            "scaleX",
+                            0,
+                            4000,
+                            "linear",
+                            "${zimpflanze2}",
+                            '1',
+                            '3.76926'
+                        ],
+                        [
+                            "eid188",
+                            "top",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_zimmer2}",
+                            '0px',
+                            '791px'
+                        ],
+                        [
+                            "eid161",
+                            "scaleX",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_zimmer2}",
+                            '1',
+                            '3.76926'
+                        ],
+                        [
+                            "eid165",
+                            "scaleX",
+                            0,
+                            4000,
+                            "linear",
+                            "${sym_vorhang}",
+                            '1',
+                            '3.76926'
+                        ]
+                    ]
+                }
+            },
+            "sym_huhliegen": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'huhliegenkorper',
+                            type: 'image',
+                            rect: [0, 0, '140px', '122px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
+                        },
+                        {
+                            id: 'huhliegenkopf',
+                            type: 'image',
+                            rect: [0, 0, '242px', '68px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/huhliegenkopf.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 242, 122]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 0,
+                    autoPlay: false,
+                    data: [
+
+                    ]
+                }
+            },
+            "sym_huhliegenkopf": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [-5, 0, '242px', '68px', 'auto', 'auto'],
+                            id: 'huhliegenkopf2',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/huhliegenkopf.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 50, 68]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 5000,
+                    autoPlay: false,
+                    labels: {
+                        "loophuhn1": 0
+                    },
+                    data: [
+                        [
+                            "eid285",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${huhliegenkopf2}",
+                            '-5px',
+                            '-5px'
+                        ],
+                        [
+                            "eid286",
+                            "left",
+                            649,
+                            0,
+                            "linear",
+                            "${huhliegenkopf2}",
+                            '-5px',
+                            '-60px'
+                        ],
+                        [
+                            "eid287",
+                            "left",
+                            1182,
+                            0,
+                            "linear",
+                            "${huhliegenkopf2}",
+                            '-60px',
+                            '-121px'
+                        ],
+                        [
+                            "eid288",
+                            "left",
+                            1750,
+                            0,
+                            "linear",
+                            "${huhliegenkopf2}",
+                            '-121px',
+                            '-185px'
+                        ],
+                        [
+                            "eid289",
+                            "left",
+                            2750,
+                            0,
+                            "linear",
+                            "${huhliegenkopf2}",
+                            '-185px',
+                            '-121px'
+                        ],
+                        [
+                            "eid290",
+                            "left",
+                            4399,
+                            0,
+                            "linear",
+                            "${huhliegenkopf2}",
+                            '-121px',
+                            '-61px'
+                        ]
+                    ]
+                }
+            },
+            "sym_huhflugelganzani": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'huhflugelganzani',
+                            type: 'image',
+                            rect: [-21, -5, '1109px', '259px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/huhflugelganzani.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 180, 259]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 3116,
+                    autoPlay: false,
+                    labels: {
+                        "loophuhflugelganzani2": 0,
+                        "labelhuhflugelganzani": 1095
+                    },
+                    data: [
+                        [
+                            "eid304",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-21px',
+                            '-21px'
+                        ],
+                        [
+                            "eid306",
+                            "left",
+                            392,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-21px',
+                            '-197px'
+                        ],
+                        [
+                            "eid308",
+                            "left",
+                            750,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-197px',
+                            '-374px'
+                        ],
+                        [
+                            "eid310",
+                            "left",
+                            1095,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-374px',
+                            '-548px'
+                        ],
+                        [
+                            "eid312",
+                            "left",
+                            1386,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-548px',
+                            '-739px'
+                        ],
+                        [
+                            "eid314",
+                            "left",
+                            1750,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-739px',
+                            '-918px'
+                        ],
+                        [
+                            "eid316",
+                            "left",
+                            2000,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-918px',
+                            '-734px'
+                        ],
+                        [
+                            "eid318",
+                            "left",
+                            2305,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-734px',
+                            '-543px'
+                        ],
+                        [
+                            "eid320",
+                            "left",
+                            2643,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-543px',
+                            '-385px'
+                        ],
+                        [
+                            "eid322",
+                            "left",
+                            2839,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-385px',
+                            '-205px'
+                        ],
+                        [
+                            "eid305",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-5px',
+                            '-5px'
+                        ],
+                        [
+                            "eid307",
+                            "top",
+                            392,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-5px',
+                            '-6px'
+                        ],
+                        [
+                            "eid309",
+                            "top",
+                            750,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-6px',
+                            '-4px'
+                        ],
+                        [
+                            "eid311",
+                            "top",
+                            1095,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-4px',
+                            '-2px'
+                        ],
+                        [
+                            "eid313",
+                            "top",
+                            1386,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-2px',
+                            '2px'
+                        ],
+                        [
+                            "eid315",
+                            "top",
+                            1750,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '2px',
+                            '-3px'
+                        ],
+                        [
+                            "eid317",
+                            "top",
+                            2000,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-3px',
+                            '2px'
+                        ],
+                        [
+                            "eid319",
+                            "top",
+                            2305,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '2px',
+                            '-3px'
+                        ],
+                        [
+                            "eid321",
+                            "top",
+                            2643,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '-3px',
+                            '2px'
+                        ],
+                        [
+                            "eid323",
+                            "top",
+                            2839,
+                            0,
+                            "linear",
+                            "${huhflugelganzani}",
+                            '2px',
+                            '3px'
+                        ]
+                    ]
+                }
+            },
+            "sym_huhpickenganzani": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [-7, 0, '550px', '147px', 'auto', 'auto'],
+                            id: 'huhpickenganzani',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/huhpickenganzani.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 170, 155]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 3717,
+                    autoPlay: false,
+                    labels: {
+                        "loophuhpickenganzani3": 0
+                    },
+                    data: [
+                        [
+                            "eid329",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid331",
+                            "top",
+                            2250,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '0px',
+                            '2px'
+                        ],
+                        [
+                            "eid333",
+                            "top",
+                            2635,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '2px',
+                            '5px'
+                        ],
+                        [
+                            "eid335",
+                            "top",
+                            3467,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '5px',
+                            '0px'
+                        ],
+                        [
+                            "eid328",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '-7px',
+                            '-7px'
+                        ],
+                        [
+                            "eid330",
+                            "left",
+                            2250,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '-7px',
+                            '-190px'
+                        ],
+                        [
+                            "eid332",
+                            "left",
+                            2635,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '-190px',
+                            '-367px'
+                        ],
+                        [
+                            "eid334",
+                            "left",
+                            3467,
+                            0,
+                            "linear",
+                            "${huhpickenganzani}",
+                            '-367px',
+                            '-190px'
+                        ]
+                    ]
+                }
+            },
+            "sym_huhpickenkopfkoroer": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [-87, 0, '163px', '146px', 'auto', 'auto'],
+                            id: 'huhpickenkopf',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/huhpickenkopf.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            overflow: 'hidden',
+                            rect: [null, null, 65, 146]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 1500,
+                    autoPlay: false,
+                    labels: {
+                        "loophuhn4": 0
+                    },
+                    data: [
+                        [
+                            "eid339",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${huhpickenkopf}",
+                            '-87px',
+                            '-87px'
+                        ],
+                        [
+                            "eid341",
+                            "left",
+                            500,
+                            0,
+                            "linear",
+                            "${huhpickenkopf}",
+                            '-87px',
+                            '-4px'
+                        ],
+                        [
+                            "eid340",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${huhpickenkopf}",
+                            '0px',
+                            '0px'
+                        ]
+                    ]
+                }
+            },
+            "sym_blatt": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'sym_auge',
+                            type: 'rect',
+                            symbolName: 'sym_auge',
+                            rect: ['0', '2', 2048, 1536, 'auto', 'auto']
+                        },
+                        {
+                            id: 'ib',
+                            type: 'image',
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/ib.png', '0px', '0px']
+                        },
+                        {
+                            id: 'hb',
+                            type: 'image',
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/hb.png', '0px', '0px']
+                        },
+                        {
+                            id: 'gb',
+                            type: 'image',
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/gb.png', '0px', '0px']
+                        },
+                        {
+                            id: 'fb',
+                            type: 'image',
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/fb.png', '0px', '0px']
+                        },
+                        {
+                            id: 'eb',
+                            type: 'image',
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/eb.png', '0px', '0px']
+                        },
+                        {
+                            id: 'db',
+                            type: 'image',
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/db.png', '0px', '0px']
+                        },
+                        {
+                            id: 'cb',
+                            type: 'image',
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/cb.png', '0px', '0px']
+                        },
+                        {
+                            id: 'bb',
+                            type: 'image',
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/bb.png', '0px', '0px']
+                        },
+                        {
+                            id: 'a',
+                            type: 'image',
+                            rect: [-50, -37, 2150, 1613, 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/a.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 1000,
+                    autoPlay: false,
+                    labels: {
+                        "loop_blatt": 0
+                    },
+                    data: [
+                        [
+                            "eid448",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-50px',
+                            '-30px'
+                        ],
+                        [
+                            "eid493",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-30px',
+                            '-50px'
+                        ],
+                        [
+                            "eid446",
+                            "top",
+                            0,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-37px',
+                            '-57px'
+                        ],
+                        [
+                            "eid490",
+                            "top",
+                            500,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-57px',
+                            '-37px'
+                        ],
+                        [
+                            "eid443",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-50px',
+                            '-24px'
+                        ],
+                        [
+                            "eid486",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-24px',
+                            '-50px'
+                        ],
+                        [
+                            "eid455",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${hb}",
+                            '-50px',
+                            '-70px'
+                        ],
+                        [
+                            "eid499",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${hb}",
+                            '-70px',
+                            '-50px'
+                        ],
+                        [
+                            "eid445",
+                            "top",
+                            0,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-37px',
+                            '-57px'
+                        ],
+                        [
+                            "eid488",
+                            "top",
+                            500,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-57px',
+                            '-37px'
+                        ],
+                        [
+                            "eid453",
+                            "top",
+                            0,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-37px',
+                            '-17px'
+                        ],
+                        [
+                            "eid496",
+                            "top",
+                            500,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-17px',
+                            '-37px'
+                        ],
+                        [
+                            "eid454",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${gb}",
+                            '-50px',
+                            '-30px'
+                        ],
+                        [
+                            "eid498",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${gb}",
+                            '-30px',
+                            '-50px'
+                        ],
+                        [
+                            "eid444",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '-50px',
+                            '0px'
+                        ],
+                        [
+                            "eid489",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${bb}",
+                            '0px',
+                            '-50px'
+                        ],
+                        [
+                            "eid421",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${hb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid481",
+                            "top",
+                            500,
+                            0,
+                            "linear",
+                            "${hb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid482",
+                            "top",
+                            1000,
+                            0,
+                            "linear",
+                            "${hb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid452",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-50px',
+                            '-20px'
+                        ],
+                        [
+                            "eid497",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${fb}",
+                            '-20px',
+                            '-50px'
+                        ],
+                        [
+                            "eid442",
+                            "top",
+                            0,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-37px',
+                            '-23px'
+                        ],
+                        [
+                            "eid487",
+                            "top",
+                            500,
+                            500,
+                            "linear",
+                            "${a}",
+                            '-23px',
+                            '-37px'
+                        ],
+                        [
+                            "eid456",
+                            "top",
+                            0,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-37px',
+                            '-67px'
+                        ],
+                        [
+                            "eid501",
+                            "top",
+                            500,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-67px',
+                            '-37px'
+                        ],
+                        [
+                            "eid449",
+                            "top",
+                            0,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-37px',
+                            '-47px'
+                        ],
+                        [
+                            "eid492",
+                            "top",
+                            500,
+                            500,
+                            "linear",
+                            "${db}",
+                            '-47px',
+                            '-37px'
+                        ],
+                        [
+                            "eid450",
+                            "top",
+                            0,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-37px',
+                            '-17px'
+                        ],
+                        [
+                            "eid494",
+                            "top",
+                            500,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-17px',
+                            '-37px'
+                        ],
+                        [
+                            "eid457",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-50px',
+                            '-19px'
+                        ],
+                        [
+                            "eid500",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${ib}",
+                            '-19px',
+                            '-50px'
+                        ],
+                        [
+                            "eid451",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-50px',
+                            '-70px'
+                        ],
+                        [
+                            "eid495",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${eb}",
+                            '-70px',
+                            '-50px'
+                        ],
+                        [
+                            "eid447",
+                            "left",
+                            0,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-50px',
+                            '-80px'
+                        ],
+                        [
+                            "eid491",
+                            "left",
+                            500,
+                            500,
+                            "linear",
+                            "${cb}",
+                            '-80px',
+                            '-50px'
+                        ],
+                        [
+                            "eid419",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${gb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid478",
+                            "top",
+                            500,
+                            0,
+                            "linear",
+                            "${gb}",
+                            '-37px',
+                            '-37px'
+                        ],
+                        [
+                            "eid479",
+                            "top",
+                            1000,
+                            0,
+                            "linear",
+                            "${gb}",
+                            '-37px',
+                            '-37px'
+                        ]
+                    ]
+                }
+            },
+            "sym_auge": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            id: 'augenaufschlagauge',
+                            type: 'image',
+                            rect: [0, 0, '14336px', '1536px', 'auto', 'auto'],
+                            fill: ['rgba(0,0,0,0)', 'images/augenaufschlagauge.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 2250,
+                    autoPlay: false,
+                    data: [
+                        [
+                            "eid459",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid458",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '0px',
+                            '0px'
+                        ],
+                        [
+                            "eid460",
+                            "left",
+                            311,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '0px',
+                            '-2048px'
+                        ],
+                        [
+                            "eid461",
+                            "left",
+                            642,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '-2048px',
+                            '-4096px'
+                        ],
+                        [
+                            "eid462",
+                            "left",
+                            1000,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '-4096px',
+                            '-6144px'
+                        ],
+                        [
+                            "eid463",
+                            "left",
+                            1338,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '-6144px',
+                            '-8192px'
+                        ],
+                        [
+                            "eid464",
+                            "left",
+                            1839,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '-8192px',
+                            '-10310px'
+                        ],
+                        [
+                            "eid465",
+                            "left",
+                            2250,
+                            0,
+                            "linear",
+                            "${augenaufschlagauge}",
+                            '-10000px',
+                            '-12367px'
+                        ]
+                    ]
+                }
+            },
+            "sym_ausblick_1": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [133, -229, '2048px', '1536px', 'auto', 'auto'],
+                            id: 'wasserstruktur_KopieCopy',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/wasserstruktur%20Kopie.jpg', '0px', '0px']
+                        },
+                        {
+                            rect: [133, -94, '2048px', '1536px', 'auto', 'auto'],
+                            id: 'ausblickwasserfrei',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/ausblickwasserfrei.png', '0px', '0px']
+                        },
+                        {
+                            rect: [133, -94, '2048px', '1536px', 'auto', 'auto'],
+                            id: 'aussichtvorsw2',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/aussichtvorsw.png', '0px', '0px']
+                        },
+                        {
+                            rect: [1116, 1198, '140px', '122px', 'auto', 'auto'],
+                            id: 'huhliegenkorper2',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
+                        },
+                        {
+                            rect: [1146, 1214, 50, 68, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'sym_huhliegenkopf',
+                            symbolName: 'sym_huhliegenkopf',
+                            type: 'rect'
+                        },
+                        {
+                            rect: ['1465px', '1242px', 170, 155, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'sym_huhpickenganzani',
+                            symbolName: 'sym_huhpickenganzani',
+                            type: 'rect'
+                        },
+                        {
+                            rect: ['1278px', '1291px', '163px', '146px', 'auto', 'auto'],
+                            id: 'huhpickenkorper2',
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/huhpickenkorper.png', '0px', '0px']
+                        },
+                        {
+                            rect: ['1278px', '1291px', 65, 146, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'sym_huhpickenkopfkoroer',
+                            symbolName: 'sym_huhpickenkopfkoroer',
+                            type: 'rect',
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']]
+                        },
+                        {
+                            rect: [694, 271, 678, 570, 'auto', 'auto'],
+                            id: 'sym_blattbaum',
+                            symbolName: 'sym_blattbaum',
+                            type: 'rect',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']]
+                        },
+                        {
+                            rect: [753, 390, 188, 192, 'auto', 'auto'],
+                            id: 'sym_baumgesicht',
+                            symbolName: 'sym_baumgesicht',
+                            type: 'rect',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']]
+                        },
+                        {
+                            rect: [1439, 479, '235px', '236px', 'auto', 'auto'],
+                            id: 'bruckesitzen',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/bruckesitzen.png', '0px', '0px']
+                        },
+                        {
+                            rect: [1229, 445, '116px', '135px', 'auto', 'auto'],
+                            id: 'sitzenwasser',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/sitzenwasser.png', '0px', '0px']
+                        },
+                        {
+                            rect: [1327, 445, 250, 250, 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'sym_sprung',
+                            symbolName: 'sym_sprung',
+                            type: 'rect',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.4', '0.4', 1], ['50%', '50%']]
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 2048, 1536]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 36000,
+                    autoPlay: true,
+                    labels: {
+                        "wasser": 0,
+                        "ausblick_zoom": 16245,
+                        "huhsontherun": 19570
+                    },
+                    data: [
+                        [
+                            "eid571",
+                            "scaleX",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_baumgesicht}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid271",
+                            "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${aussichtvorsw2}",
+                            '133px',
+                            '0px'
+                        ],
+                        [
+                            "eid719",
+                            "scaleX",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_blattbaum}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid511",
+                            "scaleX",
+                            16245,
+                            3325,
+                            "linear",
+                            "${ausblickwasserfrei}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid720",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_blattbaum}",
+                            '271px',
+                            '254px'
+                        ],
+                        [
+                            "eid711",
+                            "scaleY",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_sprung}",
+                            '0.4',
+                            '0.8'
+                        ],
+                        [
+                            "eid259",
+                            "scaleX",
+                            16245,
+                            3325,
+                            "linear",
+                            "${aussichtvorsw2}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid714",
+                            "scaleX",
+                            16245,
+                            3325,
+                            "linear",
+                            "${wasserstruktur_KopieCopy}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid710",
+                            "scaleX",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_sprung}",
+                            '0.4',
+                            '0.8'
+                        ],
+                        [
+                            "eid713",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_sprung}",
+                            '445px',
+                            '433px'
+                        ],
+                        [
+                            "eid272",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${aussichtvorsw2}",
+                            '-94px',
+                            '0px'
+                        ],
+                        [
+                            "eid737",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${bruckesitzen}",
+                            '479px',
+                            '500px'
+                        ],
+                        [
+                            "eid742",
+                            "scaleX",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sitzenwasser}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid513",
+                            "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${ausblickwasserfrei}",
+                            '133px',
+                            '0px'
+                        ],
+                        [
+                            "eid744",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sitzenwasser}",
+                            '445px',
+                            '390px'
+                        ],
+                        [
+                            "eid721",
+                            "scaleY",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_blattbaum}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid260",
+                            "scaleY",
+                            16245,
+                            3325,
+                            "linear",
+                            "${aussichtvorsw2}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid404",
+                            "scaleX",
+                            19570,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid402",
+                            "scaleX",
+                            26569,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '1',
+                            '-1'
+                        ],
+                        [
+                            "eid722",
+                            "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_blattbaum}",
+                            '694px',
+                            '452px'
+                        ],
+                        [
+                            "eid572",
+                            "scaleY",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_baumgesicht}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid745",
+                            "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sitzenwasser}",
+                            '1229px',
+                            '1212px'
+                        ],
+                        [
+                            "eid736",
+                            "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${bruckesitzen}",
+                            '1439px',
+                            '1663px'
+                        ],
+                        [
+                            "eid735",
+                            "scaleX",
+                            16245,
+                            3325,
+                            "linear",
+                            "${bruckesitzen}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid725",
+                            "scaleY",
+                            16245,
+                            3325,
+                            "linear",
+                            "${wasserstruktur_KopieCopy}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid570",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_baumgesicht}",
+                            '390px',
+                            '317px'
+                        ],
+                        [
+                            "eid715",
+                            "top",
+                            0,
+                            15750,
+                            "linear",
+                            "${wasserstruktur_KopieCopy}",
+                            '-229px',
+                            '-7px'
+                        ],
+                        [
+                            "eid716",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${wasserstruktur_KopieCopy}",
+                            '-277px',
+                            '-47px'
+                        ],
+                        [
+                            "eid717",
+                            "top",
+                            19570,
+                            16430,
+                            "linear",
+                            "${wasserstruktur_KopieCopy}",
+                            '-47px',
+                            '-7px'
+                        ],
+                        [
+                            "eid510",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${ausblickwasserfrei}",
+                            '-94px',
+                            '0px'
+                        ],
+                        [
+                            "eid374",
+                            "rotateZ",
+                            21860,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid377",
+                            "rotateZ",
+                            22137,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '-8deg'
+                        ],
+                        [
+                            "eid379",
+                            "rotateZ",
+                            22414,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '-8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid381",
+                            "rotateZ",
+                            22691,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid383",
+                            "rotateZ",
+                            22968,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid393",
+                            "rotateZ",
+                            27677,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid394",
+                            "rotateZ",
+                            27955,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '-8deg'
+                        ],
+                        [
+                            "eid395",
+                            "rotateZ",
+                            28232,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '-8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid396",
+                            "rotateZ",
+                            28509,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid397",
+                            "rotateZ",
+                            28786,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid370",
+                            "location",
+                            21860,
+                            277,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1310.5, 1364, 0, 0, 0, 0,0],[1299.5, 1364, 0, 0, -20.19, -2.76,11.04]]
+                        ],
+                        [
+                            "eid384",
+                            "location",
+                            22137,
+                            831,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1299.5, 1364, -5.53, -0.76, 0, 0,0],[1291.41, 1360.26, -9.59, 0.4, -4.94, 0.2,8.95],[1282.45, 1368.31, -36.7, -20.67, -8.45, -4.76,21.41],[1258.5, 1366.14, 0, 0, 0, 0,46.11]]
+                        ],
+                        [
+                            "eid405",
+                            "location",
+                            26569,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1356.51, 1366, 0, 0, 0, 0,0],[1356.51, 1366, 0, 0, 0, 0,0]]
+                        ],
+                        [
+                            "eid398",
+                            "location",
+                            27677,
+                            831,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1352.91, 1367.26, 0, 0, 0, 0,0],[1376.86, 1369.43, 8.45, 4.76, 36.7, 20.67,24.7],[1385.82, 1361.38, 4.94, -0.2, 9.59, -0.4,37.16],[1393.91, 1365.12, 0, 0, 5.53, 0.76,46.11]]
+                        ],
+                        [
+                            "eid399",
+                            "location",
+                            28509,
+                            277,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1393.91, 1365.12, 20.19, 2.76, 0, 0,0],[1404.91, 1365.12, 0, 0, 0, 0,11.04]]
+                        ],
+                        [
+                            "eid512",
+                            "scaleY",
+                            16245,
+                            3325,
+                            "linear",
+                            "${ausblickwasserfrei}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid743",
+                            "scaleY",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sitzenwasser}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid718",
+                            "left",
+                            0,
+                            15750,
+                            "linear",
+                            "${wasserstruktur_KopieCopy}",
+                            '133px',
+                            '517px'
+                        ],
+                        [
+                            "eid723",
+                            "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${wasserstruktur_KopieCopy}",
+                            '133px',
+                            '113px'
+                        ],
+                        [
+                            "eid724",
+                            "left",
+                            19570,
+                            16430,
+                            "linear",
+                            "${wasserstruktur_KopieCopy}",
+                            '113px',
+                            '517px'
+                        ],
+                        [
+                            "eid734",
+                            "scaleY",
+                            16245,
+                            3325,
+                            "linear",
+                            "${bruckesitzen}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid403",
+                            "scaleX",
+                            19570,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid401",
+                            "scaleX",
+                            26569,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '1',
+                            '-1'
+                        ],
+                        [
+                            "eid371",
+                            "location",
+                            21860,
+                            1108,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            [[1359.5, 1364, 0, 0, 0, 0,0],[1344.43, 1370.42, -26.36, -18.81, -23.2, -16.55,18.22],[1318.34, 1370.17, -16.72, 1.61, -23.12, 2.22,45.12],[1307.5, 1366.14, 0, 0, 0, 0,56.93]]
+                        ],
+                        [
+                            "eid400",
+                            "location",
+                            27677,
+                            1108,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            [[1307.5, 1366.14, 0, 0, 0, 0,0],[1318.34, 1370.17, 23.12, -2.22, 16.72, -1.61,11.81],[1344.43, 1370.42, 23.2, 16.55, 26.36, 18.81,38.7],[1359.5, 1364, 0, 0, 0, 0,56.93]]
+                        ],
+                        [
+                            "eid569",
+                            "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_baumgesicht}",
+                            '753px',
+                            '345px'
+                        ],
+                        [
+                            "eid712",
+                            "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_sprung}",
+                            '1327px',
+                            '1458px'
+                        ],
+                        [
+                            "eid375",
+                            "rotateZ",
+                            21860,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid376",
+                            "rotateZ",
+                            22137,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid378",
+                            "rotateZ",
+                            22414,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '-8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid380",
+                            "rotateZ",
+                            22691,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid382",
+                            "rotateZ",
+                            22968,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid387",
+                            "rotateZ",
+                            27677,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid388",
+                            "rotateZ",
+                            27955,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid389",
+                            "rotateZ",
+                            28232,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid390",
+                            "rotateZ",
+                            28509,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid391",
+                            "rotateZ",
+                            28786,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '8deg',
+                            '0deg'
+                        ]
+                    ]
+                }
+            },
+            "sym_blattbaum": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [43, 142, '610px', '428px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
+                            id: 'baubeweg2',
+                            opacity: '0',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/baubeweg2.png', '0px', '0px']
+                        },
+                        {
+                            rect: [0, 0, '678px', '396px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
+                            id: 'baubeweg1',
+                            opacity: '0.5',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/baubeweg1.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 678, 570]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 6000,
+                    autoPlay: true,
+                    labels: {
+                        "loop_blatt": 303
+                    },
+                    data: [
+                        [
+                            "eid641",
+                            "opacity",
+                            0,
+                            0,
+                            "linear",
+                            "${baubeweg2}",
+                            '0',
+                            '0'
+                        ],
+                        [
+                            "eid704",
+                            "opacity",
+                            303,
+                            296,
+                            "linear",
+                            "${baubeweg2}",
+                            '0',
+                            '0.5'
+                        ],
+                        [
+                            "eid703",
+                            "opacity",
+                            599,
+                            299,
+                            "linear",
+                            "${baubeweg2}",
+                            '0.5',
+                            '0'
+                        ],
+                        [
+                            "eid702",
+                            "opacity",
+                            898,
+                            406,
+                            "linear",
+                            "${baubeweg2}",
+                            '0',
+                            '0.5'
+                        ],
+                        [
+                            "eid705",
+                            "opacity",
+                            1304,
+                            492,
+                            "linear",
+                            "${baubeweg2}",
+                            '0.5',
+                            '0'
+                        ],
+                        [
+                            "eid635",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${baubeweg2}",
+                            '142px',
+                            '142px'
+                        ],
+                        [
+                            "eid673",
+                            "top",
+                            303,
+                            192,
+                            "linear",
+                            "${baubeweg2}",
+                            '142px',
+                            '140px'
+                        ],
+                        [
+                            "eid674",
+                            "top",
+                            495,
+                            308,
+                            "linear",
+                            "${baubeweg2}",
+                            '140px',
+                            '141px'
+                        ],
+                        [
+                            "eid675",
+                            "top",
+                            954,
+                            247,
+                            "linear",
+                            "${baubeweg2}",
+                            '141px',
+                            '142px'
+                        ],
+                        [
+                            "eid676",
+                            "top",
+                            1201,
+                            247,
+                            "linear",
+                            "${baubeweg2}",
+                            '142px',
+                            '141px'
+                        ],
+                        [
+                            "eid677",
+                            "top",
+                            1599,
+                            308,
+                            "linear",
+                            "${baubeweg2}",
+                            '141px',
+                            '140px'
+                        ],
+                        [
+                            "eid678",
+                            "top",
+                            1907,
+                            192,
+                            "linear",
+                            "${baubeweg2}",
+                            '140px',
+                            '142px'
+                        ],
+                        [
+                            "eid696",
+                            "opacity",
+                            303,
+                            296,
+                            "linear",
+                            "${baubeweg1}",
+                            '0.5',
+                            '0'
+                        ],
+                        [
+                            "eid697",
+                            "opacity",
+                            599,
+                            299,
+                            "linear",
+                            "${baubeweg1}",
+                            '0',
+                            '0.5'
+                        ],
+                        [
+                            "eid698",
+                            "opacity",
+                            898,
+                            406,
+                            "linear",
+                            "${baubeweg1}",
+                            '0.5',
+                            '0'
+                        ],
+                        [
+                            "eid699",
+                            "opacity",
+                            1304,
+                            492,
+                            "linear",
+                            "${baubeweg1}",
+                            '0',
+                            '0.5'
+                        ],
+                        [
+                            "eid634",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${baubeweg2}",
+                            '43px',
+                            '43px'
+                        ],
+                        [
+                            "eid681",
+                            "left",
+                            303,
+                            357,
+                            "linear",
+                            "${baubeweg2}",
+                            '43px',
+                            '45px'
+                        ],
+                        [
+                            "eid682",
+                            "left",
+                            660,
+                            294,
+                            "linear",
+                            "${baubeweg2}",
+                            '45px',
+                            '43px'
+                        ],
+                        [
+                            "eid683",
+                            "left",
+                            954,
+                            247,
+                            "linear",
+                            "${baubeweg2}",
+                            '43px',
+                            '42px'
+                        ],
+                        [
+                            "eid684",
+                            "left",
+                            1201,
+                            247,
+                            "linear",
+                            "${baubeweg2}",
+                            '42px',
+                            '43px'
+                        ],
+                        [
+                            "eid685",
+                            "left",
+                            1448,
+                            294,
+                            "linear",
+                            "${baubeweg2}",
+                            '43px',
+                            '45px'
+                        ],
+                        [
+                            "eid686",
+                            "left",
+                            1742,
+                            357,
+                            "linear",
+                            "${baubeweg2}",
+                            '45px',
+                            '43px'
+                        ],
+                        [
+                            "eid644",
+                            "rotateZ",
+                            0,
+                            250,
+                            "linear",
+                            "${baubeweg1}",
+                            '0deg',
+                            '1deg'
+                        ],
+                        [
+                            "eid645",
+                            "rotateZ",
+                            250,
+                            133,
+                            "linear",
+                            "${baubeweg1}",
+                            '1deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid646",
+                            "rotateZ",
+                            500,
+                            295,
+                            "linear",
+                            "${baubeweg1}",
+                            '0deg',
+                            '1deg'
+                        ],
+                        [
+                            "eid647",
+                            "rotateZ",
+                            795,
+                            103,
+                            "linear",
+                            "${baubeweg1}",
+                            '1deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid672",
+                            "rotateZ",
+                            898,
+                            103,
+                            "linear",
+                            "${baubeweg1}",
+                            '0deg',
+                            '1deg'
+                        ],
+                        [
+                            "eid671",
+                            "rotateZ",
+                            1001,
+                            295,
+                            "linear",
+                            "${baubeweg1}",
+                            '1deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid670",
+                            "rotateZ",
+                            1413,
+                            133,
+                            "linear",
+                            "${baubeweg1}",
+                            '0deg',
+                            '1deg'
+                        ],
+                        [
+                            "eid669",
+                            "rotateZ",
+                            1546,
+                            250,
+                            "linear",
+                            "${baubeweg1}",
+                            '1deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid643",
+                            "top",
+                            0,
+                            192,
+                            "linear",
+                            "${baubeweg1}",
+                            '0px',
+                            '-2px'
+                        ],
+                        [
+                            "eid649",
+                            "top",
+                            192,
+                            308,
+                            "linear",
+                            "${baubeweg1}",
+                            '-2px',
+                            '-1px'
+                        ],
+                        [
+                            "eid651",
+                            "top",
+                            651,
+                            247,
+                            "linear",
+                            "${baubeweg1}",
+                            '-1px',
+                            '0px'
+                        ],
+                        [
+                            "eid665",
+                            "top",
+                            898,
+                            247,
+                            "linear",
+                            "${baubeweg1}",
+                            '0px',
+                            '-1px'
+                        ],
+                        [
+                            "eid664",
+                            "top",
+                            1296,
+                            308,
+                            "linear",
+                            "${baubeweg1}",
+                            '-1px',
+                            '-2px'
+                        ],
+                        [
+                            "eid663",
+                            "top",
+                            1604,
+                            192,
+                            "linear",
+                            "${baubeweg1}",
+                            '-2px',
+                            '0px'
+                        ],
+                        [
+                            "eid642",
+                            "left",
+                            0,
+                            357,
+                            "linear",
+                            "${baubeweg1}",
+                            '0px',
+                            '2px'
+                        ],
+                        [
+                            "eid648",
+                            "left",
+                            357,
+                            294,
+                            "linear",
+                            "${baubeweg1}",
+                            '2px',
+                            '0px'
+                        ],
+                        [
+                            "eid650",
+                            "left",
+                            651,
+                            247,
+                            "linear",
+                            "${baubeweg1}",
+                            '0px',
+                            '-1px'
+                        ],
+                        [
+                            "eid668",
+                            "left",
+                            898,
+                            247,
+                            "linear",
+                            "${baubeweg1}",
+                            '-1px',
+                            '0px'
+                        ],
+                        [
+                            "eid667",
+                            "left",
+                            1145,
+                            294,
+                            "linear",
+                            "${baubeweg1}",
+                            '0px',
+                            '2px'
+                        ],
+                        [
+                            "eid666",
+                            "left",
+                            1439,
+                            357,
+                            "linear",
+                            "${baubeweg1}",
+                            '2px',
+                            '0px'
+                        ],
+                        [
+                            "eid637",
+                            "rotateZ",
+                            0,
+                            0,
+                            "linear",
+                            "${baubeweg2}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid687",
+                            "rotateZ",
+                            303,
+                            250,
+                            "linear",
+                            "${baubeweg2}",
+                            '0deg',
+                            '1deg'
+                        ],
+                        [
+                            "eid688",
+                            "rotateZ",
+                            553,
+                            133,
+                            "linear",
+                            "${baubeweg2}",
+                            '1deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid689",
+                            "rotateZ",
+                            803,
+                            295,
+                            "linear",
+                            "${baubeweg2}",
+                            '0deg',
+                            '1deg'
+                        ],
+                        [
+                            "eid690",
+                            "rotateZ",
+                            1098,
+                            103,
+                            "linear",
+                            "${baubeweg2}",
+                            '1deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid691",
+                            "rotateZ",
+                            1201,
+                            103,
+                            "linear",
+                            "${baubeweg2}",
+                            '0deg',
+                            '1deg'
+                        ],
+                        [
+                            "eid692",
+                            "rotateZ",
+                            1304,
+                            295,
+                            "linear",
+                            "${baubeweg2}",
+                            '1deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid693",
+                            "rotateZ",
+                            1716,
+                            133,
+                            "linear",
+                            "${baubeweg2}",
+                            '0deg',
+                            '1deg'
+                        ],
+                        [
+                            "eid694",
+                            "rotateZ",
+                            1849,
+                            250,
+                            "linear",
+                            "${baubeweg2}",
+                            '1deg',
+                            '0deg'
+                        ]
+                    ]
+                }
+            },
+            "sym_baumgesicht": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [152, 77, '92px', '61px', 'auto', 'auto'],
+                            id: 'bauhand',
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/bauhand.png', '0px', '0px']
+                        },
+                        {
+                            rect: [0, 0, '188px', '192px', 'auto', 'auto'],
+                            id: 'baugesicht',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/baugesicht.png', '0px', '0px']
+                        },
+                        {
+                            rect: [46, 69, '31px', '26px', 'auto', 'auto'],
+                            id: 'auge',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/auge.png', '0px', '0px']
+                        },
+                        {
+                            rect: [118, 58, '31px', '26px', 'auto', 'auto'],
+                            id: 'auge2',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/auge.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 188, 192]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 14000,
+                    autoPlay: true,
+                    labels: {
+                        "loop_auge": 0
+                    },
+                    data: [
+                        [
+                            "eid551",
+                            "top",
+                            0,
+                            2100,
+                            "linear",
+                            "${auge}",
+                            '69px',
+                            '66px'
+                        ],
+                        [
+                            "eid555",
+                            "top",
+                            2100,
+                            2800,
+                            "linear",
+                            "${auge}",
+                            '66px',
+                            '64px'
+                        ],
+                        [
+                            "eid558",
+                            "top",
+                            4900,
+                            2100,
+                            "linear",
+                            "${auge}",
+                            '64px',
+                            '68px'
+                        ],
+                        [
+                            "eid582",
+                            "top",
+                            7000,
+                            2100,
+                            "linear",
+                            "${auge}",
+                            '69px',
+                            '66px'
+                        ],
+                        [
+                            "eid583",
+                            "top",
+                            9100,
+                            2800,
+                            "linear",
+                            "${auge}",
+                            '66px',
+                            '64px'
+                        ],
+                        [
+                            "eid584",
+                            "top",
+                            11900,
+                            2100,
+                            "linear",
+                            "${auge}",
+                            '64px',
+                            '68px'
+                        ],
+                        [
+                            "eid605",
+                            "top",
+                            3000,
+                            3000,
+                            "linear",
+                            "${bauhand}",
+                            '77px',
+                            '85px'
+                        ],
+                        [
+                            "eid606",
+                            "top",
+                            6000,
+                            3100,
+                            "linear",
+                            "${bauhand}",
+                            '85px',
+                            '77px'
+                        ],
+                        [
+                            "eid610",
+                            "rotateZ",
+                            3000,
+                            3000,
+                            "linear",
+                            "${bauhand}",
+                            '0deg',
+                            '-33deg'
+                        ],
+                        [
+                            "eid611",
+                            "rotateZ",
+                            6000,
+                            3100,
+                            "linear",
+                            "${bauhand}",
+                            '-33deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid550",
+                            "top",
+                            0,
+                            2100,
+                            "linear",
+                            "${auge2}",
+                            '58px',
+                            '55px'
+                        ],
+                        [
+                            "eid553",
+                            "top",
+                            2100,
+                            2800,
+                            "linear",
+                            "${auge2}",
+                            '55px',
+                            '53px'
+                        ],
+                        [
+                            "eid556",
+                            "top",
+                            4900,
+                            2100,
+                            "linear",
+                            "${auge2}",
+                            '53px',
+                            '57px'
+                        ],
+                        [
+                            "eid576",
+                            "top",
+                            7000,
+                            2100,
+                            "linear",
+                            "${auge2}",
+                            '58px',
+                            '55px'
+                        ],
+                        [
+                            "eid577",
+                            "top",
+                            9100,
+                            2800,
+                            "linear",
+                            "${auge2}",
+                            '55px',
+                            '53px'
+                        ],
+                        [
+                            "eid578",
+                            "top",
+                            11900,
+                            2100,
+                            "linear",
+                            "${auge2}",
+                            '53px',
+                            '57px'
+                        ],
+                        [
+                            "eid549",
+                            "left",
+                            0,
+                            2100,
+                            "linear",
+                            "${auge}",
+                            '46px',
+                            '50px'
+                        ],
+                        [
+                            "eid554",
+                            "left",
+                            2100,
+                            2800,
+                            "linear",
+                            "${auge}",
+                            '50px',
+                            '48px'
+                        ],
+                        [
+                            "eid559",
+                            "left",
+                            4900,
+                            2100,
+                            "linear",
+                            "${auge}",
+                            '48px',
+                            '46px'
+                        ],
+                        [
+                            "eid579",
+                            "left",
+                            7000,
+                            2100,
+                            "linear",
+                            "${auge}",
+                            '46px',
+                            '50px'
+                        ],
+                        [
+                            "eid580",
+                            "left",
+                            9100,
+                            2800,
+                            "linear",
+                            "${auge}",
+                            '50px',
+                            '48px'
+                        ],
+                        [
+                            "eid581",
+                            "left",
+                            11900,
+                            2100,
+                            "linear",
+                            "${auge}",
+                            '48px',
+                            '46px'
+                        ],
+                        [
+                            "eid548",
+                            "left",
+                            0,
+                            2100,
+                            "linear",
+                            "${auge2}",
+                            '118px',
+                            '122px'
+                        ],
+                        [
+                            "eid552",
+                            "left",
+                            2100,
+                            2800,
+                            "linear",
+                            "${auge2}",
+                            '122px',
+                            '120px'
+                        ],
+                        [
+                            "eid557",
+                            "left",
+                            4900,
+                            2100,
+                            "linear",
+                            "${auge2}",
+                            '120px',
+                            '118px'
+                        ],
+                        [
+                            "eid573",
+                            "left",
+                            7000,
+                            2100,
+                            "linear",
+                            "${auge2}",
+                            '118px',
+                            '122px'
+                        ],
+                        [
+                            "eid574",
+                            "left",
+                            9100,
+                            2800,
+                            "linear",
+                            "${auge2}",
+                            '122px',
+                            '120px'
+                        ],
+                        [
+                            "eid575",
+                            "left",
+                            11900,
+                            2100,
+                            "linear",
+                            "${auge2}",
+                            '120px',
+                            '118px'
+                        ],
+                        [
+                            "eid603",
+                            "left",
+                            3000,
+                            3000,
+                            "linear",
+                            "${bauhand}",
+                            '152px',
+                            '89px'
+                        ],
+                        [
+                            "eid604",
+                            "left",
+                            6000,
+                            3100,
+                            "linear",
+                            "${bauhand}",
+                            '89px',
+                            '152px'
+                        ]
+                    ]
+                }
+            },
+            "sym_sprung": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            rect: [45, 10, '1114px', '588px', 'auto', 'auto'],
+                            overflow: 'hidden',
+                            id: 'sprungbrucke',
+                            type: 'image',
+                            fill: ['rgba(0,0,0,0)', 'images/sprungbrucke.png', '0px', '0px']
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            rect: [null, null, 250, 250]
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 1121,
+                    autoPlay: false,
+                    labels: {
+                        "loop_sprung": 0
+                    },
+                    data: [
+                        [
+                            "eid617",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '10px',
+                            '10px'
+                        ],
+                        [
+                            "eid619",
+                            "top",
+                            131,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '10px',
+                            '25px'
+                        ],
+                        [
+                            "eid621",
+                            "top",
+                            250,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '27px',
+                            '17px'
+                        ],
+                        [
+                            "eid623",
+                            "top",
+                            389,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '17px',
+                            '9px'
+                        ],
+                        [
+                            "eid659",
+                            "top",
+                            406,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '9px',
+                            '7px'
+                        ],
+                        [
+                            "eid625",
+                            "top",
+                            500,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '7px',
+                            '-311px'
+                        ],
+                        [
+                            "eid627",
+                            "top",
+                            629,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-311px',
+                            '-290px'
+                        ],
+                        [
+                            "eid657",
+                            "top",
+                            687,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-290px',
+                            '-282px'
+                        ],
+                        [
+                            "eid629",
+                            "top",
+                            750,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-282px',
+                            '-259px'
+                        ],
+                        [
+                            "eid631",
+                            "top",
+                            854,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-274px',
+                            '-278px'
+                        ],
+                        [
+                            "eid633",
+                            "top",
+                            1000,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-256px',
+                            '-166px'
+                        ],
+                        [
+                            "eid612",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '45px',
+                            '45px'
+                        ],
+                        [
+                            "eid618",
+                            "left",
+                            131,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '45px',
+                            '-183px'
+                        ],
+                        [
+                            "eid620",
+                            "left",
+                            250,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-251px',
+                            '-430px'
+                        ],
+                        [
+                            "eid622",
+                            "left",
+                            389,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-500px',
+                            '-680px'
+                        ],
+                        [
+                            "eid658",
+                            "left",
+                            406,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-680px',
+                            '-685px'
+                        ],
+                        [
+                            "eid624",
+                            "left",
+                            500,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-685px',
+                            '-6px'
+                        ],
+                        [
+                            "eid626",
+                            "left",
+                            629,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-76px',
+                            '-270px'
+                        ],
+                        [
+                            "eid656",
+                            "left",
+                            687,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-270px',
+                            '-264px'
+                        ],
+                        [
+                            "eid628",
+                            "left",
+                            750,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-264px',
+                            '-507px'
+                        ],
+                        [
+                            "eid630",
+                            "left",
+                            854,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-598px',
+                            '-792px'
+                        ],
+                        [
+                            "eid632",
+                            "left",
+                            1000,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-898px',
+                            '-1020px'
+                        ]
+                    ]
                 }
             }
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_uberschwarz}": [
-                ["style", "top", '319px'],
-                ["style", "height", '449px'],
-                ["color", "border-color", 'rgba(0,0,0,0.00)'],
-                ["style", "left", '844px'],
-                ["style", "width", '680px']
-            ],
-            "${_Stage}": [
-                ["color", "background-color", 'rgba(199,138,138,1.00)'],
-                ["style", "width", '2048px'],
-                ["style", "height", '1536px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_Rectangle}": [
-                ["style", "top", '548px'],
-                ["style", "height", '153px'],
-                ["color", "background-color", 'rgba(192,192,192,0.00)'],
-                ["style", "left", '1311px'],
-                ["style", "width", '361px']
-            ],
-            "${_StageA}": [
-                ["color", "background-color", 'rgba(255,255,255,1.00)']
-            ],
-            "${_sym_ausblick}": [
-                ["style", "top", '0px'],
-                ["style", "left", '0px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 36000,
-            autoPlay: false,
-            timeline: [
-            ]
-        }
-    }
-},
-"sym_vorhang": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'vorhangani',
-                    type: 'image',
-                    rect: ['0px', '0px', '5112px', '538px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/vorhangani.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_vorhangani}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '538px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '850px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 2500,
-            autoPlay: false,
-            timeline: [
-                { id: "eid58", tween: [ "style", "${_vorhangani}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid60", tween: [ "style", "${_vorhangani}", "left", '-871px', { fromValue: '0px'}], position: 500, duration: 0 },
-                { id: "eid61", tween: [ "style", "${_vorhangani}", "left", '-1750px', { fromValue: '-872px'}], position: 1000, duration: 0 },
-                { id: "eid62", tween: [ "style", "${_vorhangani}", "left", '-2610px', { fromValue: '-1751px'}], position: 1500, duration: 0 },
-                { id: "eid63", tween: [ "style", "${_vorhangani}", "left", '-3462px', { fromValue: '-2610px'}], position: 2000, duration: 0 },
-                { id: "eid64", tween: [ "style", "${_vorhangani}", "left", '-4313px', { fromValue: '-3464px'}], position: 2500, duration: 0 }            ]
-        }
-    }
-},
-"wegzumhaus": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'haushinterswrgb',
-                    type: 'image',
-                    rect: ['-580', '-403', '3414px', '2369px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/haushinterswrgb.jpg', '0px', '0px']
-                },
-                {
-                    id: 'hauswegsw',
-                    type: 'image',
-                    rect: ['140px', '132px', '1737px', '916px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/hauswegsw.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_hauswegsw}": [
-                ["transform", "scaleX", '0.66'],
-                ["transform", "scaleY", '0.66'],
-                ["style", "left", '142px'],
-                ["style", "top", '216px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1564px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '8217px']
-            ],
-            "${_haushinterswrgb}": [
-                ["transform", "scaleX", '0.66'],
-                ["transform", "scaleY", '0.66']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 3000,
-            autoPlay: false,
-            timeline: [
-                { id: "eid50", tween: [ "transform", "${_hauswegsw}", "scaleY", '1', { fromValue: '0.66'}], position: 0, duration: 3000 },
-                { id: "eid129", tween: [ "style", "${_hauswegsw}", "left", '91px', { fromValue: '142px'}], position: 0, duration: 3000 },
-                { id: "eid96", tween: [ "transform", "${_haushinterswrgb}", "scaleX", '1', { fromValue: '0.66'}], position: 0, duration: 3000 },
-                { id: "eid128", tween: [ "style", "${_hauswegsw}", "top", '158px', { fromValue: '216px'}], position: 0, duration: 3000 },
-                { id: "eid97", tween: [ "transform", "${_haushinterswrgb}", "scaleY", '1', { fromValue: '0.66'}], position: 0, duration: 3000 },
-                { id: "eid49", tween: [ "transform", "${_hauswegsw}", "scaleX", '1', { fromValue: '0.66'}], position: 0, duration: 3000 }            ]
-        }
-    }
-},
-"sym_schwarz": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    type: 'rect',
-                    id: 'schwarz',
-                    stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
-                    rect: ['0px', '0px', '2048px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,1)']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ],
-            "${_schwarz}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.850000'],
-                ["style", "left", '0px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 2000,
-            autoPlay: false,
-            timeline: [
-                { id: "eid70", tween: [ "style", "${_schwarz}", "opacity", '0', { fromValue: '0.850000'}], position: 0, duration: 2000 }            ]
-        }
-    }
-},
-"sym_ausblick": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'wasserstruktur_Kopie',
-                    type: 'image',
-                    rect: ['526', '0', '2048px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/wasserstruktur%20Kopie.jpg', '0px', '0px']
-                },
-                {
-                    id: 'ausblickwasserfrei',
-                    type: 'image',
-                    rect: ['0px', '0px', '2048px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ausblickwasserfrei.png', '0px', '0px']
-                },
-                {
-                    id: 'aussichtvorsw2',
-                    type: 'image',
-                    rect: ['0', '0', '2048px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/aussichtvorsw.png', '0px', '0px']
-                },
-                {
-                    id: 'huhliegenkorper2',
-                    type: 'image',
-                    rect: ['1116px', '1198px', '140px', '122px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
-                },
-                {
-                    id: 'sym_huhliegenkopf',
-                    type: 'rect',
-                    rect: ['1146px', '1214px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'sym_huhpickenganzani',
-                    type: 'rect',
-                    rect: ['1465px', '1242px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'huhpickenkorper2',
-                    type: 'image',
-                    rect: ['1278px', '1291px', '163px', '146px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhpickenkorper.png', '0px', '0px']
-                },
-                {
-                    id: 'sym_huhpickenkopfkoroer',
-                    type: 'rect',
-                    rect: ['1278px', '1291px', 'auto', 'auto', 'auto', 'auto']
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'sym_huhliegenkopf',
-                symbolName: 'sym_huhliegenkopf',
-                autoPlay: {
+        };
 
-               }
-            },
-            {
-                id: 'sym_huhpickenkopfkoroer',
-                symbolName: 'sym_huhpickenkopfkoroer',
-                autoPlay: {
+    AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
-               }
-            },
-            {
-                id: 'sym_huhpickenganzani',
-                symbolName: 'sym_huhpickenganzani',
-                autoPlay: {
-
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_huhpickenkorper2}": [
-                ["motion", "location", '1359.5px 1364px'],
-                ["transform", "scaleX", '1'],
-                ["transform", "rotateZ", '0deg']
-            ],
-            "${_huhliegenkorper2}": [
-                ["style", "left", '1116px'],
-                ["style", "top", '1198px']
-            ],
-            "${_sym_huhpickenkopfkoroer}": [
-                ["motion", "location", '1310.5px 1364px'],
-                ["transform", "scaleX", '1'],
-                ["transform", "rotateZ", '0deg']
-            ],
-            "${_sym_huhliegenkopf}": [
-                ["style", "left", '1146px'],
-                ["style", "top", '1214px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ],
-            "${_wasserstruktur_Kopie}": [
-                ["transform", "scaleX", '0.53'],
-                ["style", "top", '-74px'],
-                ["transform", "scaleY", '0.53'],
-                ["style", "left", '399px']
-            ],
-            "${_ausblickwasserfrei}": [
-                ["transform", "scaleX", '0.53'],
-                ["style", "top", '-94px'],
-                ["style", "left", '133px'],
-                ["transform", "scaleY", '0.53']
-            ],
-            "${_sym_huhpickenganzani}": [
-                ["transform", "scaleX", '1'],
-                ["transform", "scaleY", '1'],
-                ["motion", "location", '1550px 1319.5px']
-            ],
-            "${_aussichtvorsw2}": [
-                ["style", "top", '-94px'],
-                ["style", "left", '133px'],
-                ["transform", "scaleY", '0.53'],
-                ["transform", "scaleX", '0.53']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 15162,
-            autoPlay: false,
-            labels: {
-                "huhsontherun": 3069
-            },
-            timeline: [
-                { id: "eid515", tween: [ "transform", "${_wasserstruktur_Kopie}", "scaleX", '1', { fromValue: '0.53'}], position: 0, duration: 3000 },
-                { id: "eid513", tween: [ "style", "${_ausblickwasserfrei}", "left", '0px', { fromValue: '133px'}], position: 0, duration: 3000 },
-                { id: "eid375", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 5250, duration: 0 },
-                { id: "eid376", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 5500, duration: 0 },
-                { id: "eid378", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '-8deg'}], position: 5750, duration: 0 },
-                { id: "eid380", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 6000, duration: 0 },
-                { id: "eid382", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 6250, duration: 0 },
-                { id: "eid387", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 10500, duration: 0 },
-                { id: "eid388", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 10750, duration: 0 },
-                { id: "eid389", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 11000, duration: 0 },
-                { id: "eid390", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 11250, duration: 0 },
-                { id: "eid391", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 11500, duration: 0 },
-                { id: "eid259", tween: [ "transform", "${_aussichtvorsw2}", "scaleX", '1', { fromValue: '0.53'}], position: 0, duration: 3000 },
-                { id: "eid374", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 5250, duration: 0 },
-                { id: "eid377", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '-8deg', { fromValue: '0deg'}], position: 5500, duration: 0 },
-                { id: "eid379", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '-8deg'}], position: 5750, duration: 0 },
-                { id: "eid381", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 6000, duration: 0 },
-                { id: "eid383", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 6250, duration: 0 },
-                { id: "eid393", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 10500, duration: 0 },
-                { id: "eid394", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '-8deg', { fromValue: '0deg'}], position: 10750, duration: 0 },
-                { id: "eid395", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '-8deg'}], position: 11000, duration: 0 },
-                { id: "eid396", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 11250, duration: 0 },
-                { id: "eid397", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 11500, duration: 0 },
-                { id: "eid510", tween: [ "style", "${_ausblickwasserfrei}", "top", '0px', { fromValue: '-94px'}], position: 0, duration: 3000 },
-                { id: "eid271", tween: [ "style", "${_aussichtvorsw2}", "left", '0px', { fromValue: '133px'}], position: 0, duration: 3000 },
-                { id: "eid403", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "scaleX", '1', { fromValue: '1'}], position: 3184, duration: 0 },
-                { id: "eid401", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "scaleX", '-1', { fromValue: '1'}], position: 9500, duration: 0 },
-                { id: "eid512", tween: [ "transform", "${_ausblickwasserfrei}", "scaleY", '1', { fromValue: '0.53'}], position: 0, duration: 3000 },
-                { id: "eid371", tween: [ "motion", "${_huhpickenkorper2}", [[1359.5, 1364, 0, 0],[1344.43, 1370.42, -26.36, -18.81, -23.2, -16.55],[1318.34, 1370.17, -16.72, 1.61, -23.12, 2.22],[1307.5, 1366.14, 0, 0]]], position: 5250, duration: 1000 },
-                { id: "eid400", tween: [ "motion", "${_huhpickenkorper2}", [[1307.5, 1366.14, 0, 0],[1318.34, 1370.17, 23.12, -2.22, 16.72, -1.61],[1344.43, 1370.42, 23.2, 16.55, 26.36, 18.81],[1359.5, 1364, 0, 0]]], position: 10500, duration: 1000 },
-                { id: "eid260", tween: [ "transform", "${_aussichtvorsw2}", "scaleY", '1', { fromValue: '0.53'}], position: 0, duration: 3000 },
-                { id: "eid370", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1310.5, 1364, 0, 0],[1299.5, 1364, -20.19, -2.76]]], position: 5250, duration: 250 },
-                { id: "eid384", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1299.5, 1364, -5.53, -0.76],[1291.41, 1360.26, -9.59, 0.4, -4.94, 0.2],[1282.45, 1368.31, -36.7, -20.67, -8.45, -4.76],[1258.5, 1366.14, 0, 0]]], position: 5500, duration: 750 },
-                { id: "eid405", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1356.51, 1366, 0, 0],[1356.51, 1366, 0, 0]]], position: 9500, duration: 0 },
-                { id: "eid398", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1352.91, 1367.26, 0, 0],[1376.86, 1369.43, 8.45, 4.76, 36.7, 20.67],[1385.82, 1361.38, 4.94, -0.2, 9.59, -0.4],[1393.91, 1365.12, 5.53, 0.76]]], position: 10500, duration: 750 },
-                { id: "eid399", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1393.91, 1365.12, 20.19, 2.76],[1404.91, 1365.12, 0, 0]]], position: 11250, duration: 250 },
-                { id: "eid517", tween: [ "transform", "${_wasserstruktur_Kopie}", "scaleY", '1', { fromValue: '0.53'}], position: 0, duration: 3000 },
-                { id: "eid404", tween: [ "transform", "${_huhpickenkorper2}", "scaleX", '1', { fromValue: '1'}], position: 3184, duration: 0 },
-                { id: "eid402", tween: [ "transform", "${_huhpickenkorper2}", "scaleX", '-1', { fromValue: '1'}], position: 9500, duration: 0 },
-                { id: "eid535", tween: [ "style", "${_wasserstruktur_Kopie}", "top", '-94px', { fromValue: '-74px'}], position: 0, duration: 3000 },
-                { id: "eid526", tween: [ "style", "${_wasserstruktur_Kopie}", "top", '-136px', { fromValue: '-94px'}], position: 3069, duration: 2016 },
-                { id: "eid527", tween: [ "style", "${_wasserstruktur_Kopie}", "top", '-7px', { fromValue: '-136px'}], position: 5085, duration: 3596 },
-                { id: "eid528", tween: [ "style", "${_wasserstruktur_Kopie}", "top", '-82px', { fromValue: '-7px'}], position: 8680, duration: 4769 },
-                { id: "eid529", tween: [ "style", "${_wasserstruktur_Kopie}", "top", '-94px', { fromValue: '-82px'}], position: 13449, duration: 1713 },
-                { id: "eid272", tween: [ "style", "${_aussichtvorsw2}", "top", '0px', { fromValue: '-94px'}], position: 0, duration: 3000 },
-                { id: "eid534", tween: [ "style", "${_wasserstruktur_Kopie}", "left", '439px', { fromValue: '399px'}], position: 0, duration: 3000 },
-                { id: "eid523", tween: [ "style", "${_wasserstruktur_Kopie}", "left", '266px', { fromValue: '439px'}], position: 3069, duration: 3407 },
-                { id: "eid524", tween: [ "style", "${_wasserstruktur_Kopie}", "left", '517px', { fromValue: '266px'}], position: 6476, duration: 4655 },
-                { id: "eid525", tween: [ "style", "${_wasserstruktur_Kopie}", "left", '439px', { fromValue: '517px'}], position: 11131, duration: 4031 },
-                { id: "eid511", tween: [ "transform", "${_ausblickwasserfrei}", "scaleX", '1', { fromValue: '0.53'}], position: 0, duration: 3000 }            ]
-        }
-    }
-},
-"sym_zimmer": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'zimmer',
-                    type: 'image',
-                    rect: ['0px', '0px', '2048px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/zimmer.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_zimmer}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 0,
-            autoPlay: false,
-            timeline: [
-            ]
-        }
-    }
-},
-"sym_vorzim": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'sym_zimmer2',
-                    type: 'rect',
-                    rect: ['0px', '0px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'sym_vorhang',
-                    type: 'rect',
-                    rect: ['773px', '274px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'zimpflanze2',
-                    type: 'image',
-                    rect: ['1632px', '245px', '336px', '393px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/zimpflanze2.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'sym_vorhang',
-                symbolName: 'sym_vorhang',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'sym_zimmer2',
-                symbolName: 'sym_zimmer',
-                autoPlay: {
-
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_zimpflanze2}": [
-                ["transform", "scaleX", '1'],
-                ["transform", "scaleY", '1'],
-                ["style", "left", '1673px'],
-                ["style", "top", '242px']
-            ],
-            "${_sym_zimmer2}": [
-                ["transform", "scaleX", '1'],
-                ["transform", "scaleY", '1'],
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_sym_vorhang}": [
-                ["transform", "scaleX", '1'],
-                ["transform", "scaleY", '1'],
-                ["style", "left", '767px'],
-                ["style", "top", '263px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 4000,
-            autoPlay: false,
-            timeline: [
-                { id: "eid537", tween: [ "transform", "${_zimpflanze2}", "scaleY", '3.76926', { fromValue: '1'}], position: 0, duration: 4000 },
-                { id: "eid190", tween: [ "style", "${_sym_vorhang}", "top", '404px', { fromValue: '263px'}], position: 0, duration: 4000 },
-                { id: "eid539", tween: [ "transform", "${_zimpflanze2}", "scaleX", '3.76926', { fromValue: '1'}], position: 0, duration: 4000 },
-                { id: "eid165", tween: [ "transform", "${_sym_vorhang}", "scaleX", '3.76926', { fromValue: '1'}], position: 0, duration: 4000 },
-                { id: "eid536", tween: [ "style", "${_zimpflanze2}", "top", '155px', { fromValue: '242px'}], position: 0, duration: 4000 },
-                { id: "eid166", tween: [ "transform", "${_sym_vorhang}", "scaleY", '3.76926', { fromValue: '1'}], position: 0, duration: 4000 },
-                { id: "eid189", tween: [ "style", "${_sym_vorhang}", "left", '289px', { fromValue: '767px'}], position: 0, duration: 4000 },
-                { id: "eid161", tween: [ "transform", "${_sym_zimmer2}", "scaleX", '3.76926', { fromValue: '1'}], position: 0, duration: 4000 },
-                { id: "eid187", tween: [ "style", "${_sym_zimmer2}", "left", '-851px', { fromValue: '0px'}], position: 0, duration: 4000 },
-                { id: "eid162", tween: [ "transform", "${_sym_zimmer2}", "scaleY", '3.76926', { fromValue: '1'}], position: 0, duration: 4000 },
-                { id: "eid188", tween: [ "style", "${_sym_zimmer2}", "top", '791px', { fromValue: '0px'}], position: 0, duration: 4000 },
-                { id: "eid538", tween: [ "style", "${_zimpflanze2}", "left", '3080px', { fromValue: '1673px'}], position: 0, duration: 4000 }            ]
-        }
-    }
-},
-"sym_huhliegen": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'huhliegenkorper',
-                    type: 'image',
-                    rect: ['0px', '0px', '140px', '122px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
-                },
-                {
-                    id: 'huhliegenkopf',
-                    type: 'image',
-                    rect: ['0px', '0px', '242px', '68px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhliegenkopf.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_huhliegenkopf}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${_huhliegenkorper}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '122px'],
-                ["style", "width", '242px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 0,
-            autoPlay: false,
-            timeline: [
-            ]
-        }
-    }
-},
-"sym_huhliegenkopf": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'huhliegenkopf2',
-                    type: 'image',
-                    rect: ['-6px', '0px', '242px', '68px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhliegenkopf.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${symbolSelector}": [
-                ["style", "height", '68px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '50px']
-            ],
-            "${_huhliegenkopf2}": [
-                ["style", "left", '-5px'],
-                ["style", "top", '0px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 5000,
-            autoPlay: false,
-            labels: {
-                "loophuhn1": 0
-            },
-            timeline: [
-                { id: "eid285", tween: [ "style", "${_huhliegenkopf2}", "left", '-5px', { fromValue: '-5px'}], position: 0, duration: 0 },
-                { id: "eid286", tween: [ "style", "${_huhliegenkopf2}", "left", '-60px', { fromValue: '-5px'}], position: 649, duration: 0 },
-                { id: "eid287", tween: [ "style", "${_huhliegenkopf2}", "left", '-121px', { fromValue: '-60px'}], position: 1182, duration: 0 },
-                { id: "eid288", tween: [ "style", "${_huhliegenkopf2}", "left", '-185px', { fromValue: '-121px'}], position: 1750, duration: 0 },
-                { id: "eid289", tween: [ "style", "${_huhliegenkopf2}", "left", '-121px', { fromValue: '-185px'}], position: 2750, duration: 0 },
-                { id: "eid290", tween: [ "style", "${_huhliegenkopf2}", "left", '-61px', { fromValue: '-121px'}], position: 4399, duration: 0 }            ]
-        }
-    }
-},
-"sym_huhflugelganzani": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'huhflugelganzani',
-                    type: 'image',
-                    rect: ['-21px', '-5px', '1109px', '259px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhflugelganzani.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_huhflugelganzani}": [
-                ["style", "left", '-21px'],
-                ["style", "top", '-5px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '259px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '180px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 3116,
-            autoPlay: false,
-            labels: {
-                "loophuhflugelganzani2": 0,
-                "labelhuhflugelganzani": 1095
-            },
-            timeline: [
-                { id: "eid305", tween: [ "style", "${_huhflugelganzani}", "top", '-5px', { fromValue: '-5px'}], position: 0, duration: 0 },
-                { id: "eid307", tween: [ "style", "${_huhflugelganzani}", "top", '-6px', { fromValue: '-5px'}], position: 392, duration: 0 },
-                { id: "eid309", tween: [ "style", "${_huhflugelganzani}", "top", '-4px', { fromValue: '-6px'}], position: 750, duration: 0 },
-                { id: "eid311", tween: [ "style", "${_huhflugelganzani}", "top", '-2px', { fromValue: '-4px'}], position: 1095, duration: 0 },
-                { id: "eid313", tween: [ "style", "${_huhflugelganzani}", "top", '2px', { fromValue: '-2px'}], position: 1386, duration: 0 },
-                { id: "eid315", tween: [ "style", "${_huhflugelganzani}", "top", '-3px', { fromValue: '2px'}], position: 1750, duration: 0 },
-                { id: "eid317", tween: [ "style", "${_huhflugelganzani}", "top", '2px', { fromValue: '-3px'}], position: 2000, duration: 0 },
-                { id: "eid319", tween: [ "style", "${_huhflugelganzani}", "top", '-3px', { fromValue: '2px'}], position: 2305, duration: 0 },
-                { id: "eid321", tween: [ "style", "${_huhflugelganzani}", "top", '2px', { fromValue: '-3px'}], position: 2643, duration: 0 },
-                { id: "eid323", tween: [ "style", "${_huhflugelganzani}", "top", '3px', { fromValue: '2px'}], position: 2839, duration: 0 },
-                { id: "eid304", tween: [ "style", "${_huhflugelganzani}", "left", '-21px', { fromValue: '-21px'}], position: 0, duration: 0 },
-                { id: "eid306", tween: [ "style", "${_huhflugelganzani}", "left", '-197px', { fromValue: '-21px'}], position: 392, duration: 0 },
-                { id: "eid308", tween: [ "style", "${_huhflugelganzani}", "left", '-374px', { fromValue: '-197px'}], position: 750, duration: 0 },
-                { id: "eid310", tween: [ "style", "${_huhflugelganzani}", "left", '-548px', { fromValue: '-374px'}], position: 1095, duration: 0 },
-                { id: "eid312", tween: [ "style", "${_huhflugelganzani}", "left", '-739px', { fromValue: '-548px'}], position: 1386, duration: 0 },
-                { id: "eid314", tween: [ "style", "${_huhflugelganzani}", "left", '-918px', { fromValue: '-739px'}], position: 1750, duration: 0 },
-                { id: "eid316", tween: [ "style", "${_huhflugelganzani}", "left", '-734px', { fromValue: '-918px'}], position: 2000, duration: 0 },
-                { id: "eid318", tween: [ "style", "${_huhflugelganzani}", "left", '-543px', { fromValue: '-734px'}], position: 2305, duration: 0 },
-                { id: "eid320", tween: [ "style", "${_huhflugelganzani}", "left", '-385px', { fromValue: '-543px'}], position: 2643, duration: 0 },
-                { id: "eid322", tween: [ "style", "${_huhflugelganzani}", "left", '-205px', { fromValue: '-385px'}], position: 2839, duration: 0 }            ]
-        }
-    }
-},
-"sym_huhpickenganzani": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'huhpickenganzani',
-                    type: 'image',
-                    rect: ['-7px', '0px', '550px', '147px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhpickenganzani.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_huhpickenganzani}": [
-                ["style", "left", '-7px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '155px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '170px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 3717,
-            autoPlay: false,
-            labels: {
-                "loophuhpickenganzani3": 0
-            },
-            timeline: [
-                { id: "eid328", tween: [ "style", "${_huhpickenganzani}", "left", '-7px', { fromValue: '-7px'}], position: 0, duration: 0 },
-                { id: "eid330", tween: [ "style", "${_huhpickenganzani}", "left", '-190px', { fromValue: '-7px'}], position: 2250, duration: 0 },
-                { id: "eid332", tween: [ "style", "${_huhpickenganzani}", "left", '-367px', { fromValue: '-190px'}], position: 2635, duration: 0 },
-                { id: "eid334", tween: [ "style", "${_huhpickenganzani}", "left", '-190px', { fromValue: '-367px'}], position: 3467, duration: 0 },
-                { id: "eid329", tween: [ "style", "${_huhpickenganzani}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid331", tween: [ "style", "${_huhpickenganzani}", "top", '2px', { fromValue: '0px'}], position: 2250, duration: 0 },
-                { id: "eid333", tween: [ "style", "${_huhpickenganzani}", "top", '5px', { fromValue: '2px'}], position: 2635, duration: 0 },
-                { id: "eid335", tween: [ "style", "${_huhpickenganzani}", "top", '0px', { fromValue: '5px'}], position: 3467, duration: 0 }            ]
-        }
-    }
-},
-"sym_huhpickenkopfkoroer": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'huhpickenkopf',
-                    type: 'image',
-                    rect: ['-11px', '0px', '163px', '146px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhpickenkopf.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_huhpickenkopf}": [
-                ["style", "left", '-87px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '146px'],
-                ["style", "overflow", 'hidden'],
-                ["style", "width", '65px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 1500,
-            autoPlay: false,
-            labels: {
-                "loophuhn4": 0
-            },
-            timeline: [
-                { id: "eid340", tween: [ "style", "${_huhpickenkopf}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid339", tween: [ "style", "${_huhpickenkopf}", "left", '-87px', { fromValue: '-87px'}], position: 0, duration: 0 },
-                { id: "eid341", tween: [ "style", "${_huhpickenkopf}", "left", '-4px', { fromValue: '-87px'}], position: 500, duration: 0 }            ]
-        }
-    }
-},
-"sym_blatt": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'sym_auge',
-                    type: 'rect',
-                    rect: ['0', '2', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'ib',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ib.png', '0px', '0px']
-                },
-                {
-                    id: 'hb',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/hb.png', '0px', '0px']
-                },
-                {
-                    id: 'gb',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/gb.png', '0px', '0px']
-                },
-                {
-                    id: 'fb',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/fb.png', '0px', '0px']
-                },
-                {
-                    id: 'eb',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/eb.png', '0px', '0px']
-                },
-                {
-                    id: 'db',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/db.png', '0px', '0px']
-                },
-                {
-                    id: 'cb',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/cb.png', '0px', '0px']
-                },
-                {
-                    id: 'bb',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/bb.png', '0px', '0px']
-                },
-                {
-                    id: 'a',
-                    type: 'image',
-                    rect: ['0px', '0px', '2150px', '1613px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/a.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'sym_auge',
-                symbolName: 'sym_auge',
-                autoPlay: {
-
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_db}": [
-                ["style", "height", '1613px'],
-                ["style", "top", '-37px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${_a}": [
-                ["style", "height", '1613px'],
-                ["style", "top", '-37px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${_cb}": [
-                ["style", "height", '1613px'],
-                ["style", "top", '-37px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${_bb}": [
-                ["style", "height", '1613px'],
-                ["style", "top", '-37px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${_eb}": [
-                ["style", "height", '1613px'],
-                ["style", "top", '-37px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${_gb}": [
-                ["style", "height", '1613px'],
-                ["style", "top", '-37px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${_fb}": [
-                ["style", "height", '1613px'],
-                ["style", "top", '-37px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${_ib}": [
-                ["style", "height", '1613px'],
-                ["style", "top", '-37px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ],
-            "${_hb}": [
-                ["style", "height", '1613px'],
-                ["style", "top", '-37px'],
-                ["style", "left", '-50px'],
-                ["style", "width", '2150px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 1000,
-            autoPlay: false,
-            labels: {
-                "loop_blatt": 0
-            },
-            timeline: [
-                { id: "eid421", tween: [ "style", "${_hb}", "top", '-37px', { fromValue: '-37px'}], position: 0, duration: 0 },
-                { id: "eid481", tween: [ "style", "${_hb}", "top", '-37px', { fromValue: '-37px'}], position: 500, duration: 0 },
-                { id: "eid482", tween: [ "style", "${_hb}", "top", '-37px', { fromValue: '-37px'}], position: 1000, duration: 0 },
-                { id: "eid453", tween: [ "style", "${_fb}", "top", '-17px', { fromValue: '-37px'}], position: 0, duration: 500 },
-                { id: "eid496", tween: [ "style", "${_fb}", "top", '-37px', { fromValue: '-17px'}], position: 500, duration: 500 },
-                { id: "eid448", tween: [ "style", "${_db}", "left", '-30px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid493", tween: [ "style", "${_db}", "left", '-50px', { fromValue: '-30px'}], position: 500, duration: 500 },
-                { id: "eid450", tween: [ "style", "${_eb}", "top", '-17px', { fromValue: '-37px'}], position: 0, duration: 500 },
-                { id: "eid494", tween: [ "style", "${_eb}", "top", '-37px', { fromValue: '-17px'}], position: 500, duration: 500 },
-                { id: "eid419", tween: [ "style", "${_gb}", "top", '-37px', { fromValue: '-37px'}], position: 0, duration: 0 },
-                { id: "eid478", tween: [ "style", "${_gb}", "top", '-37px', { fromValue: '-37px'}], position: 500, duration: 0 },
-                { id: "eid479", tween: [ "style", "${_gb}", "top", '-37px', { fromValue: '-37px'}], position: 1000, duration: 0 },
-                { id: "eid454", tween: [ "style", "${_gb}", "left", '-30px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid498", tween: [ "style", "${_gb}", "left", '-50px', { fromValue: '-30px'}], position: 500, duration: 500 },
-                { id: "eid451", tween: [ "style", "${_eb}", "left", '-70px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid495", tween: [ "style", "${_eb}", "left", '-50px', { fromValue: '-70px'}], position: 500, duration: 500 },
-                { id: "eid447", tween: [ "style", "${_cb}", "left", '-80px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid491", tween: [ "style", "${_cb}", "left", '-50px', { fromValue: '-80px'}], position: 500, duration: 500 },
-                { id: "eid445", tween: [ "style", "${_bb}", "top", '-57px', { fromValue: '-37px'}], position: 0, duration: 500 },
-                { id: "eid488", tween: [ "style", "${_bb}", "top", '-37px', { fromValue: '-57px'}], position: 500, duration: 500 },
-                { id: "eid457", tween: [ "style", "${_ib}", "left", '-19px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid500", tween: [ "style", "${_ib}", "left", '-50px', { fromValue: '-19px'}], position: 500, duration: 500 },
-                { id: "eid456", tween: [ "style", "${_ib}", "top", '-67px', { fromValue: '-37px'}], position: 0, duration: 500 },
-                { id: "eid501", tween: [ "style", "${_ib}", "top", '-37px', { fromValue: '-67px'}], position: 500, duration: 500 },
-                { id: "eid442", tween: [ "style", "${_a}", "top", '-23px', { fromValue: '-37px'}], position: 0, duration: 500 },
-                { id: "eid487", tween: [ "style", "${_a}", "top", '-37px', { fromValue: '-23px'}], position: 500, duration: 500 },
-                { id: "eid443", tween: [ "style", "${_a}", "left", '-24px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid486", tween: [ "style", "${_a}", "left", '-50px', { fromValue: '-24px'}], position: 500, duration: 500 },
-                { id: "eid452", tween: [ "style", "${_fb}", "left", '-20px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid497", tween: [ "style", "${_fb}", "left", '-50px', { fromValue: '-20px'}], position: 500, duration: 500 },
-                { id: "eid455", tween: [ "style", "${_hb}", "left", '-70px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid499", tween: [ "style", "${_hb}", "left", '-50px', { fromValue: '-70px'}], position: 500, duration: 500 },
-                { id: "eid449", tween: [ "style", "${_db}", "top", '-47px', { fromValue: '-37px'}], position: 0, duration: 500 },
-                { id: "eid492", tween: [ "style", "${_db}", "top", '-37px', { fromValue: '-47px'}], position: 500, duration: 500 },
-                { id: "eid446", tween: [ "style", "${_cb}", "top", '-57px', { fromValue: '-37px'}], position: 0, duration: 500 },
-                { id: "eid490", tween: [ "style", "${_cb}", "top", '-37px', { fromValue: '-57px'}], position: 500, duration: 500 },
-                { id: "eid444", tween: [ "style", "${_bb}", "left", '0px', { fromValue: '-50px'}], position: 0, duration: 500 },
-                { id: "eid489", tween: [ "style", "${_bb}", "left", '-50px', { fromValue: '0px'}], position: 500, duration: 500 }            ]
-        }
-    }
-},
-"sym_auge": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'augenaufschlagauge',
-                    type: 'image',
-                    rect: ['0px', '0px', '14336px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/augenaufschlagauge.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_augenaufschlagauge}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 2250,
-            autoPlay: false,
-            timeline: [
-                { id: "eid458", tween: [ "style", "${_augenaufschlagauge}", "left", '0px', { fromValue: '0px'}], position: 0, duration: 0 },
-                { id: "eid460", tween: [ "style", "${_augenaufschlagauge}", "left", '-2048px', { fromValue: '0px'}], position: 311, duration: 0 },
-                { id: "eid461", tween: [ "style", "${_augenaufschlagauge}", "left", '-4096px', { fromValue: '-2048px'}], position: 642, duration: 0 },
-                { id: "eid462", tween: [ "style", "${_augenaufschlagauge}", "left", '-6144px', { fromValue: '-4096px'}], position: 1000, duration: 0 },
-                { id: "eid463", tween: [ "style", "${_augenaufschlagauge}", "left", '-8192px', { fromValue: '-6144px'}], position: 1338, duration: 0 },
-                { id: "eid464", tween: [ "style", "${_augenaufschlagauge}", "left", '-10310px', { fromValue: '-8192px'}], position: 1839, duration: 0 },
-                { id: "eid465", tween: [ "style", "${_augenaufschlagauge}", "left", '-12367px', { fromValue: '-10000px'}], position: 2250, duration: 0 },
-                { id: "eid459", tween: [ "style", "${_augenaufschlagauge}", "top", '0px', { fromValue: '0px'}], position: 0, duration: 0 }            ]
-        }
-    }
-},
-"sym_ausblick_1": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'wasserstruktur_KopieCopy',
-                    type: 'image',
-                    rect: ['526', '0', '2048px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/wasserstruktur%20Kopie.jpg', '0px', '0px']
-                },
-                {
-                    id: 'ausblickwasserfrei',
-                    type: 'image',
-                    rect: ['0px', '0px', '2048px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/ausblickwasserfrei.png', '0px', '0px']
-                },
-                {
-                    id: 'aussichtvorsw2',
-                    type: 'image',
-                    rect: ['0', '0', '2048px', '1536px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/aussichtvorsw.png', '0px', '0px']
-                },
-                {
-                    id: 'huhliegenkorper2',
-                    type: 'image',
-                    rect: ['1116px', '1198px', '140px', '122px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
-                },
-                {
-                    id: 'sym_huhliegenkopf',
-                    type: 'rect',
-                    rect: ['1146px', '1214px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'sym_huhpickenganzani',
-                    type: 'rect',
-                    rect: ['1465px', '1242px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'huhpickenkorper2',
-                    type: 'image',
-                    rect: ['1278px', '1291px', '163px', '146px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/huhpickenkorper.png', '0px', '0px']
-                },
-                {
-                    id: 'sym_huhpickenkopfkoroer',
-                    type: 'rect',
-                    rect: ['1278px', '1291px', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'sym_blattbaum',
-                    type: 'rect',
-                    rect: ['452', '254', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'sym_baumgesicht',
-                    type: 'rect',
-                    rect: ['788', '416', 'auto', 'auto', 'auto', 'auto']
-                },
-                {
-                    id: 'bruckesitzen',
-                    type: 'image',
-                    rect: ['1663px', '500px', '235px', '236px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/bruckesitzen.png', '0px', '0px']
-                },
-                {
-                    id: 'sitzenwasser',
-                    type: 'image',
-                    rect: ['1212px', '390px', '116px', '135px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/sitzenwasser.png', '0px', '0px']
-                },
-                {
-                    id: 'sym_sprung',
-                    type: 'rect',
-                    rect: ['1497', '419', 'auto', 'auto', 'auto', 'auto']
-                }
-            ],
-            symbolInstances: [
-            {
-                id: 'sym_sprung',
-                symbolName: 'sym_sprung',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'sym_huhpickenganzani',
-                symbolName: 'sym_huhpickenganzani',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'sym_baumgesicht',
-                symbolName: 'sym_baumgesicht',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'sym_huhliegenkopf',
-                symbolName: 'sym_huhliegenkopf',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'sym_blattbaum',
-                symbolName: 'sym_blattbaum',
-                autoPlay: {
-
-               }
-            },
-            {
-                id: 'sym_huhpickenkopfkoroer',
-                symbolName: 'sym_huhpickenkopfkoroer',
-                autoPlay: {
-
-               }
-            }            ]
-        },
-    states: {
-        "Base State": {
-            "${_ausblickwasserfrei}": [
-                ["transform", "scaleX", '0.53'],
-                ["style", "left", '133px'],
-                ["transform", "scaleY", '0.53'],
-                ["style", "top", '-94px']
-            ],
-            "${_sym_baumgesicht}": [
-                ["transform", "scaleX", '0.53'],
-                ["style", "top", '390px'],
-                ["transform", "scaleY", '0.53'],
-                ["style", "left", '753px']
-            ],
-            "${_aussichtvorsw2}": [
-                ["transform", "scaleX", '0.53'],
-                ["style", "top", '-94px'],
-                ["transform", "scaleY", '0.53'],
-                ["style", "left", '133px']
-            ],
-            "${_sym_huhpickenkopfkoroer}": [
-                ["transform", "scaleX", '1'],
-                ["motion", "location", '1310.5px 1364px'],
-                ["transform", "rotateZ", '0deg']
-            ],
-            "${_sym_sprung}": [
-                ["style", "top", '445px'],
-                ["transform", "scaleY", '0.4'],
-                ["style", "overflow", 'hidden'],
-                ["transform", "scaleX", '0.4'],
-                ["style", "left", '1327px']
-            ],
-            "${_huhpickenkorper2}": [
-                ["transform", "scaleX", '1'],
-                ["motion", "location", '1359.5px 1364px'],
-                ["transform", "rotateZ", '0deg']
-            ],
-            "${_sitzenwasser}": [
-                ["transform", "scaleX", '0.53'],
-                ["style", "top", '445px'],
-                ["style", "left", '1229px'],
-                ["transform", "scaleY", '0.53']
-            ],
-            "${_sym_huhliegenkopf}": [
-                ["style", "left", '1146px'],
-                ["style", "top", '1214px']
-            ],
-            "${_huhliegenkorper2}": [
-                ["style", "left", '1116px'],
-                ["style", "top", '1198px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '1536px'],
-                ["style", "width", '2048px']
-            ],
-            "${_sym_blattbaum}": [
-                ["transform", "scaleX", '0.53'],
-                ["style", "left", '694px'],
-                ["transform", "scaleY", '0.53'],
-                ["style", "top", '271px']
-            ],
-            "${_sym_huhpickenganzani}": [
-                ["transform", "scaleX", '1'],
-                ["transform", "scaleY", '1'],
-                ["motion", "location", '1550px 1319.5px']
-            ],
-            "${_wasserstruktur_KopieCopy}": [
-                ["style", "top", '-229px'],
-                ["transform", "scaleX", '0.53'],
-                ["style", "left", '133px'],
-                ["transform", "scaleY", '0.53']
-            ],
-            "${_bruckesitzen}": [
-                ["transform", "scaleX", '0.53'],
-                ["style", "top", '479px'],
-                ["style", "left", '1439px'],
-                ["transform", "scaleY", '0.53']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 36000,
-            autoPlay: true,
-            labels: {
-                "wasser": 0,
-                "ausblick_zoom": 16245,
-                "huhsontherun": 19570
-            },
-            timeline: [
-                { id: "eid710", tween: [ "transform", "${_sym_sprung}", "scaleX", '0.8', { fromValue: '0.4'}], position: 16245, duration: 3325 },
-                { id: "eid571", tween: [ "transform", "${_sym_baumgesicht}", "scaleX", '1', { fromValue: '0.53'}], position: 16245, duration: 3325 },
-                { id: "eid743", tween: [ "transform", "${_sitzenwasser}", "scaleY", '1', { fromValue: '0.53'}], position: 16245, duration: 3325 },
-                { id: "eid259", tween: [ "transform", "${_aussichtvorsw2}", "scaleX", '1', { fromValue: '0.53'}], position: 16245, duration: 3325 },
-                { id: "eid374", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 21860, duration: 0 },
-                { id: "eid377", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '-8deg', { fromValue: '0deg'}], position: 22137, duration: 0 },
-                { id: "eid379", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '-8deg'}], position: 22414, duration: 0 },
-                { id: "eid381", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 22691, duration: 0 },
-                { id: "eid383", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 22968, duration: 0 },
-                { id: "eid393", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 27677, duration: 0 },
-                { id: "eid394", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '-8deg', { fromValue: '0deg'}], position: 27955, duration: 0 },
-                { id: "eid395", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '-8deg'}], position: 28232, duration: 0 },
-                { id: "eid396", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 28509, duration: 0 },
-                { id: "eid397", tween: [ "transform", "${_huhpickenkorper2}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 28786, duration: 0 },
-                { id: "eid510", tween: [ "style", "${_ausblickwasserfrei}", "top", '0px', { fromValue: '-94px'}], position: 16245, duration: 3325 },
-                { id: "eid271", tween: [ "style", "${_aussichtvorsw2}", "left", '0px', { fromValue: '133px'}], position: 16245, duration: 3325 },
-                { id: "eid713", tween: [ "style", "${_sym_sprung}", "top", '433px', { fromValue: '445px'}], position: 16245, duration: 3325 },
-                { id: "eid272", tween: [ "style", "${_aussichtvorsw2}", "top", '0px', { fromValue: '-94px'}], position: 16245, duration: 3325 },
-                { id: "eid720", tween: [ "style", "${_sym_blattbaum}", "top", '254px', { fromValue: '271px'}], position: 16245, duration: 3325 },
-                { id: "eid370", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1310.5, 1364, 0, 0],[1299.5, 1364, -20.19, -2.76]]], position: 21860, duration: 277 },
-                { id: "eid384", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1299.5, 1364, -5.53, -0.76],[1291.41, 1360.26, -9.59, 0.4, -4.94, 0.2],[1282.45, 1368.31, -36.7, -20.67, -8.45, -4.76],[1258.5, 1366.14, 0, 0]]], position: 22137, duration: 831 },
-                { id: "eid405", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1356.51, 1366, 0, 0],[1356.51, 1366, 0, 0]]], position: 26569, duration: 0 },
-                { id: "eid398", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1352.91, 1367.26, 0, 0],[1376.86, 1369.43, 8.45, 4.76, 36.7, 20.67],[1385.82, 1361.38, 4.94, -0.2, 9.59, -0.4],[1393.91, 1365.12, 5.53, 0.76]]], position: 27677, duration: 831 },
-                { id: "eid399", tween: [ "motion", "${_sym_huhpickenkopfkoroer}", [[1393.91, 1365.12, 20.19, 2.76],[1404.91, 1365.12, 0, 0]]], position: 28509, duration: 277 },
-                { id: "eid735", tween: [ "transform", "${_bruckesitzen}", "scaleX", '1', { fromValue: '0.53'}], position: 16245, duration: 3325 },
-                { id: "eid570", tween: [ "style", "${_sym_baumgesicht}", "top", '317px', { fromValue: '390px'}], position: 16245, duration: 3325 },
-                { id: "eid719", tween: [ "transform", "${_sym_blattbaum}", "scaleX", '1', { fromValue: '0.53'}], position: 16245, duration: 3325 },
-                { id: "eid711", tween: [ "transform", "${_sym_sprung}", "scaleY", '0.8', { fromValue: '0.4'}], position: 16245, duration: 3325 },
-                { id: "eid513", tween: [ "style", "${_ausblickwasserfrei}", "left", '0px', { fromValue: '133px'}], position: 16245, duration: 3325 },
-                { id: "eid375", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 21860, duration: 0 },
-                { id: "eid376", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 22137, duration: 0 },
-                { id: "eid378", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '-8deg'}], position: 22414, duration: 0 },
-                { id: "eid380", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 22691, duration: 0 },
-                { id: "eid382", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 22968, duration: 0 },
-                { id: "eid387", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 27677, duration: 0 },
-                { id: "eid388", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 27955, duration: 0 },
-                { id: "eid389", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 28232, duration: 0 },
-                { id: "eid390", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '8deg', { fromValue: '0deg'}], position: 28509, duration: 0 },
-                { id: "eid391", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "rotateZ", '0deg', { fromValue: '8deg'}], position: 28786, duration: 0 },
-                { id: "eid569", tween: [ "style", "${_sym_baumgesicht}", "left", '345px', { fromValue: '753px'}], position: 16245, duration: 3325 },
-                { id: "eid404", tween: [ "transform", "${_huhpickenkorper2}", "scaleX", '1', { fromValue: '1'}], position: 19570, duration: 0 },
-                { id: "eid402", tween: [ "transform", "${_huhpickenkorper2}", "scaleX", '-1', { fromValue: '1'}], position: 26569, duration: 0 },
-                { id: "eid712", tween: [ "style", "${_sym_sprung}", "left", '1458px', { fromValue: '1327px'}], position: 16245, duration: 3325 },
-                { id: "eid371", tween: [ "motion", "${_huhpickenkorper2}", [[1359.5, 1364, 0, 0],[1344.43, 1370.42, -26.36, -18.81, -23.2, -16.55],[1318.34, 1370.17, -16.72, 1.61, -23.12, 2.22],[1307.5, 1366.14, 0, 0]]], position: 21860, duration: 1108 },
-                { id: "eid400", tween: [ "motion", "${_huhpickenkorper2}", [[1307.5, 1366.14, 0, 0],[1318.34, 1370.17, 23.12, -2.22, 16.72, -1.61],[1344.43, 1370.42, 23.2, 16.55, 26.36, 18.81],[1359.5, 1364, 0, 0]]], position: 27677, duration: 1108 },
-                { id: "eid714", tween: [ "transform", "${_wasserstruktur_KopieCopy}", "scaleX", '1', { fromValue: '0.53'}], position: 16245, duration: 3325 },
-                { id: "eid722", tween: [ "style", "${_sym_blattbaum}", "left", '452px', { fromValue: '694px'}], position: 16245, duration: 3325 },
-                { id: "eid403", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "scaleX", '1', { fromValue: '1'}], position: 19570, duration: 0 },
-                { id: "eid401", tween: [ "transform", "${_sym_huhpickenkopfkoroer}", "scaleX", '-1', { fromValue: '1'}], position: 26569, duration: 0 },
-                { id: "eid718", tween: [ "style", "${_wasserstruktur_KopieCopy}", "left", '517px', { fromValue: '133px'}], position: 0, duration: 15750 },
-                { id: "eid723", tween: [ "style", "${_wasserstruktur_KopieCopy}", "left", '113px', { fromValue: '133px'}], position: 16245, duration: 3325 },
-                { id: "eid724", tween: [ "style", "${_wasserstruktur_KopieCopy}", "left", '517px', { fromValue: '113px'}], position: 19570, duration: 16430 },
-                { id: "eid742", tween: [ "transform", "${_sitzenwasser}", "scaleX", '1', { fromValue: '0.53'}], position: 16245, duration: 3325 },
-                { id: "eid734", tween: [ "transform", "${_bruckesitzen}", "scaleY", '1', { fromValue: '0.53'}], position: 16245, duration: 3325 },
-                { id: "eid512", tween: [ "transform", "${_ausblickwasserfrei}", "scaleY", '1', { fromValue: '0.53'}], position: 16245, duration: 3325 },
-                { id: "eid721", tween: [ "transform", "${_sym_blattbaum}", "scaleY", '1', { fromValue: '0.53'}], position: 16245, duration: 3325 },
-                { id: "eid260", tween: [ "transform", "${_aussichtvorsw2}", "scaleY", '1', { fromValue: '0.53'}], position: 16245, duration: 3325 },
-                { id: "eid715", tween: [ "style", "${_wasserstruktur_KopieCopy}", "top", '-7px', { fromValue: '-229px'}], position: 0, duration: 15750 },
-                { id: "eid716", tween: [ "style", "${_wasserstruktur_KopieCopy}", "top", '-47px', { fromValue: '-277px'}], position: 16245, duration: 3325 },
-                { id: "eid717", tween: [ "style", "${_wasserstruktur_KopieCopy}", "top", '-7px', { fromValue: '-47px'}], position: 19570, duration: 16430 },
-                { id: "eid725", tween: [ "transform", "${_wasserstruktur_KopieCopy}", "scaleY", '1', { fromValue: '0.53'}], position: 16245, duration: 3325 },
-                { id: "eid736", tween: [ "style", "${_bruckesitzen}", "left", '1663px', { fromValue: '1439px'}], position: 16245, duration: 3325 },
-                { id: "eid511", tween: [ "transform", "${_ausblickwasserfrei}", "scaleX", '1', { fromValue: '0.53'}], position: 16245, duration: 3325 },
-                { id: "eid745", tween: [ "style", "${_sitzenwasser}", "left", '1212px', { fromValue: '1229px'}], position: 16245, duration: 3325 },
-                { id: "eid744", tween: [ "style", "${_sitzenwasser}", "top", '390px', { fromValue: '445px'}], position: 16245, duration: 3325 },
-                { id: "eid572", tween: [ "transform", "${_sym_baumgesicht}", "scaleY", '1', { fromValue: '0.53'}], position: 16245, duration: 3325 },
-                { id: "eid737", tween: [ "style", "${_bruckesitzen}", "top", '500px', { fromValue: '479px'}], position: 16245, duration: 3325 }            ]
-        }
-    }
-},
-"sym_blattbaum": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'baubeweg2',
-                    type: 'image',
-                    rect: ['43px', '142px', '610px', '428px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/baubeweg2.png', '0px', '0px']
-                },
-                {
-                    id: 'baubeweg1',
-                    type: 'image',
-                    rect: ['0px', '0px', '678px', '396px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/baubeweg1.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_baubeweg2}": [
-                ["style", "top", '142px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '43px'],
-                ["transform", "rotateZ", '0deg']
-            ],
-            "${_baubeweg1}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0.5'],
-                ["style", "left", '0px'],
-                ["transform", "rotateZ", '0deg']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '570px'],
-                ["style", "width", '678px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 6000,
-            autoPlay: true,
-            labels: {
-                "loop_blatt": 303
-            },
-            timeline: [
-                { id: "eid634", tween: [ "style", "${_baubeweg2}", "left", '43px', { fromValue: '43px'}], position: 0, duration: 0 },
-                { id: "eid681", tween: [ "style", "${_baubeweg2}", "left", '45px', { fromValue: '43px'}], position: 303, duration: 357 },
-                { id: "eid682", tween: [ "style", "${_baubeweg2}", "left", '43px', { fromValue: '45px'}], position: 660, duration: 294 },
-                { id: "eid683", tween: [ "style", "${_baubeweg2}", "left", '42px', { fromValue: '43px'}], position: 954, duration: 247 },
-                { id: "eid684", tween: [ "style", "${_baubeweg2}", "left", '43px', { fromValue: '42px'}], position: 1201, duration: 247 },
-                { id: "eid685", tween: [ "style", "${_baubeweg2}", "left", '45px', { fromValue: '43px'}], position: 1448, duration: 294 },
-                { id: "eid686", tween: [ "style", "${_baubeweg2}", "left", '43px', { fromValue: '45px'}], position: 1742, duration: 357 },
-                { id: "eid641", tween: [ "style", "${_baubeweg2}", "opacity", '0', { fromValue: '0'}], position: 0, duration: 0 },
-                { id: "eid704", tween: [ "style", "${_baubeweg2}", "opacity", '0.5', { fromValue: '0'}], position: 303, duration: 296 },
-                { id: "eid703", tween: [ "style", "${_baubeweg2}", "opacity", '0', { fromValue: '0.5'}], position: 599, duration: 299 },
-                { id: "eid702", tween: [ "style", "${_baubeweg2}", "opacity", '0.5', { fromValue: '0'}], position: 898, duration: 406 },
-                { id: "eid705", tween: [ "style", "${_baubeweg2}", "opacity", '0', { fromValue: '0.5'}], position: 1304, duration: 492 },
-                { id: "eid696", tween: [ "style", "${_baubeweg1}", "opacity", '0', { fromValue: '0.5'}], position: 303, duration: 296 },
-                { id: "eid697", tween: [ "style", "${_baubeweg1}", "opacity", '0.5', { fromValue: '0'}], position: 599, duration: 299 },
-                { id: "eid698", tween: [ "style", "${_baubeweg1}", "opacity", '0', { fromValue: '0.5'}], position: 898, duration: 406 },
-                { id: "eid699", tween: [ "style", "${_baubeweg1}", "opacity", '0.5', { fromValue: '0'}], position: 1304, duration: 492 },
-                { id: "eid642", tween: [ "style", "${_baubeweg1}", "left", '2px', { fromValue: '0px'}], position: 0, duration: 357 },
-                { id: "eid648", tween: [ "style", "${_baubeweg1}", "left", '0px', { fromValue: '2px'}], position: 357, duration: 294 },
-                { id: "eid650", tween: [ "style", "${_baubeweg1}", "left", '-1px', { fromValue: '0px'}], position: 651, duration: 247 },
-                { id: "eid668", tween: [ "style", "${_baubeweg1}", "left", '0px', { fromValue: '-1px'}], position: 898, duration: 247 },
-                { id: "eid667", tween: [ "style", "${_baubeweg1}", "left", '2px', { fromValue: '0px'}], position: 1145, duration: 294 },
-                { id: "eid666", tween: [ "style", "${_baubeweg1}", "left", '0px', { fromValue: '2px'}], position: 1439, duration: 357 },
-                { id: "eid637", tween: [ "transform", "${_baubeweg2}", "rotateZ", '0deg', { fromValue: '0deg'}], position: 0, duration: 0 },
-                { id: "eid687", tween: [ "transform", "${_baubeweg2}", "rotateZ", '1deg', { fromValue: '0deg'}], position: 303, duration: 250 },
-                { id: "eid688", tween: [ "transform", "${_baubeweg2}", "rotateZ", '0deg', { fromValue: '1deg'}], position: 553, duration: 133 },
-                { id: "eid689", tween: [ "transform", "${_baubeweg2}", "rotateZ", '1deg', { fromValue: '0deg'}], position: 803, duration: 295 },
-                { id: "eid690", tween: [ "transform", "${_baubeweg2}", "rotateZ", '0deg', { fromValue: '1deg'}], position: 1098, duration: 103 },
-                { id: "eid691", tween: [ "transform", "${_baubeweg2}", "rotateZ", '1deg', { fromValue: '0deg'}], position: 1201, duration: 103 },
-                { id: "eid692", tween: [ "transform", "${_baubeweg2}", "rotateZ", '0deg', { fromValue: '1deg'}], position: 1304, duration: 295 },
-                { id: "eid693", tween: [ "transform", "${_baubeweg2}", "rotateZ", '1deg', { fromValue: '0deg'}], position: 1716, duration: 133 },
-                { id: "eid694", tween: [ "transform", "${_baubeweg2}", "rotateZ", '0deg', { fromValue: '1deg'}], position: 1849, duration: 250 },
-                { id: "eid644", tween: [ "transform", "${_baubeweg1}", "rotateZ", '1deg', { fromValue: '0deg'}], position: 0, duration: 250 },
-                { id: "eid645", tween: [ "transform", "${_baubeweg1}", "rotateZ", '0deg', { fromValue: '1deg'}], position: 250, duration: 133 },
-                { id: "eid646", tween: [ "transform", "${_baubeweg1}", "rotateZ", '1deg', { fromValue: '0deg'}], position: 500, duration: 295 },
-                { id: "eid647", tween: [ "transform", "${_baubeweg1}", "rotateZ", '0deg', { fromValue: '1deg'}], position: 795, duration: 103 },
-                { id: "eid672", tween: [ "transform", "${_baubeweg1}", "rotateZ", '1deg', { fromValue: '0deg'}], position: 898, duration: 103 },
-                { id: "eid671", tween: [ "transform", "${_baubeweg1}", "rotateZ", '0deg', { fromValue: '1deg'}], position: 1001, duration: 295 },
-                { id: "eid670", tween: [ "transform", "${_baubeweg1}", "rotateZ", '1deg', { fromValue: '0deg'}], position: 1413, duration: 133 },
-                { id: "eid669", tween: [ "transform", "${_baubeweg1}", "rotateZ", '0deg', { fromValue: '1deg'}], position: 1546, duration: 250 },
-                { id: "eid643", tween: [ "style", "${_baubeweg1}", "top", '-2px', { fromValue: '0px'}], position: 0, duration: 192 },
-                { id: "eid649", tween: [ "style", "${_baubeweg1}", "top", '-1px', { fromValue: '-2px'}], position: 192, duration: 308 },
-                { id: "eid651", tween: [ "style", "${_baubeweg1}", "top", '0px', { fromValue: '-1px'}], position: 651, duration: 247 },
-                { id: "eid665", tween: [ "style", "${_baubeweg1}", "top", '-1px', { fromValue: '0px'}], position: 898, duration: 247 },
-                { id: "eid664", tween: [ "style", "${_baubeweg1}", "top", '-2px', { fromValue: '-1px'}], position: 1296, duration: 308 },
-                { id: "eid663", tween: [ "style", "${_baubeweg1}", "top", '0px', { fromValue: '-2px'}], position: 1604, duration: 192 },
-                { id: "eid635", tween: [ "style", "${_baubeweg2}", "top", '142px', { fromValue: '142px'}], position: 0, duration: 0 },
-                { id: "eid673", tween: [ "style", "${_baubeweg2}", "top", '140px', { fromValue: '142px'}], position: 303, duration: 192 },
-                { id: "eid674", tween: [ "style", "${_baubeweg2}", "top", '141px', { fromValue: '140px'}], position: 495, duration: 308 },
-                { id: "eid675", tween: [ "style", "${_baubeweg2}", "top", '142px', { fromValue: '141px'}], position: 954, duration: 247 },
-                { id: "eid676", tween: [ "style", "${_baubeweg2}", "top", '141px', { fromValue: '142px'}], position: 1201, duration: 247 },
-                { id: "eid677", tween: [ "style", "${_baubeweg2}", "top", '140px', { fromValue: '141px'}], position: 1599, duration: 308 },
-                { id: "eid678", tween: [ "style", "${_baubeweg2}", "top", '142px', { fromValue: '140px'}], position: 1907, duration: 192 }            ]
-        }
-    }
-},
-"sym_baumgesicht": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'bauhand',
-                    type: 'image',
-                    rect: ['152px', '77px', '92px', '61px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/bauhand.png', '0px', '0px']
-                },
-                {
-                    id: 'baugesicht',
-                    type: 'image',
-                    rect: ['0px', '0px', '188px', '192px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/baugesicht.png', '0px', '0px']
-                },
-                {
-                    id: 'auge',
-                    type: 'image',
-                    rect: ['46px', '69px', '31px', '26px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/auge.png', '0px', '0px']
-                },
-                {
-                    id: 'auge2',
-                    type: 'image',
-                    rect: ['118px', '58px', '31px', '26px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/auge.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_baugesicht}": [
-                ["style", "left", '0px'],
-                ["style", "top", '0px']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '192px'],
-                ["style", "width", '188px']
-            ],
-            "${_auge2}": [
-                ["style", "left", '118px'],
-                ["style", "top", '58px']
-            ],
-            "${_bauhand}": [
-                ["style", "top", '77px'],
-                ["style", "left", '152px'],
-                ["transform", "rotateZ", '0deg']
-            ],
-            "${_auge}": [
-                ["style", "left", '46px'],
-                ["style", "top", '69px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 14000,
-            autoPlay: true,
-            labels: {
-                "loop_auge": 0
-            },
-            timeline: [
-                { id: "eid550", tween: [ "style", "${_auge2}", "top", '55px', { fromValue: '58px'}], position: 0, duration: 2100 },
-                { id: "eid553", tween: [ "style", "${_auge2}", "top", '53px', { fromValue: '55px'}], position: 2100, duration: 2800 },
-                { id: "eid556", tween: [ "style", "${_auge2}", "top", '57px', { fromValue: '53px'}], position: 4900, duration: 2100 },
-                { id: "eid576", tween: [ "style", "${_auge2}", "top", '55px', { fromValue: '58px'}], position: 7000, duration: 2100 },
-                { id: "eid577", tween: [ "style", "${_auge2}", "top", '53px', { fromValue: '55px'}], position: 9100, duration: 2800 },
-                { id: "eid578", tween: [ "style", "${_auge2}", "top", '57px', { fromValue: '53px'}], position: 11900, duration: 2100 },
-                { id: "eid551", tween: [ "style", "${_auge}", "top", '66px', { fromValue: '69px'}], position: 0, duration: 2100 },
-                { id: "eid555", tween: [ "style", "${_auge}", "top", '64px', { fromValue: '66px'}], position: 2100, duration: 2800 },
-                { id: "eid558", tween: [ "style", "${_auge}", "top", '68px', { fromValue: '64px'}], position: 4900, duration: 2100 },
-                { id: "eid582", tween: [ "style", "${_auge}", "top", '66px', { fromValue: '69px'}], position: 7000, duration: 2100 },
-                { id: "eid583", tween: [ "style", "${_auge}", "top", '64px', { fromValue: '66px'}], position: 9100, duration: 2800 },
-                { id: "eid584", tween: [ "style", "${_auge}", "top", '68px', { fromValue: '64px'}], position: 11900, duration: 2100 },
-                { id: "eid610", tween: [ "transform", "${_bauhand}", "rotateZ", '-33deg', { fromValue: '0deg'}], position: 3000, duration: 3000 },
-                { id: "eid611", tween: [ "transform", "${_bauhand}", "rotateZ", '0deg', { fromValue: '-33deg'}], position: 6000, duration: 3100 },
-                { id: "eid605", tween: [ "style", "${_bauhand}", "top", '85px', { fromValue: '77px'}], position: 3000, duration: 3000 },
-                { id: "eid606", tween: [ "style", "${_bauhand}", "top", '77px', { fromValue: '85px'}], position: 6000, duration: 3100 },
-                { id: "eid603", tween: [ "style", "${_bauhand}", "left", '89px', { fromValue: '152px'}], position: 3000, duration: 3000 },
-                { id: "eid604", tween: [ "style", "${_bauhand}", "left", '152px', { fromValue: '89px'}], position: 6000, duration: 3100 },
-                { id: "eid549", tween: [ "style", "${_auge}", "left", '50px', { fromValue: '46px'}], position: 0, duration: 2100 },
-                { id: "eid554", tween: [ "style", "${_auge}", "left", '48px', { fromValue: '50px'}], position: 2100, duration: 2800 },
-                { id: "eid559", tween: [ "style", "${_auge}", "left", '46px', { fromValue: '48px'}], position: 4900, duration: 2100 },
-                { id: "eid579", tween: [ "style", "${_auge}", "left", '50px', { fromValue: '46px'}], position: 7000, duration: 2100 },
-                { id: "eid580", tween: [ "style", "${_auge}", "left", '48px', { fromValue: '50px'}], position: 9100, duration: 2800 },
-                { id: "eid581", tween: [ "style", "${_auge}", "left", '46px', { fromValue: '48px'}], position: 11900, duration: 2100 },
-                { id: "eid548", tween: [ "style", "${_auge2}", "left", '122px', { fromValue: '118px'}], position: 0, duration: 2100 },
-                { id: "eid552", tween: [ "style", "${_auge2}", "left", '120px', { fromValue: '122px'}], position: 2100, duration: 2800 },
-                { id: "eid557", tween: [ "style", "${_auge2}", "left", '118px', { fromValue: '120px'}], position: 4900, duration: 2100 },
-                { id: "eid573", tween: [ "style", "${_auge2}", "left", '122px', { fromValue: '118px'}], position: 7000, duration: 2100 },
-                { id: "eid574", tween: [ "style", "${_auge2}", "left", '120px', { fromValue: '122px'}], position: 9100, duration: 2800 },
-                { id: "eid575", tween: [ "style", "${_auge2}", "left", '118px', { fromValue: '120px'}], position: 11900, duration: 2100 }            ]
-        }
-    }
-},
-"sym_sprung": {
-    version: "3.0.0",
-    minimumCompatibleVersion: "3.0.0",
-    build: "3.0.0.322",
-    baseState: "Base State",
-    scaleToFit: "none",
-    centerStage: "none",
-    initialState: "Base State",
-    gpuAccelerate: false,
-    resizeInstances: false,
-    content: {
-            dom: [
-                {
-                    id: 'sprungbrucke',
-                    type: 'image',
-                    rect: ['0px', '0px', '1114px', '588px', 'auto', 'auto'],
-                    fill: ['rgba(0,0,0,0)', 'images/sprungbrucke.png', '0px', '0px']
-                }
-            ],
-            symbolInstances: [
-            ]
-        },
-    states: {
-        "Base State": {
-            "${_sprungbrucke}": [
-                ["style", "top", '10px'],
-                ["style", "left", '45px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${symbolSelector}": [
-                ["style", "height", '250px'],
-                ["style", "width", '250px']
-            ]
-        }
-    },
-    timelines: {
-        "Default Timeline": {
-            fromState: "Base State",
-            toState: "",
-            duration: 1121,
-            autoPlay: false,
-            labels: {
-                "loop_sprung": 0
-            },
-            timeline: [
-                { id: "eid612", tween: [ "style", "${_sprungbrucke}", "left", '45px', { fromValue: '45px'}], position: 0, duration: 0 },
-                { id: "eid618", tween: [ "style", "${_sprungbrucke}", "left", '-183px', { fromValue: '45px'}], position: 131, duration: 0 },
-                { id: "eid620", tween: [ "style", "${_sprungbrucke}", "left", '-430px', { fromValue: '-251px'}], position: 250, duration: 0 },
-                { id: "eid622", tween: [ "style", "${_sprungbrucke}", "left", '-680px', { fromValue: '-500px'}], position: 389, duration: 0 },
-                { id: "eid658", tween: [ "style", "${_sprungbrucke}", "left", '-685px', { fromValue: '-680px'}], position: 406, duration: 0 },
-                { id: "eid624", tween: [ "style", "${_sprungbrucke}", "left", '-6px', { fromValue: '-685px'}], position: 500, duration: 0 },
-                { id: "eid626", tween: [ "style", "${_sprungbrucke}", "left", '-270px', { fromValue: '-76px'}], position: 629, duration: 0 },
-                { id: "eid656", tween: [ "style", "${_sprungbrucke}", "left", '-264px', { fromValue: '-270px'}], position: 687, duration: 0 },
-                { id: "eid628", tween: [ "style", "${_sprungbrucke}", "left", '-507px', { fromValue: '-264px'}], position: 750, duration: 0 },
-                { id: "eid630", tween: [ "style", "${_sprungbrucke}", "left", '-792px', { fromValue: '-598px'}], position: 854, duration: 0 },
-                { id: "eid632", tween: [ "style", "${_sprungbrucke}", "left", '-1020px', { fromValue: '-898px'}], position: 1000, duration: 0 },
-                { id: "eid617", tween: [ "style", "${_sprungbrucke}", "top", '10px', { fromValue: '10px'}], position: 0, duration: 0 },
-                { id: "eid619", tween: [ "style", "${_sprungbrucke}", "top", '25px', { fromValue: '10px'}], position: 131, duration: 0 },
-                { id: "eid621", tween: [ "style", "${_sprungbrucke}", "top", '17px', { fromValue: '27px'}], position: 250, duration: 0 },
-                { id: "eid623", tween: [ "style", "${_sprungbrucke}", "top", '9px', { fromValue: '17px'}], position: 389, duration: 0 },
-                { id: "eid659", tween: [ "style", "${_sprungbrucke}", "top", '7px', { fromValue: '9px'}], position: 406, duration: 0 },
-                { id: "eid625", tween: [ "style", "${_sprungbrucke}", "top", '-311px', { fromValue: '7px'}], position: 500, duration: 0 },
-                { id: "eid627", tween: [ "style", "${_sprungbrucke}", "top", '-290px', { fromValue: '-311px'}], position: 629, duration: 0 },
-                { id: "eid657", tween: [ "style", "${_sprungbrucke}", "top", '-282px', { fromValue: '-290px'}], position: 687, duration: 0 },
-                { id: "eid629", tween: [ "style", "${_sprungbrucke}", "top", '-259px', { fromValue: '-282px'}], position: 750, duration: 0 },
-                { id: "eid631", tween: [ "style", "${_sprungbrucke}", "top", '-278px', { fromValue: '-274px'}], position: 854, duration: 0 },
-                { id: "eid633", tween: [ "style", "${_sprungbrucke}", "top", '-166px', { fromValue: '-256px'}], position: 1000, duration: 0 }            ]
-        }
-    }
-}
-};
-
-
-Edge.registerCompositionDefn(compId, symbols, fonts, resources, opts);
-
-/**
- * Adobe Edge DOM Ready Event Handler
- */
-$(window).ready(function() {
-     Edge.launchComposition(compId);
-});
-})(jQuery, AdobeEdge, "PART3");
+    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("part3_edgeActions.js");
+})("PART3");
