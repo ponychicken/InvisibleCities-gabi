@@ -76,7 +76,7 @@
                             id: 'wald',
                             type: 'image',
                             rect: ['0', '0', '2048px', '1536px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"wald.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"wald.jpg",'0px','0px']
                         }
                     ],
                     style: {
@@ -516,7 +516,7 @@
                             id: 'wasserstruktur_Kopie',
                             transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
                             type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/wasserstruktur%20Kopie.jpg', '0px', '0px']
+                            fill: ['rgba(0,0,0,0)', 'images/wasserstruktur.png', '0px', '0px']
                         }
                     ],
                     style: {
@@ -1835,7 +1835,7 @@
                             id: 'MaisHinten2',
                             type: 'image',
                             rect: [0, '0', '2048px', '1536px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/MaisHinten.png', '0px', '0px']
+                            fill: ['rgba(0,0,0,0)', 'images/MaisHinten.jpg', '0px', '0px']
                         },
                         {
                             id: 'maisaugengrau',

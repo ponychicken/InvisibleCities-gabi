@@ -131,14 +131,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //=========================================================
    
-   //Edge symbol: 'wegzumhaus'
-   (function(symbolName) {   
-   
-   })("wegzumhaus");
-   //Edge symbol end:'wegzumhaus'
-
-   //=========================================================
-   
    //Edge symbol: 'sym_schwarz'
    (function(symbolName) {   
    
@@ -186,14 +178,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //=========================================================
    
-   //Edge symbol: 'sym_huhliegen'
-   (function(symbolName) {   
-   
-   })("sym_huhliegen");
-   //Edge symbol end:'sym_huhliegen'
-
-   //=========================================================
-   
    //Edge symbol: 'sym_huhliegenkopf'
    (function(symbolName) {   
    
@@ -205,152 +189,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    })("sym_huhliegenkopf");
    //Edge symbol end:'sym_huhliegenkopf'
-
-   //=========================================================
-   
-   //Edge symbol: 'sym_huhflugelganzani'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3116, function(sym, e) {
-         sym.play('loophuhflugelganzani2');
-         
-
-      });
-      //Edge binding end
-
-   })("sym_huhflugelganzani");
-   //Edge symbol end:'sym_huhflugelganzani'
-
-   //=========================================================
-   
-   //Edge symbol: 'sym_huhpickenganzani'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3717, function(sym, e) {
-         sym.play('loophuhpickenganzani3');
-
-      });
-      //Edge binding end
-
-   })("sym_huhpickenganzani");
-   //Edge symbol end:'sym_huhpickenganzani'
-
-   //=========================================================
-   
-   //Edge symbol: 'sym_huhpickenkopfkoroer'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1500, function(sym, e) {
-         sym.play('loophuhn4');
-
-      });
-      //Edge binding end
-
-   })("sym_huhpickenkopfkoroer");
-   //Edge symbol end:'sym_huhpickenkopfkoroer'
-
-   //=========================================================
-   
-   //Edge symbol: 'sym_blatt'
-   (function(symbolName) {   
-   
-      Symbol.bindElementAction(compId, symbolName, "${ib}", "click", function(sym, e) {
-         // Hide an Element.
-         sym.$("ib").hide();
-         
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${hb}", "click", function(sym, e) {
-         // Hide an Element.
-         sym.$("hb").hide();
-         
-         
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${gb}", "click", function(sym, e) {
-         // Hide an Element.
-         sym.$("gb").hide();
-         
-         
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${fb}", "click", function(sym, e) {
-         // Hide an Element.
-         sym.$("fb").hide();
-         
-         
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${eb}", "click", function(sym, e) {
-         // Hide an Element.
-         sym.$("eb").hide();
-         
-         
-         sym.getSymbol("sym_auge").play();
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${db}", "click", function(sym, e) {
-         // Hide an Element.
-         sym.$("db").hide();
-         
-         
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${cb}", "click", function(sym, e) {
-         // Hide an Element.
-         sym.$("cb").hide();
-         
-         
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${bb}", "click", function(sym, e) {
-         // Hide an Element.
-         sym.$("bb").hide();
-         
-         
-
-      });
-      //Edge binding end
-
-      Symbol.bindElementAction(compId, symbolName, "${a}", "click", function(sym, e) {
-         // Hide an Element.
-         sym.$("a").hide();
-         
-         
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 1000, function(sym, e) {
-         sym.play('loop_blatt');
-
-      });
-      //Edge binding end
-
-   })("sym_blatt");
-   //Edge symbol end:'sym_blatt'
-
-   //=========================================================
-   
-   //Edge symbol: 'sym_auge'
-   (function(symbolName) {   
-   
-   })("sym_auge");
-   //Edge symbol end:'sym_auge'
 
    //=========================================================
    
@@ -367,32 +205,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    })("sym_mais");
    //Edge symbol end:'sym_mais'
-
-   //=========================================================
-   
-   //Edge symbol: 'sym_maisfeld'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 6000, function(sym, e) {
-         sym.play("mais");
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2250, function(sym, e) {
-         sym.play('mais_pre');
-
-      });
-      //Edge binding end
-
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 9341, function(sym, e) {
-         sym.play('mais');
-
-      });
-      //Edge binding end
-
-   })("sym_maisfeld");
-   //Edge symbol end:'sym_maisfeld'
 
    //=========================================================
    

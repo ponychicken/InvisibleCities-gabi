@@ -32,7 +32,7 @@
                             id: 'WaserHintergrundKopie',
                             type: 'image',
                             rect: ['-3338', '0', '5409px', '1536px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"WaserHintergrundKopie.jpg",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"WaserHintergrund.png",'0px','0px']
                         },
                         {
                             id: 'wasserkorpertransparent1',
@@ -57,7 +57,7 @@
                     }
                 },
                 timeline: {
-                    duration: 0,
+                    duration: 12500,
                     autoPlay: false,
                     labels: {
                         "loop_welle": 6161

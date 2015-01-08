@@ -121,7 +121,7 @@
 		"hGuides":"",
 		"vGuides":"20px"},
 	"sym_mais-Default Timeline_mark_ms":"-1",
-	"expanded:images/wasserstruktur%20Kopie.jpg":"nil",
+	"expanded:images/wasserstruktur.png":"nil",
 	"expanded:images/icon2.png":"nil",
 	"symbol_sym_maisfeld":{
 		"element_${MaisBewegungAusblick}":{
@@ -405,7 +405,7 @@
 	"expanded:images/menschenbaum.png":"nil",
 	"expanded:images/pflanze7.png":"nil",
 	"sym_huhflugelganzani-Default Timeline_playhead_ms":"0",
-	"expanded:images/wald.png":"nil",
+	"expanded:images/wald.jpg":"nil",
 	"expanded:images/g5.png":"nil",
 	"symbol_sym_vorzim":{
 		"element_${sym_zimmer2}":{
@@ -888,7 +888,7 @@
 	"expanded:images/MiasMenschen.png":"nil",
 	"expanded:images/g3.png":"nil",
 	"expanded:images/baumHalbesGohneAugen%20Kopie.png":"nil",
-	"expanded:images/MaisHinten.png":"nil",
+	"expanded:images/MaisHinten.jpg":"nil",
 	"sym_vorzim-Default Timeline_playhead_ms":"0",
 	"expanded:images/db.png":"nil",
 	"expanded:images/k6.png":"nil",
