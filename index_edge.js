@@ -99,7 +99,7 @@
                             id: 'wald',
                             type: 'image',
                             rect: ['0', '0', '2048px', '1536px', 'auto', 'auto'],
-                            fill: ["rgba(0,0,0,0)",im+"wald.png",'0px','0px']
+                            fill: ["rgba(0,0,0,0)",im+"wald.jpg",'0px','0px']
                         }
                     ],
                     style: {
@@ -115,8 +115,8 @@
                     autoPlay: false,
                     data: [
                         [
-                            "eid585",
-                            "top",
+                            "eid586",
+                            "left",
                             0,
                             0,
                             "linear",
@@ -125,8 +125,8 @@
                             '0px'
                         ],
                         [
-                            "eid586",
-                            "left",
+                            "eid585",
+                            "top",
                             0,
                             0,
                             "linear",
@@ -147,9 +147,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '5112px', '538px', 'auto', 'auto'],
-                            id: 'vorhangani',
                             type: 'image',
+                            id: 'vorhangani',
+                            rect: [0, 0, '5112px', '538px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/vorhangani.png', '0px', '0px']
                         }
                     ],
@@ -244,10 +244,10 @@
                             fill: ['rgba(0,0,0,0)', 'images/haushinterswrgb.jpg', '0px', '0px']
                         },
                         {
-                            rect: [-989, -30, 1274, 471, 'auto', 'auto'],
+                            type: 'rect',
                             id: 'sym_wolke',
                             symbolName: 'sym_wolke',
-                            type: 'rect'
+                            rect: [-989, -30, 1274, 471, 'auto', 'auto']
                         },
                         {
                             rect: [142, 216, '1737px', '916px', 'auto', 'auto'],
@@ -269,16 +269,6 @@
                     autoPlay: false,
                     data: [
                         [
-                            "eid575",
-                            "left",
-                            0,
-                            0,
-                            "linear",
-                            "${sym_wolke}",
-                            '-989px',
-                            '-989px'
-                        ],
-                        [
                             "eid574",
                             "top",
                             0,
@@ -287,6 +277,16 @@
                             "${sym_wolke}",
                             '-30px',
                             '-30px'
+                        ],
+                        [
+                            "eid50",
+                            "scaleY",
+                            0,
+                            4000,
+                            "linear",
+                            "${hauswegsw}",
+                            '0.66',
+                            '1'
                         ],
                         [
                             "eid97",
@@ -329,22 +329,22 @@
                             '91px'
                         ],
                         [
+                            "eid575",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${sym_wolke}",
+                            '-989px',
+                            '-989px'
+                        ],
+                        [
                             "eid96",
                             "scaleX",
                             0,
                             4000,
                             "linear",
                             "${haushinterswrgb}",
-                            '0.66',
-                            '1'
-                        ],
-                        [
-                            "eid50",
-                            "scaleY",
-                            0,
-                            4000,
-                            "linear",
-                            "${hauswegsw}",
                             '0.66',
                             '1'
                         ]
@@ -362,9 +362,9 @@
                     dom: [
                         {
                             type: 'rect',
-                            opacity: '0.850000',
-                            id: 'schwarz',
                             stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
+                            id: 'schwarz',
+                            opacity: '0.850000',
                             rect: [0, 0, '2048px', '1536px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,1)']
                         }
@@ -406,7 +406,7 @@
                             id: 'wasserstruktur_Kopie',
                             transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
                             type: 'image',
-                            fill: ['rgba(0,0,0,0)', 'images/wasserstruktur%20Kopie.jpg', '0px', '0px']
+                            fill: ['rgba(0,0,0,0)', 'images/wasserstruktur.png', '0px', '0px']
                         },
                         {
                             rect: [133, -94, '2048px', '1536px', 'auto', 'auto'],
@@ -423,9 +423,9 @@
                             fill: ['rgba(0,0,0,0)', 'images/aussichtvorsw.png', '0px', '0px']
                         },
                         {
-                            rect: [1116, 1198, '140px', '122px', 'auto', 'auto'],
-                            id: 'huhliegenkorper2',
                             type: 'image',
+                            id: 'huhliegenkorper2',
+                            rect: [1116, 1198, '140px', '122px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
                         },
                         {
@@ -454,8 +454,8 @@
                             overflow: 'hidden',
                             id: 'sym_huhpickenkopfkoroer',
                             symbolName: 'sym_huhpickenkopfkoroer',
-                            type: 'rect',
-                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']]
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
+                            type: 'rect'
                         },
                         {
                             rect: [694, 271, 678, 570, 'auto', 'auto'],
@@ -571,14 +571,49 @@
                             '254px'
                         ],
                         [
-                            "eid719",
-                            "scaleX",
-                            16245,
-                            3325,
+                            "eid370",
+                            "location",
+                            21860,
+                            277,
                             "linear",
-                            "${sym_blattbaum}",
-                            '0.53',
-                            '1'
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1310.5, 1364, 0, 0, 0, 0,0],[1299.5, 1364, 0, 0, 0, 0,11]]
+                        ],
+                        [
+                            "eid384",
+                            "location",
+                            22137,
+                            831,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1299.5, 1364, -5.53, -0.76, 0, 0,0],[1291.41, 1360.26, -9.59, 0.4, -4.94, 0.2,8.95],[1282.45, 1368.31, -36.7, -20.67, -8.45, -4.76,21.41],[1258.5, 1366.14, 0, 0, 0, 0,46.11]]
+                        ],
+                        [
+                            "eid405",
+                            "location",
+                            26569,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1356.51, 1366, 0, 0, 0, 0,0],[1356.51, 1366, 0, 0, 0, 0,0]]
+                        ],
+                        [
+                            "eid398",
+                            "location",
+                            27677,
+                            831,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1352.91, 1367.26, 0, 0, 0, 0,0],[1376.86, 1369.43, 8.45, 4.76, 36.7, 20.67,24.7],[1385.82, 1361.38, 4.94, -0.2, 9.59, -0.4,37.16],[1393.91, 1365.12, 0, 0, 0, 0,46.11]]
+                        ],
+                        [
+                            "eid399",
+                            "location",
+                            28509,
+                            277,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            [[1393.91, 1365.12, 20.19, 2.76, 0, 0,0],[1404.91, 1365.12, 0, 0, 0, 0,11.04]]
                         ],
                         [
                             "eid259",
@@ -749,26 +784,6 @@
                             '1'
                         ],
                         [
-                            "eid510",
-                            "top",
-                            16245,
-                            3325,
-                            "linear",
-                            "${ausblickwasserfrei}",
-                            '-94px',
-                            '0px'
-                        ],
-                        [
-                            "eid272",
-                            "top",
-                            16245,
-                            3325,
-                            "linear",
-                            "${aussichtvorsw2}",
-                            '-94px',
-                            '0px'
-                        ],
-                        [
                             "eid517",
                             "scaleY",
                             16245,
@@ -779,34 +794,14 @@
                             '1'
                         ],
                         [
-                            "eid600",
-                            "top",
-                            0,
-                            15750,
-                            "linear",
-                            "${wasserstruktur_Kopie}",
-                            '-229px',
-                            '-7px'
-                        ],
-                        [
-                            "eid613",
-                            "top",
+                            "eid515",
+                            "scaleX",
                             16245,
                             3325,
                             "linear",
                             "${wasserstruktur_Kopie}",
-                            '-277px',
-                            '-47px'
-                        ],
-                        [
-                            "eid615",
-                            "top",
-                            19570,
-                            16430,
-                            "linear",
-                            "${wasserstruktur_Kopie}",
-                            '-47px',
-                            '-7px'
+                            '0.53',
+                            '1'
                         ],
                         [
                             "eid375",
@@ -909,6 +904,46 @@
                             '0deg'
                         ],
                         [
+                            "eid600",
+                            "top",
+                            0,
+                            15750,
+                            "linear",
+                            "${wasserstruktur_Kopie}",
+                            '-229px',
+                            '-7px'
+                        ],
+                        [
+                            "eid613",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${wasserstruktur_Kopie}",
+                            '-277px',
+                            '-47px'
+                        ],
+                        [
+                            "eid615",
+                            "top",
+                            19570,
+                            16430,
+                            "linear",
+                            "${wasserstruktur_Kopie}",
+                            '-47px',
+                            '-7px'
+                        ],
+                        [
+                            "eid272",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${aussichtvorsw2}",
+                            '-94px',
+                            '0px'
+                        ],
+                        [
                             "eid403",
                             "scaleX",
                             19570,
@@ -929,59 +964,24 @@
                             '-1'
                         ],
                         [
-                            "eid515",
+                            "eid510",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${ausblickwasserfrei}",
+                            '-94px',
+                            '0px'
+                        ],
+                        [
+                            "eid719",
                             "scaleX",
                             16245,
                             3325,
                             "linear",
-                            "${wasserstruktur_Kopie}",
+                            "${sym_blattbaum}",
                             '0.53',
                             '1'
-                        ],
-                        [
-                            "eid370",
-                            "location",
-                            21860,
-                            277,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            [[1310.5, 1364, 0, 0, 0, 0,0],[1299.5, 1364, 0, 0, -20.19, -2.76,11.04]]
-                        ],
-                        [
-                            "eid384",
-                            "location",
-                            22137,
-                            831,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            [[1299.5, 1364, -5.53, -0.76, 0, 0,0],[1291.41, 1360.26, -9.59, 0.4, -4.94, 0.2,8.95],[1282.45, 1368.31, -36.7, -20.67, -8.45, -4.76,21.41],[1258.5, 1366.14, 0, 0, 0, 0,46.11]]
-                        ],
-                        [
-                            "eid405",
-                            "location",
-                            26569,
-                            0,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            [[1356.51, 1366, 0, 0, 0, 0,0],[1356.51, 1366, 0, 0, 0, 0,0]]
-                        ],
-                        [
-                            "eid398",
-                            "location",
-                            27677,
-                            831,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            [[1352.91, 1367.26, 0, 0, 0, 0,0],[1376.86, 1369.43, 8.45, 4.76, 36.7, 20.67,24.7],[1385.82, 1361.38, 4.94, -0.2, 9.59, -0.4,37.16],[1393.91, 1365.12, 0, 0, 5.53, 0.76,46.11]]
-                        ],
-                        [
-                            "eid399",
-                            "location",
-                            28509,
-                            277,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            [[1393.91, 1365.12, 20.19, 2.76, 0, 0,0],[1404.91, 1365.12, 0, 0, 0, 0,11.04]]
                         ]
                     ]
                 }
@@ -996,9 +996,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, '2048px', '1536px', 'auto', 'auto'],
-                            id: 'zimmer',
                             type: 'image',
+                            id: 'zimmer',
+                            rect: [0, 0, '2048px', '1536px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/zimmer.png', '0px', '0px']
                         }
                     ],
@@ -1026,10 +1026,10 @@
                 content: {
                     dom: [
                         {
-                            rect: [0, 0, 2048, 1536, 'auto', 'auto'],
+                            type: 'rect',
                             id: 'sym_zimmer2',
                             symbolName: 'sym_zimmer',
-                            type: 'rect'
+                            rect: [0, 0, 2048, 1536, 'auto', 'auto']
                         },
                         {
                             rect: [767, 263, 850, 538, 'auto', 'auto'],
@@ -1097,14 +1097,14 @@
                             '404px'
                         ],
                         [
-                            "eid165",
-                            "scaleX",
+                            "eid188",
+                            "top",
                             0,
                             4000,
                             "linear",
-                            "${sym_vorhang}",
-                            '1',
-                            '3.76926'
+                            "${sym_zimmer2}",
+                            '0px',
+                            '791px'
                         ],
                         [
                             "eid577",
@@ -1127,24 +1127,14 @@
                             '201px'
                         ],
                         [
-                            "eid188",
-                            "top",
+                            "eid189",
+                            "left",
                             0,
                             4000,
                             "linear",
-                            "${sym_zimmer2}",
-                            '0px',
-                            '791px'
-                        ],
-                        [
-                            "eid536",
-                            "top",
-                            0,
-                            4000,
-                            "linear",
-                            "${zimpflanze1}",
-                            '439px',
-                            '584px'
+                            "${sym_vorhang}",
+                            '767px',
+                            '289px'
                         ],
                         [
                             "eid537",
@@ -1155,6 +1145,16 @@
                             "${zimpflanze1}",
                             '1',
                             '3.76926'
+                        ],
+                        [
+                            "eid580",
+                            "rotateZ",
+                            0,
+                            4000,
+                            "linear",
+                            "${zimpflanze1}",
+                            '-18deg',
+                            '-10deg'
                         ],
                         [
                             "eid161",
@@ -1177,14 +1177,14 @@
                             '3099px'
                         ],
                         [
-                            "eid189",
-                            "left",
+                            "eid536",
+                            "top",
                             0,
                             4000,
                             "linear",
-                            "${sym_vorhang}",
-                            '767px',
-                            '289px'
+                            "${zimpflanze1}",
+                            '439px',
+                            '584px'
                         ],
                         [
                             "eid539",
@@ -1197,51 +1197,15 @@
                             '3.76926'
                         ],
                         [
-                            "eid580",
-                            "rotateZ",
+                            "eid165",
+                            "scaleX",
                             0,
                             4000,
                             "linear",
-                            "${zimpflanze1}",
-                            '-18deg',
-                            '-10deg'
+                            "${sym_vorhang}",
+                            '1',
+                            '3.76926'
                         ]
-                    ]
-                }
-            },
-            "sym_huhliegen": {
-                version: "5.0.1",
-                minimumCompatibleVersion: "5.0.0",
-                build: "5.0.1.386",
-                scaleToFit: "none",
-                centerStage: "none",
-                resizeInstances: false,
-                content: {
-                    dom: [
-                        {
-                            id: 'huhliegenkorper',
-                            type: 'image',
-                            rect: [0, 0, '140px', '122px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
-                        },
-                        {
-                            id: 'huhliegenkopf',
-                            type: 'image',
-                            rect: [0, 0, '242px', '68px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/huhliegenkopf.png', '0px', '0px']
-                        }
-                    ],
-                    style: {
-                        '${symbolSelector}': {
-                            rect: [null, null, 242, 122]
-                        }
-                    }
-                },
-                timeline: {
-                    duration: 0,
-                    autoPlay: false,
-                    data: [
-
                     ]
                 }
             },
@@ -1255,9 +1219,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [-5, 0, '242px', '68px', 'auto', 'auto'],
-                            id: 'huhliegenkopf2',
                             type: 'image',
+                            id: 'huhliegenkopf2',
+                            rect: [-5, 0, '242px', '68px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/huhliegenkopf.png', '0px', '0px']
                         }
                     ],
@@ -1338,240 +1302,6 @@
                     ]
                 }
             },
-            "sym_huhflugelganzani": {
-                version: "5.0.1",
-                minimumCompatibleVersion: "5.0.0",
-                build: "5.0.1.386",
-                scaleToFit: "none",
-                centerStage: "none",
-                resizeInstances: false,
-                content: {
-                    dom: [
-                        {
-                            id: 'huhflugelganzani',
-                            type: 'image',
-                            rect: [-21, -5, '1109px', '259px', 'auto', 'auto'],
-                            fill: ['rgba(0,0,0,0)', 'images/huhflugelganzani.png', '0px', '0px']
-                        }
-                    ],
-                    style: {
-                        '${symbolSelector}': {
-                            overflow: 'hidden',
-                            rect: [null, null, 180, 259]
-                        }
-                    }
-                },
-                timeline: {
-                    duration: 3116,
-                    autoPlay: false,
-                    labels: {
-                        "loophuhflugelganzani2": 0,
-                        "labelhuhflugelganzani": 1095
-                    },
-                    data: [
-                        [
-                            "eid304",
-                            "left",
-                            0,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-21px',
-                            '-21px'
-                        ],
-                        [
-                            "eid306",
-                            "left",
-                            392,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-21px',
-                            '-197px'
-                        ],
-                        [
-                            "eid308",
-                            "left",
-                            750,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-197px',
-                            '-374px'
-                        ],
-                        [
-                            "eid310",
-                            "left",
-                            1095,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-374px',
-                            '-548px'
-                        ],
-                        [
-                            "eid312",
-                            "left",
-                            1386,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-548px',
-                            '-739px'
-                        ],
-                        [
-                            "eid314",
-                            "left",
-                            1750,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-739px',
-                            '-918px'
-                        ],
-                        [
-                            "eid316",
-                            "left",
-                            2000,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-918px',
-                            '-734px'
-                        ],
-                        [
-                            "eid318",
-                            "left",
-                            2305,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-734px',
-                            '-543px'
-                        ],
-                        [
-                            "eid320",
-                            "left",
-                            2643,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-543px',
-                            '-385px'
-                        ],
-                        [
-                            "eid322",
-                            "left",
-                            2839,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-385px',
-                            '-205px'
-                        ],
-                        [
-                            "eid305",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-5px',
-                            '-5px'
-                        ],
-                        [
-                            "eid307",
-                            "top",
-                            392,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-5px',
-                            '-6px'
-                        ],
-                        [
-                            "eid309",
-                            "top",
-                            750,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-6px',
-                            '-4px'
-                        ],
-                        [
-                            "eid311",
-                            "top",
-                            1095,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-4px',
-                            '-2px'
-                        ],
-                        [
-                            "eid313",
-                            "top",
-                            1386,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-2px',
-                            '2px'
-                        ],
-                        [
-                            "eid315",
-                            "top",
-                            1750,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '2px',
-                            '-3px'
-                        ],
-                        [
-                            "eid317",
-                            "top",
-                            2000,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-3px',
-                            '2px'
-                        ],
-                        [
-                            "eid319",
-                            "top",
-                            2305,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '2px',
-                            '-3px'
-                        ],
-                        [
-                            "eid321",
-                            "top",
-                            2643,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '-3px',
-                            '2px'
-                        ],
-                        [
-                            "eid323",
-                            "top",
-                            2839,
-                            0,
-                            "linear",
-                            "${huhflugelganzani}",
-                            '2px',
-                            '3px'
-                        ]
-                    ]
-                }
-            },
             "sym_huhpickenganzani": {
                 version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
@@ -1582,9 +1312,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [-7, 0, '550px', '147px', 'auto', 'auto'],
-                            id: 'huhpickenganzani',
                             type: 'image',
+                            id: 'huhpickenganzani',
+                            rect: [-7, 0, '550px', '147px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/huhpickenganzani.png', '0px', '0px']
                         }
                     ],
@@ -1695,9 +1425,9 @@
                 content: {
                     dom: [
                         {
-                            rect: [-87, 0, '163px', '146px', 'auto', 'auto'],
-                            id: 'huhpickenkopf',
                             type: 'image',
+                            id: 'huhpickenkopf',
+                            rect: [-87, 0, '163px', '146px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/huhpickenkopf.png', '0px', '0px']
                         }
                     ],
@@ -1715,6 +1445,16 @@
                         "loophuhn4": 0
                     },
                     data: [
+                        [
+                            "eid340",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${huhpickenkopf}",
+                            '0px',
+                            '0px'
+                        ],
                         [
                             "eid339",
                             "left",
@@ -1734,16 +1474,6 @@
                             "${huhpickenkopf}",
                             '-87px',
                             '-4px'
-                        ],
-                        [
-                            "eid340",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${huhpickenkopf}",
-                            '0px',
-                            '0px'
                         ]
                     ]
                 }
@@ -1758,17 +1488,17 @@
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '1005px', '405px', 'auto', 'auto'],
+                            type: 'image',
                             id: 'w5',
                             opacity: '0',
-                            type: 'image',
+                            rect: ['0px', '0px', '1005px', '405px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/w5.png', '0px', '0px']
                         },
                         {
-                            rect: ['179px', '25px', '1005px', '405px', 'auto', 'auto'],
+                            type: 'image',
                             id: 'w6',
                             opacity: '0.7',
-                            type: 'image',
+                            rect: ['179px', '25px', '1005px', '405px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/w6.png', '0px', '0px']
                         }
                     ],
@@ -1804,24 +1534,13 @@
                             [[1957.71, 199.53, 0, 0, 0, 0,0],[2505.88, 188.7, 482.93, -3.21, 964.43, -6.4,548.29],[3038.66, 263.96, 173.86, 22.29, 466.56, 59.81,1086.96],[3266.58, 294.34, 640.36, 36.38, 156.49, 8.89,1316.93],[3571.5, 202.5, 0, 0, 0, 0,1644.35]]
                         ],
                         [
-                            "eid571",
-                            "opacity",
+                            "eid556",
+                            "location",
                             0,
-                            5750,
+                            15000,
                             "linear",
-                            "${w6}",
-                            '0.7',
-                            '0'
-                        ],
-                        [
-                            "eid564",
-                            "opacity",
-                            10000,
-                            5000,
-                            "linear",
-                            "${w6}",
-                            '0',
-                            '0.7'
+                            "${w5}",
+                            [[502.5, 202.5, 0, 0, 0, 0,0],[1033.66, 262.58, 681.42, -12.1, 858.03, -15.24,535.92],[1834.94, 168.23, 927.72, -73.5, 731.76, -57.97,1343.11],[2443.88, 168.02, 0, 0, 0, 0,1952.57]]
                         ],
                         [
                             "eid568",
@@ -1844,13 +1563,24 @@
                             '0'
                         ],
                         [
-                            "eid556",
-                            "location",
+                            "eid571",
+                            "opacity",
                             0,
-                            15000,
+                            5750,
                             "linear",
-                            "${w5}",
-                            [[502.5, 202.5, 0, 0, 0, 0,0],[1033.66, 262.58, 681.42, -12.1, 858.03, -15.24,535.92],[1834.94, 168.23, 927.72, -73.5, 731.76, -57.97,1343.11],[2443.88, 168.02, 0, 0, 0, 0,1952.57]]
+                            "${w6}",
+                            '0.7',
+                            '0'
+                        ],
+                        [
+                            "eid564",
+                            "opacity",
+                            10000,
+                            5000,
+                            "linear",
+                            "${w6}",
+                            '0',
+                            '0.7'
                         ]
                     ]
                 }
@@ -1865,16 +1595,16 @@
                 content: {
                     dom: [
                         {
-                            rect: [43, 142, '610px', '428px', 'auto', 'auto'],
                             transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
+                            rect: [43, 142, '610px', '428px', 'auto', 'auto'],
                             id: 'baubeweg2',
                             opacity: '0',
                             type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/baubeweg2.png', '0px', '0px']
                         },
                         {
-                            rect: [0, 0, '678px', '396px', 'auto', 'auto'],
                             transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
+                            rect: [0, 0, '678px', '396px', 'auto', 'auto'],
                             id: 'baubeweg1',
                             opacity: '0.5',
                             type: 'image',
@@ -2421,5 +2151,5 @@
 
     AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
-    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("part1_edgeActions.js");
+    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("index_edgeActions.js");
 })("PART1");

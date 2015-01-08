@@ -182,14 +182,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    //=========================================================
    
-   //Edge symbol: 'sym_huhliegen'
-   (function(symbolName) {   
-   
-   })("sym_huhliegen");
-   //Edge symbol end:'sym_huhliegen'
-
-   //=========================================================
-   
    //Edge symbol: 'sym_huhliegenkopf'
    (function(symbolName) {   
    
@@ -201,21 +193,6 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    })("sym_huhliegenkopf");
    //Edge symbol end:'sym_huhliegenkopf'
-
-   //=========================================================
-   
-   //Edge symbol: 'sym_huhflugelganzani'
-   (function(symbolName) {   
-   
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 3116, function(sym, e) {
-         sym.play('loophuhflugelganzani2');
-         
-
-      });
-      //Edge binding end
-
-   })("sym_huhflugelganzani");
-   //Edge symbol end:'sym_huhflugelganzani'
 
    //=========================================================
    

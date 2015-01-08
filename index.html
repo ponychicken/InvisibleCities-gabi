@@ -13,14 +13,40 @@
         .edgeLoad-PART1 { visibility:hidden; }
     </style>
 <script>
-   AdobeEdge.loadComposition('part1', 'PART1', {
+   AdobeEdge.loadComposition('index', 'PART1', {
     scaleToFit: "none",
     centerStage: "none",
     minW: "0",
     maxW: "undefined",
     width: "0",
     height: "0"
-}, {"dom":[{"id":"wald2","type":"image","tag":"img","rect":["0","0","2048px","1536px","auto","auto"],"fill":["rgba(0,0,0,0)","images/wald.png","0px","0px"]}]}, {"dom":[]});
+}, {
+    dom: [
+        {
+            id: 'wald2',
+            type: 'image',
+            tag: 'img',
+            rect: ['0', '0', '2048px', '1536px', 'auto', 'auto'],
+            fill: ["rgba(0,0,0,0)",'images/wald.jpg','0px','0px']
+        }
+    ],
+    style: {
+        '${symbolSelector}': {
+            isStage: true,
+            fill: ["rgba(255,255,255,1)"]
+        }
+    }
+}, {
+    dom: [
+
+    ],
+    style: {
+        '${symbolSelector}': {
+            isStage: true,
+            fill: ["rgba(255,255,255,1)"]
+        }
+    }
+});
 </script>
 <!--Adobe Edge Runtime End-->
 
