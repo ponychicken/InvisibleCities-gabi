@@ -23,7 +23,7 @@
                 version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
                 build: "5.0.1.386",
-                scaleToFit: "none",
+                scaleToFit: "width",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
@@ -105,7 +105,8 @@
                     style: {
                         '${StageA}': {
                             isStage: true,
-                            rect: ['0', '0', '0', '0', 'auto', 'auto'],
+                            rect: ['0', '0', '2048px', '1536px', 'auto', 'auto'],
+                            overflow: 'hidden',
                             fill: ["rgba(0,0,0,1.00)"]
                         }
                     }
@@ -237,10 +238,10 @@
                 content: {
                     dom: [
                         {
-                            rect: ['-580', '-403', '3414px', '2369px', 'auto', 'auto'],
-                            id: 'haushinterswrgb',
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
                             type: 'image',
+                            id: 'haushinterswrgb',
+                            rect: ['-580', '-403', '3414px', '2369px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/haushinterswrgb.jpg', '0px', '0px']
                         },
                         {
@@ -250,10 +251,10 @@
                             rect: [-989, -30, 1274, 471, 'auto', 'auto']
                         },
                         {
-                            rect: [142, 216, '1737px', '916px', 'auto', 'auto'],
-                            id: 'hauswegsw',
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
                             type: 'image',
+                            id: 'hauswegsw',
+                            rect: [142, 216, '1737px', '916px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/hauswegsw.png', '0px', '0px']
                         }
                     ],
@@ -269,14 +270,14 @@
                     autoPlay: false,
                     data: [
                         [
-                            "eid574",
-                            "top",
+                            "eid575",
+                            "left",
                             0,
                             0,
                             "linear",
                             "${sym_wolke}",
-                            '-30px',
-                            '-30px'
+                            '-989px',
+                            '-989px'
                         ],
                         [
                             "eid50",
@@ -289,14 +290,14 @@
                             '1'
                         ],
                         [
-                            "eid97",
-                            "scaleY",
+                            "eid574",
+                            "top",
                             0,
-                            4000,
+                            0,
                             "linear",
-                            "${haushinterswrgb}",
-                            '0.66',
-                            '1'
+                            "${sym_wolke}",
+                            '-30px',
+                            '-30px'
                         ],
                         [
                             "eid49",
@@ -329,14 +330,14 @@
                             '91px'
                         ],
                         [
-                            "eid575",
-                            "left",
+                            "eid97",
+                            "scaleY",
                             0,
-                            0,
+                            4000,
                             "linear",
-                            "${sym_wolke}",
-                            '-989px',
-                            '-989px'
+                            "${haushinterswrgb}",
+                            '0.66',
+                            '1'
                         ],
                         [
                             "eid96",
@@ -402,72 +403,71 @@
                 content: {
                     dom: [
                         {
-                            rect: [133, -229, '2048px', '1536px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.53', '0.53']],
                             id: 'wasserstruktur_Kopie',
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
                             type: 'image',
+                            rect: ['133', '-229', '2048px', '1536px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/wasserstruktur.png', '0px', '0px']
                         },
                         {
-                            rect: [133, -94, '2048px', '1536px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.53', '0.53']],
                             id: 'ausblickwasserfrei',
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
                             type: 'image',
+                            rect: ['133', '-94', '2048px', '1536px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/ausblickwasserfrei.png', '0px', '0px']
                         },
                         {
-                            rect: [133, -94, '2048px', '1536px', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.53', '0.53']],
                             id: 'aussichtvorsw2',
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
                             type: 'image',
+                            rect: ['133', '-94', '2048px', '1536px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/aussichtvorsw.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
+                            rect: ['1116', '1198', '140px', '122px', 'auto', 'auto'],
                             id: 'huhliegenkorper2',
-                            rect: [1116, 1198, '140px', '122px', 'auto', 'auto'],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
                         },
                         {
-                            rect: [1146, 1214, 50, 68, 'auto', 'auto'],
+                            type: 'rect',
                             overflow: 'hidden',
                             id: 'sym_huhliegenkopf',
                             symbolName: 'sym_huhliegenkopf',
-                            type: 'rect'
+                            rect: ['1146', '1214', '50', '68', 'auto', 'auto']
                         },
                         {
-                            rect: ['1465px', '1242px', 170, 155, 'auto', 'auto'],
+                            type: 'rect',
                             overflow: 'hidden',
                             id: 'sym_huhpickenganzani',
                             symbolName: 'sym_huhpickenganzani',
-                            type: 'rect'
+                            rect: ['1465px', '1242px', '170', '155', 'auto', 'auto']
                         },
                         {
                             rect: ['1278px', '1291px', '163px', '146px', 'auto', 'auto'],
                             id: 'huhpickenkorper2',
-                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/huhpickenkorper.png', '0px', '0px']
                         },
                         {
-                            rect: ['1278px', '1291px', 65, 146, 'auto', 'auto'],
+                            type: 'rect',
                             overflow: 'hidden',
                             id: 'sym_huhpickenkopfkoroer',
                             symbolName: 'sym_huhpickenkopfkoroer',
-                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
-                            type: 'rect'
+                            rect: ['1278px', '1291px', '65', '146', 'auto', 'auto'],
+                            transform: [[], [], [], ['1.1']]
                         },
                         {
-                            rect: [694, 271, 678, 570, 'auto', 'auto'],
+                            transform: [[], [], [], ['0.53', '0.53']],
                             id: 'sym_blattbaum',
                             symbolName: 'sym_blattbaum',
-                            type: 'rect',
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']]
+                            rect: ['694', '271', '678', '570', 'auto', 'auto'],
+                            type: 'rect'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, 2048, 1536]
+                            rect: [null, null, '2048', '1536']
                         }
                     }
                 },
@@ -521,24 +521,14 @@
                             '1'
                         ],
                         [
-                            "eid404",
+                            "eid719",
                             "scaleX",
-                            19570,
-                            0,
+                            16245,
+                            3325,
                             "linear",
-                            "${huhpickenkorper2}",
-                            '1',
+                            "${sym_blattbaum}",
+                            '0.53',
                             '1'
-                        ],
-                        [
-                            "eid402",
-                            "scaleX",
-                            26569,
-                            0,
-                            "linear",
-                            "${huhpickenkorper2}",
-                            '1',
-                            '-1'
                         ],
                         [
                             "eid722",
@@ -944,13 +934,13 @@
                             '0px'
                         ],
                         [
-                            "eid403",
+                            "eid723",
                             "scaleX",
-                            19570,
                             0,
+                            19570,
                             "linear",
                             "${sym_huhpickenkopfkoroer}",
-                            '1',
+                            '1.1',
                             '1'
                         ],
                         [
@@ -974,14 +964,24 @@
                             '0px'
                         ],
                         [
-                            "eid719",
+                            "eid404",
                             "scaleX",
-                            16245,
-                            3325,
+                            19570,
+                            0,
                             "linear",
-                            "${sym_blattbaum}",
-                            '0.53',
+                            "${huhpickenkorper2}",
+                            '1',
                             '1'
+                        ],
+                        [
+                            "eid402",
+                            "scaleX",
+                            26569,
+                            0,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            '1',
+                            '-1'
                         ]
                     ]
                 }
@@ -1039,10 +1039,10 @@
                             type: 'rect'
                         },
                         {
-                            rect: [1734, 439, 172, 201, 'auto', 'auto'],
-                            id: 'zimpflanze1',
-                            transform: [[0, 0, 0], ['-18', 0, 0], [0, 0], ['1', 1, 1], ['50%', '50%']],
                             type: 'image',
+                            id: 'zimpflanze1',
+                            rect: [1734, 439, 172, 201, 'auto', 'auto'],
+                            transform: [[0, 0, 0], ['-18', 0, 0], [0, 0], ['1', 1, 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/zimpflanze1.png', '0px', '0px']
                         }
                     ],
@@ -1067,14 +1067,14 @@
                             '3.76926'
                         ],
                         [
-                            "eid166",
-                            "scaleY",
+                            "eid188",
+                            "top",
                             0,
                             4000,
                             "linear",
-                            "${sym_vorhang}",
-                            '1',
-                            '3.76926'
+                            "${sym_zimmer2}",
+                            '0px',
+                            '791px'
                         ],
                         [
                             "eid187",
@@ -1087,24 +1087,24 @@
                             '-851px'
                         ],
                         [
-                            "eid190",
-                            "top",
+                            "eid165",
+                            "scaleX",
                             0,
                             4000,
                             "linear",
                             "${sym_vorhang}",
-                            '263px',
-                            '404px'
+                            '1',
+                            '3.76926'
                         ],
                         [
-                            "eid188",
-                            "top",
+                            "eid166",
+                            "scaleY",
                             0,
                             4000,
                             "linear",
-                            "${sym_zimmer2}",
-                            '0px',
-                            '791px'
+                            "${sym_vorhang}",
+                            '1',
+                            '3.76926'
                         ],
                         [
                             "eid577",
@@ -1137,16 +1137,6 @@
                             '289px'
                         ],
                         [
-                            "eid537",
-                            "scaleY",
-                            0,
-                            4000,
-                            "linear",
-                            "${zimpflanze1}",
-                            '1',
-                            '3.76926'
-                        ],
-                        [
                             "eid580",
                             "rotateZ",
                             0,
@@ -1155,6 +1145,16 @@
                             "${zimpflanze1}",
                             '-18deg',
                             '-10deg'
+                        ],
+                        [
+                            "eid537",
+                            "scaleY",
+                            0,
+                            4000,
+                            "linear",
+                            "${zimpflanze1}",
+                            '1',
+                            '3.76926'
                         ],
                         [
                             "eid161",
@@ -1167,16 +1167,6 @@
                             '3.76926'
                         ],
                         [
-                            "eid538",
-                            "left",
-                            0,
-                            4000,
-                            "linear",
-                            "${zimpflanze1}",
-                            '1734px',
-                            '3099px'
-                        ],
-                        [
                             "eid536",
                             "top",
                             0,
@@ -1185,6 +1175,16 @@
                             "${zimpflanze1}",
                             '439px',
                             '584px'
+                        ],
+                        [
+                            "eid538",
+                            "left",
+                            0,
+                            4000,
+                            "linear",
+                            "${zimpflanze1}",
+                            '1734px',
+                            '3099px'
                         ],
                         [
                             "eid539",
@@ -1197,14 +1197,14 @@
                             '3.76926'
                         ],
                         [
-                            "eid165",
-                            "scaleX",
+                            "eid190",
+                            "top",
                             0,
                             4000,
                             "linear",
                             "${sym_vorhang}",
-                            '1',
-                            '3.76926'
+                            '263px',
+                            '404px'
                         ]
                     ]
                 }

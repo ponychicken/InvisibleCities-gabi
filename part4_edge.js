@@ -23,7 +23,7 @@
                 version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
                 build: "5.0.1.386",
-                scaleToFit: "none",
+                scaleToFit: "both",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
@@ -51,7 +51,7 @@
                         '${Stage}': {
                             isStage: true,
                             rect: ['null', 'null', '2048', '1536', 'auto', 'auto'],
-                            overflow: 'auto',
+                            overflow: 'hidden',
                             fill: ["rgba(0,0,0,1.00)"]
                         }
                     }

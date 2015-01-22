@@ -23,7 +23,7 @@
                 version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
                 build: "5.0.1.386",
-                scaleToFit: "none",
+                scaleToFit: "both",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
@@ -97,7 +97,8 @@
                     style: {
                         '${StageA}': {
                             isStage: true,
-                            rect: ['0', '0', '0', '0', 'auto', 'auto'],
+                            rect: ['0', '0', '2048px', '1536px', 'auto', 'auto'],
+                            overflow: 'hidden',
                             fill: ["rgba(255,255,255,1.00)"]
                         }
                     }
@@ -120,9 +121,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'vorhangani',
                             rect: [0, 0, '5112px', '538px', 'auto', 'auto'],
+                            id: 'vorhangani',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/vorhangani.png', '0px', '0px']
                         }
                     ],
@@ -211,9 +212,9 @@
                     dom: [
                         {
                             type: 'rect',
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
-                            id: 'schwarz',
                             opacity: '0.850000',
+                            id: 'schwarz',
+                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                             rect: [0, 0, '2048px', '1536px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,1)']
                         }
@@ -251,9 +252,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'zimmer',
                             rect: [0, 0, '2048px', '1536px', 'auto', 'auto'],
+                            id: 'zimmer',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/zimmer.png', '0px', '0px']
                         }
                     ],
@@ -281,9 +282,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'huhliegenkopf2',
                             rect: [-5, 0, '242px', '68px', 'auto', 'auto'],
+                            id: 'huhliegenkopf2',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/huhliegenkopf.png', '0px', '0px']
                         }
                     ],
@@ -374,9 +375,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'huhpickenganzani',
                             rect: [-7, 0, '550px', '147px', 'auto', 'auto'],
+                            id: 'huhpickenganzani',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/huhpickenganzani.png', '0px', '0px']
                         }
                     ],
@@ -487,9 +488,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'huhpickenkopf',
                             rect: [-87, 0, '163px', '146px', 'auto', 'auto'],
+                            id: 'huhpickenkopf',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/huhpickenkopf.png', '0px', '0px']
                         }
                     ],
@@ -507,16 +508,6 @@
                         "loophuhn4": 0
                     },
                     data: [
-                        [
-                            "eid340",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${huhpickenkopf}",
-                            '0px',
-                            '0px'
-                        ],
                         [
                             "eid339",
                             "left",
@@ -536,6 +527,16 @@
                             "${huhpickenkopf}",
                             '-87px',
                             '-4px'
+                        ],
+                        [
+                            "eid340",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${huhpickenkopf}",
+                            '0px',
+                            '0px'
                         ]
                     ]
                 }
@@ -550,69 +551,69 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'MaisHinten2',
                             rect: [0, '0', '2048px', '1536px', 'auto', 'auto'],
+                            id: 'MaisHinten2',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/MaisHinten.jpg', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'maisaugengrau',
                             rect: [6, '0', '1748px', '832px', 'auto', 'auto'],
+                            id: 'maisaugengrau',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/maisaugengrau.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'maisaugepopille',
                             rect: [712, 644, '76px', '57px', 'auto', 'auto'],
+                            id: 'maisaugepopille',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/maisaugepopille.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'maisaugepopille2',
                             rect: [839, 628, 59, '57px', 'auto', 'auto'],
+                            id: 'maisaugepopille2',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/maisaugepopille.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'maisaugepopille3',
                             rect: [1118, 416, '76px', '57px', 'auto', 'auto'],
+                            id: 'maisaugepopille3',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/maisaugepopille.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'maisaugepopille4',
                             rect: [1184, 344, '76px', '57px', 'auto', 'auto'],
+                            id: 'maisaugepopille4',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/maisaugepopille.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'maisaugepopille5',
                             rect: [1505, 611, 65, '57px', 'auto', 'auto'],
+                            id: 'maisaugepopille5',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/maisaugepopille.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'maisaugepopille6',
                             rect: [1599, 571, '76px', '57px', 'auto', 'auto'],
+                            id: 'maisaugepopille6',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/maisaugepopille.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'maisaugepopille7',
                             rect: [576, 301, 43, 32, 'auto', 'auto'],
+                            id: 'maisaugepopille7',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/maisaugepopille.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'maisaugepopille8',
                             rect: [512, 259, 43, 32, 'auto', 'auto'],
+                            id: 'maisaugepopille8',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/maisaugepopille.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'maismenschen',
                             rect: [1, '0px', '2048px', '1536px', 'auto', 'auto'],
+                            id: 'maismenschen',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/maismenschen.png', '0px', '0px']
                         }
                     ],
@@ -627,34 +628,14 @@
                     autoPlay: false,
                     data: [
                         [
-                            "eid665",
-                            "left",
-                            0,
-                            1054,
+                            "eid594",
+                            "top",
+                            385,
+                            615,
                             "linear",
-                            "${maisaugepopille7}",
-                            '576px',
-                            '575px'
-                        ],
-                        [
-                            "eid615",
-                            "left",
-                            1054,
-                            190,
-                            "linear",
-                            "${maisaugepopille7}",
-                            '575px',
-                            '584px'
-                        ],
-                        [
-                            "eid623",
-                            "left",
-                            1244,
-                            141,
-                            "linear",
-                            "${maisaugepopille7}",
-                            '584px',
-                            '595px'
+                            "${maisaugepopille3}",
+                            '416px',
+                            '407px'
                         ],
                         [
                             "eid586",
@@ -877,14 +858,34 @@
                             '6px'
                         ],
                         [
-                            "eid594",
-                            "top",
-                            385,
-                            615,
+                            "eid665",
+                            "left",
+                            0,
+                            1054,
                             "linear",
-                            "${maisaugepopille3}",
-                            '416px',
-                            '407px'
+                            "${maisaugepopille7}",
+                            '576px',
+                            '575px'
+                        ],
+                        [
+                            "eid615",
+                            "left",
+                            1054,
+                            190,
+                            "linear",
+                            "${maisaugepopille7}",
+                            '575px',
+                            '584px'
+                        ],
+                        [
+                            "eid623",
+                            "left",
+                            1244,
+                            141,
+                            "linear",
+                            "${maisaugepopille7}",
+                            '584px',
+                            '595px'
                         ],
                         [
                             "eid598",
@@ -927,36 +928,6 @@
                             '1500px'
                         ],
                         [
-                            "eid582",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${maisaugepopille8}",
-                            '259px',
-                            '259px'
-                        ],
-                        [
-                            "eid620",
-                            "top",
-                            1054,
-                            190,
-                            "linear",
-                            "${maisaugepopille8}",
-                            '259px',
-                            '268px'
-                        ],
-                        [
-                            "eid622",
-                            "top",
-                            1244,
-                            141,
-                            "linear",
-                            "${maisaugepopille8}",
-                            '268px',
-                            '270px'
-                        ],
-                        [
                             "eid673",
                             "left",
                             0,
@@ -987,6 +958,36 @@
                             '524px'
                         ],
                         [
+                            "eid582",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${maisaugepopille8}",
+                            '259px',
+                            '259px'
+                        ],
+                        [
+                            "eid620",
+                            "top",
+                            1054,
+                            190,
+                            "linear",
+                            "${maisaugepopille8}",
+                            '259px',
+                            '268px'
+                        ],
+                        [
+                            "eid622",
+                            "top",
+                            1244,
+                            141,
+                            "linear",
+                            "${maisaugepopille8}",
+                            '268px',
+                            '270px'
+                        ],
+                        [
                             "eid629",
                             "width",
                             1015,
@@ -1009,17 +1010,17 @@
                 content: {
                     dom: [
                         {
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
-                            id: 'haushinterswrgb',
                             type: 'image',
+                            id: 'haushinterswrgb',
                             rect: ['-580', '-403', '3414px', '2369px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/haushinterswrgb.jpg', '0px', '0px']
                         },
                         {
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
-                            id: 'hauswegsw',
                             type: 'image',
+                            id: 'hauswegsw',
                             rect: [142, 216, '1737px', '916px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/hauswegsw.png', '0px', '0px']
                         }
                     ],
@@ -1075,22 +1076,22 @@
                             '91px'
                         ],
                         [
-                            "eid50",
-                            "scaleY",
-                            0,
-                            3000,
-                            "linear",
-                            "${hauswegsw}",
-                            '0.66',
-                            '1'
-                        ],
-                        [
                             "eid96",
                             "scaleX",
                             0,
                             3000,
                             "linear",
                             "${haushinterswrgb}",
+                            '0.66',
+                            '1'
+                        ],
+                        [
+                            "eid50",
+                            "scaleY",
+                            0,
+                            3000,
+                            "linear",
+                            "${hauswegsw}",
                             '0.66',
                             '1'
                         ]
@@ -1107,10 +1108,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: [0, 0, 2048, 1536, 'auto', 'auto'],
                             id: 'sym_zimmer2',
                             symbolName: 'sym_zimmer',
-                            rect: [0, 0, 2048, 1536, 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
                             rect: [767, 263, 850, 538, 'auto', 'auto'],
@@ -1120,9 +1121,9 @@
                             type: 'rect'
                         },
                         {
-                            type: 'image',
-                            id: 'zimpflanze4',
                             rect: [1665, 371, '308px', '302px', 'auto', 'auto'],
+                            id: 'zimpflanze4',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/zimpflanze4.png', '0px', '0px']
                         }
                     ],
@@ -1157,14 +1158,14 @@
                             '3.76926'
                         ],
                         [
-                            "eid187",
+                            "eid792",
                             "left",
                             0,
                             4000,
                             "linear",
-                            "${sym_zimmer2}",
-                            '0px',
-                            '-851px'
+                            "${zimpflanze4}",
+                            '1665px',
+                            '3010px'
                         ],
                         [
                             "eid190",
@@ -1197,14 +1198,14 @@
                             '289px'
                         ],
                         [
-                            "eid792",
-                            "left",
+                            "eid165",
+                            "scaleX",
                             0,
                             4000,
                             "linear",
-                            "${zimpflanze4}",
-                            '1665px',
-                            '3010px'
+                            "${sym_vorhang}",
+                            '1',
+                            '3.76926'
                         ],
                         [
                             "eid161",
@@ -1247,14 +1248,14 @@
                             '3.76926'
                         ],
                         [
-                            "eid165",
-                            "scaleX",
+                            "eid187",
+                            "left",
                             0,
                             4000,
                             "linear",
-                            "${sym_vorhang}",
-                            '1',
-                            '3.76926'
+                            "${sym_zimmer2}",
+                            '0px',
+                            '-851px'
                         ]
                     ]
                 }
@@ -1269,10 +1270,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
+                            rect: [45, 10, '1114px', '588px', 'auto', 'auto'],
                             overflow: 'hidden',
                             id: 'sprungbrucke',
-                            rect: [45, 10, '1114px', '588px', 'auto', 'auto'],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/sprungbrucke.png', '0px', '0px']
                         }
                     ],
@@ -1289,116 +1290,6 @@
                         "loop_sprung": 0
                     },
                     data: [
-                        [
-                            "eid612",
-                            "left",
-                            0,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '45px',
-                            '45px'
-                        ],
-                        [
-                            "eid618",
-                            "left",
-                            131,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '45px',
-                            '-183px'
-                        ],
-                        [
-                            "eid620",
-                            "left",
-                            250,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-251px',
-                            '-430px'
-                        ],
-                        [
-                            "eid622",
-                            "left",
-                            389,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-500px',
-                            '-680px'
-                        ],
-                        [
-                            "eid658",
-                            "left",
-                            406,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-680px',
-                            '-685px'
-                        ],
-                        [
-                            "eid624",
-                            "left",
-                            500,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-685px',
-                            '-6px'
-                        ],
-                        [
-                            "eid626",
-                            "left",
-                            629,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-76px',
-                            '-270px'
-                        ],
-                        [
-                            "eid656",
-                            "left",
-                            687,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-270px',
-                            '-264px'
-                        ],
-                        [
-                            "eid628",
-                            "left",
-                            750,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-264px',
-                            '-507px'
-                        ],
-                        [
-                            "eid630",
-                            "left",
-                            854,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-598px',
-                            '-792px'
-                        ],
-                        [
-                            "eid815",
-                            "left",
-                            1000,
-                            116,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-1020px',
-                            '-1198px'
-                        ],
                         [
                             "eid617",
                             "top",
@@ -1508,6 +1399,116 @@
                             "${sprungbrucke}",
                             '-166px',
                             '-164px'
+                        ],
+                        [
+                            "eid612",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '45px',
+                            '45px'
+                        ],
+                        [
+                            "eid618",
+                            "left",
+                            131,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '45px',
+                            '-183px'
+                        ],
+                        [
+                            "eid620",
+                            "left",
+                            250,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-251px',
+                            '-430px'
+                        ],
+                        [
+                            "eid622",
+                            "left",
+                            389,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-500px',
+                            '-680px'
+                        ],
+                        [
+                            "eid658",
+                            "left",
+                            406,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-680px',
+                            '-685px'
+                        ],
+                        [
+                            "eid624",
+                            "left",
+                            500,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-685px',
+                            '-6px'
+                        ],
+                        [
+                            "eid626",
+                            "left",
+                            629,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-76px',
+                            '-270px'
+                        ],
+                        [
+                            "eid656",
+                            "left",
+                            687,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-270px',
+                            '-264px'
+                        ],
+                        [
+                            "eid628",
+                            "left",
+                            750,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-264px',
+                            '-507px'
+                        ],
+                        [
+                            "eid630",
+                            "left",
+                            854,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-598px',
+                            '-792px'
+                        ],
+                        [
+                            "eid815",
+                            "left",
+                            1000,
+                            116,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-1020px',
+                            '-1198px'
                         ]
                     ]
                 }
@@ -1522,28 +1523,28 @@
                 content: {
                     dom: [
                         {
-                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
-                            id: 'bauhand',
                             type: 'image',
+                            id: 'bauhand',
                             rect: [152, 77, '92px', '61px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/bauhand.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'baugesicht',
                             rect: [0, 0, '188px', '192px', 'auto', 'auto'],
+                            id: 'baugesicht',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/baugesicht.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'auge',
                             rect: [46, 69, '31px', '26px', 'auto', 'auto'],
+                            id: 'auge',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/auge.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'auge2',
                             rect: [118, 58, '31px', '26px', 'auto', 'auto'],
+                            id: 'auge2',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/auge.png', '0px', '0px']
                         }
                     ],
@@ -1781,26 +1782,6 @@
                             '46px'
                         ],
                         [
-                            "eid603",
-                            "left",
-                            3000,
-                            3000,
-                            "linear",
-                            "${bauhand}",
-                            '152px',
-                            '89px'
-                        ],
-                        [
-                            "eid604",
-                            "left",
-                            6000,
-                            3100,
-                            "linear",
-                            "${bauhand}",
-                            '89px',
-                            '152px'
-                        ],
-                        [
                             "eid548",
                             "left",
                             0,
@@ -1859,6 +1840,26 @@
                             "${auge2}",
                             '120px',
                             '118px'
+                        ],
+                        [
+                            "eid603",
+                            "left",
+                            3000,
+                            3000,
+                            "linear",
+                            "${bauhand}",
+                            '152px',
+                            '89px'
+                        ],
+                        [
+                            "eid604",
+                            "left",
+                            6000,
+                            3100,
+                            "linear",
+                            "${bauhand}",
+                            '89px',
+                            '152px'
                         ]
                     ]
                 }
@@ -1873,16 +1874,16 @@
                 content: {
                     dom: [
                         {
-                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             rect: [43, 142, '610px', '428px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             id: 'baubeweg2',
                             opacity: '0',
                             type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/baubeweg2.png', '0px', '0px']
                         },
                         {
-                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             rect: [0, 0, '678px', '396px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             id: 'baubeweg1',
                             opacity: '0.5',
                             type: 'image',
@@ -2435,37 +2436,37 @@
                 content: {
                     dom: [
                         {
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
-                            id: 'wasserstruktur_KopieCopy',
                             type: 'image',
+                            id: 'wasserstruktur_KopieCopy',
                             rect: [133, -229, '2048px', '1536px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/wasserstruktur.png', '0px', '0px']
                         },
                         {
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
-                            id: 'ausblickwasserfrei',
                             type: 'image',
+                            id: 'ausblickwasserfrei',
                             rect: [133, -94, '2048px', '1536px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/ausblickwasserfrei.png', '0px', '0px']
                         },
                         {
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
-                            id: 'aussichtvorsw2',
                             type: 'image',
+                            id: 'aussichtvorsw2',
                             rect: [133, -94, '2048px', '1536px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/aussichtvorsw.png', '0px', '0px']
                         },
                         {
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
-                            id: 'Ausblickvornebuschkal2',
                             type: 'image',
+                            id: 'Ausblickvornebuschkal2',
                             rect: [1061, 617, '834px', '517px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/Ausblickvornebuschkal.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'huhliegenkorper2',
                             rect: [1116, 1198, '140px', '122px', 'auto', 'auto'],
+                            id: 'huhliegenkorper2',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
                         },
                         {
@@ -2483,10 +2484,10 @@
                             type: 'rect'
                         },
                         {
-                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
-                            id: 'huhpickenkorper2',
                             type: 'image',
+                            id: 'huhpickenkorper2',
                             rect: ['1278px', '1291px', '163px', '146px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/huhpickenkorper.png', '0px', '0px']
                         },
                         {
@@ -2494,21 +2495,21 @@
                             overflow: 'hidden',
                             id: 'sym_huhpickenkopfkoroer',
                             symbolName: 'sym_huhpickenkopfkoroer',
-                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
+                            type: 'rect',
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']]
+                        },
+                        {
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
+                            id: 'sym_blattbaum',
+                            symbolName: 'sym_blattbaum',
+                            rect: [694, 271, 678, 570, 'auto', 'auto'],
                             type: 'rect'
                         },
                         {
-                            type: 'rect',
-                            id: 'sym_blattbaum',
-                            symbolName: 'sym_blattbaum',
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
-                            rect: [694, 271, 678, 570, 'auto', 'auto']
-                        },
-                        {
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
-                            id: 'bruckesitzen',
                             type: 'image',
+                            id: 'bruckesitzen',
                             rect: [1439, 479, '235px', '236px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/bruckesitzen.png', '0px', '0px']
                         },
                         {
@@ -2516,29 +2517,29 @@
                             overflow: 'hidden',
                             id: 'sym_sprung',
                             symbolName: 'sym_sprung',
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.4', '0.4', 1], ['50%', '50%']],
+                            type: 'rect',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.4', '0.4', 1], ['50%', '50%']]
+                        },
+                        {
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
+                            id: 'sym_maisfeldhinten',
+                            symbolName: 'sym_maisfeldhinten',
+                            rect: [1176, 282, 588, 311, 'auto', 'auto'],
                             type: 'rect'
                         },
                         {
-                            type: 'rect',
-                            id: 'sym_maisfeldhinten',
-                            symbolName: 'sym_maisfeldhinten',
                             transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
-                            rect: [1176, 282, 588, 311, 'auto', 'auto']
-                        },
-                        {
-                            type: 'rect',
                             id: 'sym_baummenschen',
                             symbolName: 'sym_baummenschen',
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
-                            rect: [394, -4, 1097, 1123, 'auto', 'auto']
+                            rect: [394, -4, 1097, 1123, 'auto', 'auto'],
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
                             id: 'sym_baumgesicht',
                             symbolName: 'sym_baumgesicht',
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.53', '0.53', 1], ['50%', '50%']],
-                            rect: [753, 390, 188, 192, 'auto', 'auto']
+                            rect: [753, 390, 188, 192, 'auto', 'auto'],
+                            type: 'rect'
                         }
                     ],
                     style: {
@@ -2667,106 +2668,6 @@
                             '0px'
                         ],
                         [
-                            "eid715",
-                            "top",
-                            0,
-                            15750,
-                            "linear",
-                            "${wasserstruktur_KopieCopy}",
-                            '-229px',
-                            '-7px'
-                        ],
-                        [
-                            "eid716",
-                            "top",
-                            16245,
-                            3325,
-                            "linear",
-                            "${wasserstruktur_KopieCopy}",
-                            '-277px',
-                            '-47px'
-                        ],
-                        [
-                            "eid717",
-                            "top",
-                            19570,
-                            16430,
-                            "linear",
-                            "${wasserstruktur_KopieCopy}",
-                            '-47px',
-                            '-7px'
-                        ],
-                        [
-                            "eid812",
-                            "top",
-                            16245,
-                            3325,
-                            "linear",
-                            "${bruckesitzen}",
-                            '479px',
-                            '500px'
-                        ],
-                        [
-                            "eid802",
-                            "top",
-                            16245,
-                            3325,
-                            "linear",
-                            "${Ausblickvornebuschkal2}",
-                            '617px',
-                            '889px'
-                        ],
-                        [
-                            "eid836",
-                            "scaleX",
-                            16245,
-                            3325,
-                            "linear",
-                            "${sym_maisfeldhinten}",
-                            '0.53',
-                            '1'
-                        ],
-                        [
-                            "eid807",
-                            "scaleX",
-                            16245,
-                            3325,
-                            "linear",
-                            "${Ausblickvornebuschkal2}",
-                            '0.53',
-                            '1'
-                        ],
-                        [
-                            "eid892",
-                            "scaleY",
-                            16245,
-                            3325,
-                            "linear",
-                            "${sym_baummenschen}",
-                            '0.53',
-                            '1'
-                        ],
-                        [
-                            "eid513",
-                            "left",
-                            16245,
-                            3325,
-                            "linear",
-                            "${ausblickwasserfrei}",
-                            '133px',
-                            '0px'
-                        ],
-                        [
-                            "eid839",
-                            "top",
-                            16245,
-                            3325,
-                            "linear",
-                            "${sym_maisfeldhinten}",
-                            '282px',
-                            '161px'
-                        ],
-                        [
                             "eid375",
                             "rotateZ",
                             21860,
@@ -2867,14 +2768,122 @@
                             '0deg'
                         ],
                         [
-                            "eid895",
+                            "eid812",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${bruckesitzen}",
+                            '479px',
+                            '500px'
+                        ],
+                        [
+                            "eid371",
+                            "location",
+                            21860,
+                            1108,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            [[1359.5, 1364, 0, 0, 0, 0,0],[1344.43, 1370.42, -26.36, -18.81, -23.2, -16.55,18.22],[1318.34, 1370.17, -16.72, 1.61, -23.12, 2.22,45.12],[1307.5, 1366.14, 0, 0, 0, 0,56.93]]
+                        ],
+                        [
+                            "eid400",
+                            "location",
+                            27677,
+                            1108,
+                            "linear",
+                            "${huhpickenkorper2}",
+                            [[1307.5, 1366.14, 0, 0, 0, 0,0],[1318.34, 1370.17, 23.12, -2.22, 16.72, -1.61,11.81],[1344.43, 1370.42, 23.2, 16.55, 26.36, 18.81,38.7],[1359.5, 1364, 0, 0, 0, 0,56.93]]
+                        ],
+                        [
+                            "eid836",
+                            "scaleX",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_maisfeldhinten}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid718",
+                            "left",
+                            0,
+                            15750,
+                            "linear",
+                            "${wasserstruktur_KopieCopy}",
+                            '133px',
+                            '517px'
+                        ],
+                        [
+                            "eid723",
                             "left",
                             16245,
                             3325,
                             "linear",
+                            "${wasserstruktur_KopieCopy}",
+                            '133px',
+                            '113px'
+                        ],
+                        [
+                            "eid724",
+                            "left",
+                            19570,
+                            16430,
+                            "linear",
+                            "${wasserstruktur_KopieCopy}",
+                            '113px',
+                            '517px'
+                        ],
+                        [
+                            "eid892",
+                            "scaleY",
+                            16245,
+                            3325,
+                            "linear",
                             "${sym_baummenschen}",
-                            '394px',
-                            '64px'
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid513",
+                            "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${ausblickwasserfrei}",
+                            '133px',
+                            '0px'
+                        ],
+                        [
+                            "eid839",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_maisfeldhinten}",
+                            '282px',
+                            '161px'
+                        ],
+                        [
+                            "eid838",
+                            "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_maisfeldhinten}",
+                            '1176px',
+                            '1311px'
+                        ],
+                        [
+                            "eid810",
+                            "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${bruckesitzen}",
+                            '1439px',
+                            '1663px'
                         ],
                         [
                             "eid721",
@@ -2887,14 +2896,14 @@
                             '1'
                         ],
                         [
-                            "eid569",
+                            "eid801",
                             "left",
                             16245,
                             3325,
                             "linear",
-                            "${sym_baumgesicht}",
-                            '753px',
-                            '345px'
+                            "${Ausblickvornebuschkal2}",
+                            '1061px',
+                            '1215px'
                         ],
                         [
                             "eid891",
@@ -2947,12 +2956,12 @@
                             '452px'
                         ],
                         [
-                            "eid725",
-                            "scaleY",
+                            "eid809",
+                            "scaleX",
                             16245,
                             3325,
                             "linear",
-                            "${wasserstruktur_KopieCopy}",
+                            "${bruckesitzen}",
                             '0.53',
                             '1'
                         ],
@@ -2967,32 +2976,22 @@
                             '1'
                         ],
                         [
-                            "eid403",
-                            "scaleX",
-                            19570,
-                            0,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            '1',
-                            '1'
-                        ],
-                        [
-                            "eid401",
-                            "scaleX",
-                            26569,
-                            0,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            '1',
-                            '-1'
-                        ],
-                        [
-                            "eid572",
+                            "eid811",
                             "scaleY",
                             16245,
                             3325,
                             "linear",
-                            "${sym_baumgesicht}",
+                            "${bruckesitzen}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid512",
+                            "scaleY",
+                            16245,
+                            3325,
+                            "linear",
+                            "${ausblickwasserfrei}",
                             '0.53',
                             '1'
                         ],
@@ -3015,26 +3014,6 @@
                             "${sym_baumgesicht}",
                             '390px',
                             '317px'
-                        ],
-                        [
-                            "eid510",
-                            "top",
-                            16245,
-                            3325,
-                            "linear",
-                            "${ausblickwasserfrei}",
-                            '-94px',
-                            '0px'
-                        ],
-                        [
-                            "eid712",
-                            "left",
-                            16245,
-                            3325,
-                            "linear",
-                            "${sym_sprung}",
-                            '1327px',
-                            '1458px'
                         ],
                         [
                             "eid374",
@@ -3137,6 +3116,26 @@
                             '0deg'
                         ],
                         [
+                            "eid510",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${ausblickwasserfrei}",
+                            '-94px',
+                            '0px'
+                        ],
+                        [
+                            "eid895",
+                            "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_baummenschen}",
+                            '394px',
+                            '64px'
+                        ],
+                        [
                             "eid370",
                             "location",
                             21860,
@@ -3182,112 +3181,114 @@
                             [[1393.91, 1365.12, 20.19, 2.76, 0, 0,0],[1404.91, 1365.12, 0, 0, 0, 0,11.04]]
                         ],
                         [
-                            "eid512",
-                            "scaleY",
-                            16245,
-                            3325,
-                            "linear",
-                            "${ausblickwasserfrei}",
-                            '0.53',
-                            '1'
-                        ],
-                        [
-                            "eid811",
-                            "scaleY",
-                            16245,
-                            3325,
-                            "linear",
-                            "${bruckesitzen}",
-                            '0.53',
-                            '1'
-                        ],
-                        [
-                            "eid809",
-                            "scaleX",
-                            16245,
-                            3325,
-                            "linear",
-                            "${bruckesitzen}",
-                            '0.53',
-                            '1'
-                        ],
-                        [
-                            "eid801",
-                            "left",
-                            16245,
-                            3325,
-                            "linear",
-                            "${Ausblickvornebuschkal2}",
-                            '1061px',
-                            '1215px'
-                        ],
-                        [
-                            "eid810",
-                            "left",
-                            16245,
-                            3325,
-                            "linear",
-                            "${bruckesitzen}",
-                            '1439px',
-                            '1663px'
-                        ],
-                        [
-                            "eid838",
-                            "left",
-                            16245,
-                            3325,
-                            "linear",
-                            "${sym_maisfeldhinten}",
-                            '1176px',
-                            '1311px'
-                        ],
-                        [
-                            "eid718",
-                            "left",
+                            "eid715",
+                            "top",
                             0,
                             15750,
                             "linear",
                             "${wasserstruktur_KopieCopy}",
-                            '133px',
-                            '517px'
+                            '-229px',
+                            '-7px'
                         ],
                         [
-                            "eid723",
-                            "left",
+                            "eid716",
+                            "top",
                             16245,
                             3325,
                             "linear",
                             "${wasserstruktur_KopieCopy}",
-                            '133px',
-                            '113px'
+                            '-277px',
+                            '-47px'
                         ],
                         [
-                            "eid724",
-                            "left",
+                            "eid717",
+                            "top",
                             19570,
                             16430,
                             "linear",
                             "${wasserstruktur_KopieCopy}",
-                            '113px',
-                            '517px'
+                            '-47px',
+                            '-7px'
                         ],
                         [
-                            "eid371",
-                            "location",
-                            21860,
-                            1108,
+                            "eid712",
+                            "left",
+                            16245,
+                            3325,
                             "linear",
-                            "${huhpickenkorper2}",
-                            [[1359.5, 1364, 0, 0, 0, 0,0],[1344.43, 1370.42, -26.36, -18.81, -23.2, -16.55,18.22],[1318.34, 1370.17, -16.72, 1.61, -23.12, 2.22,45.12],[1307.5, 1366.14, 0, 0, 0, 0,56.93]]
+                            "${sym_sprung}",
+                            '1327px',
+                            '1458px'
                         ],
                         [
-                            "eid400",
-                            "location",
-                            27677,
-                            1108,
+                            "eid572",
+                            "scaleY",
+                            16245,
+                            3325,
                             "linear",
-                            "${huhpickenkorper2}",
-                            [[1307.5, 1366.14, 0, 0, 0, 0,0],[1318.34, 1370.17, 23.12, -2.22, 16.72, -1.61,11.81],[1344.43, 1370.42, 23.2, 16.55, 26.36, 18.81,38.7],[1359.5, 1364, 0, 0, 0, 0,56.93]]
+                            "${sym_baumgesicht}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid403",
+                            "scaleX",
+                            19570,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '1',
+                            '1'
+                        ],
+                        [
+                            "eid401",
+                            "scaleX",
+                            26569,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '1',
+                            '-1'
+                        ],
+                        [
+                            "eid725",
+                            "scaleY",
+                            16245,
+                            3325,
+                            "linear",
+                            "${wasserstruktur_KopieCopy}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid802",
+                            "top",
+                            16245,
+                            3325,
+                            "linear",
+                            "${Ausblickvornebuschkal2}",
+                            '617px',
+                            '889px'
+                        ],
+                        [
+                            "eid807",
+                            "scaleX",
+                            16245,
+                            3325,
+                            "linear",
+                            "${Ausblickvornebuschkal2}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid569",
+                            "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_baumgesicht}",
+                            '753px',
+                            '345px'
                         ],
                         [
                             "eid897",
@@ -3322,15 +3323,15 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'MaisBewegungAusblick',
                             rect: [0, 0, '588px', '311px', 'auto', 'auto'],
+                            id: 'MaisBewegungAusblick',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/MaisBewegungAusblick.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'MaisBewegungAusMenschen',
                             rect: [0, 0, '588px', '311px', 'auto', 'auto'],
+                            id: 'MaisBewegungAusMenschen',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/MaisBewegungAusMenschen.png', '0px', '0px']
                         }
                     ],
@@ -3520,10 +3521,10 @@
                 content: {
                     dom: [
                         {
-                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
-                            id: 'baumkronemenschen',
                             type: 'image',
+                            id: 'baumkronemenschen',
                             rect: [0, 0, '1097px', '1123px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/baumkronemenschen.png', '0px', '0px']
                         }
                     ],

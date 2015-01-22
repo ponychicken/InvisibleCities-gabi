@@ -23,7 +23,7 @@
                 version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
                 build: "5.0.1.386",
-                scaleToFit: "none",
+                scaleToFit: "both",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
@@ -84,7 +84,8 @@
                     style: {
                         '${StageA}': {
                             isStage: true,
-                            rect: ['0', '0', '0', '0', 'auto', 'auto'],
+                            rect: ['0', '0', '2048px', '1536px', 'auto', 'auto'],
+                            overflow: 'hidden',
                             fill: ["rgba(255,255,255,1.00)"]
                         }
                     }
@@ -93,7 +94,26 @@
                     duration: 36000,
                     autoPlay: false,
                     data: [
-
+                        [
+                            "eid746",
+                            "width",
+                            0,
+                            0,
+                            "linear",
+                            "${StageA}",
+                            '2048px',
+                            '2048px'
+                        ],
+                        [
+                            "eid747",
+                            "height",
+                            0,
+                            0,
+                            "linear",
+                            "${StageA}",
+                            '1536px',
+                            '1536px'
+                        ]
                     ]
                 }
             },
@@ -107,9 +127,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'vorhangani',
                             rect: [0, 0, '5112px', '538px', 'auto', 'auto'],
+                            id: 'vorhangani',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/vorhangani.png', '0px', '0px']
                         }
                     ],
@@ -197,17 +217,17 @@
                 content: {
                     dom: [
                         {
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
-                            id: 'haushinterswrgb',
                             type: 'image',
+                            id: 'haushinterswrgb',
                             rect: ['-580', '-403', '3414px', '2369px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/haushinterswrgb.jpg', '0px', '0px']
                         },
                         {
-                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
-                            id: 'hauswegsw',
                             type: 'image',
+                            id: 'hauswegsw',
                             rect: [142, 216, '1737px', '916px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], [0, 0, 0], [0, 0], ['0.66', '0.66', 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/hauswegsw.png', '0px', '0px']
                         }
                     ],
@@ -263,22 +283,22 @@
                             '91px'
                         ],
                         [
-                            "eid50",
-                            "scaleY",
-                            0,
-                            3000,
-                            "linear",
-                            "${hauswegsw}",
-                            '0.66',
-                            '1'
-                        ],
-                        [
                             "eid96",
                             "scaleX",
                             0,
                             3000,
                             "linear",
                             "${haushinterswrgb}",
+                            '0.66',
+                            '1'
+                        ],
+                        [
+                            "eid50",
+                            "scaleY",
+                            0,
+                            3000,
+                            "linear",
+                            "${hauswegsw}",
                             '0.66',
                             '1'
                         ]
@@ -296,9 +316,9 @@
                     dom: [
                         {
                             rect: [0, 0, '2048px', '1536px', 'auto', 'auto'],
-                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
-                            id: 'schwarz',
                             opacity: '0.850000',
+                            id: 'schwarz',
+                            stroke: [0, 'rgba(0, 0, 0, 0)', 'none'],
                             type: 'rect',
                             fill: ['rgba(0,0,0,1)']
                         }
@@ -336,9 +356,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'zimmer',
                             rect: [0, 0, '2048px', '1536px', 'auto', 'auto'],
+                            id: 'zimmer',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/zimmer.png', '0px', '0px']
                         }
                     ],
@@ -366,10 +386,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'rect',
+                            rect: [0, 0, 2048, 1536, 'auto', 'auto'],
                             id: 'sym_zimmer2',
                             symbolName: 'sym_zimmer',
-                            rect: [0, 0, 2048, 1536, 'auto', 'auto']
+                            type: 'rect'
                         },
                         {
                             rect: [767, 263, 850, 538, 'auto', 'auto'],
@@ -379,9 +399,9 @@
                             type: 'rect'
                         },
                         {
-                            type: 'image',
-                            id: 'zimpflanze2',
                             rect: [1673, 242, '336px', '393px', 'auto', 'auto'],
+                            id: 'zimpflanze2',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/zimpflanze2.png', '0px', '0px']
                         }
                     ],
@@ -486,14 +506,14 @@
                             '3.76926'
                         ],
                         [
-                            "eid165",
-                            "scaleX",
+                            "eid188",
+                            "top",
                             0,
                             4000,
                             "linear",
-                            "${sym_vorhang}",
-                            '1',
-                            '3.76926'
+                            "${sym_zimmer2}",
+                            '0px',
+                            '791px'
                         ],
                         [
                             "eid161",
@@ -506,14 +526,14 @@
                             '3.76926'
                         ],
                         [
-                            "eid188",
-                            "top",
+                            "eid165",
+                            "scaleX",
                             0,
                             4000,
                             "linear",
-                            "${sym_zimmer2}",
-                            '0px',
-                            '791px'
+                            "${sym_vorhang}",
+                            '1',
+                            '3.76926'
                         ]
                     ]
                 }
@@ -528,9 +548,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'huhliegenkopf2',
                             rect: [-5, 0, '242px', '68px', 'auto', 'auto'],
+                            id: 'huhliegenkopf2',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/huhliegenkopf.png', '0px', '0px']
                         }
                     ],
@@ -621,9 +641,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'huhpickenganzani',
                             rect: [-7, 0, '550px', '147px', 'auto', 'auto'],
+                            id: 'huhpickenganzani',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/huhpickenganzani.png', '0px', '0px']
                         }
                     ],
@@ -734,9 +754,9 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
-                            id: 'huhpickenkopf',
                             rect: [-87, 0, '163px', '146px', 'auto', 'auto'],
+                            id: 'huhpickenkopf',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/huhpickenkopf.png', '0px', '0px']
                         }
                     ],
@@ -754,16 +774,6 @@
                         "loophuhn4": 0
                     },
                     data: [
-                        [
-                            "eid340",
-                            "top",
-                            0,
-                            0,
-                            "linear",
-                            "${huhpickenkopf}",
-                            '0px',
-                            '0px'
-                        ],
                         [
                             "eid339",
                             "left",
@@ -783,6 +793,16 @@
                             "${huhpickenkopf}",
                             '-87px',
                             '-4px'
+                        ],
+                        [
+                            "eid340",
+                            "top",
+                            0,
+                            0,
+                            "linear",
+                            "${huhpickenkopf}",
+                            '0px',
+                            '0px'
                         ]
                     ]
                 }
@@ -797,30 +817,30 @@
                 content: {
                     dom: [
                         {
-                            rect: ['133', '-229', '2048px', '1536px', 'auto', 'auto'],
-                            id: 'wasserstruktur_KopieCopy',
                             transform: [[], [], [], ['0.53', '0.53']],
+                            id: 'wasserstruktur_KopieCopy',
                             type: 'image',
+                            rect: ['133', '-229', '2048px', '1536px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/wasserstruktur.png', '0px', '0px']
                         },
                         {
-                            rect: ['133', '-94', '2048px', '1536px', 'auto', 'auto'],
-                            id: 'ausblickwasserfrei',
                             transform: [[], [], [], ['0.53', '0.53']],
+                            id: 'ausblickwasserfrei',
                             type: 'image',
+                            rect: ['133', '-94', '2048px', '1536px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/ausblickwasserfrei.png', '0px', '0px']
                         },
                         {
-                            rect: ['133', '-94', '2048px', '1536px', 'auto', 'auto'],
-                            id: 'aussichtvorsw2',
                             transform: [[], [], [], ['0.53', '0.53']],
+                            id: 'aussichtvorsw2',
                             type: 'image',
+                            rect: ['133', '-94', '2048px', '1536px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/aussichtvorsw.png', '0px', '0px']
                         },
                         {
+                            rect: ['1116', '1198', '140px', '122px', 'auto', 'auto'],
                             id: 'huhliegenkorper2',
                             type: 'image',
-                            rect: ['1116', '1198', '140px', '122px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/huhliegenkorper.png', '0px', '0px']
                         },
                         {
@@ -838,9 +858,9 @@
                             rect: ['1465px', '1242px', '170', '155', 'auto', 'auto']
                         },
                         {
+                            rect: ['1278px', '1291px', '163px', '146px', 'auto', 'auto'],
                             id: 'huhpickenkorper2',
                             type: 'image',
-                            rect: ['1278px', '1291px', '163px', '146px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/huhpickenkorper.png', '0px', '0px']
                         },
                         {
@@ -851,31 +871,31 @@
                             rect: ['1278px', '1291px', '65', '146', 'auto', 'auto']
                         },
                         {
-                            type: 'rect',
+                            transform: [[], [], [], ['0.53', '0.53']],
                             id: 'sym_blattbaum',
                             symbolName: 'sym_blattbaum',
-                            transform: [[], [], [], ['0.53', '0.53']],
-                            rect: ['694', '271', '678', '570', 'auto', 'auto']
+                            rect: ['694', '271', '678', '570', 'auto', 'auto'],
+                            type: 'rect'
                         },
                         {
-                            type: 'rect',
+                            transform: [[], [], [], ['0.53', '0.53']],
                             id: 'sym_baumgesicht',
                             symbolName: 'sym_baumgesicht',
-                            transform: [[], [], [], ['0.53', '0.53']],
-                            rect: ['753', '390', '188', '192', 'auto', 'auto']
+                            rect: ['753', '390', '188', '192', 'auto', 'auto'],
+                            type: 'rect'
                         },
                         {
-                            rect: ['1439', '479', '235px', '236px', 'auto', 'auto'],
-                            id: 'bruckesitzen',
                             transform: [[], [], [], ['0.53', '0.53']],
+                            id: 'bruckesitzen',
                             type: 'image',
+                            rect: ['1439', '479', '235px', '236px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/bruckesitzen.png', '0px', '0px']
                         },
                         {
-                            rect: ['1229', '445', '116px', '135px', 'auto', 'auto'],
-                            id: 'sitzenwasser',
                             transform: [[], [], [], ['0.53', '0.53']],
+                            id: 'sitzenwasser',
                             type: 'image',
+                            rect: ['1229', '445', '116px', '135px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/sitzenwasser.png', '0px', '0px']
                         },
                         {
@@ -883,14 +903,13 @@
                             overflow: 'hidden',
                             id: 'sym_sprung',
                             symbolName: 'sym_sprung',
-                            transform: [[], [], [], ['0.4', '0.4']],
-                            rect: ['1327', '445', '250', '250', 'auto', 'auto']
+                            rect: ['1327', '445', '250', '250', 'auto', 'auto'],
+                            transform: [[], [], [], ['0.4', '0.4']]
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '2048', '1536']
+                            rect: [null, null, '2048', '1536']
                         }
                     }
                 },
@@ -904,12 +923,12 @@
                     },
                     data: [
                         [
-                            "eid735",
+                            "eid571",
                             "scaleX",
                             16245,
                             3325,
                             "linear",
-                            "${bruckesitzen}",
+                            "${sym_baumgesicht}",
                             '0.53',
                             '1'
                         ],
@@ -1104,124 +1123,94 @@
                             '452px'
                         ],
                         [
-                            "eid375",
-                            "rotateZ",
-                            21860,
-                            0,
+                            "eid725",
+                            "scaleY",
+                            16245,
+                            3325,
                             "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            '0deg',
-                            '0deg'
+                            "${wasserstruktur_KopieCopy}",
+                            '0.53',
+                            '1'
                         ],
                         [
-                            "eid376",
-                            "rotateZ",
-                            22137,
-                            0,
+                            "eid260",
+                            "scaleY",
+                            16245,
+                            3325,
                             "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            '0deg',
-                            '8deg'
+                            "${aussichtvorsw2}",
+                            '0.53',
+                            '1'
                         ],
                         [
-                            "eid378",
-                            "rotateZ",
-                            22414,
+                            "eid718",
+                            "left",
                             0,
+                            15750,
                             "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            '-8deg',
-                            '0deg'
+                            "${wasserstruktur_KopieCopy}",
+                            '133px',
+                            '517px'
                         ],
                         [
-                            "eid380",
-                            "rotateZ",
-                            22691,
-                            0,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            '0deg',
-                            '8deg'
-                        ],
-                        [
-                            "eid382",
-                            "rotateZ",
-                            22968,
-                            0,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            '8deg',
-                            '0deg'
-                        ],
-                        [
-                            "eid387",
-                            "rotateZ",
-                            27677,
-                            0,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            '0deg',
-                            '0deg'
-                        ],
-                        [
-                            "eid388",
-                            "rotateZ",
-                            27955,
-                            0,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            '0deg',
-                            '8deg'
-                        ],
-                        [
-                            "eid389",
-                            "rotateZ",
-                            28232,
-                            0,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            '8deg',
-                            '0deg'
-                        ],
-                        [
-                            "eid390",
-                            "rotateZ",
-                            28509,
-                            0,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            '0deg',
-                            '8deg'
-                        ],
-                        [
-                            "eid391",
-                            "rotateZ",
-                            28786,
-                            0,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            '8deg',
-                            '0deg'
-                        ],
-                        [
-                            "eid712",
+                            "eid723",
                             "left",
                             16245,
                             3325,
                             "linear",
-                            "${sym_sprung}",
-                            '1327px',
-                            '1458px'
+                            "${wasserstruktur_KopieCopy}",
+                            '133px',
+                            '113px'
                         ],
                         [
-                            "eid569",
+                            "eid724",
                             "left",
+                            19570,
+                            16430,
+                            "linear",
+                            "${wasserstruktur_KopieCopy}",
+                            '113px',
+                            '517px'
+                        ],
+                        [
+                            "eid721",
+                            "scaleY",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_blattbaum}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid512",
+                            "scaleY",
+                            16245,
+                            3325,
+                            "linear",
+                            "${ausblickwasserfrei}",
+                            '0.53',
+                            '1'
+                        ],
+                        [
+                            "eid570",
+                            "top",
                             16245,
                             3325,
                             "linear",
                             "${sym_baumgesicht}",
-                            '753px',
-                            '345px'
+                            '390px',
+                            '317px'
+                        ],
+                        [
+                            "eid572",
+                            "scaleY",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_baumgesicht}",
+                            '0.53',
+                            '1'
                         ],
                         [
                             "eid371",
@@ -1240,56 +1229,6 @@
                             "linear",
                             "${huhpickenkorper2}",
                             [[1307.5, 1366.14, 0, 0, 0, 0,0],[1318.34, 1370.17, 23.12, -2.22, 16.72, -1.61,11.81],[1344.43, 1370.42, 23.2, 16.55, 26.36, 18.81,38.7],[1359.5, 1364, 0, 0, 0, 0,56.93]]
-                        ],
-                        [
-                            "eid403",
-                            "scaleX",
-                            19570,
-                            0,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            '1',
-                            '1'
-                        ],
-                        [
-                            "eid401",
-                            "scaleX",
-                            26569,
-                            0,
-                            "linear",
-                            "${sym_huhpickenkopfkoroer}",
-                            '1',
-                            '-1'
-                        ],
-                        [
-                            "eid570",
-                            "top",
-                            16245,
-                            3325,
-                            "linear",
-                            "${sym_baumgesicht}",
-                            '390px',
-                            '317px'
-                        ],
-                        [
-                            "eid734",
-                            "scaleY",
-                            16245,
-                            3325,
-                            "linear",
-                            "${bruckesitzen}",
-                            '0.53',
-                            '1'
-                        ],
-                        [
-                            "eid510",
-                            "top",
-                            16245,
-                            3325,
-                            "linear",
-                            "${ausblickwasserfrei}",
-                            '-94px',
-                            '0px'
                         ],
                         [
                             "eid374",
@@ -1477,94 +1416,174 @@
                             '1'
                         ],
                         [
-                            "eid571",
+                            "eid735",
                             "scaleX",
                             16245,
                             3325,
                             "linear",
-                            "${sym_baumgesicht}",
+                            "${bruckesitzen}",
                             '0.53',
                             '1'
                         ],
                         [
-                            "eid572",
-                            "scaleY",
-                            16245,
-                            3325,
+                            "eid403",
+                            "scaleX",
+                            19570,
+                            0,
                             "linear",
-                            "${sym_baumgesicht}",
-                            '0.53',
+                            "${sym_huhpickenkopfkoroer}",
+                            '1',
                             '1'
                         ],
                         [
-                            "eid512",
-                            "scaleY",
+                            "eid401",
+                            "scaleX",
+                            26569,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '1',
+                            '-1'
+                        ],
+                        [
+                            "eid510",
+                            "top",
                             16245,
                             3325,
                             "linear",
                             "${ausblickwasserfrei}",
-                            '0.53',
-                            '1'
+                            '-94px',
+                            '0px'
                         ],
                         [
-                            "eid721",
+                            "eid734",
                             "scaleY",
                             16245,
                             3325,
                             "linear",
-                            "${sym_blattbaum}",
+                            "${bruckesitzen}",
                             '0.53',
                             '1'
                         ],
                         [
-                            "eid718",
+                            "eid569",
                             "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_baumgesicht}",
+                            '753px',
+                            '345px'
+                        ],
+                        [
+                            "eid712",
+                            "left",
+                            16245,
+                            3325,
+                            "linear",
+                            "${sym_sprung}",
+                            '1327px',
+                            '1458px'
+                        ],
+                        [
+                            "eid375",
+                            "rotateZ",
+                            21860,
                             0,
-                            15750,
                             "linear",
-                            "${wasserstruktur_KopieCopy}",
-                            '133px',
-                            '517px'
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '0deg'
                         ],
                         [
-                            "eid723",
-                            "left",
-                            16245,
-                            3325,
+                            "eid376",
+                            "rotateZ",
+                            22137,
+                            0,
                             "linear",
-                            "${wasserstruktur_KopieCopy}",
-                            '133px',
-                            '113px'
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
                         ],
                         [
-                            "eid724",
-                            "left",
-                            19570,
-                            16430,
+                            "eid378",
+                            "rotateZ",
+                            22414,
+                            0,
                             "linear",
-                            "${wasserstruktur_KopieCopy}",
-                            '113px',
-                            '517px'
+                            "${sym_huhpickenkopfkoroer}",
+                            '-8deg',
+                            '0deg'
                         ],
                         [
-                            "eid260",
-                            "scaleY",
-                            16245,
-                            3325,
+                            "eid380",
+                            "rotateZ",
+                            22691,
+                            0,
                             "linear",
-                            "${aussichtvorsw2}",
-                            '0.53',
-                            '1'
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
                         ],
                         [
-                            "eid725",
-                            "scaleY",
-                            16245,
-                            3325,
+                            "eid382",
+                            "rotateZ",
+                            22968,
+                            0,
                             "linear",
-                            "${wasserstruktur_KopieCopy}",
-                            '0.53',
-                            '1'
+                            "${sym_huhpickenkopfkoroer}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid387",
+                            "rotateZ",
+                            27677,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid388",
+                            "rotateZ",
+                            27955,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid389",
+                            "rotateZ",
+                            28232,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '8deg',
+                            '0deg'
+                        ],
+                        [
+                            "eid390",
+                            "rotateZ",
+                            28509,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '0deg',
+                            '8deg'
+                        ],
+                        [
+                            "eid391",
+                            "rotateZ",
+                            28786,
+                            0,
+                            "linear",
+                            "${sym_huhpickenkopfkoroer}",
+                            '8deg',
+                            '0deg'
                         ]
                     ]
                 }
@@ -1579,16 +1598,16 @@
                 content: {
                     dom: [
                         {
-                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             rect: [43, 142, '610px', '428px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             id: 'baubeweg2',
                             opacity: '0',
                             type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/baubeweg2.png', '0px', '0px']
                         },
                         {
-                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             rect: [0, 0, '678px', '396px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             id: 'baubeweg1',
                             opacity: '0.5',
                             type: 'image',
@@ -2141,28 +2160,28 @@
                 content: {
                     dom: [
                         {
-                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
-                            id: 'bauhand',
                             type: 'image',
+                            id: 'bauhand',
                             rect: [152, 77, '92px', '61px', 'auto', 'auto'],
+                            transform: [[0, 0, 0], ['0', 0, 0], [0, 0], [1, 1, 1], ['50%', '50%']],
                             fill: ['rgba(0,0,0,0)', 'images/bauhand.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'baugesicht',
                             rect: [0, 0, '188px', '192px', 'auto', 'auto'],
+                            id: 'baugesicht',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/baugesicht.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'auge',
                             rect: [46, 69, '31px', '26px', 'auto', 'auto'],
+                            id: 'auge',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/auge.png', '0px', '0px']
                         },
                         {
-                            type: 'image',
-                            id: 'auge2',
                             rect: [118, 58, '31px', '26px', 'auto', 'auto'],
+                            id: 'auge2',
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/auge.png', '0px', '0px']
                         }
                     ],
@@ -2400,26 +2419,6 @@
                             '46px'
                         ],
                         [
-                            "eid603",
-                            "left",
-                            3000,
-                            3000,
-                            "linear",
-                            "${bauhand}",
-                            '152px',
-                            '89px'
-                        ],
-                        [
-                            "eid604",
-                            "left",
-                            6000,
-                            3100,
-                            "linear",
-                            "${bauhand}",
-                            '89px',
-                            '152px'
-                        ],
-                        [
                             "eid548",
                             "left",
                             0,
@@ -2478,6 +2477,26 @@
                             "${auge2}",
                             '120px',
                             '118px'
+                        ],
+                        [
+                            "eid603",
+                            "left",
+                            3000,
+                            3000,
+                            "linear",
+                            "${bauhand}",
+                            '152px',
+                            '89px'
+                        ],
+                        [
+                            "eid604",
+                            "left",
+                            6000,
+                            3100,
+                            "linear",
+                            "${bauhand}",
+                            '89px',
+                            '152px'
                         ]
                     ]
                 }
@@ -2492,10 +2511,10 @@
                 content: {
                     dom: [
                         {
-                            type: 'image',
+                            rect: [45, 10, '1114px', '588px', 'auto', 'auto'],
                             overflow: 'hidden',
                             id: 'sprungbrucke',
-                            rect: [45, 10, '1114px', '588px', 'auto', 'auto'],
+                            type: 'image',
                             fill: ['rgba(0,0,0,0)', 'images/sprungbrucke.png', '0px', '0px']
                         }
                     ],
@@ -2512,116 +2531,6 @@
                         "loop_sprung": 0
                     },
                     data: [
-                        [
-                            "eid612",
-                            "left",
-                            0,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '45px',
-                            '45px'
-                        ],
-                        [
-                            "eid618",
-                            "left",
-                            131,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '45px',
-                            '-183px'
-                        ],
-                        [
-                            "eid620",
-                            "left",
-                            250,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-251px',
-                            '-430px'
-                        ],
-                        [
-                            "eid622",
-                            "left",
-                            389,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-500px',
-                            '-680px'
-                        ],
-                        [
-                            "eid658",
-                            "left",
-                            406,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-680px',
-                            '-685px'
-                        ],
-                        [
-                            "eid624",
-                            "left",
-                            500,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-685px',
-                            '-6px'
-                        ],
-                        [
-                            "eid626",
-                            "left",
-                            629,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-76px',
-                            '-270px'
-                        ],
-                        [
-                            "eid656",
-                            "left",
-                            687,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-270px',
-                            '-264px'
-                        ],
-                        [
-                            "eid628",
-                            "left",
-                            750,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-264px',
-                            '-507px'
-                        ],
-                        [
-                            "eid630",
-                            "left",
-                            854,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-598px',
-                            '-792px'
-                        ],
-                        [
-                            "eid632",
-                            "left",
-                            1000,
-                            0,
-                            "linear",
-                            "${sprungbrucke}",
-                            '-898px',
-                            '-1020px'
-                        ],
                         [
                             "eid617",
                             "top",
@@ -2731,6 +2640,116 @@
                             "${sprungbrucke}",
                             '-256px',
                             '-166px'
+                        ],
+                        [
+                            "eid612",
+                            "left",
+                            0,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '45px',
+                            '45px'
+                        ],
+                        [
+                            "eid618",
+                            "left",
+                            131,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '45px',
+                            '-183px'
+                        ],
+                        [
+                            "eid620",
+                            "left",
+                            250,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-251px',
+                            '-430px'
+                        ],
+                        [
+                            "eid622",
+                            "left",
+                            389,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-500px',
+                            '-680px'
+                        ],
+                        [
+                            "eid658",
+                            "left",
+                            406,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-680px',
+                            '-685px'
+                        ],
+                        [
+                            "eid624",
+                            "left",
+                            500,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-685px',
+                            '-6px'
+                        ],
+                        [
+                            "eid626",
+                            "left",
+                            629,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-76px',
+                            '-270px'
+                        ],
+                        [
+                            "eid656",
+                            "left",
+                            687,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-270px',
+                            '-264px'
+                        ],
+                        [
+                            "eid628",
+                            "left",
+                            750,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-264px',
+                            '-507px'
+                        ],
+                        [
+                            "eid630",
+                            "left",
+                            854,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-598px',
+                            '-792px'
+                        ],
+                        [
+                            "eid632",
+                            "left",
+                            1000,
+                            0,
+                            "linear",
+                            "${sprungbrucke}",
+                            '-898px',
+                            '-1020px'
                         ]
                     ]
                 }

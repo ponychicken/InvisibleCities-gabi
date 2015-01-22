@@ -79,11 +79,11 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          sym.getSymbol('sym_ausblick').getSymbol('sym_huhpickenkopfkoroer').play();
          sym.getSymbol('sym_ausblick').getSymbol('sym_huhpickenganzani').play();
          sym.getSymbol('sym_ausblick').getSymbol('sym_huhliegenkopf').play();
+         sym.getComposition().getStage().$("Rectangle2").hide();
          
-         sym.getSymbol('sym_schwarz').deleteSymbol();
-         sym.getComposition().getStage().$('Rectangle2').hide;
-         
-         
+         if (sym.getSymbol('sym_schwarz')) {
+         	sym.getSymbol('sym_schwarz').deleteSymbol();
+         }
 
       });
       //Edge binding end

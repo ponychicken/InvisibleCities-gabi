@@ -61,16 +61,18 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
 
       Symbol.bindElementAction(compId, symbolName, "${Rectangle2}", "click", function(sym, e) {
-         // insert code for mouse click here
+         // Zoom into garden
          sym.getSymbol('sym_vorzim').play();
          sym.getSymbol('sym_ausblick').play('ausblick_zoom');
          sym.getSymbol('sym_ausblick').getSymbol('sym_huhpickenkopfkoroer').play();
          sym.getSymbol('sym_ausblick').getSymbol('sym_huhpickenganzani').play();
          sym.getSymbol('sym_ausblick').getSymbol('sym_huhliegenkopf').play();
          
-         sym.getSymbol('sym_schwarz').deleteSymbol();
+         if (sym.getSymbol('sym_schwarz')) {
+         	sym.getSymbol('sym_schwarz').deleteSymbol();
+         }
          
-         sym.getComposition().getStage().$('Rectangle2').hide;
+         sym.getComposition().getStage().$('Rectangle2').hide();
          
          
 

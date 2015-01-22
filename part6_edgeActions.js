@@ -56,18 +56,10 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
 
       Symbol.bindElementAction(compId, symbolName, "${Rectangle}", "click", function(sym, e) {
-         // insert code for mouse click here
-         // Navigate to a new URL in the current window
-         // (replace "_self" with appropriate target attribute for a new window)
          sym.getComposition().getStage().$('sym_menschen').hide();
          sym.getComposition().getStage().$('sym_vorzim').hide();
          sym.getComposition().getStage().$('sym_hintergrund').hide();
          sym.getComposition().getStage().$('sym_ausblick').hide();
-         
-         
-         
-         
-         
          
          
          sym.getComposition().getStage().$('Rectangle').hide();
@@ -83,19 +75,13 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindElementAction(compId, symbolName, "${endeStriche}", "click", function(sym, e) {
-         // Hide an Element.
          sym.$("endeStriche").hide();
-         sym.getSymbol('wegzumhaus').play();
          
 
       });
       //Edge binding end
 
-      Symbol.bindElementAction(compId, symbolName, "${endeStriche2}", "click", function(sym, e) {
-         // insert code for mouse click here
-         
-      });
-      //Edge binding end
+      
 
       Symbol.bindElementAction(compId, symbolName, "${sym_menschen}", "click", function(sym, e) {
          sym.getComposition().getStage().$('sym_menschen').hide();
@@ -234,4 +220,4 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    })("sym_hintergrund");
    //Edge symbol end:'sym_hintergrund'
 
-})(window.jQuery || AdobeEdge.$, AdobeEdge, "PART5");
+})(window.jQuery || AdobeEdge.$, AdobeEdge, "PART6");
